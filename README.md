@@ -8,10 +8,10 @@
 
 ## 🧊 Preview
 
-| 3D Knowledge Cube | Paper Database | Quadrant Groups |
-|:-:|:-:|:-:|
-| ![3D Cube](screenshots/cube-overview.png) | ![Database](screenshots/database-view.png) | ![Modal](screenshots/modal-quadrant-groups.png) |
-| Drag · Zoom · Click cubes | Search · Filter · 8-dim tags | Papers grouped by quadrant |
+| 3D Knowledge Cube | Paper Database |
+|:-:|:-:|
+| ![3D Cube](screenshots/cube-overview.png) | ![Database](screenshots/database-view.png) |
+| Drag · Zoom · Click cubes | Search · Filter · 8-dim tags |
 
 ## Quick Start
 
