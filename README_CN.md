@@ -122,6 +122,10 @@ awesome-code-as-agent/
 └── .claude/skills/open-awesome-cube/  # Agent 技能
 ```
 
+## 学生指南
+
+刚接触这个领域？看 [学生指南](STUDENT_GUIDE.md)——5 分钟学会用 3D 立方体找研究空白、选论文题目、理解领域全景。
+
 ## 贡献
 
 参见 [CONTRIBUTING.md](CONTRIBUTING.md)——论文 tag 格式与投稿指南。
