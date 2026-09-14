@@ -122,6 +122,10 @@ awesome-code-as-agent/
 └── .claude/skills/open-awesome-cube/  # Agent skill
 ```
 
+## Student Guide
+
+New to this field? Check out the [Student Guide](STUDENT_GUIDE.md) — a 5-minute walkthrough on how to use the 3D cube to find research gaps, pick a thesis topic, and understand the landscape.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the paper tag format and guidelines.
