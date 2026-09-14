@@ -7663,5 +7663,192 @@
   "dom": "general",
   "id": "p291",
   "combo": true
+ },
+ {
+  "n": "The Last Harness You Will Ever Build: Evolution Agent Modifies Harness End-to-End",
+  "l": "https://arxiv.org/abs/2604.21003",
+  "m": "2026",
+  "d": "Evolution Agent 分析完整进化历史并修改 harness 全栈（prompt/工具/编排逻辑/观测）——端到端 harness 自改的标志作。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "evo",
+   "loop"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "id": "p292",
+  "combo": true
+ },
+ {
+  "n": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+  "l": "https://arxiv.org/abs/2609.01437",
+  "m": "2026",
+  "d": "基准：agent 创建并迭代修改自己的 harness，用下游反馈评估——harness 自改的首个标准化评测。",
+  "v": "search",
+  "nums": [
+   "首个 harness 自改基准"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "id": "p293",
+  "combo": false
+ },
+ {
+  "n": "EvoHarness-RL: Learning Self-Evolving Runtime Harness",
+  "l": "https://arxiv.org/abs/2608.05446",
+  "m": "2026",
+  "d": "RL 学习自进化运行时 harness：成本感知的 agent-harness 协调 + harness 退火（annealing）——ALFWorld 上验证。",
+  "v": "search",
+  "nums": [
+   "harness 退火"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "evo"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "id": "p294",
+  "combo": false
+ },
+ {
+  "n": "Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory",
+  "l": "https://arxiv.org/abs/2606.05922",
+  "m": "2026",
+  "d": "自我偏好驱动的 harness 优化：改进完整 harness（记忆/上下文/技能等）——不止改 prompt，改全栈。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "id": "p295",
+  "combo": true
+ },
+ {
+  "n": "Weaver: Shrinking the Generation-Verification Gap with Weak Verifiers",
+  "l": "https://arxiv.org/abs/2506.18203",
+  "m": "Stanford/Hazy · 2025",
+  "d": "弱验证器组合成强验证器：多个不完美的验证器（RM/LM judge）融合后显著胜过任何单个——验证器侧的集成学习，间接支撑数据飞轮的可行性。",
+  "v": "ok",
+  "nums": [
+   "弱验证器→强集成"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p296",
+  "combo": false
+ },
+ {
+  "n": "LMAC: LLM-Guided Communication for Cooperative Multi-Agent RL",
+  "l": "https://arxiv.org/abs/2605.18077",
+  "m": "ICML 2026",
+  "d": "LLM 设计协作 MARL 的通信规则——LLM 的推理能力用于决定 agent 间\"怎么说话\"而非\"说什么\"。",
+  "v": "search",
+  "nums": [
+   "ICML 2026"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "multi"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p297",
+  "combo": false
+ },
+ {
+  "n": "Observability-Driven Automatic Evolution of Coding Agents",
+  "l": "https://arxiv.org/abs/2604.25850",
+  "m": "2026",
+  "d": "观测驱动进化：跨组件/轨迹/决策三层观测性指导 coding agent harness 的自动进化——\"看得到才能改得好\"。",
+  "v": "search",
+  "nums": [
+   "三层观测性"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "id": "p298",
+  "combo": false
  }
 ]
