@@ -11,16 +11,38 @@
 | 3D 知识立方体 | 论文数据库 | 四象限分组弹窗 |
 |:-:|:-:|:-:|
 | ![3D 立方体](screenshots/cube-overview.png) | ![数据库](screenshots/database-view.png) | ![弹窗](screenshots/modal-quadrant-groups.png) |
-| 拖拽 · 缩放 · 点击立方体 | 搜索 · 过滤 · 8 维 tag | 🔴A/🟡B/🔵C/⚪D 运行时象限 |
+| 拖拽 · 缩放 · 点击立方体 | 搜索 · 过滤 · 8 维 tag | 运行时象限分组 |
 
 ## 快速开始
 
-在浏览器中打开 [`code-as-policy-cube.html`](code-as-policy-cube.html)（需联网加载 Three.js）：
+**第 1 步** — 克隆本仓库：
+
+```bash
+git clone https://github.com/ExuberantWitness/awesome-code-as-agent.git
+cd awesome-code-as-agent
+```
+
+**第 2 步** — 在浏览器中打开 3D 立方体：
+
+```bash
+# macOS / Linux
+open code-as-policy-cube.html
+
+# Windows
+start code-as-policy-cube.html
+
+# 或者直接在文件管理器中双击该文件
+```
+
+> ⚠️ 需要联网（Three.js 从 CDN 加载）
+
+**第 3 步** — 开始探索：
 
 1. **拖拽旋转** 3D 晶格，滚轮缩放
-2. **点击任何立方体** 查看该格论文，按四象限分组显示
+2. **点击任何立方体** 查看该格论文，按运行时象限分组显示
 3. **点击弹窗中的论文标题** → 跳转到数据库条目（含完整 tag）
 4. **按更新层级过滤**（L0-L4），或切换到数据库视图做多维搜索
+5. **发现研究空白** — 标注"暂无论文"的格子就是选题机会
 
 ## 四维分类体系
 

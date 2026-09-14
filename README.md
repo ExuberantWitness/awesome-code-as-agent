@@ -11,16 +11,38 @@
 | 3D Knowledge Cube | Paper Database | Quadrant Groups |
 |:-:|:-:|:-:|
 | ![3D Cube](screenshots/cube-overview.png) | ![Database](screenshots/database-view.png) | ![Modal](screenshots/modal-quadrant-groups.png) |
-| Drag · Zoom · Click cubes | Search · Filter · 8-dim tags | 🔴A/🟡B/🔵C/⚪D runtime quadrants |
+| Drag · Zoom · Click cubes | Search · Filter · 8-dim tags | Runtime quadrant groups |
 
 ## Quick Start
 
-Open [`code-as-policy-cube.html`](code-as-policy-cube.html) in your browser (needs internet for Three.js CDN):
+**Step 1** — Clone this repo:
+
+```bash
+git clone https://github.com/ExuberantWitness/awesome-code-as-agent.git
+cd awesome-code-as-agent
+```
+
+**Step 2** — Open the 3D cube in your browser:
+
+```bash
+# macOS / Linux
+open code-as-policy-cube.html
+
+# Windows
+start code-as-policy-cube.html
+
+# Or just double-click the file in your file manager
+```
+
+> ⚠️ Requires internet connection (Three.js loads from CDN)
+
+**Step 3** — Explore:
 
 1. **Drag to rotate** the 3D lattice, scroll to zoom
-2. **Click any cube** to see papers in that cell, grouped by 4 runtime quadrants
+2. **Click any cube** to see papers in that cell, grouped by runtime quadrants
 3. **Click paper titles** in popups → jumps to the database entry with full tags
 4. **Filter** by update level (L0-L4), or switch to Database view for multi-dimensional search
+5. **Find research gaps** — cells showing "no papers yet" are empty research slots
 
 ## The Taxonomy
 
