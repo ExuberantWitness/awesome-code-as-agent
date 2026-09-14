@@ -11,7 +11,7 @@
 | 3D Knowledge Cube | Paper Database | Quadrant Groups |
 |:-:|:-:|:-:|
 | ![3D Cube](screenshots/cube-overview.png) | ![Database](screenshots/database-view.png) | ![Modal](screenshots/modal-quadrant-groups.png) |
-| Drag · Zoom · Click cubes | Search · Filter · 8-dim tags | Runtime quadrant groups |
+| Drag · Zoom · Click cubes | Search · Filter · 8-dim tags | Papers grouped by quadrant |
 
 ## Quick Start
 
