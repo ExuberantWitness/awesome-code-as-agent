@@ -11,7 +11,7 @@
 | 3D 知识立方体 | 论文数据库 | 四象限分组弹窗 |
 |:-:|:-:|:-:|
 | ![3D 立方体](screenshots/cube-overview.png) | ![数据库](screenshots/database-view.png) | ![弹窗](screenshots/modal-quadrant-groups.png) |
-| 拖拽 · 缩放 · 点击立方体 | 搜索 · 过滤 · 8 维 tag | 运行时象限分组 |
+| 拖拽 · 缩放 · 点击立方体 | 搜索 · 过滤 · 8 维 tag | 按象限分组显示 |
 
 ## 快速开始
 
