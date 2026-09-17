@@ -8462,5 +8462,146 @@
   "dom": "general",
   "id": "p320",
   "combo": false
+ },
+ {
+  "n": "Learning While Deploying (LWD): Fleet-Scale Offline-to-Online RL for Generalist Robots",
+  "l": "https://arxiv.org/abs/2605.00416",
+  "m": "2026",
+  "d": "机队规模的边部署边学习：离线到在线 RL 框架，通用机器人在生产部署中持续后训练——Live RL 机器人侧的旗舰系统。",
+  "v": "search",
+  "nums": [
+   "机队规模",
+   "边部署边训练"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop",
+   "multi"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p321",
+  "combo": true
+ },
+ {
+  "n": "Sirius: Human-in-the-Loop Autonomy and Learning During Deployment",
+  "l": "https://arxiv.org/abs/2211.08416",
+  "m": "UT Austin RPL · RSS 2023",
+  "d": "部署中学习的人机协作框架：策略更新与部署同时发生——齿轮装配/咖啡包装真机验证，处理数周部署中数据增长与安全挑战。\"learning on the job\"的经典。",
+  "v": "ok",
+  "nums": [
+   "真机部署",
+   "齿轮装配"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real",
+   "human"
+  ],
+  "dom": "robot",
+  "id": "p322",
+  "combo": false
+ },
+ {
+  "n": "TT-VLA: On-the-Fly VLA Adaptation via Test-Time Reinforcement Learning",
+  "l": "https://arxiv.org/abs/2601.06748",
+  "m": "2026",
+  "d": "VLA 模型的即时测试时 RL 适应：解决自监督 TTT 在视觉-动作域的限制——真机部署中在线适应的具身前沿。",
+  "v": "search",
+  "nums": [
+   "VLA 测试时 RL"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop",
+   "wm"
+  ],
+  "lvl": 2,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p323",
+  "combo": true
+ },
+ {
+  "n": "Test-Time Curricula for Targeted Reinforcement Learning",
+  "l": "https://openreview.net/forum?id=HoUIYpitfo",
+  "m": "2025 · 13+ 引用",
+  "d": "测试时课程：在部署阶段针对目标 RL 任务构建课程——TTRL 的课程化扩展，高效定向适应。",
+  "v": "search",
+  "nums": [
+   "13+ 引用"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "evo",
+   "loop"
+  ],
+  "lvl": 2,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "math",
+  "id": "p324",
+  "combo": true
+ },
+ {
+  "n": "rLLM: Continual Learning via Real-Time RL for Agents",
+  "l": "https://rllm-project.com/post.html?post=realtime_rl.md",
+  "m": "rLLM Project · 2026",
+  "d": "生产约束下的实时 RL：每个任务只有一次 rollout（不可重复采样），更贴近真实部署——CLaaS 的开源对照。",
+  "v": "search",
+  "nums": [
+   "单次 rollout"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p325",
+  "combo": false
  }
 ]
