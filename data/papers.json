@@ -8104,5 +8104,222 @@
   "dom": "general",
   "id": "p307",
   "combo": false
+ },
+ {
+  "n": "CLaaS: Continual Learning as a Service for Deployed Agents",
+  "l": "https://arxiv.org/abs/2606.05559",
+  "m": "2026",
+  "d": "持续学习即服务：agent 在部署期间持续改进，抽象在 chat API 之后——live RL 的基础设施正主，把在线学习做成可调用的服务。",
+  "v": "search",
+  "nums": [
+   "chat API 后的在线学习"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p308",
+  "combo": false
+ },
+ {
+  "n": "On-Policy Replay for Continual Supervised Fine-Tuning",
+  "l": "https://arxiv.org/abs/2605.29495",
+  "m": "2026",
+  "d": "部署后 on-policy 数据回放做持续 SFT：用模型自己的部署输出做训练信号——live RL 的 SFT 路线。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p309",
+  "combo": true
+ },
+ {
+  "n": "Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent RL",
+  "l": "https://arxiv.org/abs/2602.09578",
+  "m": "2026",
+  "d": "Rollout-训练协同设计：rollout 与训练部署在专用资源池，避免频繁加载/卸载——live RL 的系统工程优化。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "multi"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "id": "p310",
+  "combo": false
+ },
+ {
+  "n": "RL-100: Performant Robotic Manipulation with Real-World RL",
+  "l": "https://arxiv.org/abs/2510.14830",
+  "m": "2025",
+  "d": "真机 RL 训练框架：扩散视觉运动策略先监督预训练再真机在线 RL 精调——real-world live RL 的工程标志作。",
+  "v": "search",
+  "nums": [
+   "真机在线 RL"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p311",
+  "combo": false
+ },
+ {
+  "n": "What Matters for Simulation-to-Online Reinforcement Learning",
+  "l": "https://arxiv.org/abs/2602.20220",
+  "m": "2026",
+  "d": "系统消融：哪些设计选择使在线 RL 在物理机器人上成功——sim-to-online RL 的经验指南。",
+  "v": "search",
+  "nums": [
+   "设计选择消融"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p312",
+  "combo": false
+ },
+ {
+  "n": "Self-Adapting Robotic Agents through Online Continual Reinforcement Learning",
+  "l": "https://arxiv.org/abs/2603.04029",
+  "m": "2026",
+  "d": "仿生在线持续 RL：机器人 agent 在部署期间自动化适应——生物启发的部署期学习框架。",
+  "v": "search",
+  "nums": [
+   "部署期自动化适应"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p313",
+  "combo": true
+ },
+ {
+  "n": "LifeLong-RFT: Continual Learning VLA Models via Reinforcement Fine-Tuning",
+  "l": "https://arxiv.org/abs/2602.10503",
+  "m": "2026",
+  "d": "VLA 模型的终身 RL 精调：vision-language-action 模型在长寿命机器人上持续改进——具身 live RL 的前沿。",
+  "v": "search",
+  "nums": [
+   "VLA 终身 RL"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p314",
+  "combo": true
+ },
+ {
+  "n": "OHP-RL: Online Human Preference Reinforcement Learning for Real-World Manipulation",
+  "l": "https://arxiv.org/abs/2605.15971",
+  "m": "2026",
+  "d": "在线人类偏好引导 RL：稀疏奖励真机操纵中人在环在线偏好信号——live RL 的人反馈路线。",
+  "v": "search",
+  "nums": [
+   "人在环真机 RL"
+  ],
+  "scenes": [
+   "policy",
+   "reward"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real",
+   "human"
+  ],
+  "dom": "robot",
+  "id": "p315",
+  "combo": true
  }
 ]
