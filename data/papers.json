@@ -8762,5 +8762,37 @@
   "dom": "general",
   "id": "p331",
   "combo": false
+ },
+ {
+  "n": "Machines That Accelerate Machine-Making: A Research Agenda for Human-Demand-Guided Physical Recursive Self-Improvement",
+  "l": "https://www.datafluxdynamics.ltd/research/machines-that-accelerate-machine-making.pdf",
+  "m": "DataFlux Dynamics · Zhang Minghao · 2026-08",
+  "d": "物理递归自我改进（PRSI）的纲领性论文：定义了 AI 进入物理世界的五个因果位置（P1硬件接口→P2固定形态策略→P3真实经验环→P4产品R&D→P5产生后续机器的算子），形式化了物理改进-生产边（PIPE），提出人类需求引导的 PRSI 双环架构（需求环+物理环），证明了证书链可构造性、几何收缩、选择遗憾界、劳动系数收缩。核心主张：让机器加速造机器，让人类需求引导加速方向。",
+  "v": "ok",
+  "nums": [
+   "P1-P5 五级因果位置",
+   "PIPE 形式化",
+   "6 大系统能力",
+   "4 个数学定理"
+  ],
+  "scenes": [
+   "research",
+   "policy"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 4,
+  "stk": 3,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": true,
+  "id": "p332",
+  "combo": true
  }
 ]
