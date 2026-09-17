@@ -8321,5 +8321,146 @@
   "dom": "robot",
   "id": "p315",
   "combo": true
+ },
+ {
+  "n": "From Self-Evolving Synthetic Data to Verifiable-Reward RL for Multi-Turn Tool-Using Agents",
+  "l": "https://arxiv.org/abs/2601.22607",
+  "m": "2026",
+  "d": "自进化数据合成+可验证奖励 RL：自动生成-验证-精炼高质量训练任务的闭环——数据飞轮与 RL 训练的完整对接，agent 后训练的系统化路线。",
+  "v": "search",
+  "nums": [
+   "闭环数据合成"
+  ],
+  "scenes": [
+   "research",
+   "agentself"
+  ],
+  "dirs": [
+   "loop",
+   "evo"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "id": "p316",
+  "combo": true
+ },
+ {
+  "n": "CoRe: Collaborative Reinforcement Learning for Multi-Agent Code Generation",
+  "l": "https://arxiv.org/abs/2605.24812",
+  "m": "2026",
+  "d": "多智能体代码生成的协作 RL：解决协调与专业化挑战——agent 间分工训练的涌现专门化。",
+  "v": "search",
+  "nums": [
+   "协作 RL 专业化"
+  ],
+  "scenes": [
+   "action"
+  ],
+  "dirs": [
+   "multi",
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "id": "p317",
+  "combo": true
+ },
+ {
+  "n": "Emergent Tool Use From Multi-Agent Autocurricula",
+  "l": "https://arxiv.org/abs/1909.07528",
+  "m": "OpenAI · 2019 · 3000+ 引用",
+  "d": "多智能体自博弈产生涌现自动课程：hide-and-seek 中六种策略涌现——工具使用、协作、竞争自发分层出现。开放式学习的经典证据。",
+  "v": "ok",
+  "nums": [
+   "6 种涌现策略",
+   "3000+ 引用"
+  ],
+  "scenes": [
+   "skill"
+  ],
+  "dirs": [
+   "multi",
+   "evo"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "mc",
+  "id": "p318",
+  "combo": true
+ },
+ {
+  "n": "AgentVerse: Dynamic Multi-Agent Collaboration with Emergent Team Composition",
+  "l": "https://arxiv.org/abs/2308.10848",
+  "m": "2023 · 1200+ 引用",
+  "d": "动态多智能体协作框架：团队组成根据任务动态调整，涌现出有效协作——从静态角色分工到动态组队的跃迁。",
+  "v": "ok",
+  "nums": [
+   "1200+ 引用",
+   "动态组队"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "multi"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p319",
+  "combo": false
+ },
+ {
+  "n": "Flying Serving: On-the-Fly Parallelism Switching for LLM Serving",
+  "l": "https://arxiv.org/abs/2602.22593",
+  "m": "2026",
+  "d": "在线 DP-TP 并行度切换不重启引擎——live RL 的 serving 侧基础设施：模型在训练中变化时 serving 如何持续。",
+  "v": "search",
+  "nums": [
+   "免重启并行切换"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "id": "p320",
+  "combo": false
  }
 ]
