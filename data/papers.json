@@ -7850,5 +7850,259 @@
   "dom": "swe",
   "id": "p298",
   "combo": false
+ },
+ {
+  "n": "MetaRSI-v1: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+  "l": "https://arxiv.org/abs/2609.06396",
+  "m": "2026 · 30 人 · CosmosMind",
+  "d": "目前最完整的 RSI 系统：统一 Data(𝒟)/Harness(ℋ)/Model(θ) 三个可写面为同一循环内核的三个算子实例化；RSI² 调度器在类型化契约下横向编排算子序列+纵向改写提案策略；MetaRSI² 再改进调度器——RSI 应用于 RSI。信号新鲜度规则（可反驳的组合理论）：H→M 与 M→M 禁止因为数据不应早于能力变化。权限边界：模型只提案，确定性代码验证/打分/发布。普查发现：闭环形成追踪验证格式而非能力（ρ=-0.75）——定量验证 oracle 类型决定论。",
+  "v": "ok",
+  "nums": [
+   "平均 +10.9",
+   "胜固定管线+3.6",
+   "SWE-bench Pro 10.3→19.5",
+   "调度本身承重"
+  ],
+  "scenes": [
+   "agentself",
+   "research"
+  ],
+  "dirs": [
+   "loop",
+   "evo",
+   "mem"
+  ],
+  "lvl": 4,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": true,
+  "id": "p299",
+  "combo": true
+ },
+ {
+  "n": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+  "l": "https://github.com/zhengkid/Dream-RSI",
+  "m": "Google + DeepMind + UMD + UVA · 17 人 · 2026",
+  "d": "RSI×世界模型的交叉正主：积累的发现历史变成\"回放模拟器池\"，agent 在其上\"做梦\"（dreaming）——回放不同分支子集/顺序/分组/停止决策来评估和精炼探索策略，无需重跑即获即时低成本 off-policy 反馈。轻量编排层位于未修改的编码 agent 之上，使探索显式化可编程（分支/并行/停止）。三域验证：算法工程/数学优化/GPU 内核工程。改进→部署→扩池→再做梦——闭环的反馈 oracle 从\"重跑真实环境\"变成\"在历史池上做梦\"。",
+  "v": "ok",
+  "nums": [
+   "三域验证",
+   "off-policy 免重跑",
+   "48 stars"
+  ],
+  "scenes": [
+   "research",
+   "agentself"
+  ],
+  "dirs": [
+   "wm",
+   "mem",
+   "evo"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p300",
+  "combo": true
+ },
+ {
+  "n": "Deployed Reinforcement Learning should be Continual",
+  "l": "https://arxiv.org/abs/2606.04029",
+  "m": "2026 · 立场论文",
+  "d": "部署后 RL 应当是持续的：识别四种非平稳性来源（用户行为漂移/环境变化/竞争 agent 演化/自身性能变化），论证最佳部署 RL 系统应采用持续学习——live RL 的理论正当性。",
+  "v": "search",
+  "nums": [
+   "四种非平稳性"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p301",
+  "combo": false
+ },
+ {
+  "n": "Continual Learning, Not Training: Online Adaptation for Deployed Agents",
+  "l": "https://arxiv.org/abs/2511.01093",
+  "m": "2025",
+  "d": "部署后持续学习而非训练：动态环境中 LLM agent 的在线适应——核心知识保持静态但行为持续调整。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself",
+   "action"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 2,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p302",
+  "combo": true
+ },
+ {
+  "n": "WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning",
+  "l": "https://arxiv.org/abs/2411.02337",
+  "m": "ICLR 2025 · 111+ 引用",
+  "d": "自进化在线课程 RL 训练 web agent：指令自动生成→课程递进→在线交互学习——web agent 的 live RL 正主。",
+  "v": "search",
+  "nums": [
+   "111+ 引用",
+   "自进化课程"
+  ],
+  "scenes": [
+   "action"
+  ],
+  "dirs": [
+   "loop",
+   "evo"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "web",
+  "id": "p303",
+  "combo": true
+ },
+ {
+  "n": "RLUF: Reinforcement Learning from User Feedback",
+  "l": "https://arxiv.org/abs/2505.14946",
+  "m": "2025",
+  "d": "从真实用户反馈做 RL：生产环境中的部署信号直接驱动策略更新——live RL 在对话/客服场景的落地。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "action",
+   "reward"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "human"
+  ],
+  "dom": "general",
+  "id": "p304",
+  "combo": true
+ },
+ {
+  "n": "Dejavu: Post-Deployment Learning for Embodied Agents via Experience Feedback Network",
+  "l": "https://arxiv.org/abs/2510.10181",
+  "m": "2025",
+  "d": "具身 agent 的部署后学习：经验反馈网络（EFN）从部署交互中学习——机器人 live RL 的近邻。",
+  "v": "search",
+  "nums": [
+   "经验反馈网络"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 2,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "id": "p305",
+  "combo": true
+ },
+ {
+  "n": "Next-Generation Agentic Reinforcement Learning Systems",
+  "l": "https://arxiv.org/abs/2607.01120",
+  "m": "2026 · 4+ 引用",
+  "d": "下一代 agent RL 系统：面向生产部署（编码助手/客服 chatbot）的 RL——live RL 的系统工程愿景。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p306",
+  "combo": false
+ },
+ {
+  "n": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
+  "l": "https://arxiv.org/abs/2508.03680",
+  "m": "2025",
+  "d": "用 RL 训练任意 AI agent 的灵活框架：跨环境统一接口——agent RL 的基础设施。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "id": "p307",
+  "combo": false
  }
 ]
