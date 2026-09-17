@@ -8603,5 +8603,164 @@
   "dom": "general",
   "id": "p325",
   "combo": false
+ },
+ {
+  "n": "Discovery Foundation Models: Toward Open-Ended Discovery Intelligence",
+  "l": "https://arxiv.org/abs/2609.15973",
+  "m": "PHAI Labs · 2026 · 13 人",
+  "d": "发现基础模型（DFM）的定义性论文：提出 Discovery Intelligence 为超越任务求解的开放式发现能力，DFM = 面向发现的基础模型系统——比假设生成更广，与将基础模型直接用于科学数据不同。七个耦合组件构成。",
+  "v": "ok",
+  "nums": [
+   "DFM 定义之作",
+   "7 个耦合组件"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p326",
+  "combo": false
+ },
+ {
+  "n": "Foundation Models for Scientific Discovery: From Paradigm Enhancement to Paradigm Transition",
+  "l": "https://arxiv.org/abs/2510.15280",
+  "m": "2025 · 综述",
+  "d": "基础模型×科学发现全景：从范式增强到范式跃迁——基础模型从工具变成科研合作者（AI Co-Creation），覆盖 AI Scientist 及后续工作。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p327",
+  "combo": false
+ },
+ {
+  "n": "Sparks: Multi-Agent AI Model Discovers Novel Scientific Ideas",
+  "l": "https://arxiv.org/abs/2504.19017",
+  "m": "Buehler · MIT · 2025 · 28+ 引用",
+  "d": "多智能体 AI 发现新颖科学想法：Sparks 系统——自主科学 ideation 的多智能体范式。",
+  "v": "search",
+  "nums": [
+   "28+ 引用"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "multi",
+   "evo"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p328",
+  "combo": true
+ },
+ {
+  "n": "Autonomous Agents for Scientific Discovery: Vision and Roadmap",
+  "l": "https://arxiv.org/abs/2510.09901",
+  "m": "2025 · 愿景",
+  "d": "LLM 科学 agent 的愿景与路线图：从假设发现→实验设计/执行→结果精炼的完整发现生命周期。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p329",
+  "combo": false
+ },
+ {
+  "n": "Automating the Search for Artificial Life with Foundation Models",
+  "l": "https://arxiv.org/abs/2412.17799",
+  "m": "Sakana · 2024",
+  "d": "用基础模型自动搜索人工生命：FM 驱动的大组合空间探索——开放式发现的具身体现。",
+  "v": "search",
+  "nums": [],
+  "scenes": [
+   "research",
+   "world"
+  ],
+  "dirs": [
+   "evo"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "mc",
+  "id": "p330",
+  "combo": true
+ },
+ {
+  "n": "AI for Scientific Discovery is a Social Problem",
+  "l": "https://www.cell.com/patterns/fulltext/S2666-3899(26)00006-1",
+  "m": "Patterns/Cell · 2026 · 17+ 引用",
+  "d": "批判性视角：发现模型需要解释力——推荐化合物但不解释电子结构的模型价值有限；科学发现本质是社会问题。",
+  "v": "search",
+  "nums": [
+   "17+ 引用"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "id": "p331",
+  "combo": false
  }
 ]
