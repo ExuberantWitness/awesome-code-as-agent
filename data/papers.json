@@ -8794,5 +8794,329 @@
   "selfref": true,
   "id": "p332",
   "combo": true
+ },
+ {
+  "n": "Rubrics as Rewards: Reinforcement Learning Beyond Verifiable Domains",
+  "l": "https://arxiv.org/abs/2507.17746",
+  "m": "Scale AI · Gunjal et al. · 2025-07",
+  "d": "旗舰级 RaR 方法：用加权检查表（instance-specific rubric）作为 on-policy RL 奖励，把 RLVR 从可验证域（数学/代码）扩展到多标准模糊判定的真实任务。rubric 由冻结 LLM 按任务逐例生成，验证器库自动填充的代表。",
+  "v": "ok",
+  "nums": [
+   "RLVR 扩展到非可验证域",
+   "实例级加权检查表",
+   "~270 引用"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p333",
+  "combo": false
+ },
+ {
+  "n": "Rubric-ARM: Alternating RL for Rubric-Based Reward Modeling",
+  "l": "https://arxiv.org/abs/2602.01511",
+  "m": "Emory · Xu et al. · 2026-02",
+  "d": "交替强化学习联合优化 rubric 生成器 πr 与判官 πj：各自被 RL 从偏好反馈训练、轮流进化，判官与标准共演。奖励建模基准平均 +4.7%，回答了「谁来给判官打分」的自指问题。",
+  "v": "ok",
+  "nums": [
+   "生成器/判官交替 RL",
+   "+4.7% 奖励建模"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "loop",
+   "multi"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": true,
+  "id": "p334",
+  "combo": true
+ },
+ {
+  "n": "AutoRubric: Rubric-Based Generative Rewards for Faithful Multimodal Reasoning",
+  "l": "https://arxiv.org/abs/2510.14738",
+  "m": "2025-10 · ACL 2026",
+  "d": "把 RLVR 与过程级监督结合：自动收集的 rubric 生成奖励嵌入多模态推理 RL，只奖励最终答案会诱发虚假推理，rubric 补上过程级忠实性信号。",
+  "v": "ok",
+  "nums": [
+   "过程级 rubric 奖励",
+   "多模态 RLVR"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "multimodal",
+  "selfref": false,
+  "id": "p335",
+  "combo": false
+ },
+ {
+  "n": "Autorubric: A Unifying Framework for Rubric-Based LLM Evaluation on Non-Verifiable Tasks",
+  "l": "https://arxiv.org/abs/2603.00077",
+  "m": "2026-03",
+  "d": "统一框架论文：系统分析 rubric 判官的五种失效模式（位置偏差/随机不一致/标准混淆/不确定下强制判决/模型依赖校准），指出 rubric 结构化评测但并未消除这些失败，给出统一治理框架。",
+  "v": "ok",
+  "nums": [
+   "5 种判官失效模式",
+   "统一治理框架"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p336",
+  "combo": false
+ },
+ {
+  "n": "OpenRubrics: Scalable Synthetic Rubric Generation for Reward Modeling",
+  "l": "https://arxiv.org/abs/2510.07743",
+  "m": "2025-10",
+  "d": "从偏好对中对比式挖掘规则，规模化合成 rubric 库用于奖励建模与对齐——rubric 版的「从人类偏好反推可执行标准」，衔接 Inverse Constitutional AI 谱系。",
+  "v": "ok",
+  "nums": [
+   "偏好对→规则挖掘",
+   "规模化 rubric 合成"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "evo"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model",
+   "human"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p337",
+  "combo": false
+ },
+ {
+  "n": "RM-R1: Reward Modeling as Reasoning",
+  "l": "https://arxiv.org/abs/2505.02387",
+  "m": "2025-05",
+  "d": "把奖励建模重构为「链式 rubric 推理」：RM 先生成可解释的评判理由链再打分，用 RLVR 训练 RM 本身。奖励模型从黑盒打分器变成白盒推理器。",
+  "v": "ok",
+  "nums": [
+   "RM=推理器",
+   "RLVR 训练 RM"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p338",
+  "combo": false
+ },
+ {
+  "n": "Generating and Refining Dynamic Evaluation Rubrics for LLM-as-a-Judge",
+  "l": "https://arxiv.org/abs/2605.30568",
+  "m": "U Arizona · Wang & Blanco · 2026-05",
+  "d": "免训练的动态 rubric：零人工标注，先在数据集级、再在实例级两个粒度自动生成细粒度评测标准，并与人类标注 rubric 性能持平。rubric 迭代精炼但不动权重（L2 典型）。",
+  "v": "ok",
+  "nums": [
+   "免训练",
+   "数据集级+实例级双层粒度"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 2,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p339",
+  "combo": false
+ },
+ {
+  "n": "Self-Taught Evaluators",
+  "l": "https://arxiv.org/abs/2408.02666",
+  "m": "Meta AI · Wang et al. · 2024-08",
+  "d": "评测器自训练鼻祖：零人类标注，LLM 自己合成响应对+推理偏好理由+迭代自我训练成判官，Llama3-70B 判官 RewardBench 75.4→88.3，匹敌人类标注训练的 RM。",
+  "v": "ok",
+  "nums": [
+   "零人类标注",
+   "75.4→88.3 RewardBench",
+   "~170 引用"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": true,
+  "id": "p340",
+  "combo": false
+ },
+ {
+  "n": "AutoBencher: Towards Declarative Benchmark Construction",
+  "l": "https://arxiv.org/abs/2407.08351",
+  "m": "ICLR 2025 · Li et al.",
+  "d": "声明式基准构建：用户只声明「评什么」（主题+难度），系统自动检索+推理生成基准数据集，产出的基准比人构基准平均更新颖 27%、更难 22%，还能暴露目标模型安全漏洞。",
+  "v": "ok",
+  "nums": [
+   "声明式构建",
+   "新颖+27%/难+22%"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym",
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p341",
+  "combo": false
+ },
+ {
+  "n": "RubricEval: A Rubric-Level Meta-Evaluation Benchmark for LLM Judges",
+  "l": "https://arxiv.org/abs/2603.25133",
+  "m": "2026-03",
+  "d": "判官的判官：rubric 级元评测基准，发现 rubric 级评测一致优于 checklist 级评测——「评评测器」这个自指层的实证基础。",
+  "v": "ok",
+  "nums": [
+   "rubric级>checklist级",
+   "元评测"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": true,
+  "id": "p342",
+  "combo": false
+ },
+ {
+  "n": "awesome-rubric-rewards（论文清单库）",
+  "l": "https://github.com/chrisliu298/awesome-rubric-rewards",
+  "m": "GitHub · chrisliu298 · 2026-08",
+  "d": "rubric 奖励研究总仓库：数百篇论文按「直接生成/对比挖掘/迭代精炼/在线共进化/宪法原则/可执行编译器/过程级PRM」分类，含数据集、工具、前沿实验室配方。与本项目互为镜像：它按 rubric 组织，我们按四维分类学组织。",
+  "v": "ok",
+  "nums": [
+   "数百篇分类",
+   "7 大构造范式"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p343",
+  "combo": false
  }
 ]
