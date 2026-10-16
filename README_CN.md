@@ -147,7 +147,7 @@ start code-as-policy-cube.html
 | 17 | [Robot-Powered Data Flywheel (RPDF)](https://arxiv.org/abs/2511.19647) | 策略 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 真实环境, 模型 | 机器人 | 否 |
 | 18 | [DexFlyWheel](https://arxiv.org/abs/2509.23829) | 策略 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 真实环境, 模型 | 机器人 | 否 |
 | 19 | [VERITAS](https://arxiv.org/abs/2606.18247) | 策略 | 闭环调整 | 权重训练 | 只采集数据，不训练 | 数据飞轮 | 模型, 真实环境 | 通用 | 否 |
-| 20 | [CodeDiffuser](https://www.roboticsproceedings.org/rss21/p072.pdf) | 策略 | 单次生成 | 权重训练 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
+| 20 | [CodeDiffuser](https://www.roboticsproceedings.org/rss21/p072.pdf) | 策略 | 单次生成 | 权重训练 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
 | 21 | [RoboPro (Robotic Programmer)](https://arxiv.org/abs/2501.04268) | 策略 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | 模型, 人类 | 通用 | 否 |
 | 22 | [TT-VLA: On-the-Fly VLA Adaptation via Test-Time Reinforcement Learning](https://arxiv.org/abs/2601.06748) | 策略 | 闭环调整, 世界模型 | 运行时适应 | 采集数据＋训练 | 数据飞轮 | 真实环境 | 机器人 | 否 |
 | 23 | [Dejavu: Post-Deployment Learning for Embodied Agents via Experience Feedback Network](https://arxiv.org/abs/2510.10181) | 策略 | 闭环调整, 记忆上下文 | 运行时适应 | 采集数据＋训练 | 数据飞轮 | 真实环境 | 机器人 | 否 |
@@ -160,30 +160,30 @@ start code-as-policy-cube.html
 | 30 | [RISE (Embodied): Compositional World Model Imagined Rollouts for Robot Policy](https://arxiv.org/abs/2602.11075) | 策略 | 世界模型 | 机制冻结 | 采集数据＋训练 | 验证反馈 | 仿真 | 机器人 | 否 |
 | 31 | [Large Language Models as Commonsense Knowledge for Large-Scale Task Planning (LLM-MCTS)](https://arxiv.org/abs/2305.14078) | 策略 | 世界模型 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 32 | [GenSwarm](https://www.nature.com/articles/s44182-025-00065-w) | 策略 | 多智能体 | 机制冻结 | 运行时全冻结 | 证据反馈 | 真实环境 | 机器人 | 否 |
-| 33 | [Genesys](https://dl.acm.org/doi/10.1145/3776736) | 策略 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 仿真 | 通用 | 否 |
+| 33 | [Genesys](https://dl.acm.org/doi/10.1145/3776736) | 策略 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 仿真 | 通用 | 否 |
 | 34 | [Code Evolution for Control](https://arxiv.org/abs/2601.06845) | 策略 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 35 | [Evolution through Large Models (ELM)](https://arxiv.org/abs/2206.08896) | 策略 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 机器人 | 否 |
 | 36 | [OmniManip](https://arxiv.org/abs/2501.03841) | 策略 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型, 仿真 | 通用 | 否 |
 | 37 | [Contact-Rich Adaptive LLM-based Control (CoRAL)](https://arxiv.org/abs/2605.02600) | 策略 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 真实环境, 仿真 | 机器人 | 否 |
 | 38 | [RoboInspector](https://arxiv.org/abs/2508.21378) | 策略 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 39 | [RoboCodeX](https://arxiv.org/abs/2402.16117) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 40 | [ChatGPT for Robotics](https://arxiv.org/abs/2306.17582) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 机器人 | 否 |
-| 41 | [Robot Policy Code for High-Precision Tasks](https://scholar.google.com/scholar?q=%22Generating+Robot+Policy+Code%22+dexterous) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 42 | [VoxPoser](https://arxiv.org/abs/2307.05973) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
-| 43 | [ProgPrompt](https://arxiv.org/abs/2209.11302) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
-| 44 | [Code as Policies](https://arxiv.org/abs/2209.07753) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 机器人 | 否 |
+| 39 | [RoboCodeX](https://arxiv.org/abs/2402.16117) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 40 | [ChatGPT for Robotics](https://arxiv.org/abs/2306.17582) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 机器人 | 否 |
+| 41 | [Robot Policy Code for High-Precision Tasks](https://scholar.google.com/scholar?q=%22Generating+Robot+Policy+Code%22+dexterous) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 42 | [VoxPoser](https://arxiv.org/abs/2307.05973) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
+| 43 | [ProgPrompt](https://arxiv.org/abs/2209.11302) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
+| 44 | [Code as Policies](https://arxiv.org/abs/2209.07753) | 策略 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 机器人 | 否 |
 | 45 | [CoRe: Collaborative Reinforcement Learning for Multi-Agent Code Generation](https://arxiv.org/abs/2605.24812) | 动作 | 多智能体, 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
 | 46 | [RLUF: Reinforcement Learning from User Feedback](https://arxiv.org/abs/2505.14946) | 动作, 奖励 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 人类 | 通用 | 否 |
 | 47 | [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning](https://arxiv.org/abs/2411.02337) | 动作 | 闭环调整, 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 网页 | 否 |
 | 48 | [Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data](https://arxiv.org/abs/2602.21320) | 动作 | 进化搜索, 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 通用 | 否 |
-| 49 | [UI-TARS: Pioneering Automated GUI Interaction with Native Agents](https://arxiv.org/abs/2501.12326) | 动作 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | — | 图形界面 | 否 |
+| 49 | [UI-TARS: Pioneering Automated GUI Interaction with Native Agents](https://arxiv.org/abs/2501.12326) | 动作 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | 不适用 | 图形界面 | 否 |
 | 50 | [SWEET-RL: Training Multi-Turn LLM Agents on Collaborative Tasks](https://arxiv.org/abs/2503.15478) | 动作 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 软件工程 | 否 |
 | 51 | [Socratic-SWE: Self-Evolving Coding Agents via Trace-Driven Evolution](https://arxiv.org/abs/2606.07412) | 动作 | 闭环调整 | 权重训练 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
-| 52 | [Reinforcement World Model Learning (RWML)](https://arxiv.org/abs/2602.05842) | 动作 | 世界模型 | 权重训练 | 采集数据＋训练 | — | 模型 | 通用 | 否 |
-| 53 | [Web Agents with World Models (WMA)](https://openreview.net/forum?id=moWiYJuSGF) | 动作 | 世界模型 | 权重训练 | 采集数据＋训练 | — | 仿真 | 前端 | 否 |
-| 54 | [ToolGen: Unified Tool Retrieval and Calling via Generation（近邻）](https://openreview.net/forum?id=XLMAMmowdY) | 动作 | 单次生成 | 权重训练 | 运行时全冻结 | — | — | 通用 | 否 |
+| 52 | [Reinforcement World Model Learning (RWML)](https://arxiv.org/abs/2602.05842) | 动作 | 世界模型 | 权重训练 | 采集数据＋训练 | 无反馈 | 模型 | 通用 | 否 |
+| 53 | [Web Agents with World Models (WMA)](https://openreview.net/forum?id=moWiYJuSGF) | 动作 | 世界模型 | 权重训练 | 采集数据＋训练 | 无反馈 | 仿真 | 前端 | 否 |
+| 54 | [ToolGen: Unified Tool Retrieval and Calling via Generation（近邻）](https://openreview.net/forum?id=XLMAMmowdY) | 动作 | 单次生成 | 权重训练 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
 | 55 | [AgentTuning: Enabling Generalized Agent Abilities for LLMs](https://arxiv.org/abs/2310.12823) | 动作 | 闭环调整 | 权重训练 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
-| 56 | [OpenHands CodeAct 2.1](https://www.openhands.dev/blog/openhands-codeact-21-an-open-state-of-the-art-software-development-agent) | 动作 | 闭环调整 | 权重训练 | 运行时全冻结 | — | 模型 | 通用 | 否 |
+| 56 | [OpenHands CodeAct 2.1](https://www.openhands.dev/blog/openhands-codeact-21-an-open-state-of-the-art-software-development-agent) | 动作 | 闭环调整 | 权重训练 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
 | 57 | [CodeActInstruct → CodeActAgent](https://huggingface.co/xingyaoww/CodeActAgent-Mistral-7b-v0.1) | 动作 | 闭环调整 | 权重训练 | 运行时全冻结 | 数据飞轮 | 符号 | 软件工程 | 否 |
 | 58 | [TT-SI: Self-Improving LLM Agents with Test-Time Training](https://aclanthology.org/2026.findings-acl.462.pdf) | 动作 | 闭环调整 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 59 | [Grounded Test-Time Adaptation for LLM Agents](https://arxiv.org/abs/2511.04847) | 动作 | 闭环调整 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 符号 | 通用 | 否 |
@@ -208,7 +208,7 @@ start code-as-policy-cube.html
 | 78 | [LATS（近邻）](https://arxiv.org/abs/2310.04406) | 动作 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 79 | [CoAct-1: Computer-Using Agents with Coding as Actions](https://arxiv.org/abs/2508.03923) | 动作 | 闭环调整, 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 图形界面 | 否 |
 | 80 | [CodeAct: Executable Code Actions Elicit Better LLM Agents](https://arxiv.org/abs/2402.01030) | 动作 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 软件工程 | 否 |
-| 81 | [Agent S3 / OSWorld-ACI](https://github.com/simular-ai/agent-s) | 动作 | 单次生成 | 机制冻结 | 运行时全冻结 | — | 符号 | 前端 | 否 |
+| 81 | [Agent S3 / OSWorld-ACI](https://github.com/simular-ai/agent-s) | 动作 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 符号 | 前端 | 否 |
 | 82 | [Self-Taught Evaluators](https://arxiv.org/abs/2408.02666) | 奖励 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | NLP | 是 |
 | 83 | [RM-R1: Reward Modeling as Reasoning](https://arxiv.org/abs/2505.02387) | 奖励 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | NLP | 否 |
 | 84 | [Rubric-ARM: Alternating RL for Rubric-Based Reward Modeling](https://arxiv.org/abs/2602.01511) | 奖励 | 闭环调整, 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | NLP | 是 |
@@ -218,7 +218,7 @@ start code-as-policy-cube.html
 | 88 | [DERL: Differentiable Evolutionary Discovery of Optimal Reward Structures](https://arxiv.org/abs/2512.13399) | 奖励 | 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 仿真 | 通用 | 否 |
 | 89 | [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) | 奖励 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 模型 | 通用 | 否 |
 | 90 | [SER: Self-Evolved Reward Learning for LLMs](https://arxiv.org/abs/2411.00418) | 奖励 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 91 | [RM-Distiller（近邻）](https://arxiv.org/abs/2601.14032) | 奖励 | 单次生成 | 权重训练 | 运行时全冻结 | — | — | 通用 | 否 |
+| 91 | [RM-Distiller（近邻）](https://arxiv.org/abs/2601.14032) | 奖励 | 单次生成 | 权重训练 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
 | 92 | [Generating and Refining Dynamic Evaluation Rubrics for LLM-as-a-Judge](https://arxiv.org/abs/2605.30568) | 奖励 | 闭环调整 | 运行时适应 | 只采集数据，不训练 | 验证反馈 | 模型 | NLP | 否 |
 | 93 | [Inference-Time Reward Hacking in Large Language Models](https://arxiv.org/abs/2508.08884) | 奖励 | 单次生成 | 运行时适应 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 94 | [TDRM: Smooth Reward Models with Temporal Difference for LLM Reasoning](https://openreview.net/forum?id=j2oWVgTFNX) | 奖励 | 世界模型, 闭环调整 | 机制自进化 | 运行时全冻结 | 验证反馈 | 模型 | 数学 | 否 |
@@ -230,34 +230,34 @@ start code-as-policy-cube.html
 | 100 | [Reward Model Overoptimisation in Iterated RLHF](https://arxiv.org/abs/2505.18126) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 101 | [FORGE: A Multi-Agent LLM Framework for Reward Design](https://openreview.net/forum?id=Z6GStCfccl) | 奖励 | 多智能体, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 102 | [LaRes: Evolutionary Reinforcement Learning with LLM-based Adaptive Reward Search](https://papers.nips.cc/paper_files/paper/2025/hash/21b5d3a17aa5525f30bfd2bc59ac3a48-Abstract-Conference.html) | 奖励 | 进化搜索 | 机制冻结 | 采集数据＋训练 | 验证反馈 | 仿真 | 机器人 | 否 |
-| 103 | [Reward Modeling for Reinforcement Learning-Based LLM Reasoning: A Survey](https://arxiv.org/abs/2602.09305) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
+| 103 | [Reward Modeling for Reinforcement Learning-Based LLM Reasoning: A Survey](https://arxiv.org/abs/2602.09305) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
 | 104 | [SENSEI: Semantic Exploration Guided by Foundation Models](https://arxiv.org/abs/2503.01584) | 奖励 | 世界模型 | 机制冻结 | 采集数据＋训练 | 数据飞轮 | 模型 | 机器人 | 否 |
 | 105 | [REvolve: Reward Evolution with Large Language Models](https://arxiv.org/abs/2406.01309) | 奖励 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 106 | [PCGRLLM](https://arxiv.org/abs/2502.10906) | 奖励 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 仿真 | Minecraft | 否 |
+| 106 | [PCGRLLM](https://arxiv.org/abs/2502.10906) | 奖励 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 仿真 | Minecraft | 否 |
 | 107 | [MoRE](https://imt-atlantique.hal.science/hal-05450173/document) | 奖励 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 108 | [DrEureka](https://arxiv.org/abs/2406.01967) | 奖励 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 109 | [Eureka](https://arxiv.org/abs/2310.12931) | 奖励 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 机器人 | 否 |
 | 110 | [CARD: A Large Language Model-Driven Reward Design Framework](https://arxiv.org/abs/2410.14660) | 奖励 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 111 | [Reward Design with Language Models (L2R)（近邻）](https://arxiv.org/abs/2303.00001) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 112 | [Text2Reward（初版）](https://arxiv.org/abs/2309.11489) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | — | 仿真, 人类 | 通用 | 否 |
+| 111 | [Reward Design with Language Models (L2R)（近邻）](https://arxiv.org/abs/2303.00001) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 112 | [Text2Reward（初版）](https://arxiv.org/abs/2309.11489) | 奖励 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 仿真, 人类 | 通用 | 否 |
 | 113 | [Emergent Tool Use From Multi-Agent Autocurricula](https://arxiv.org/abs/1909.07528) | 技能 | 多智能体, 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 仿真 | Minecraft | 否 |
 | 114 | [SAGE: Skill Augmented GRPO for Self-Evolution](https://arxiv.org/abs/2512.17102) | 技能 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 通用 | 否 |
 | 115 | [DADS: Dynamics-Aware Unsupervised Discovery of Skills](https://arxiv.org/abs/1907.01657) | 技能 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 116 | [LUCID: Latent-Skill Unified Control via Imagined Dynamics](https://arxiv.org/abs/2608.07746) | 技能 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 117 | [Odyssey](https://openreview.net/forum?id=vtGLtSxtqv) | 技能 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
-| 118 | [JARVIS-1](https://arxiv.org/search/?searchtype=all&query=JARVIS-1+open-world+multi-task+agents+memory-augmented) | 技能 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
+| 117 | [Odyssey](https://openreview.net/forum?id=vtGLtSxtqv) | 技能 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
+| 118 | [JARVIS-1](https://arxiv.org/search/?searchtype=all&query=JARVIS-1+open-world+multi-task+agents+memory-augmented) | 技能 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
 | 119 | [DreamCoder](https://arxiv.org/abs/2006.08381) | 技能 | 技能沉淀 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 模型 | 通用 | 否 |
 | 120 | [SkillFoundry: Building Self-Evolving Agent Skill Libraries](https://arxiv.org/abs/2604.03964) | 技能 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
 | 121 | [SkillAxe: Sharpening LLM-Authored Agent Skills Through Execution Feedback](https://arxiv.org/abs/2606.10546) | 技能 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
 | 122 | [MineEvolve: Minecraft Skills and Guardrails from Experience](https://arxiv.org/abs/2603.13131) | 技能, 约束 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | Minecraft | 否 |
 | 123 | [Self-Evolving Embodied Agents via Skill-Harness Evolution](https://arxiv.org/abs/2608.11350) | 技能 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 124 | [Super Library Agent](https://arxiv.org/abs/2608.29310) | 技能 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
+| 124 | [Super Library Agent](https://arxiv.org/abs/2608.29310) | 技能 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
 | 125 | [Voyager](https://arxiv.org/abs/2305.16291) | 技能 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | Minecraft | 否 |
 | 126 | [Multi-Resolution Skill Discovery for HRL Agents](https://arxiv.org/abs/2505.21410) | 技能 | 世界模型 | 机制冻结 | 运行时全冻结 | 验证反馈 | 仿真 | 机器人 | 否 |
 | 127 | [CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Methods](https://arxiv.org/abs/2604.01687) | 技能 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 128 | [EvoSkill](https://arxiv.org/abs/2603.02766) | 技能 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 129 | [LEGO-Prover](https://scholar.google.com/scholar?q=LEGO-Prover+skill+library+theorem+proving) | 技能, 研究 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | — | 模型 | 数学 | 否 |
-| 130 | [LILO](https://arxiv.org/abs/2310.19791) | 技能 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
+| 128 | [EvoSkill](https://arxiv.org/abs/2603.02766) | 技能 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 129 | [LEGO-Prover](https://scholar.google.com/scholar?q=LEGO-Prover+skill+library+theorem+proving) | 技能, 研究 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 模型 | 数学 | 否 |
+| 130 | [LILO](https://arxiv.org/abs/2310.19791) | 技能 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
 | 131 | [Provably Safe Policy Updates in Deep Reinforcement Learning](https://arxiv.org/abs/2604.09452) | 约束 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 通用 | 否 |
 | 132 | [SafeDreamer: Safe Reinforcement Learning with World Models](https://arxiv.org/abs/2307.07176) | 约束 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 133 | [Test-Time Adaptation for Generalizable Task Progress Estimation](https://arxiv.org/abs/2506.10085) | 约束 | 闭环调整 | 运行时适应 | 只训练，不采集 | 验证反馈 | 模型 | 机器人 | 否 |
@@ -267,84 +267,84 @@ start code-as-policy-cube.html
 | 137 | [Proactive Runtime Enforcement of LLM Agent Safety](https://arxiv.org/abs/2508.00500) | 约束 | 世界模型, 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 138 | [Toward Safe LLM Agents: A Survey of Specification, Verification, and Enforcement](https://arxiv.org/abs/2608.14590) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 符号 | 通用 | 否 |
 | 139 | [ToolEmu: Identifying the Risks of LLM Agents with an LLM Emulator](https://arxiv.org/abs/2309.04786) | 约束 | 世界模型 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 140 | [SafeManip: A Property-Driven Benchmark for Temporal Safety in Robotic Manipulation](https://arxiv.org/abs/2605.12386) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 机器人 | 否 |
-| 141 | [RoboGuard: Safety Guardrails for LLM-Enabled Robots](https://arxiv.org/abs/2503.07885) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 机器人 | 否 |
+| 140 | [SafeManip: A Property-Driven Benchmark for Temporal Safety in Robotic Manipulation](https://arxiv.org/abs/2605.12386) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 机器人 | 否 |
+| 141 | [RoboGuard: Safety Guardrails for LLM-Enabled Robots](https://arxiv.org/abs/2503.07885) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 机器人 | 否 |
 | 142 | [Learning Failure Prevention Skills for Safe Robot Manipulation](https://arxiv.org/abs/2305.02807) | 约束 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 真实环境 | 机器人 | 否 |
 | 143 | [SAHOO: Monitoring Alignment Drift during RSI](https://arxiv.org/abs/2603.06333) | 约束 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 144 | [AutoSafeCoder](https://neurips.cc/virtual/2024/99390) | 约束 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 145 | [AssertMiner（近邻）](https://arxiv.org/abs/2511.10007) | 约束 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | — | 符号 | 通用 | 否 |
+| 144 | [AutoSafeCoder](https://neurips.cc/virtual/2024/99390) | 约束 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 145 | [AssertMiner（近邻）](https://arxiv.org/abs/2511.10007) | 约束 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 通用 | 否 |
 | 146 | [Lisa（近邻）](https://arxiv.org/abs/2607.18711) | 约束 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 147 | [QD 漏洞多样性搜索（近邻）](https://arxiv.org/abs/2606.00801) | 约束 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
-| 148 | [UnitTenX（近邻）](https://arxiv.org/abs/2510.05441) | 约束 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | — | 符号 | 通用 | 否 |
-| 149 | [Property-Generated Solver](https://arxiv.org/abs/2506.18315) | 约束 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | — | 符号 | 通用 | 否 |
+| 147 | [QD 漏洞多样性搜索（近邻）](https://arxiv.org/abs/2606.00801) | 约束 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
+| 148 | [UnitTenX（近邻）](https://arxiv.org/abs/2510.05441) | 约束 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 通用 | 否 |
+| 149 | [Property-Generated Solver](https://arxiv.org/abs/2506.18315) | 约束 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 通用 | 否 |
 | 150 | [Code-as-Monitor (CaM)](https://arxiv.org/abs/2412.04455) | 约束 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型, 仿真 | 通用 | 否 |
-| 151 | [Pre-Execution Safety Gate](https://arxiv.org/abs/2604.05427) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 机器人 | 否 |
-| 152 | [Plug in the Safety Chip](https://openreview.net/pdf?id=INvxF4iQ34) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 153 | [FlexiWorld: Learning and Planning via Flexible Action Chunks Across Multiple Time Scales](https://arxiv.org/abs/2609.35138) | 世界, 动作 | 世界模型 | 权重训练 | 采集数据＋训练 | — | 仿真 | 机器人 | 否 |
+| 151 | [Pre-Execution Safety Gate](https://arxiv.org/abs/2604.05427) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 机器人 | 否 |
+| 152 | [Plug in the Safety Chip](https://openreview.net/pdf?id=INvxF4iQ34) | 约束 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 153 | [FlexiWorld: Learning and Planning via Flexible Action Chunks Across Multiple Time Scales](https://arxiv.org/abs/2609.35138) | 世界, 动作 | 世界模型 | 权重训练 | 采集数据＋训练 | 无反馈 | 仿真 | 机器人 | 否 |
 | 154 | [SimWorld Studio: Open-Source UE5 Platform for Automatic Generation of Evolving Embodied Environments](https://arxiv.org/abs/2605.09423) | 世界 | 单次生成 | 权重训练 | 采集数据＋训练 | 验证反馈 | 仿真 | 机器人 | 否 |
 | 155 | [PAN: A World Model for General Interactable Worlds via Generative Latent Prediction](https://arxiv.org/abs/2506.16616) | 世界, 策略 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 156 | [Genie: Generative Interactive Environments](https://arxiv.org/abs/2402.15391) | 世界 | 单次生成 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 仿真 | 通用 | 否 |
 | 157 | [Agent-World: Scaling Real-World Environment Synthesis](https://arxiv.org/abs/2604.18292) | 世界 | 世界模型, 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 仿真 | 通用 | 否 |
 | 158 | [Agent World Model: Infinity Synthetic Environments](https://arxiv.org/abs/2602.10090) | 世界 | 单次生成 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 仿真 | 通用 | 否 |
 | 159 | [Code2Worlds: Empowering Coding LLMs for 4D World Models](https://arxiv.org/abs/2602.11757) | 世界 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | 仿真 | 通用 | 否 |
-| 160 | [Cosmos（近邻，非代码）](https://arxiv.org/abs/2501.03575) | 世界 | 单次生成 | 权重训练 | 运行时全冻结 | — | — | 通用 | 否 |
+| 160 | [Cosmos（近邻，非代码）](https://arxiv.org/abs/2501.03575) | 世界 | 单次生成 | 权重训练 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
 | 161 | [Code-as-World-VL](https://arxiv.org/abs/2608.27549) | 世界 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 仿真 | 通用 | 否 |
 | 162 | [Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks](https://arxiv.org/abs/2610.11794) | 世界, 自我 | 世界模型, 记忆上下文, 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 是 |
 | 163 | [Self-Evolving World Models for LLM Agent Planning](https://arxiv.org/abs/2606.30639) | 世界 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 164 | [Dual Digital Twin（近邻）](https://www.mdpi.com/2079-9292/14/24/4806) | 世界 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | — | 仿真 | 通用 | 否 |
+| 164 | [Dual Digital Twin（近邻）](https://www.mdpi.com/2079-9292/14/24/4806) | 世界 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 无反馈 | 仿真 | 通用 | 否 |
 | 165 | [Scaling Laws for Pre-training Agents and World Models](https://arxiv.org/abs/2411.04434) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 仿真 | 通用 | 否 |
 | 166 | [A Definition and Roadmap for World Models](https://arxiv.org/abs/2607.06401) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
 | 167 | [NeSyS: Neuro-Symbolic Synergy for Interactive World Modeling](https://arxiv.org/abs/2602.10480) | 世界 | 世界模型 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
 | 168 | [World Model for Robot Learning: A Comprehensive Survey](https://arxiv.org/abs/2605.00080) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 仿真 | 机器人 | 否 |
 | 169 | [Foundation World Models for Agents that Learn, Verify, and Plan](https://arxiv.org/abs/2602.23997) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 170 | [From Word to World: Can Large Language Models be World Models?](https://arxiv.org/abs/2512.18832) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
+| 170 | [From Word to World: Can Large Language Models be World Models?](https://arxiv.org/abs/2512.18832) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
 | 171 | [SR-Platform](https://arxiv.org/abs/2605.14700) | 世界 | 技能沉淀, 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 172 | [Agent2World: Learning to Generate Symbolic World Models via Adaptive Tool-Use](https://arxiv.org/abs/2512.22336) | 世界 | 世界模型, 多智能体 | 机制冻结 | 运行时全冻结 | 数据飞轮 | 模型 | 通用 | 否 |
 | 173 | [PoE-World: Compositional World Modeling with Products of Experts](https://arxiv.org/abs/2505.10819) | 世界 | 世界模型 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 174 | [Generating Code World Models with LLMs (GIF-MCTS)](https://arxiv.org/abs/2405.15383) | 世界 | 世界模型 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 175 | [Executable World Models for ARC-AGI-3](https://arxiv.org/abs/2608.27549) | 世界 | 世界模型 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
+| 175 | [Executable World Models for ARC-AGI-3](https://arxiv.org/abs/2608.27549) | 世界 | 世界模型 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
 | 176 | [Code World Models for General Game Playing](https://arxiv.org/abs/2510.04542) | 世界 | 世界模型, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
 | 177 | [WorldCoder: A Model-Based LLM Agent](https://arxiv.org/abs/2402.12275) | 世界 | 世界模型 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
 | 178 | [Code as Worlds](https://arxiv.org/abs/2608.27549) | 世界 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 仿真 | 通用 | 否 |
-| 179 | [3DCodeBench](https://arxiv.org/abs/2606.01057) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 180 | [VoxelCodeBench](https://arxiv.org/abs/2604.02580) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 181 | [Code-as-Room](https://arxiv.org/abs/2605.18451) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 182 | [SceneCode](https://arxiv.org/abs/2605.19587) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 183 | [Scene Language](https://arxiv.org/search/?searchtype=all&query=Scene+Language+visual+numerical+scene+generation) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 184 | [Genesis](https://arxiv.org/abs/2502.02590) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
-| 185 | [RoboGen](https://arxiv.org/abs/2311.01455) | 世界 | 单次生成 | 机制冻结 | 采集数据＋训练 | — | 仿真 | 通用 | 否 |
+| 179 | [3DCodeBench](https://arxiv.org/abs/2606.01057) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 180 | [VoxelCodeBench](https://arxiv.org/abs/2604.02580) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 181 | [Code-as-Room](https://arxiv.org/abs/2605.18451) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 182 | [SceneCode](https://arxiv.org/abs/2605.19587) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 183 | [Scene Language](https://arxiv.org/search/?searchtype=all&query=Scene+Language+visual+numerical+scene+generation) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 184 | [Genesis](https://arxiv.org/abs/2502.02590) | 世界 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 185 | [RoboGen](https://arxiv.org/abs/2311.01455) | 世界 | 单次生成 | 机制冻结 | 采集数据＋训练 | 无反馈 | 仿真 | 通用 | 否 |
 | 186 | [Leveraging Human Revisions for Improving Text-to-Layout Generation](https://arxiv.org/abs/2405.13026) | 设计 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 人类 | 前端 | 否 |
 | 187 | [BRepCLIP: Contrastive Multimodal Pretraining on BRep](https://arxiv.org/abs/2606.05515) | 设计 | 技能沉淀 | 权重训练 | 运行时全冻结 | 验证反馈 | 仿真 | CAD | 否 |
-| 188 | [Generative Floor Plan Design with LLMs via Reinforcement Learning](https://arxiv.org/abs/2605.14117) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | — | 体系结构 | 否 |
+| 188 | [Generative Floor Plan Design with LLMs via Reinforcement Learning](https://arxiv.org/abs/2605.14117) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | 不适用 | 体系结构 | 否 |
 | 189 | [VeriCoder: Fine-tuned RTL Generation with 125K+ Examples](https://arxiv.org/abs/2504.15659) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | 符号 | 芯片 | 否 |
 | 190 | [RTLCoder: Outperforming GPT-3.5 in Design RTL Generation](https://arxiv.org/abs/2312.08617) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 数据飞轮 | 符号 | 芯片 | 否 |
-| 191 | [CAD-Recode: Reverse Engineering CAD Code from Point Clouds](https://arxiv.org/abs/2412.14042) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | — | CAD | 否 |
-| 192 | [Text2CAD](https://sadilkhan.github.io/text2cad-project/) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 证据反馈 | — | CAD | 否 |
+| 191 | [CAD-Recode: Reverse Engineering CAD Code from Point Clouds](https://arxiv.org/abs/2412.14042) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 验证反馈 | 不适用 | CAD | 否 |
+| 192 | [Text2CAD](https://sadilkhan.github.io/text2cad-project/) | 设计 | 单次生成 | 权重训练 | 运行时全冻结 | 证据反馈 | 不适用 | CAD | 否 |
 | 193 | [Interactive Evolutionary Image Generation with Bayesian Optimization](https://research-portal.uu.nl/ws/files/235432773/Image_Generation_with_Interactive_Evolutionary_System_using_Bayesian_Optimization.pdf) | 设计 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 人类 | 通用 | 否 |
 | 194 | [AssemCAD: Representative Production-Ready CAD Assemblies](https://arxiv.org/abs/2607.05123) | 设计 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 仿真 | CAD | 否 |
 | 195 | [CADIR: A Cross-Backend Editable Intermediate Representation](https://arxiv.org/abs/2608.00891) | 设计 | 技能沉淀 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | CAD | 否 |
-| 196 | [Large Language Models for Computer-Aided Design: A Survey](https://arxiv.org/abs/2505.08137) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | CAD | 否 |
+| 196 | [Large Language Models for Computer-Aided Design: A Survey](https://arxiv.org/abs/2505.08137) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | CAD | 否 |
 | 197 | [Catala: A Programming Language for the Law](https://arxiv.org/abs/2103.03198) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 符号 | 法律 | 否 |
-| 198 | [IFC-Based Building Design Using Large Language Models](https://arxiv.org/abs/2511.05533) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 体系结构 | 否 |
-| 199 | [Text2MBL: Text-to-Code Generation for Modular Building Layouts](https://arxiv.org/abs/2509.23713) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 体系结构 | 否 |
-| 200 | [Interaction2Code: How Far Are We From Automatic Interactive Webpage Generation?](https://arxiv.org/abs/2411.03292) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 前端 | 否 |
-| 201 | [Web2Code: A Large-scale Webpage-to-Code Dataset and Benchmark](https://proceedings.neurips.cc/paper_files/paper/2024/file/cb66be286795d71f89367d596bf78ea7-Paper-Datasets_and_Benchmarks_Track.pdf) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 前端 | 否 |
-| 202 | [Text2CAD-Bench: A Benchmark for LLM-based Text-to-CAD](https://arxiv.org/abs/2605.18430) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | CAD | 否 |
+| 198 | [IFC-Based Building Design Using Large Language Models](https://arxiv.org/abs/2511.05533) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 体系结构 | 否 |
+| 199 | [Text2MBL: Text-to-Code Generation for Modular Building Layouts](https://arxiv.org/abs/2509.23713) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 体系结构 | 否 |
+| 200 | [Interaction2Code: How Far Are We From Automatic Interactive Webpage Generation?](https://arxiv.org/abs/2411.03292) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 前端 | 否 |
+| 201 | [Web2Code: A Large-scale Webpage-to-Code Dataset and Benchmark](https://proceedings.neurips.cc/paper_files/paper/2024/file/cb66be286795d71f89367d596bf78ea7-Paper-Datasets_and_Benchmarks_Track.pdf) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 前端 | 否 |
+| 202 | [Text2CAD-Bench: A Benchmark for LLM-based Text-to-CAD](https://arxiv.org/abs/2605.18430) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | CAD | 否 |
 | 203 | [EvolVE: Evolutionary Search for LLM-based Verilog Generation](https://arxiv.org/abs/2601.18067) | 设计 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 芯片 | 否 |
 | 204 | [CADEvolve: Creating Realistic CAD via Program Evolution](https://arxiv.org/abs/2602.16317) | 设计 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 仿真 | CAD | 否 |
 | 205 | [EvoCAD: Evolutionary CAD Code Generation with Vision Language Models](https://arxiv.org/abs/2510.11631) | 设计 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | CAD | 否 |
 | 206 | [From Surrogate Modeling to Autonomous Design](https://arxiv.org/abs/2608.18279) | 设计 | 世界模型 | 机制冻结 | 运行时全冻结 | 证据反馈 | 仿真 | 通用 | 否 |
-| 207 | [NeOn-GPT](https://2024.eswc-conferences.org/wp-content/uploads/2024/05/77770034.pdf) | 设计 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 本体 | 否 |
+| 207 | [NeOn-GPT](https://2024.eswc-conferences.org/wp-content/uploads/2024/05/77770034.pdf) | 设计 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 本体 | 否 |
 | 208 | [NL2SHACL 基准（近邻）](https://arxiv.org/html/2608.07530v2) | 设计 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 证据反馈 | 符号 | 本体 | 否 |
-| 209 | [xpSHACL](https://arxiv.org/abs/2507.08432) | 设计 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | — | 符号 | 本体 | 否 |
+| 209 | [xpSHACL](https://arxiv.org/abs/2507.08432) | 设计 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 本体 | 否 |
 | 210 | [Extended NeOn-GPT](https://journals.sagepub.com/doi/abs/10.1177/22104968261453138) | 设计 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 本体 | 否 |
 | 211 | [Text-to-CAD + Visual Feedback](https://icml.cc/virtual/2025/poster/46007) | 设计 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | CAD | 否 |
-| 212 | [SPIRES / OntoGPT: Structured Prompt Interrogation and Recursive Extraction of Semantics](https://arxiv.org/abs/2304.02711) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 本体 | 否 |
-| 213 | [RIGOR: Retrieval-Augmented Generation of Ontologies from Relational Schemas](https://arxiv.org/abs/2506.01232) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 本体 | 否 |
-| 214 | [Ontology Generation using LLMs](https://arxiv.org/abs/2503.05388) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 本体 | 否 |
-| 215 | [Text-to-CadQuery](https://arxiv.org/abs/2505.06507) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | — | 仿真 | CAD | 否 |
-| 216 | [Design2Code](https://arxiv.org/abs/2403.03163) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 前端 | 否 |
-| 217 | [Improving Test-Time Scaling with Adaptive Looped Transformers](https://arxiv.org/abs/2609.35748) | 推理 | 闭环调整 | 权重训练 | 只训练，不采集 | — | — | NLP | 否 |
+| 212 | [SPIRES / OntoGPT: Structured Prompt Interrogation and Recursive Extraction of Semantics](https://arxiv.org/abs/2304.02711) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 本体 | 否 |
+| 213 | [RIGOR: Retrieval-Augmented Generation of Ontologies from Relational Schemas](https://arxiv.org/abs/2506.01232) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 本体 | 否 |
+| 214 | [Ontology Generation using LLMs](https://arxiv.org/abs/2503.05388) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 本体 | 否 |
+| 215 | [Text-to-CadQuery](https://arxiv.org/abs/2505.06507) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 仿真 | CAD | 否 |
+| 216 | [Design2Code](https://arxiv.org/abs/2403.03163) | 设计 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 前端 | 否 |
+| 217 | [Improving Test-Time Scaling with Adaptive Looped Transformers](https://arxiv.org/abs/2609.35748) | 推理 | 闭环调整 | 权重训练 | 只训练，不采集 | 无反馈 | 不适用 | NLP | 否 |
 | 218 | [Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge](https://arxiv.org/abs/2609.34327) | 推理 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号 | NLP | 否 |
 | 219 | [Beyond Repeated Sampling: Learning Search Policies for LLM Reasoning](https://arxiv.org/abs/2609.26704) | 推理 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号 | 数学 | 否 |
 | 220 | [ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning](https://arxiv.org/abs/2608.03972) | 推理 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 数学 | 否 |
@@ -354,28 +354,28 @@ start code-as-policy-cube.html
 | 224 | [STaR: Bootstrapping Reasoning with Reasoning](https://arxiv.org/abs/2203.14465) | 推理 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 模型 | 数学 | 否 |
 | 225 | [rStar-Math: Small LLMs Master Math Reasoning with Self-Evolved Deep Thinking](https://arxiv.org/abs/2501.04519) | 推理 | 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 数学 | 否 |
 | 226 | [AlphaGeometry: Solving Olympiad Geometry without Human Demonstrations](https://www.nature.com/articles/s41586-023-06747-5) | 推理 | 闭环调整 | 权重训练 | 只采集数据，不训练 | 数据飞轮 | 符号 | 数学 | 否 |
-| 227 | [VPD (Visual Program Distillation)](https://www.semanticscholar.org/paper/af1c871282ec122869d03f5420ef5d9143358a91) | 推理 | 单次生成 | 权重训练 | 运行时全冻结 | — | — | 通用 | 否 |
+| 227 | [VPD (Visual Program Distillation)](https://www.semanticscholar.org/paper/af1c871282ec122869d03f5420ef5d9143358a91) | 推理 | 单次生成 | 权重训练 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
 | 228 | [Test-Time Curricula for Targeted Reinforcement Learning](https://openreview.net/forum?id=HoUIYpitfo) | 推理 | 进化搜索, 闭环调整 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 模型 | 数学 | 否 |
 | 229 | [Test-Time Policy Adaptation for Enhanced Multi-Turn Reasoning](https://arxiv.org/abs/2509.23166) | 推理 | 闭环调整 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 模型 | 数学 | 否 |
 | 230 | [Test-Time Tool Evolution for Scientific Reasoning](https://arxiv.org/abs/2601.07641) | 推理 | 技能沉淀 | 运行时适应 | 只采集数据，不训练 | 验证反馈 | 符号 | 数学 | 否 |
 | 231 | [Tent: Fully Test-time Adaptation by Entropy Minimization](https://arxiv.org/abs/2006.10726) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | 验证反馈 | 模型 | 通用 | 否 |
 | 232 | [TTRL: Test-Time Reinforcement Learning](https://arxiv.org/abs/2504.16084) | 推理 | 闭环调整 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 模型 | 数学 | 否 |
-| 233 | [Titans: Learning to Memorize at Test Time（近邻）](https://arxiv.org/abs/2501.00663) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | — | — | 通用 | 否 |
-| 234 | [The Surprising Effectiveness of Test-Time Training for Abstract Reasoning（近邻）](https://icml.cc/virtual/2025/poster/44773) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | — | — | 通用 | 否 |
-| 235 | [Learning to (Learn at Test Time): RNNs with Expressive Hidden States (TTT)（近邻）](https://arxiv.org/abs/2407.04620) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | — | — | 通用 | 否 |
+| 233 | [Titans: Learning to Memorize at Test Time（近邻）](https://arxiv.org/abs/2501.00663) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | 无反馈 | 不适用 | 通用 | 否 |
+| 234 | [The Surprising Effectiveness of Test-Time Training for Abstract Reasoning（近邻）](https://icml.cc/virtual/2025/poster/44773) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | 无反馈 | 不适用 | 通用 | 否 |
+| 235 | [Learning to (Learn at Test Time): RNNs with Expressive Hidden States (TTT)（近邻）](https://arxiv.org/abs/2407.04620) | 推理 | 单次生成 | 运行时适应 | 只训练，不采集 | 无反馈 | 不适用 | 通用 | 否 |
 | 236 | [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) | 推理 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 237 | [ReasoningBank（语言形态）](https://arxiv.org/abs/2509.25140) | 推理 | 技能沉淀, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
 | 238 | [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) | 推理 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 239 | [What Learning Algorithm is In-Context Learning? Investigations with Linear Models](https://arxiv.org/abs/2211.15661) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
 | 240 | [RAP: Reasoning via Planning in Language Model is Planning with World Model](https://aclanthology.org/2023.emnlp-main.507.pdf) | 推理 | 世界模型 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 241 | [MAC-Reasoner](https://aclanthology.org/2026.findings-acl.233.pdf) | 推理 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 242 | [AgentGroupChat-V2](https://arxiv.org/abs/2506.15451) | 推理 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 243 | [AutoQD](https://arxiv.org/abs/2506.05634) | 推理 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
-| 244 | [Quality-Diversity through AI Feedback (QDAIF)](https://arxiv.org/abs/2310.13032) | 推理 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
+| 241 | [MAC-Reasoner](https://aclanthology.org/2026.findings-acl.233.pdf) | 推理 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 242 | [AgentGroupChat-V2](https://arxiv.org/abs/2506.15451) | 推理 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 243 | [AutoQD](https://arxiv.org/abs/2506.05634) | 推理 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
+| 244 | [Quality-Diversity through AI Feedback (QDAIF)](https://arxiv.org/abs/2310.13032) | 推理 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
 | 245 | [Self-Debugging](https://arxiv.org/abs/2304.05128) | 推理 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 246 | [ExoViP: Step-by-Step Verification with Exoskeleton Modules](https://arxiv.org/abs/2408.02210) | 推理 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
+| 246 | [ExoViP: Step-by-Step Verification with Exoskeleton Modules](https://arxiv.org/abs/2408.02210) | 推理 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
 | 247 | [LLM+P](https://arxiv.org/abs/2304.11477) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 符号 | 通用 | 否 |
-| 248 | [PoT (Program of Thoughts)](https://arxiv.org/abs/2211.12588) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | — | — | 通用 | 否 |
+| 248 | [PoT (Program of Thoughts)](https://arxiv.org/abs/2211.12588) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
 | 249 | [PAL](https://arxiv.org/abs/2211.10435) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 符号 | 通用 | 否 |
 | 250 | [ViperGPT: Visual Inference via Python Execution for Reasoning](https://arxiv.org/abs/2303.08128) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 符号 | 通用 | 否 |
 | 251 | [VisProg: Visual Programming — Compositional Visual Reasoning without Training](https://arxiv.org/abs/2211.11559) | 推理 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 符号 | 通用 | 否 |
@@ -402,9 +402,9 @@ start code-as-policy-cube.html
 | 272 | [RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn RL](https://arxiv.org/abs/2504.20073) | 自我 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 273 | [RISE: Recursive Introspection — Teaching Language Model Agents How to Self-Improve](https://arxiv.org/abs/2407.18219) | 自我 | 闭环调整 | 权重训练 | 运行时全冻结 | 数据飞轮 | 模型 | 通用 | 否 |
 | 274 | [RISE: Recursive Improvement via Self-Extrapolating Policy Distillation](https://arxiv.org/abs/2609.05295) | 自我 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 模型 | 通用 | 是 |
-| 275 | [AgentDistill](https://arxiv.org/abs/2506.14728) | 自我 | 单次生成 | 权重训练 | 运行时全冻结 | — | — | 通用 | 否 |
-| 276 | [Agent Distillation](https://neurips.cc/virtual/2025/poster/117657) | 自我 | 多智能体 | 权重训练 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 277 | [AgentArk](https://arxiv.org/abs/2602.03955) | 自我 | 多智能体 | 权重训练 | 运行时全冻结 | — | 模型 | 通用 | 否 |
+| 275 | [AgentDistill](https://arxiv.org/abs/2506.14728) | 自我 | 单次生成 | 权重训练 | 运行时全冻结 | 无反馈 | 不适用 | 通用 | 否 |
+| 276 | [Agent Distillation](https://neurips.cc/virtual/2025/poster/117657) | 自我 | 多智能体 | 权重训练 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 277 | [AgentArk](https://arxiv.org/abs/2602.03955) | 自我 | 多智能体 | 权重训练 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
 | 278 | [FlowReasoner](https://arxiv.org/abs/2504.15257) | 自我 | 多智能体 | 权重训练 | 运行时全冻结 | 数据飞轮 | 模型 | 通用 | 否 |
 | 279 | [Self-Adapting Language Models (SEAL)](https://arxiv.org/abs/2506.10943) | 自我 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 模型 | 通用 | 是 |
 | 280 | [Continual Learning, Not Training: Online Adaptation for Deployed Agents](https://arxiv.org/abs/2511.01093) | 自我, 动作 | 闭环调整, 记忆上下文 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
@@ -446,13 +446,13 @@ start code-as-policy-cube.html
 | 316 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 317 | [Scaling Self-Evolving Agents via Parametric Memory](https://arxiv.org/abs/2606.04536) | 自我 | 闭环调整, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
 | 318 | [Sleep-time Compute: Beyond Inference Scaling at Test-time](https://arxiv.org/abs/2504.13171) | 自我 | 技能沉淀, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 319 | [Gödel Machine: Self-Referential Optimal Problem Solvers](https://arxiv.org/abs/cs/0309048) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 数学 | 否 |
-| 320 | [The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
-| 321 | [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | — | 通用 | 否 |
+| 319 | [Gödel Machine: Self-Referential Optimal Problem Solvers](https://arxiv.org/abs/cs/0309048) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 数学 | 否 |
+| 320 | [The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
+| 321 | [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
 | 322 | [A Dynamic LLM-Powered Agent Network for Task-Oriented Collaboration (DyLAN)](https://arxiv.org/abs/2310.02170) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
 | 323 | [Search Self-play: Pushing the Frontier of Agent Capability without Supervision](https://arxiv.org/abs/2510.18821) | 研究 | 进化搜索 | 递归自我改进 | 采集数据＋训练 | 验证反馈 | 真实环境 | 网页 | 是 |
 | 324 | [Machines That Accelerate Machine-Making: A Research Agenda for Human-Demand-Guided Physical Recursive Self-Improvement](https://www.datafluxdynamics.ltd/research/machines-that-accelerate-machine-making.pdf) | 研究, 策略 | 单次生成 | 递归自我改进 | 运行时全冻结 | 数据飞轮 | 符号 | 通用 | 是 |
-| 325 | [Absolute Zero: Reinforced Self-play Reasoning with Zero Data (AZR)](https://arxiv.org/abs/2505.03335) | 研究 | 进化搜索 | 递归自我改进 | 采集数据＋训练 | — | 模型 | 通用 | 是 |
+| 325 | [Absolute Zero: Reinforced Self-play Reasoning with Zero Data (AZR)](https://arxiv.org/abs/2505.03335) | 研究 | 进化搜索 | 递归自我改进 | 采集数据＋训练 | 无反馈 | 模型 | 通用 | 是 |
 | 326 | [IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation](https://arxiv.org/abs/2610.04074) | 研究 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 327 | [From Self-Evolving Synthetic Data to Verifiable-Reward RL for Multi-Turn Tool-Using Agents](https://arxiv.org/abs/2601.22607) | 研究, 自我 | 闭环调整, 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 通用 | 否 |
 | 328 | [MatBrain: Collaborative Dual-Model Agent for Autonomous Crystal Materials Research](https://arxiv.org/abs/2604.11540) | 研究, 设计 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号 | 通用 | 否 |
@@ -460,16 +460,16 @@ start code-as-policy-cube.html
 | 330 | [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](https://arxiv.org/abs/2607.28568) | 研究 | 进化搜索, 闭环调整 | 权重训练 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
 | 331 | [Scaling Self-Play with Self-Guidance in Lean4](https://arxiv.org/abs/2604.20209) | 研究 | 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 数学 | 否 |
 | 332 | [STP: Self-play LLM Theorem Provers with Iterative Conjecturing and Proving](https://arxiv.org/abs/2502.00212) | 研究 | 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 数学 | 否 |
-| 333 | [RefineCoder](https://arxiv.org/abs/2502.09183) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | — | 符号 | 通用 | 否 |
-| 334 | [DreamProver](https://arxiv.org/abs/2604.26311) | 研究 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | — | 模型 | 通用 | 否 |
-| 335 | [EvoTune](https://claire-labo.github.io/EvoTune/) | 研究 | 进化搜索 | 权重训练 | 采集数据＋训练 | — | 仿真 | 通用 | 否 |
+| 333 | [RefineCoder](https://arxiv.org/abs/2502.09183) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 无反馈 | 符号 | 通用 | 否 |
+| 334 | [DreamProver](https://arxiv.org/abs/2604.26311) | 研究 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
+| 335 | [EvoTune](https://claire-labo.github.io/EvoTune/) | 研究 | 进化搜索 | 权重训练 | 采集数据＋训练 | 无反馈 | 仿真 | 通用 | 否 |
 | 336 | [Scaling Automatic Research Agents via World Models (WMRL)](https://arxiv.org/abs/2608.12564) | 研究 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 软件工程 | 否 |
 | 337 | [Sample Efficient Generative Molecular Optimization](https://arxiv.org/abs/2602.10984) | 研究 | 闭环调整 | 运行时适应 | 只采集数据，不训练 | 验证反馈 | 模型 | 药物研发 | 否 |
 | 338 | [FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution](https://arxiv.org/abs/2610.03675) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 数学 | 否 |
 | 339 | [Arbor: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement](https://arxiv.org/abs/2606.11926) | 研究 | 多智能体, 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
 | 340 | [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://github.com/zhengkid/Dream-RSI) | 研究, 自我 | 世界模型, 记忆上下文, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
 | 341 | [MLEvolve: Progressive Graph Search with Retrospective Memory](https://arxiv.org/abs/2606.06473) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 342 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | — | 符号 | 软件工程 | 否 |
+| 342 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 无反馈 | 符号 | 软件工程 | 否 |
 | 343 | [Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents](https://arxiv.org/abs/2610.07447) | 研究 | 多智能体, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
 | 344 | [Benchmark Radar: A Living Database and Search Engine for AI Benchmarks](https://arxiv.org/abs/2609.11115) | 研究 | 单次生成 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
 | 345 | [OmniScientist: An Omni-Modal Omni-Discipline AI Scientist](https://arxiv.org/abs/2608.13558) | 研究 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 真实环境 | 通用 | 否 |
@@ -489,13 +489,13 @@ start code-as-policy-cube.html
 | 359 | [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) | 研究 | 闭环调整, 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 360 | [CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation](https://arxiv.org/abs/2503.22708) | 研究 | 进化搜索, 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
 | 361 | [Towards an AI Co-Scientist](https://arxiv.org/abs/2502.18864) | 研究 | 多智能体, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 药物研发 | 否 |
-| 362 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
+| 362 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
 | 363 | [The AI Scientist](https://arxiv.org/abs/2408.06292) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 364 | [ChatDev](https://arxiv.org/abs/2307.07924) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 365 | [MetaGPT](https://arxiv.org/abs/2308.00352) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 366 | [Self-Collaboration Code Generation](https://arxiv.org/abs/2304.07590) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | — | 模型 | 通用 | 否 |
-| 367 | [Digital Red Queen](https://pub.sakana.ai/drq/) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 仿真 | 通用 | 否 |
-| 368 | [FunSearch](https://www.nature.com/articles/s41586-023-06924-6) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | — | 符号 | 数学 | 否 |
+| 364 | [ChatDev](https://arxiv.org/abs/2307.07924) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 365 | [MetaGPT](https://arxiv.org/abs/2308.00352) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 366 | [Self-Collaboration Code Generation](https://arxiv.org/abs/2304.07590) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 367 | [Digital Red Queen](https://pub.sakana.ai/drq/) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 仿真 | 通用 | 否 |
+| 368 | [FunSearch](https://www.nature.com/articles/s41586-023-06924-6) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 数学 | 否 |
 | 369 | [Learning to Evaluate Before Improving (AutoSciRub)](https://arxiv.org/abs/2608.31076) | 研究 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 软件工程 | 否 |
 <!-- PAPER-INDEX:END -->
 

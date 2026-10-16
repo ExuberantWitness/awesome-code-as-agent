@@ -14,10 +14,10 @@ const LVL_EN={0:'Frozen mechanism',1:'Mechanism self-evolves',2:'Adapts at runti
 const LVL_CN={0:'机制冻结',1:'机制自进化',2:'运行时适应',3:'权重训练',4:'递归自我改进'};
 const TS_EN={a:'Collects data + trains',b:'Collects data, no training',c:'Trains, no data collection',d:'Frozen at runtime'};
 const TS_CN={a:'采集数据＋训练',b:'只采集数据，不训练',c:'只训练，不采集',d:'运行时全冻结'};
-const STK_EN={0:'—',1:'Evidence feedback',2:'Verification feedback',3:'Data flywheel'};
-const STK_CN={0:'—',1:'证据反馈',2:'验证反馈',3:'数据飞轮'};
-const ORA_EN={sym:'Symbolic',sim:'Simulation',model:'Model',real:'Real-world',human:'Human',na:'—'};
-const ORA_CN={sym:'符号',sim:'仿真',model:'模型',real:'真实环境',human:'人类',na:'—'};
+const STK_EN={0:'No feedback',1:'Evidence feedback',2:'Verification feedback',3:'Data flywheel'};
+const STK_CN={0:'无反馈',1:'证据反馈',2:'验证反馈',3:'数据飞轮'};
+const ORA_EN={sym:'Symbolic',sim:'Simulation',model:'Model',real:'Real-world',human:'Human',na:'N/A'};
+const ORA_CN={sym:'符号',sim:'仿真',model:'模型',real:'真实环境',human:'人类',na:'不适用'};
 const DOM_EN={robot:'Robotics',general:'General',front:'Frontend',swe:'Software',gui:'GUI',mc:'Minecraft',math:'Math',web:'Web',cad:'CAD',onto:'Ontology',drug:'Drug discovery',chip:'Chip',arch:'Architecture',law:'Legal',nlp:'NLP',multimodal:'Multimodal'};
 const DOM_CN={robot:'机器人',general:'通用',front:'前端',swe:'软件工程',gui:'图形界面',mc:'Minecraft',math:'数学',web:'网页',cad:'CAD',onto:'本体',drug:'药物研发',chip:'芯片',arch:'体系结构',law:'法律',nlp:'NLP',multimodal:'多模态'};
 
@@ -43,7 +43,7 @@ function build(lang){
     const papers=DB.filter(p=>p.scenes[0]===s).sort((a,b)=>b.lvl-a.lvl||parseInt(b.id.slice(1))-parseInt(a.id.slice(1)));
     for(const p of papers){
       idx++;
-      lines.push('| '+idx+' | ['+esc(p.n)+']('+esc(p.l)+') | '+map(p.scenes,S)+' | '+map(p.dirs,D)+' | '+lvlName(p.lvl,V)+' | '+(T[p.ts]||p.ts)+' | '+(K[p.stk]!=null?K[p.stk]:p.stk)+' | '+map(p.oracle,O)+' | '+(M[p.dom]||p.dom)+' | '+(p.selfref?(L?'是':'Yes'):(L?'否':'No'))+' |');
+      lines.push('| '+idx+' | ['+esc(p.n)+']('+esc(p.l)+') | '+map(p.scenes,S)+' | '+map(p.dirs,D)+' | '+lvlName(p.lvl,V)+' | '+(T[p.ts]||p.ts)+' | '+(K[p.stk]!=null?K[p.stk]:p.stk)+' | '+((p.oracle||[]).length?map(p.oracle,O):O.na)+' | '+(M[p.dom]||p.dom)+' | '+(p.selfref?(L?'是':'Yes'):(L?'否':'No'))+' |');
     }
   }
   return lines.join('\n');
