@@ -613,8 +613,8 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design |
 |---|---|---|
-| World-model | A JEPA-Anything predictive world model guides both action selection and learning-data selection | Imagination pre-filters data when external feedback is costly |
-| Closed-loop | Observed feedback drives policy/workflow improvement plus conditional world-model adaptation | The world model stays accurate as the policy evolves |
+| World-model | A JEPA-Anything predictive world model guides both action selection and learning-data selection | Paper: "external feedback is costly ... uses predictive world models to guide action and learning-data selection" |
+| Closed-loop | Paper: "observed feedback drives policy or workflow improvement and conditional world-model adaptation" | The paper concedes "world-model predictions may become unreliable as policies evolve" and mitigates via conditional world-model adaptation — mitigated, not eliminated |
 
 **Update Capability**
 

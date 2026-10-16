@@ -11901,12 +11901,12 @@
     {
      "t": "世界模型",
      "d": "JEPA-Anything 预测性世界模型同时指导动作选择与学习数据选择",
-     "g": "外部反馈昂贵时用想象预筛数据"
+     "g": "原文：“external feedback is costly … uses predictive world models to guide action and learning-data selection”——以预测性世界模型指导动作与学习数据选择，回应外部反馈昂贵"
     },
     {
      "t": "闭环调整",
-     "d": "观测反馈驱动策略/工作流改进+世界模型条件适应",
-     "g": "世界模型随策略进化而不失准"
+     "d": "原文：“observed feedback drives policy or workflow improvement and conditional world-model adaptation”",
+     "g": "原文承认“world-model predictions may become unreliable as policies evolve”，以 conditional world-model adaptation 应对——缓解而非消除失准"
     }
    ],
    "upd": [
@@ -11944,12 +11944,12 @@
     {
      "t": "World-model",
      "d": "A JEPA-Anything predictive world model guides both action selection and learning-data selection",
-     "g": "Imagination pre-filters data when external feedback is costly"
+     "g": "Paper: \"external feedback is costly ... uses predictive world models to guide action and learning-data selection\""
     },
     {
      "t": "Closed-loop",
-     "d": "Observed feedback drives policy/workflow improvement plus conditional world-model adaptation",
-     "g": "The world model stays accurate as the policy evolves"
+     "d": "Paper: \"observed feedback drives policy or workflow improvement and conditional world-model adaptation\"",
+     "g": "The paper concedes \"world-model predictions may become unreliable as policies evolve\" and mitigates via conditional world-model adaptation — mitigated, not eliminated"
     }
    ],
    "upd": [

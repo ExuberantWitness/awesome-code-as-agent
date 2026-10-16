@@ -613,8 +613,8 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 |
 |---|---|---|
-| 世界模型 | JEPA-Anything 预测性世界模型同时指导动作选择与学习数据选择 | 外部反馈昂贵时用想象预筛数据 |
-| 闭环调整 | 观测反馈驱动策略/工作流改进+世界模型条件适应 | 世界模型随策略进化而不失准 |
+| 世界模型 | JEPA-Anything 预测性世界模型同时指导动作选择与学习数据选择 | 原文：“external feedback is costly … uses predictive world models to guide action and learning-data selection”——以预测性世界模型指导动作与学习数据选择，回应外部反馈昂贵 |
+| 闭环调整 | 原文：“observed feedback drives policy or workflow improvement and conditional world-model adaptation” | 原文承认“world-model predictions may become unreliable as policies evolve”，以 conditional world-model adaptation 应对——缓解而非消除失准 |
 
 **更新能力**
 
