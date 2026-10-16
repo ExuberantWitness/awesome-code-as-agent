@@ -570,6 +570,8 @@ awesome-code-as-agent/
 ├── code-as-policy-spectrum.html    # 2D 矩阵（旧版）
 ├── data/
 │   └── papers.json                 # 369 篇论文，8 维 tag
+├── tools/
+│   └── gen_paper_table.js      # Regenerate README paper tables
 ├── screenshots/
 │   ├── cube-overview.png           # 3D 立方体
 │   ├── database-view.png           # 论文数据库

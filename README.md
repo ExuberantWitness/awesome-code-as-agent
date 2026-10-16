@@ -570,6 +570,8 @@ awesome-code-as-agent/
 ├── code-as-policy-spectrum.html    # 2D matrix (legacy)
 ├── data/
 │   └── papers.json                 # 369 papers, 8-dim tags
+├── tools/
+│   └── gen_paper_table.js      # Regenerate README paper tables
 ├── screenshots/
 │   ├── cube-overview.png           # 3D cube view
 │   ├── database-view.png           # Paper database
