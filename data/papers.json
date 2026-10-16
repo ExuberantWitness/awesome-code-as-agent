@@ -11408,7 +11408,71 @@
   "dom": "general",
   "selfref": false,
   "id": "p357",
-  "combo": false
+  "combo": false,
+  "card": {
+   "dir": [
+    {
+     "t": "记忆上下文",
+     "d": "原文：“reframes memory management as a dynamic decision-making problem … deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations”——记忆管理被重构为动态决策问题，高层记忆过程拆解为原子 CRUD 操作",
+     "g": "原文动机：“most existing agent memory mechanisms rely on static and hand-crafted workflows”——静态手工流程限制性能与泛化，故需可学习的记忆框架"
+    }
+   ],
+   "upd": [
+    {
+     "t": "权重训练",
+     "d": "原文：“combining supervised fine-tuning with reinforcement learning … learns an autonomous, task-aligned policy to orchestrate memory behaviors”——SFT+RL 训出自主的记忆编排策略",
+     "g": "原文：“the trained AtomMem-8B consistently outperforms prior static-workflow memory methods”（3 个长上下文基准，原文未报具体百分比）"
+    }
+   ],
+   "rt": [
+    {
+     "t": "采集数据＋训练",
+     "d": "任务执行中的记忆操作决策被回收为 SFT+RL 训练信号（编者概述，原文未展开运行时细节）",
+     "g": "—"
+    }
+   ],
+   "stk": [
+    {
+     "t": "验证反馈",
+     "d": "原文：“orchestrate memory behaviors tailored to specific task demands”——按任务需求动态编排 CRUD",
+     "g": "原文：“learning-based formulation enables the agent to discover structured, task-aligned memory management strategies”——学到结构化策略而非预定义例程"
+    }
+   ],
+   "self": [],
+   "extra": "训练动力学分析显示：基于学习的表述让 agent 自己发现结构化、任务对齐的记忆管理策略——这是相对预定义例程的关键优势（原文结论）"
+  },
+  "card_en": {
+   "dir": [
+    {
+     "t": "Memory",
+     "d": "Paper: \"reframes memory management as a dynamic decision-making problem ... deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations\"",
+     "g": "Motive, verbatim: \"most existing agent memory mechanisms rely on static and hand-crafted workflows\" — static hand-crafted flows cap performance and generalization"
+    }
+   ],
+   "upd": [
+    {
+     "t": "Weight training",
+     "d": "Paper: \"combining supervised fine-tuning with reinforcement learning ... learns an autonomous, task-aligned policy to orchestrate memory behaviors\"",
+     "g": "Paper: \"the trained AtomMem-8B consistently outperforms prior static-workflow memory methods\" (3 long-context benchmarks; no percentages reported)"
+    }
+   ],
+   "rt": [
+    {
+     "t": "Collects + trains",
+     "d": "Memory-operation decisions during task execution are recycled as SFT+RL signal (editor summary; the paper does not detail runtime)",
+     "g": "—"
+    }
+   ],
+   "stk": [
+    {
+     "t": "Verification feedback",
+     "d": "Paper: \"orchestrate memory behaviors tailored to specific task demands\"",
+     "g": "Paper: \"learning-based formulation enables the agent to discover structured, task-aligned memory management strategies\" — discovered, not predefined"
+    }
+   ],
+   "self": [],
+   "extra": "Training-dynamics analysis (paper conclusion): the learning-based formulation lets the agent discover structured, task-aligned memory management strategies — the key advantage over predefined routines"
+  }
  },
  {
   "n": "Aspire: Can Models Self-Evolve from Vague Goals?",
