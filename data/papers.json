@@ -9877,5 +9877,37 @@
   "selfref": true,
   "id": "p368",
   "combo": true
+ },
+ {
+  "n": "Evo^2: Evolving the Evolver through Weight-Harness Co-Evolution",
+  "l": "https://arxiv.org/abs/2610.13025",
+  "m": "2026-10 · Xu/Zhang/Zhou/Lambert",
+  "d": "权重-harness 协同进化：把此前独立的两条自进化线（自生成经验训权重 vs 重写 harness）连成一体。单一策略身兼双职——Proposer 写 harness 编辑、Reflector 诊断效果引导修订；EvoTIDE 训练管线用编辑提取+前缀续写回收可用轨迹，SFT+双角色交错 GRPO 同时训练 Proposer 和 Reflector——进化器本身被进化。进化出的 harness 无需继续进化即可跨基准迁移（跨基准评估第一），框架可扩展到闭源模型（GPT-5-mini agent 24.4%→48.3%）。",
+  "v": "ok",
+  "nums": [
+   "Polyglot 82.1%（基线62.6%）",
+   "SWE-bench Verified 48.3%（基线41.0%）",
+   "GPT-5-mini 24.4→48.3",
+   "跨基准迁移第一"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "evo",
+   "loop"
+  ],
+  "lvl": 4,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "selfref": true,
+  "id": "p369",
+  "combo": true
  }
 ]

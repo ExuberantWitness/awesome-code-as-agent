@@ -2,7 +2,7 @@
 
 **中文版** | **[English](README.md)**
 
-> 一张可导航的 3D 知识地图，收录 **368 篇论文**——LLM agent 如何用可执行代码感知、行动、学习和自我改进。覆盖 **10 个场景 × 7 个方向 × 5 层更新能力 × 4 象限运行时行为**。
+> 一张可导航的 3D 知识地图，收录 **369 篇论文**——LLM agent 如何用可执行代码感知、行动、学习和自我改进。覆盖 **10 个场景 × 7 个方向 × 5 层更新能力 × 4 象限运行时行为**。
 
 **不只是读列表——导航整个空间。**
 
@@ -110,7 +110,8 @@ start code-as-policy-cube.html
 
 ## 更新日志
 
-- **2026-10-16 ——新增 25 篇（共 368 篇）**
+- **2026-10-16 ——新增 26 篇（共 369 篇）**
+  - **权重×harness 桥接**——[Evo²](https://arxiv.org/abs/2610.13025) 用双角色 Proposer/Reflector 协同进化模型权重与 agent harness，连「进化器本身被进化」（L4）；进化出的 harness 无需继续进化即可跨基准迁移
   - 🎯 **填上最后一块前沿空白格：世界模型 × L4**——[RSI-Anything](https://arxiv.org/abs/2610.13912)（JEPA-Anything 底座）让预测性世界模型同时选择动作与学习数据，保留更新需过兼容性检查
   - **Harness-RSI 集群成型**——[SoL-Pi](https://arxiv.org/abs/2609.20519)（NVIDIA，3.4k 星：自动研究循环递归优化 agent 自己的 harness）+ [RRSI](https://arxiv.org/abs/2609.24972)（对 harness 过拟合加正则——DGM 路线缺的机器学习 101 一课）
   - **记忆自进化加厚**——MemCodex（记忆程序开放式进化）、AtomMem（RL 训 CRUD 策略）、RSI Agent（免训练三 agent 探索）
@@ -128,7 +129,7 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D 交互立方体
 ├── code-as-policy-spectrum.html    # 2D 矩阵（旧版）
 ├── data/
-│   └── papers.json                 # 368 篇论文，8 维 tag
+│   └── papers.json                 # 369 篇论文，8 维 tag
 ├── screenshots/
 │   ├── cube-overview.png           # 3D 立方体
 │   ├── database-view.png           # 论文数据库

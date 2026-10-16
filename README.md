@@ -2,7 +2,7 @@
 
 **[中文版](README_CN.md)** | **English**
 
-> A navigable 3D knowledge map of **368 papers** on how LLM agents use executable code to perceive, act, learn, and improve — spanning **10 scenes × 7 directions × 5 update levels × 4 runtime quadrants**.
+> A navigable 3D knowledge map of **369 papers** on how LLM agents use executable code to perceive, act, learn, and improve — spanning **10 scenes × 7 directions × 5 update levels × 4 runtime quadrants**.
 
 **Don't just read the list — navigate the space.**
 
@@ -110,7 +110,8 @@ start code-as-policy-cube.html
 
 ## Recent Updates
 
-- **2026-10-16 — +25 papers (368 total)**
+- **2026-10-16 — +26 papers (369 total)**
+  - **Weight×harness bridge** — [Evo²](https://arxiv.org/abs/2610.13025) co-evolves model weights and the agent harness with a dual-role Proposer/Reflector, training the evolver itself (L4); the evolved harness transfers cross-benchmark without further evolution
   - 🎯 **Filled the last blank frontier cell: World model × L4** — [RSI-Anything](https://arxiv.org/abs/2610.13912) (JEPA-Anything) lets a predictive world model select both actions and learning data, with compatibility checks gating retention
   - **Harness-RSI cluster formed** — [SoL-Pi](https://arxiv.org/abs/2609.20519) (NVIDIA, 3.4k★: auto-research loops that recursively optimize the agent's own harness) + [RRSI](https://arxiv.org/abs/2609.24972) (regularization against harness overfitting — the ML-101 lesson DGM was missing)
   - **Memory self-evolution thickens** — MemCodex (open-ended evolution of memory programs), AtomMem (RL-trained CRUD policies), RSI Agent (training-free 3-agent exploration)
@@ -128,7 +129,7 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D interactive cube
 ├── code-as-policy-spectrum.html    # 2D matrix (legacy)
 ├── data/
-│   └── papers.json                 # 368 papers, 8-dim tags
+│   └── papers.json                 # 369 papers, 8-dim tags
 ├── screenshots/
 │   ├── cube-overview.png           # 3D cube view
 │   ├── database-view.png           # Paper database
