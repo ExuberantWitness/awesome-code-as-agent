@@ -2,7 +2,7 @@
 
 **[中文版](README_CN.md)** | **English**
 
-> A navigable 3D knowledge map of **291 papers** on how LLM agents use executable code to perceive, act, learn, and improve — spanning **10 scenes × 7 directions × 5 update levels × 4 runtime quadrants**.
+> A navigable 3D knowledge map of **368 papers** on how LLM agents use executable code to perceive, act, learn, and improve — spanning **10 scenes × 7 directions × 5 update levels × 4 runtime quadrants**.
 
 **Don't just read the list — navigate the space.**
 
@@ -103,7 +103,21 @@ start code-as-policy-cube.html
 2. **World models have 5 roles** — oracle / training ground / filter / imagination space / intrinsic motivation source
 3. **Code space vs latent space** — two parallel world model methodologies (CWM writes executable Python; PAN predicts in JEPA latent)
 4. **RSI vertical ladder** — Math (STP→AZR), Software (SICA→Frontis-MA1→DGM), Drug discovery (molecular self-improvement)
-5. **Memory direction is exploding** — 25 papers in 4 survey rounds, from MemGPT to Memory-R1 (RL-trained memory operations)
+5. **Memory direction is exploding** — from MemGPT to Memory-R1 (RL-trained memory operations), plus self-programming memory (MemCodex) and learnable CRUD policies (AtomMem)
+6. **Harness-RSI cluster has formed** (L4 × agent-self) — DGM stood alone; now SoL-Pi (NVIDIA, auto-research loops recursively optimizing the agent harness, 3.4k stars), RRSI (first systematic diagnosis of harness-RSI overfitting), and RSI-Anything join it
+7. **World model × L4 was a blank cell — now filled** — RSI-Anything uses JEPA predictive world models to guide both action selection and learning-data selection, connecting the two formerly separate clusters
+8. **Auto-defined rubrics** — the verifier library has a second auto-fill path: instead of memorizing verification experience, systems now synthesize structured criteria (RaR, Rubric-ARM's co-evolving generator+judge, RM-R1), converging on executable rubrics — the natural-language twin of the reward-code line (Text2Reward/Eureka)
+
+## Recent Updates
+
+- **2026-10-16 — +25 papers (368 total)**
+  - 🎯 **Filled the last blank frontier cell: World model × L4** — [RSI-Anything](https://arxiv.org/abs/2610.13912) (JEPA-Anything) lets a predictive world model select both actions and learning data, with compatibility checks gating retention
+  - **Harness-RSI cluster formed** — [SoL-Pi](https://arxiv.org/abs/2609.20519) (NVIDIA, 3.4k★: auto-research loops that recursively optimize the agent's own harness) + [RRSI](https://arxiv.org/abs/2609.24972) (regularization against harness overfitting — the ML-101 lesson DGM was missing)
+  - **Memory self-evolution thickens** — MemCodex (open-ended evolution of memory programs), AtomMem (RL-trained CRUD policies), RSI Agent (training-free 3-agent exploration)
+  - **Autoresearch pathology** — Fork-and-Flush's "idea basins" (repeated runs get trapped in local solution regions) and Arbor's hypothesis-tree countermeasure
+- **2026-10-15 — +12 papers (343 total)**
+  - **Auto-rubric line imported** (RaR, Rubric-ARM, RM-R1, Self-Taught Evaluators, AutoBencher, …) — the verifier library's second auto-fill path
+  - **PRSI manifesto** — physical recursive self-improvement (P1–P5 causal positions), the physical-world mirror of the DFM endpoint
 
 ## Repository Structure
 
@@ -114,7 +128,7 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D interactive cube
 ├── code-as-policy-spectrum.html    # 2D matrix (legacy)
 ├── data/
-│   └── papers.json                 # 291 papers, 8-dim tags
+│   └── papers.json                 # 368 papers, 8-dim tags
 ├── screenshots/
 │   ├── cube-overview.png           # 3D cube view
 │   ├── database-view.png           # Paper database
