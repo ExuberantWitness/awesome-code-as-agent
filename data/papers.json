@@ -11201,7 +11201,105 @@
   "dom": "general",
   "selfref": true,
   "id": "p353",
-  "combo": true
+  "combo": true,
+  "card": {
+   "dir": [
+    {
+     "t": "记忆上下文",
+     "d": "原文：\"organizes experience into executable memory programs for summaries, relational knowledge, reusable skills, and latent memory\"<br>**总结**：经验存成四层可执行记忆程序——摘要、关系知识、可复用技能、潜记忆",
+     "g": "原文动机：\"a single-hop question may require one piece of evidence, whereas a multi-hop question must combine evidence from multiple sources. Predefined memory workflows cannot adapt to these varying needs\"<br>**总结**：单跳多跳需求不同，固定流程顾此失彼",
+     "w": "**原理**：分层把\"找什么证据\"变成\"在哪一层找\"——单跳只碰顶层即停，多跳沿层间指针下钻；平铺式记忆每次提问都要全库扫描，分层让访问成本正比于所需证据深度而非记忆总量（编辑推演）"
+    },
+    {
+     "t": "进化搜索",
+     "d": "原文：\"Open-ended program evolution searches the open design space of layer programs by rewriting how each layer is constructed, indexed, retrieved, and routed\"<br>**总结**：设计空间本身开放——每层怎么构建/索引/检索/路由都可被进化重写",
+     "g": "原文（对近邻方法的定位）：\"Recent adaptive methods search or learn over memory components and their compositions, but the design space itself remains predefined\"<br>**总结**：别家在给定空间里调，MemCodex 把空间打开",
+     "w": "**原理**：预定义方法的可达上限是设计者想象力的上限——当任务需要的结构（如\"时序+因果混合索引\"）不在预定义集合里，调参调不出来；进化能发明集合外的新结构（编辑推演）"
+    }
+   ],
+   "upd": [
+    {
+     "t": "机制自进化",
+     "d": "原文：\"a self-evolving hierarchical memory system\"<br>**总结**：进化只动记忆程序层，不动模型权重（摘要全程无权重更新表述，编者按）",
+     "g": "原文：\"improves average task success by 10.1% relative to the strongest adaptive-memory baseline\"<br>**总结**：vs 最强自适应记忆基线，平均任务成功率 +10.1%",
+     "w": "**原理**：收益沉淀在外部可执行工件而非参数里——不占模型容量、不需要梯度与训练设施；代价是推理时多一层程序执行开销，换来\"改进即插即用\"（编辑推演）"
+    }
+   ],
+   "rt": [
+    {
+     "t": "只采集数据，不训练",
+     "d": "原文：\"reads traverse the hierarchy from coarse to fine and stop once sufficient evidence is found, descending to the original history when needed\"<br>**总结**：查询由粗到细走层级、证据够就停、拿不准回原文",
+     "g": "原文：\"using 3.4x fewer context tokens and achieving 2.1x faster inference\"<br>**总结**：上下文 token 省 3.4 倍、推理快 2.1 倍",
+     "w": "**原理**：带早停的检索树——上下文长度只随\"所需证据深度\"增长，不随记忆总量增长；\"证据够就停\"避免为 20% 的问题付 100% 的检索成本，回原文兜底保证截断不丢精度（编辑推演）"
+    }
+   ],
+   "stk": [
+    {
+     "t": "验证反馈",
+     "d": "原文：\"stop once sufficient evidence is found\"<br>**总结**：以证据充分为停机判据（程序可执行、可校验为编者概述）",
+     "g": "同上格——3.4× token 节省的直接来源<br>**总结**：停得早就花得少",
+     "w": "**原理**：\"证据充分\"是可判定的停机谓词——把\"何时停止检索\"从开放式启发式变成可验证条件；不可判定的停止策略只有两种失败模式：过度检索（浪费）或过早停止（丢证据），谓词化同时封死两者（编辑推演）"
+    }
+   ],
+   "self": [
+    {
+     "t": "是",
+     "d": "原文（编者按）：进化重写的是记忆的构建/索引/检索/路由方式本身<br>**总结**：改的对象是\"记忆怎么组织\"，不是某个固定任务",
+     "g": "原文（反面锚点）：\"the design space itself remains predefined\"——别家的天花板<br>**总结**：组织方式本身可进化，无预设边界",
+     "w": "**原理**：自指让\"索引怎么建\"和\"查询怎么来\"共同进化——非自指系统里两者必然错位（索引按 A 逻辑建、查询按 B 逻辑来），每次访问都付接口摩擦税；共同进化把这笔税消掉（编辑推演）"
+    }
+   ],
+   "extra": "配套 MemArena 运行时——原文：\"a unified runtime that places heterogeneous data and memory systems behind a common interface\"，异构数据与记忆系统统一到公共接口之后，不同记忆方案才能公平对比。"
+  },
+  "card_en": {
+   "dir": [
+    {
+     "t": "Memory",
+     "d": "Paper: \"organizes experience into executable memory programs for summaries, relational knowledge, reusable skills, and latent memory\"<br>**Summary**: experience becomes four layers of executable memory programs — summaries, relational knowledge, reusable skills, latent memory",
+     "g": "Motive, verbatim: \"a single-hop question may require one piece of evidence, whereas a multi-hop question must combine evidence from multiple sources. Predefined memory workflows cannot adapt to these varying needs\"<br>**Summary**: single-hop and multi-hop needs differ; fixed workflows cannot serve both",
+     "w": "**Why**: layering turns \"what evidence to find\" into \"which layer to look in\" — single-hop stops at the top, multi-hop follows pointers down; flat memory scans everything per query, layered access costs scale with evidence depth, not memory size (editor)"
+    },
+    {
+     "t": "Evolutionary",
+     "d": "Paper: \"Open-ended program evolution searches the open design space of layer programs by rewriting how each layer is constructed, indexed, retrieved, and routed\"<br>**Summary**: the design space itself is open — construction/indexing/retrieval/routing of every layer is evolvable",
+     "g": "Paper (on neighbors): \"Recent adaptive methods search or learn over memory components and their compositions, but the design space itself remains predefined\"<br>**Summary**: others tune within a given space; MemCodex opens the space",
+     "w": "**Why**: predefined methods are capped by the designer's imagination — if the needed structure (e.g., a temporal-causal hybrid index) is outside the predefined set, no tuning reaches it; evolution can invent structures outside the set (editor)"
+    }
+   ],
+   "upd": [
+    {
+     "t": "Mechanism self-evolves",
+     "d": "Paper: \"a self-evolving hierarchical memory system\"<br>**Summary**: evolution touches memory programs only, never weights (no weight update appears in the abstract — editor)",
+     "g": "Paper: \"improves average task success by 10.1% relative to the strongest adaptive-memory baseline\"<br>**Summary**: +10.1% average task success vs the strongest adaptive-memory baseline",
+     "w": "**Why**: gains sediment in external executable artifacts, not parameters — no model capacity consumed, no training infrastructure needed; the price is one extra program-execution hop at inference, buying plug-and-play improvement (editor)"
+    }
+   ],
+   "rt": [
+    {
+     "t": "Collects, no training",
+     "d": "Paper: \"reads traverse the hierarchy from coarse to fine and stop once sufficient evidence is found, descending to the original history when needed\"<br>**Summary**: coarse-to-fine traversal, stop when evidence suffices, fall back to raw history",
+     "g": "Paper: \"using 3.4x fewer context tokens and achieving 2.1x faster inference\"<br>**Summary**: 3.4× fewer context tokens, 2.1× faster inference",
+     "w": "**Why**: a retrieval tree with early stopping — context length grows with needed evidence depth, not memory size; \"stop when sufficient\" avoids paying 100% retrieval cost for 20% questions, and raw-history fallback keeps truncation lossless (editor)"
+    }
+   ],
+   "stk": [
+    {
+     "t": "Verification feedback",
+     "d": "Paper: \"stop once sufficient evidence is found\"<br>**Summary**: evidence-sufficiency as the stopping predicate (executability/verifiability — editor)",
+     "g": "Same source as above — the direct origin of the 3.4× saving<br>**Summary**: stop early, spend less",
+     "w": "**Why**: \"sufficient evidence\" is a decidable predicate — turning when-to-stop from open-ended heuristics into a checkable condition; undecidable stopping has exactly two failure modes (over-retrieval waste, under-retrieval loss), and the predicate closes both (editor)"
+    }
+   ],
+   "self": [
+    {
+     "t": "Yes",
+     "d": "Paper (editor note): evolution rewrites how memory itself is constructed/indexed/retrieved/routed<br>**Summary**: the target is \"how memory is organized\", not any fixed task",
+     "g": "Paper (counter-anchor): \"the design space itself remains predefined\" — the neighbors' ceiling<br>**Summary**: organization itself evolves, no preset boundary",
+     "w": "**Why**: self-reference lets how-to-index and how-to-query co-evolve — in non-self-referential systems the two inevitably mismatch (index built by logic A, queries arriving by logic B), paying an interface-friction tax on every access; co-evolution removes the tax (editor)"
+    }
+   ],
+   "extra": "MemArena companion runtime — paper: \"a unified runtime that places heterogeneous data and memory systems behind a common interface\"; only behind a common interface can heterogeneous memory designs be compared fairly."
+  }
  },
  {
   "n": "ExplorationBench: Measuring AI Systems Exploration in Verifiable Alien Worlds",
@@ -11413,65 +11511,73 @@
    "dir": [
     {
      "t": "记忆上下文",
-     "d": "原文：“reframes memory management as a dynamic decision-making problem … deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations”——记忆管理被重构为动态决策问题，高层记忆过程拆解为原子 CRUD 操作",
-     "g": "原文动机：“most existing agent memory mechanisms rely on static and hand-crafted workflows”——静态手工流程限制性能与泛化，故需可学习的记忆框架"
+     "d": "原文：\"reframes memory management as a dynamic decision-making problem ... deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations\"<br>**总结**：记忆管理重构为动态决策问题，高层记忆过程拆成原子 CRUD 操作",
+     "g": "原文动机：\"most existing agent memory mechanisms rely on static and hand-crafted workflows\"<br>**总结**：静态手工流程限制性能与泛化",
+     "w": "**原理**：手工流程是设计者对任务分布的先验猜测——任务分布一变，流程就系统性错配；CRUD 化把\"何时读、何时写\"从固定程序变成可学策略，让行为随任务分布自适应（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "原文：“combining supervised fine-tuning with reinforcement learning … learns an autonomous, task-aligned policy to orchestrate memory behaviors”——SFT+RL 训出自主的记忆编排策略",
-     "g": "原文：“the trained AtomMem-8B consistently outperforms prior static-workflow memory methods”（3 个长上下文基准，原文未报具体百分比）"
+     "d": "原文：\"combining supervised fine-tuning with reinforcement learning ... learns an autonomous, task-aligned policy to orchestrate memory behaviors\"<br>**总结**：SFT+RL 训出自主的记忆编排策略",
+     "g": "原文：\"the trained AtomMem-8B consistently outperforms prior static-workflow memory methods\"（3 个长上下文基准，原文未报百分比）<br>**总结**：8B 一致超越静态流程记忆方法",
+     "w": "**原理**：RL 把\"记忆操作\"直接绑定到任务回报——每一次读/写决策的奖惩最终来自任务成败，策略于是学会为通过任务而记忆，而不是为存而存（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "任务执行中的记忆操作决策被回收为 SFT+RL 训练信号（编者概述，原文未展开运行时细节）",
-     "g": "—"
+     "d": "任务执行中的记忆操作决策被回收为 SFT+RL 训练信号（编辑概述，原文未展开运行时细节）",
+     "g": "—",
+     "w": "**原理**：训练数据与部署行为同分布——学的是\"我自己在这种任务里会怎么做记忆决策\"，避免离线记忆语料与在线需求的错位（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "验证反馈",
-     "d": "原文：“orchestrate memory behaviors tailored to specific task demands”——按任务需求动态编排 CRUD",
-     "g": "原文：“learning-based formulation enables the agent to discover structured, task-aligned memory management strategies”——学到结构化策略而非预定义例程"
+     "d": "原文：\"orchestrate memory behaviors tailored to specific task demands\"<br>**总结**：按任务需求动态编排 CRUD",
+     "g": "原文：\"learning-based formulation enables the agent to discover structured, task-aligned memory management strategies\"<br>**总结**：学到的是结构化、任务对齐的记忆策略，不是预定义例程",
+     "w": "**原理**：任务成败是记忆策略的最终裁判——可验证的任务信号让\"发现的策略\"经过选择压力淬炼，而预定义例程从未被任务筛选过（编辑推演）"
     }
    ],
    "self": [],
-   "extra": "训练动力学分析显示：基于学习的表述让 agent 自己发现结构化、任务对齐的记忆管理策略——这是相对预定义例程的关键优势（原文结论）"
+   "extra": "原文训练动力学分析：学习式表述让 agent 自己发现结构化、任务对齐的记忆管理策略——\"highlighting a key advantage over predefined routines\"（相对预定义例程的关键优势）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Memory",
-     "d": "Paper: \"reframes memory management as a dynamic decision-making problem ... deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations\"",
-     "g": "Motive, verbatim: \"most existing agent memory mechanisms rely on static and hand-crafted workflows\" — static hand-crafted flows cap performance and generalization"
+     "d": "Paper: \"reframes memory management as a dynamic decision-making problem ... deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations\"<br>**Summary**: memory management becomes a dynamic decision problem; high-level processes decompose into atomic CRUD ops",
+     "g": "Motive, verbatim: \"most existing agent memory mechanisms rely on static and hand-crafted workflows\"<br>**Summary**: static hand-crafted flows cap performance and generalization",
+     "w": "**Why**: a hand-crafted workflow is the designer's prior guess at the task distribution — once the distribution shifts, the workflow mismatches systematically; CRUD-ification turns when-to-read/write from a fixed program into a learnable policy (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Paper: \"combining supervised fine-tuning with reinforcement learning ... learns an autonomous, task-aligned policy to orchestrate memory behaviors\"",
-     "g": "Paper: \"the trained AtomMem-8B consistently outperforms prior static-workflow memory methods\" (3 long-context benchmarks; no percentages reported)"
+     "d": "Paper: \"combining supervised fine-tuning with reinforcement learning ... learns an autonomous, task-aligned policy to orchestrate memory behaviors\"<br>**Summary**: SFT+RL train an autonomous memory-orchestration policy",
+     "g": "Paper: \"the trained AtomMem-8B consistently outperforms prior static-workflow memory methods\" (3 long-context benchmarks; no percentages reported)<br>**Summary**: 8B consistently beats static-workflow memory",
+     "w": "**Why**: RL ties memory operations directly to task reward — each read/write decision is credited from task success, so the policy learns to remember for the task, not for storage's sake (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Memory-operation decisions during task execution are recycled as SFT+RL signal (editor summary; the paper does not detail runtime)",
-     "g": "—"
+     "d": "Memory-operation decisions during execution are recycled as SFT+RL signal (editor summary; runtime not detailed in the abstract)",
+     "g": "—",
+     "w": "**Why**: training data and deployment behavior share one distribution — the model learns its own memory decisions in its own tasks, avoiding offline/online mismatch (editor)"
     }
    ],
    "stk": [
     {
      "t": "Verification feedback",
-     "d": "Paper: \"orchestrate memory behaviors tailored to specific task demands\"",
-     "g": "Paper: \"learning-based formulation enables the agent to discover structured, task-aligned memory management strategies\" — discovered, not predefined"
+     "d": "Paper: \"orchestrate memory behaviors tailored to specific task demands\"<br>**Summary**: CRUD orchestrated per task demand",
+     "g": "Paper: \"learning-based formulation enables the agent to discover structured, task-aligned memory management strategies\"<br>**Summary**: discovered, structured, task-aligned strategies — not predefined routines",
+     "w": "**Why**: task success is the final judge of a memory strategy — verifiable task signal tempers discovered strategies under selection pressure, while predefined routines were never task-screened (editor)"
     }
    ],
    "self": [],
-   "extra": "Training-dynamics analysis (paper conclusion): the learning-based formulation lets the agent discover structured, task-aligned memory management strategies — the key advantage over predefined routines"
+   "extra": "Training-dynamics analysis (paper): the learning-based formulation lets the agent discover structured, task-aligned memory strategies — \"highlighting a key advantage over predefined routines\"."
   }
  },
  {
@@ -11964,87 +12070,99 @@
    "dir": [
     {
      "t": "世界模型",
-     "d": "JEPA-Anything 预测性世界模型同时指导动作选择与学习数据选择",
-     "g": "原文：“external feedback is costly … uses predictive world models to guide action and learning-data selection”——以预测性世界模型指导动作与学习数据选择，回应外部反馈昂贵"
+     "d": "原文：\"uses predictive world models to guide action and learning-data selection\"<br>**总结**：JEPA-Anything 预测性世界模型同时指导动作选择与学习数据选择",
+     "g": "原文动机：\"external feedback is costly\"<br>**总结**：外部反馈昂贵时，数据选择由内部预测器代劳",
+     "w": "**原理**：真实环境采样每条都要付执行成本；预测器把\"这条数据值不值得采\"的判断前移到想象空间——用近似成本换真实成本，只有当预测不确定时才花真钱采样（编辑概述）"
     },
     {
      "t": "闭环调整",
-     "d": "原文：“observed feedback drives policy or workflow improvement and conditional world-model adaptation”",
-     "g": "原文承认“world-model predictions may become unreliable as policies evolve”，以 conditional world-model adaptation 应对——缓解而非消除失准"
+     "d": "原文：\"observed feedback drives policy or workflow improvement and conditional world-model adaptation\"<br>**总结**：观测反馈一边改进策略/工作流，一边做世界模型的条件适应",
+     "g": "原文承认\"world-model predictions may become unreliable as policies evolve\"，以条件适应应对<br>**总结**：缓解（而非消除）世界模型随策略进化而失准",
+     "w": "**原理**：策略变了，旧经验分布就过时——世界模型若冻结，预测偏差会随策略偏移累积；条件适应=每批新观测后局部更新预测器，把分布漂移的误差压回小邻域（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "组件与兼容性检查决定更新的策略-模型对是否保留",
-     "g": "代码修复 26.3%→29.2%（静态验证器基线）"
+     "d": "原文：\"component and compatibility checks govern the retention of updated policy-model pairs\"<br>**总结**：策略-模型对的更新是否保留，由组件与兼容性检查把关",
+     "g": "原文：\"In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2%\"<br>**总结**：代码修复（coder 固定）26.3%→29.2%",
+     "w": "**原理**：RSI 的最大风险是好心改坏——更新在局部任务上涨分却在全局失配；兼容性检查是一道闸门，把\"更新\"从单向应用变成\"申请-审批\"，坏更新进不了系统（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "经验回流同时更新策略与世界模型",
-     "g": "域通用框架"
+     "d": "经验回流同时更新策略与世界模型（编辑概述，摘要未展开运行时细节）",
+     "g": "—",
+     "w": "**原理**：策略与世界模型共训消除\"鸡生蛋\"错位——模型理解的是旧策略的世界，策略适应的是新模型的世界，交替更新让两者始终互为对方的当前版本（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "世界模型选数据→更好数据→更好世界模型",
-     "g": "数据效率提升"
+     "d": "世界模型选数据→更好数据→更好世界模型（编辑概述）",
+     "g": "—",
+     "w": "**原理**：数据选择质量与模型预测精度互为因果，正循环成立的前提是选择压力真实存在——这正是兼容性检查提供的（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "改进的保留与否由自身世界模型预判",
-     "g": "有风险的更新被挡在门外"
+     "d": "原文（编者按）：\"compatibility checks govern the retention of updated policy-model pairs\"——保留与否由系统自身的世界模型预判",
+     "g": "—",
+     "w": "**原理**：自我评估自我=裁判与选手同体，风险是自我强化偏差；该设计用可执行的兼容性谓词约束裁判权，自指但非任意（编辑推演）"
     }
    ],
-   "extra": ""
+   "extra": "论文自述域通用（\"Across diverse computational and scientific domains ... demonstrates substantial gains\"），完整分域数字见原文。"
   },
   "card_en": {
    "dir": [
     {
      "t": "World-model",
-     "d": "A JEPA-Anything predictive world model guides both action selection and learning-data selection",
-     "g": "Paper: \"external feedback is costly ... uses predictive world models to guide action and learning-data selection\""
+     "d": "Paper: \"uses predictive world models to guide action and learning-data selection\"<br>**Summary**: a JEPA-Anything predictive world model guides both action selection and learning-data selection",
+     "g": "Motive, verbatim: \"external feedback is costly\"<br>**Summary**: data selection delegated to an internal predictor when external feedback is expensive",
+     "w": "**Why**: every real-environment sample costs an execution; the predictor moves the \"is this datum worth sampling\" judgment into imagination — approximate cost replaces real cost, real sampling only when prediction is uncertain (editor)"
     },
     {
      "t": "Closed-loop",
-     "d": "Paper: \"observed feedback drives policy or workflow improvement and conditional world-model adaptation\"",
-     "g": "The paper concedes \"world-model predictions may become unreliable as policies evolve\" and mitigates via conditional world-model adaptation — mitigated, not eliminated"
+     "d": "Paper: \"observed feedback drives policy or workflow improvement and conditional world-model adaptation\"<br>**Summary**: observed feedback improves policy/workflow and conditionally adapts the world model",
+     "g": "The paper concedes \"world-model predictions may become unreliable as policies evolve\" and counters with conditional adaptation<br>**Summary**: mitigates (not eliminates) model staleness under policy drift",
+     "w": "**Why**: a changed policy makes old experience stale — a frozen world model accumulates prediction bias as the policy drifts; conditional adaptation locally updates the predictor after each batch, pulling drift error back into a small neighborhood (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "Component and compatibility checks gate which policy-model pairs are retained",
-     "g": "Code repair 26.3%→29.2% over a static-verifier baseline"
+     "d": "Paper: \"component and compatibility checks govern the retention of updated policy-model pairs\"<br>**Summary**: whether an updated policy-model pair is kept is gated by component and compatibility checks",
+     "g": "Paper: \"In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2%\"<br>**Summary**: code repair 26.3%→29.2% with the coder held fixed",
+     "w": "**Why**: RSI's core risk is well-intentioned regressions — updates that score locally but misfit globally; the check turns \"update\" from unilateral application into apply-and-audit, blocking bad updates at the door (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Experience flows back to update policy and world model jointly",
-     "g": "Domain-general framework"
+     "d": "Experience flows back to update policy and world model jointly (editor summary; abstract does not detail runtime)",
+     "g": "—",
+     "w": "**Why**: co-training removes the chicken-and-egg mismatch — the model understanding an old policy's world while the policy adapts to a new model's world; alternating updates keep each current for the other (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "World model picks data → better data → better world model",
-     "g": "Higher data efficiency"
+     "d": "World model picks data → better data → better world model (editor summary)",
+     "g": "—",
+     "w": "**Why**: data-selection quality and prediction accuracy are mutually causal; the positive loop holds only if the selection pressure is real — which is exactly what the compatibility checks supply (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "Whether an update is kept is predicted by its own world model",
-     "g": "Risky updates rejected at the door"
+     "d": "Paper (editor note): \"compatibility checks govern the retention of updated policy-model pairs\" — retention is judged by the system's own world model",
+     "g": "—",
+     "w": "**Why**: self-assessing self = judge and player united, risking self-reinforcing bias; here executable compatibility predicates constrain the judge's authority — self-referential but not arbitrary (editor)"
     }
    ],
-   "extra": ""
+   "extra": "The paper claims domain generality (\"Across diverse computational and scientific domains ... demonstrates substantial gains\"); per-domain numbers in the full text."
   }
  },
  {
