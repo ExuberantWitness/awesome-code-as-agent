@@ -124,9 +124,9 @@ start code-as-policy-cube.html
 
 <!-- PAPER-INDEX:START -->
 <!-- 论文索引（由 tools/gen_paper_table.js 生成，勿手改） -->
-共 **369 篇**，单表列出，按场景归拢、更新能力降序排列。八个维度各占一列，含义见 [四维分类体系](#四维分类体系) 与 [附加-tag](#附加-tag)。
+共 **369 篇**，单表列出，按场景归拢、更新能力降序排列。八个维度各占一列，含义见 [四维分类体系](#四维分类体系) 与 [附加-tag](#附加-tag)。最后一列「自己改自己？」指改进闭环是否绕回改进机制本身（如 DGM 重写自己的代码、Self-Taught Evaluator 给自己造训练数据）。
 
-| # | 论文 | 场景 | 方向 | 更新能力 | 运行时行为 | 反馈栈 | Oracle | 领域 | 自指闭环 |
+| # | 论文 | 场景 | 方向 | 更新能力 | 运行时行为 | 反馈栈 | Oracle | 领域 | 自己改自己？ |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | [Puro-2B: Poor Lab Qwen2-1.5B Trained on RTX 5090 within $5090](https://arxiv.org/abs/2608.27370) | 策略 | 单次生成 | 权重训练 | 采集数据＋训练 | 证据反馈 | 符号 | NLP | 否 |
 | 2 | [CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning](https://arxiv.org/abs/2607.29172) | 策略 | 闭环调整 | 权重训练 | 采集数据＋训练 | 验证反馈 | 真实环境 | 机器人 | 否 |
