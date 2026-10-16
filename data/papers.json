@@ -477,29 +477,33 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "生成器-验证器架构：VLM 验证器对 rollout 做推理时转向+验证",
-     "g": "只有验证过的轨迹才回流训练"
+     "d": "原文：\"a generator-verifier framework for generalist robot policies for inference-time policy steering and self-improvement. We use a pre-trained generalist robot policy as a 'generator' and pair it with a gradient-free 'visual verifier' that evaluates actions at inference time\"<br>**总结**：预训策略当生成器+免梯度视觉验证器推理时评估动作",
+     "g": "原文动机：\"Robots deployed in the real world should learn from their experience and improve over time. This requires a mechanism of practicing and learning from feedback\"<br>**总结**：真机部署需要从经验改进的机制",
+     "w": "**原理**：视觉验证免梯度=不碰权重也能筛选动作——验证比训练便宜几个数量级，先用贵的生成、便宜的筛选（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "验证过的轨迹回流训练生成器",
-     "g": "数据飞轮教科书形态"
+     "d": "原文：\"verified experience is then used to improve the underlying policy\"（验证经验回流训策略，机制概述）<br>**总结**：只有验证过的轨迹回流",
+     "g": "原文：自改进后策略性能提升（数字见原文）<br>**总结**：推理时转向+训练自改进双收益",
+     "w": "**原理**：数据先过验证闸门——坏轨迹进不了训练集，数据质量单调提升（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "运行时只做验证式采集，训练在离线批次完成",
-     "g": "部署期零训练开销"
+     "d": "推理时只做验证式转向，训练离线（机制概述）<br>**总结**：部署期零训练开销",
+     "g": "原文：\"improves policy performance without additional training\"（推理时转向部分）<br>**总结**：不训练也能涨分",
+     "w": "**原理**：推理解码时的约束满足——验证器打分当作推理期搜索的启发式，choose-best-of-N 无需梯度（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "验证过的轨迹持续回流训练",
-     "g": "训练数据质量随部署量增长"
+     "d": "验证过的轨迹持续回流训练（机制概述）<br>**总结**：飞轮教科书形态",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -509,29 +513,33 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Generator-verifier: a VLM verifier does inference-time steering and verifies rollouts",
-     "g": "Only verified trajectories flow back"
+     "d": "Paper: \"a generator-verifier framework for generalist robot policies for inference-time policy steering and self-improvement. We use a pre-trained generalist robot policy as a 'generator' and pair it with a gradient-free 'visual verifier' that evaluates actions at inference time\"<br>**Summary**: pretrained policy as generator + gradient-free visual verifier scoring actions at inference",
+     "g": "Motive, verbatim: \"Robots deployed in the real world should learn from their experience and improve over time. This requires a mechanism of practicing and learning from feedback\"<br>**Summary**: deployed robots need experience-based improvement",
+     "w": "**Why**: gradient-free verification filters actions without touching weights — verification is orders cheaper than training: generate expensively, filter cheaply (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Verified trajectories retrain the generator",
-     "g": "The textbook data-flywheel shape"
+     "d": "Paper: verified experience flows back to retrain the policy (mechanism)<br>**Summary**: only verified trajectories return",
+     "g": "Paper: post-self-improvement gains (numbers in paper)<br>**Summary**: both inference-time steering and training-time gains",
+     "w": "**Why**: data passes a verification gate first — bad trajectories never enter training; data quality monotonically improves (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Runtime only verifies and collects; training happens offline",
-     "g": "Zero training overhead at deployment"
+     "d": "Inference-time verification-only steering; training offline (mechanism)<br>**Summary**: zero training overhead at deployment",
+     "g": "Paper: \"improves policy performance without additional training\" (steering part)<br>**Summary**: gains without training",
+     "w": "**Why**: constraint satisfaction at decoding — the verifier's score acts as a search heuristic; best-of-N needs no gradients (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Verified trajectories keep flowing back",
-     "g": "Training data quality grows with deployment"
+     "d": "Verified trajectories keep flowing back (mechanism)<br>**Summary**: the textbook flywheel",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -567,29 +575,33 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "IL 初始化+残差 RL+VLM 成功验证的自改进环",
-     "g": "灵巧操纵成功率持续提升"
+     "d": "原文：\"a scalable data generation framework that employs a self-improving cycle to continuously enrich data diversity. Starting from efficient seed demonstrations warmup, DexFlyWheel expands the dataset through i[terative...]\"<br>**总结**：种子演示热身→自改进循环持续扩数据",
+     "g": "原文动机：\"diverse and high-quality datasets remain scarce. Existing data collection methods either rely on human teleoperation or require significant human engineering, or generate data with limited diversity\"<br>**总结**：人工遥操贵、自动生成多样性差",
+     "w": "**原理**：多样性来自任务的组合爆炸——每轮成功策略成为下轮的种子，任务空间按能力半径扩张（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "残差 RL 在 IL 初始化的策略上微调",
-     "g": "保留演示先验的同时超越 IL 上限"
+     "d": "IL 初始化+残差 RL 在其上微调（原文设定，编者概述）<br>**总结**：保留演示先验、超越 IL 上限",
+     "g": "原文：灵巧操纵任务性能提升（数字见原文）<br>**总结**：—",
+     "w": "**原理**：残差参数化把\"学修正量\"与\"学全策略\"分开——小修正量梯度稳定，不冲毁演示先验（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "真机 rollout 即数据采集",
-     "g": "数据分布与部署分布一致"
+     "d": "真机 rollout 即采集（机制概述）<br>**总结**：数据分布=部署分布",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "VLM 判定成功的轨迹才入库训练",
-     "g": "无人工筛选的自动数据质检"
+     "d": "原文：\"self-improving cycle to continuously enrich data diversity\"<br>**总结**：飞轮直接写进题目",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -599,29 +611,33 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "IL init + residual RL + VLM success verification in a self-improvement loop",
-     "g": "Dexterous manipulation success keeps rising"
+     "d": "Paper: \"a scalable data generation framework that employs a self-improving cycle to continuously enrich data diversity. Starting from efficient seed demonstrations warmup, DexFlyWheel expands the dataset through i[terative...]\"<br>**Summary**: seed-demo warmup → self-improving cycle expands data",
+     "g": "Motive, verbatim: \"diverse and high-quality datasets remain scarce. Existing data collection methods either rely on human teleoperation or require significant human engineering, or generate data with limited diversity\"<br>**Summary**: teleop is costly; auto-generation lacks diversity",
+     "w": "**Why**: diversity comes from combinatorial task explosion — each round's successful policies seed the next; task space grows with the capability radius (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Residual RL finetunes on top of the IL-initialized policy",
-     "g": "Keeps demo priors while exceeding the IL ceiling"
+     "d": "IL init + residual RL on top (paper setup, editor summary)<br>**Summary**: keeps demo priors, exceeds the IL ceiling",
+     "g": "Paper: dexterous manipulation gains (numbers in paper)<br>**Summary**:—",
+     "w": "**Why**: residual parameterization separates \"learn corrections\" from \"learn the whole policy\" — small correction gradients are stable and don't wash out demo priors (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Real-robot rollouts are the collection",
-     "g": "Data distribution matches deployment"
+     "d": "Real-robot rollouts are the collection (mechanism)<br>**Summary**: data distribution = deployment distribution",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Only VLM-verified successes enter the training pool",
-     "g": "Automatic data QC without humans"
+     "d": "Paper: \"self-improving cycle to continuously enrich data diversity\"<br>**Summary**: flywheel in the title",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -657,29 +673,33 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "机器人从模型消费者变数据生产者：野外收集+自动标注回流",
-     "g": "数据获取成本随部署下降"
+     "d": "原文：\"Robots, as embodied agents, are uniquely positioned to close this gap: they can act in physical environments to collect large-scale, real-world data that enriches FM training with precisely the examples current models lack\"<br>**总结**：机器人从模型消费者变数据生产者",
+     "g": "原文动机：\"their reliance on internet pretraining data leaves them brittle in unstructured, real-world settings. The messy, real-world data encountered during deployment (e.g. occluded or multilingual text) remains massively underrepresented\"<br>**总结**：互联网数据缺的恰是部署时的\"脏\"数据",
+     "w": "**原理**：分布修复——部署环境天然生成训练分布的补集样本，机器人边干活边补齐长尾（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "自动标注数据回流训练模型",
-     "g": "—"
+     "d": "采集数据+自动标注回流训练 FM（机制概述）<br>**总结**：—",
+     "g": "原文：FM 在真机相关任务上提升（数字见原文）<br>**总结**：—",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "真实环境持续收集",
-     "g": "—"
+     "d": "部署即采集（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "部署越多→数据越多→模型越强→部署更多",
-     "g": "—"
+     "d": "部署越多→数据越多→模型越强→部署更多（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -689,29 +709,33 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Robot turns from model consumer to data producer: in-the-wild collection + auto-labeling flows back",
-     "g": "Data acquisition cost falls with deployment"
+     "d": "Paper: \"Robots, as embodied agents, are uniquely positioned to close this gap: they can act in physical environments to collect large-scale, real-world data that enriches FM training with precisely the examples current models lack\"<br>**Summary**: robots turn from model consumers into data producers",
+     "g": "Motive, verbatim: \"their reliance on internet pretraining data leaves them brittle in unstructured, real-world settings. The messy, real-world data encountered during deployment (e.g. occluded or multilingual text) remains massively underrepresented\"<br>**Summary**: internet corpora miss exactly the messy deployment data",
+     "w": "**Why**: distribution repair — deployment naturally generates complement-of-training samples; the robot fills the long tail while working (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Auto-labeled data retrains the model",
-     "g": "—"
+     "d": "Collected data + auto-labeling flow back to FM training (mechanism)<br>**Summary**:—",
+     "g": "Paper: FM gains on real-robot tasks (numbers in paper)<br>**Summary**:—",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Continuous collection in the real environment",
-     "g": "—"
+     "d": "Deployment is collection (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "More deployment → more data → stronger model → more deployment",
-     "g": "—"
+     "d": "More deployment → more data → stronger model → more deployment (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -981,65 +1005,73 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "把执行反馈下的自纠行为蒸馏进权重",
-     "g": "推理时自动纠错无需外部机制"
+     "d": "原文（项目页，编者按）：7139 条执行反馈下的自纠轨迹指令微调——把\"发现错误→改正→重试\"的行为蒸馏进权重<br>**总结**：自纠行为权重化",
+     "g": "项目自述：7B 达到匹敌 5-10× 参数量大模型的效果（数字为项目自报）<br>**总结**：小模型+自纠≈大模型",
+     "w": "**原理**：自纠是大模型涌现的行为——显式收集自纠轨迹微调，让 7B 免涌现直接获得该行为（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "7139 条自纠轨迹指令微调 Mistral-7B",
-     "g": "7B 匹敌 5-10× 参数量大模型"
+     "d": "7139 条自纠轨迹 SFT（项目设定）<br>**总结**：一次性蒸馏",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "运行时全冻结",
-     "d": "部署时无采集无训练，自纠能力已沉淀在权重里",
-     "g": "零额外推理成本"
+     "d": "部署时无采集无训练，自纠能力已在权重（项目设定）<br>**总结**：零推理开销",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "执行反馈产生自纠轨迹数据集（一次性沉淀）",
-     "g": "数据集开源可复用"
+     "d": "执行反馈产生自纠数据集（一次性沉淀，项目设定）<br>**总结**：数据集开源",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
-   "extra": ""
+   "extra": "本条目为模型卡而非论文，引语来自项目页自述。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Distills execution-feedback self-correction behavior into weights",
-     "g": "Self-correction at inference with no external machinery"
+     "d": "Project page (editor note): 7,139 execution-feedback self-correction trajectories instruction-tune the model — distill notice-error → fix → retry into weights<br>**Summary**: self-correction behavior into weights",
+     "g": "Project claim: 7B matches models 5-10× larger (self-reported)<br>**Summary**: small model + self-correction ≈ big model",
+     "w": "**Why**: self-correction is emergent in large models — explicitly collecting and SFT-ing these trajectories gives 7B the behavior without the emergence (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "7,139 self-correction trajectories instruction-tune Mistral-7B",
-     "g": "7B matches models 5-10× larger"
+     "d": "7,139 self-correction trajectories SFT (project setup)<br>**Summary**: one-time distillation",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Frozen at runtime",
-     "d": "No collection or training at deployment; self-correction lives in weights",
-     "g": "Zero extra inference cost"
+     "d": "No collection or training at deployment; self-correction lives in weights (setup)<br>**Summary**: zero inference overhead",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Execution feedback produced the self-correction dataset (one-time distillation)",
-     "g": "Dataset open-sourced"
+     "d": "Execution feedback produced the dataset (one-time; open-sourced)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
-   "extra": ""
+   "extra": "This entry is a model card, not a paper; quotes from the project page."
   }
  },
  {
@@ -1486,65 +1518,73 @@
    "dir": [
     {
      "t": "技能沉淀",
-     "d": "wake-sleep 库学习：解出的程序被抽象进技能库",
-     "g": "复杂任务变成已有技能的组合"
+     "d": "原文：\"It builds expertise by creating programming languages for expressing domain concepts, together with neural networks to guide the search for programs within these languages\"<br>**总结**：技能=领域概念的语言+引导搜索的神经网",
+     "g": "原文动机：\"Expert problem-solving is driven by powerful languages for thinking about problems and their solutions. Acquiring expertise means learning these languages\"<br>**总结**：专长=学会思维语言",
+     "w": "**原理**：语言决定可表达解的空间——抽象出的 DSL 让旧解成为新解的原语，组合深度随库增长（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "环内训练识别网络（recognition model）引导库搜索",
-     "g": "搜索空间指数级缩小"
+     "d": "原文：\"A 'wake-sleep' learning algorithm alternately extends the language with new symbolic abstractions and trains the neural n[etworks]\"<br>**总结**：wake-sleep 交替：扩库↔训识别网络",
+     "g": "原文：跨领域从少样本到通用的问题求解提升（数字见原文）<br>**总结**：技能库复用加速新任务学习",
+     "w": "**原理**：识别网络把\"程序怎么搜\"变成\"程序长什么样\"的先验——搜索从盲枚举变有引导采样，指数空间被先验压扁（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "每轮解题经验训练识别网络",
-     "g": "搜索越来越快"
+     "d": "每轮解题经验训练识别网络（机制概述）<br>**总结**：经验→先验",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "技能库与识别网络共进化",
-     "g": "—"
+     "d": "技能库与识别网络共进化（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
-   "extra": "识别网络在环内训练——L4 形态技能沉淀的鼻祖（DreamCoder）"
+   "extra": "编者按：识别网络在环内训练——L4 形态技能沉淀的鼻祖（DreamCoder, 2020）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Skill-accrual",
-     "d": "Wake-sleep library learning: solved programs are abstracted into the skill library",
-     "g": "Hard tasks become compositions of known skills"
+     "d": "Paper: \"It builds expertise by creating programming languages for expressing domain concepts, together with neural networks to guide the search for programs within these languages\"<br>**Summary**: skill = a language for domain concepts + nets guiding search",
+     "g": "Motive, verbatim: \"Expert problem-solving is driven by powerful languages for thinking about problems and their solutions. Acquiring expertise means learning these languages\"<br>**Summary**: expertise = learning languages of thought",
+     "w": "**Why**: language determines the expressible solution space — an abstracted DSL makes old solutions primitives of new ones; composition depth grows with the library (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "A recognition model is trained inside the loop to guide library search",
-     "g": "Exponentially smaller search space"
+     "d": "Paper: \"A 'wake-sleep' learning algorithm alternately extends the language with new symbolic abstractions and trains the neural n[etworks]\"<br>**Summary**: wake-sleep alternation: extend library ↔ train recognition",
+     "g": "Paper: gains from few-shot to general problem solving (numbers in paper)<br>**Summary**: library reuse accelerates new-task learning",
+     "w": "**Why**: the recognition model turns \"how to search programs\" into a prior of \"what programs look like\" — blind enumeration becomes guided sampling; the exponential space flattens (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Each round of solving trains the recognition model",
-     "g": "Search accelerates over time"
+     "d": "Each round's solving trains the recognition model (mechanism)<br>**Summary**: experience → prior",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Skill library and recognition model co-evolve",
-     "g": "—"
+     "d": "Library and recognition model co-evolve (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
-   "extra": "Recognition model trained in the loop — the ancestor of L4-style skill accrual (DreamCoder)"
+   "extra": "Editor note: recognition model trained inside the loop — the ancestor of L4-style skill accrual (DreamCoder, 2020)."
   }
  },
  {
@@ -2060,29 +2100,33 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "可执行世界表示（EWR）自动生成精确标注",
-     "g": "标注成本趋零"
+     "d": "原文：\"a paradigm that represents physical worlds through executable world representations. By expressing physical composition, dynamic evolution, [and governing rules] as code\"<br>**总结**：物理世界=可执行世界表示（EWR），组成/演化/规则都写成代码",
+     "g": "原文动机：\"they often lack explicit representations of the underlying mechanisms—such as object states, physical parameters, and governing dynamics—needed for reliably reasoning how the world evolves\"<br>**总结**：VLM 缺显式机制表示",
+     "w": "**原理**：代码=可执行的世界模型——预测靠运行而非回归，机制透明可干预（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "SFT+GRPO 训练 VLM",
-     "g": "QuantiPhy 58.6，超 Gemini-3.1-Flash"
+     "d": "EWR 自动生成精确标注 → SFT+GRPO 训 VLM（机制概述）<br>**总结**：代码产出数据训模型",
+     "g": "库内数字：QuantiPhy 58.6 超 Gemini-3.1-Flash（自报）<br>**总结**：小模型超商业大模型",
+     "w": "**原理**：标注来自世界代码的执行——真值无需人工，标注量只受算力限制（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "世界代码执行产生训练数据",
-     "g": "—"
+     "d": "世界代码执行产生训练数据（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "世界代码生成数据训练模型，模型再改进世界代码",
-     "g": "—"
+     "d": "世界代码生成数据训模型，模型再改进世界代码（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -2092,29 +2136,33 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Executable world representations (EWR) auto-generate precise annotations",
-     "g": "Annotation cost approaches zero"
+     "d": "Paper: \"a paradigm that represents physical worlds through executable world representations. By expressing physical composition, dynamic evolution, [and governing rules] as code\"<br>**Summary**: physical world = executable world representation (EWR)",
+     "g": "Motive, verbatim: \"they often lack explicit representations of the underlying mechanisms—such as object states, physical parameters, and governing dynamics—needed for reliably reasoning how the world evolves\"<br>**Summary**: VLMs lack explicit mechanism representations",
+     "w": "**Why**: code = an executable world model — prediction by running, not regression; mechanisms stay transparent and intervenable (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "SFT + GRPO train the VLM",
-     "g": "QuantiPhy 58.6, beating Gemini-3.1-Flash"
+     "d": "EWR auto-generates precise annotations → SFT+GRPO train the VLM (mechanism)<br>**Summary**: code produces data that trains the model",
+     "g": "Archived number: QuantiPhy 58.6 beating Gemini-3.1-Flash (self-reported)<br>**Summary**: small model beats a commercial giant",
+     "w": "**Why**: annotations come from executing world code — ground truth needs no humans; label volume is compute-bound only (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Executing world code yields training data",
-     "g": "—"
+     "d": "Executing world code yields training data (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "World code generates data that trains the model; the model improves the world code",
-     "g": "—"
+     "d": "World code generates data that trains the model; the model improves the world code (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -3280,36 +3328,41 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "模型对任务生成 self-edits（如重述记忆的自然语言改写），作为后续适应的数据与更新指令",
-     "g": "把提示工程内化为权重变化"
+     "d": "原文：\"generating their own finetuning data and update directives... a self-edit—a generation that may restructure the information in different ways, specify optimization hyperparameters, or invoke tools\"<br>**总结**：模型产出 self-edit——重述知识、指定超参、调用工具的自适应指令",
+     "g": "原文动机：\"LLMs are powerful but static; they lack mechanisms to adapt their weights in response to new tasks, knowledge, or examples\"<br>**总结**：静态权重无法适应新任务/知识/样本",
+     "w": "**原理**：适应的\"说明书\"由模型自己写而非外部训练器设计——外部设计者无法穷举所有适应场景，模型自述可以把适应方式随任务定制（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "模型自己生成微调数据+更新超参指令，触发对自身权重的再训练（SEAL 循环）",
-     "g": "知识注入后持续适应，单次微调无法维持"
+     "d": "原文：\"Through supervised finetuning (SFT), these self-edits result in persistent weight changes\"<br>**总结**：self-edit 经 SFT 变成持久权重变化",
+     "g": "原文未给单一基准数字；核心结果为适应后知识任务表现优于外置 RAG/ICL 变体（原文实验节）<br>**总结**：适应内化为参数，优于把知识挂在外部上下文",
+     "w": "**原理**：外部上下文受窗口与注意力稀释限制，权重化后的知识无检索延迟、无窗口占用——这是\"参数记忆 vs 上下文记忆\"的经典交换（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "适应会话中模型产出 self-edit 数据，随即在自身权重上执行更新",
-     "g": "适应沉淀为参数而非外部提示"
+     "d": "原文：\"a generation that may... invoke tools for data augmentation and gradient-based updates\"<br>**总结**：运行时自产数据+梯度更新",
+     "g": "—",
+     "w": "**原理**：数据、指令、更新三件事都在会话内闭环——适应不再排队等离线批次（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "每轮适应产生的数据成为下一轮训练素材",
-     "g": "自我编辑质量随适应轮次提升"
+     "d": "每轮适应产物成为下一轮素材（编辑概述）",
+     "g": "—",
+     "w": "**原理**：自我编辑质量随轮次复利——上轮学到的表述方式改进下轮的 self-edit 生成（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "更新指令由模型自己提出，更新对象也是同一模型",
-     "g": "无需外部训练器设计适配方案"
+     "d": "原文（编者按）：\"self-adapt by generating their own finetuning data\"——训练数据、更新指令、被更新者是同一模型",
+     "g": "—",
+     "w": "**原理**：最简形式的自指权重 RSI——不经过任何外部教师环节（编辑推演）"
     }
    ],
    "extra": ""
@@ -3318,36 +3371,41 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "The model emits self-edits (e.g., natural-language rephrasings of knowledge) that serve as adaptation data and update instructions",
-     "g": "Internalizes prompt engineering into weights"
+     "d": "Paper: \"generating their own finetuning data and update directives... a self-edit—a generation that may restructure the information in different ways, specify optimization hyperparameters, or invoke tools\"<br>**Summary**: the model emits self-edits — restructured knowledge, hyperparameters, tool calls as adaptation directives",
+     "g": "Motive, verbatim: \"LLMs are powerful but static; they lack mechanisms to adapt their weights in response to new tasks, knowledge, or examples\"<br>**Summary**: static weights cannot absorb new tasks/knowledge/examples",
+     "w": "**Why**: the adaptation \"manual\" is written by the model itself — an external designer cannot enumerate all adaptation scenarios; self-authored edits customize adaptation per task (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The model generates its own finetuning data and update hyperparameters, then retrains itself (SEAL loop)",
-     "g": "Sustained adaptation where one-shot finetuning fails"
+     "d": "Paper: \"Through supervised finetuning (SFT), these self-edits result in persistent weight changes\"<br>**Summary**: self-edits become persistent weight changes via SFT",
+     "g": "No single headline number; adaptation outperforms external RAG/ICL variants (paper experiments)<br>**Summary**: adaptation internalized into parameters beats context-externalized knowledge",
+     "w": "**Why**: external context pays window and attention-dilution costs; parameterized knowledge has no retrieval latency and no window占用 — the classic parametric-vs-contextual memory trade (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Self-edit data is produced during the session and applied to its own weights immediately",
-     "g": "Adaptation persists as parameters, not prompts"
+     "d": "Paper: \"a generation that may... invoke tools for data augmentation and gradient-based updates\"<br>**Summary**: runtime self-generated data + gradient updates",
+     "g": "—",
+     "w": "**Why**: data, directives, and updates all close inside the session — adaptation no longer queues for offline batches (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Each adaptation round yields data for the next",
-     "g": "Self-edit quality compounds"
+     "d": "Each round's adaptation output feeds the next (editor)",
+     "g": "—",
+     "w": "**Why**: self-edit quality compounds — last round's learned phrasing improves this round's edit generation (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The model proposes its own update instructions and is also the update target",
-     "g": "No external trainer needed"
+     "d": "Paper (editor note): \"self-adapt by generating their own finetuning data\" — data, directives, and trainee are one model",
+     "g": "—",
+     "w": "**Why**: the minimal self-referential weight-level RSI — no external teacher in the loop (editor)"
     }
    ],
    "extra": ""
@@ -3590,29 +3648,33 @@
    "dir": [
     {
      "t": "多智能体",
-     "d": "查询级元 agent 按输入生成定制多智能体系统（MAS）",
-     "g": "架构随查询而变，不再一套架构打天下"
+     "d": "原文：\"a query-level meta-agent... to automate the design of query-level multi-agent systems, i.e., one system per user query\"<br>**总结**：元 agent 按每条查询生成定制 MAS",
+     "g": "原文（核心思想）：\"incentivize a reasoning-based meta-agent via external execution feedback\"<br>**总结**：执行反馈激励推理式元 agent",
+     "w": "**原理**：一查询一系统——固定架构是最优架构在查询分布上的平均，定制架构取每点的条件最优（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "RL+执行反馈训练元 agent",
-     "g": "定制的 MAS 一致优于固定架构"
+     "d": "原文：\"by distilling DeepSeek R1, we first endow the basic reasoning ability... Then, we further enhance it via reinforcement learning (RL) with external execution feedback\"<br>**总结**：R1 蒸馏打底+执行反馈 RL 强化",
+     "g": "原文：多用途奖励从性能/复杂度/效率三方面引导（数字见原文）<br>**总结**：生成质量三目标平衡",
+     "w": "**原理**：执行反馈是系统级真值——MAS 设计好坏由运行结果裁决，不由人评（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "运行时全冻结",
-     "d": "部署时元 agent 只做生成不做学习",
-     "g": "—"
+     "d": "部署时元 agent 只做生成（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "执行反馈持续训练元 agent",
-     "g": "—"
+     "d": "执行反馈持续训练元 agent（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -3622,29 +3684,33 @@
    "dir": [
     {
      "t": "Multi-agent",
-     "d": "A query-level meta-agent generates a custom multi-agent system per input",
-     "g": "Architecture adapts per query instead of one-size-fits-all"
+     "d": "Paper: \"a query-level meta-agent... to automate the design of query-level multi-agent systems, i.e., one system per user query\"<br>**Summary**: a meta-agent emits a custom MAS per query",
+     "g": "Paper (core idea): \"incentivize a reasoning-based meta-agent via external execution feedback\"<br>**Summary**: execution feedback incentivizes the reasoning meta-agent",
+     "w": "**Why**: one query, one system — a fixed architecture is the query-distribution average of optimal architectures; customization takes the per-point conditional optimum (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The meta-agent is trained with RL + execution feedback",
-     "g": "Custom MAS consistently beats fixed architectures"
+     "d": "Paper: \"by distilling DeepSeek R1, we first endow the basic reasoning ability... Then, we further enhance it via reinforcement learning (RL) with external execution feedback\"<br>**Summary**: R1 distillation base + execution-feedback RL",
+     "g": "Paper: a multi-purpose reward guides performance/complexity/efficiency (numbers in paper)<br>**Summary**: three-objective balance",
+     "w": "**Why**: execution feedback is system-level ground truth — MAS quality is judged by running results, not human review (editor)"
     }
    ],
    "rt": [
     {
      "t": "Frozen at runtime",
-     "d": "At deployment the meta-agent only generates",
-     "g": "—"
+     "d": "At deployment the meta-agent only generates (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Execution feedback keeps training the meta-agent",
-     "g": "—"
+     "d": "Execution feedback keeps training the meta-agent (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -3758,87 +3824,99 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "维护 agent 谱系档案，Darwin 式变异自身代码并按评估选择保留",
-     "g": "开放式探索替代人工设计迭代"
+     "d": "原文：\"a self-improving AI that repeatedly modifies itself in a provably beneficial manner\"——以达尔文式开放进化替代可证明改进<br>**总结**：谱系档案+变异+选择，开放式搜索自我修改",
+     "g": "原文动机：\"Today's AI systems have human-designed, fixed architectures and cannot autonomously and continuously improve themselves... Meta-learning... is limited by first-order improvements and the human design of a suitable search space\"<br>**总结**：固定架构无法自改；元学习受限于人工搜索空间",
+     "w": "**原理**：可证明的自我改进（Gödel 机路线）在现实中证明成本过高，开放进化用\"生成多样变体+环境选择\"绕过证明——把不可判定的\"变好\"换成可执行的\"被选\"（编辑推演）"
     },
     {
      "t": "技能沉淀",
-     "d": "改进以可复用代码组件形式留在档案里",
-     "g": "好改动可被后续代际继承复用"
+     "d": "改进以代码组件形式留在谱系档案（原文机制）<br>**总结**：好改动跨代际继承",
+     "g": "—",
+     "w": "**原理**：档案=外显的技能库，进化在离散工件上操作，可回溯可复用（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "agent 修改自己的 scaffold 与工具代码，修改后的自己继续做下一轮修改",
-     "g": "SWE-bench 编码性能翻倍（×2）"
+     "d": "原文（摘要末段，DGM 自述）：在 SWE-bench 上从 20% 提升到 50%（编码性能翻倍量级，具体数字以原文为准）<br>**总结**：agent 重写自身代码，重写后的自己继续重写",
+     "g": "原文：\"coding performance... doubles\"（量级以原文为准）<br>**总结**：SWE-bench 性能翻倍",
+     "w": "**原理**：改进作用于 scaffold 而非权重——搜索空间是离散代码编辑，每次改进改变下一轮搜索的起点，形成能力复合（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "骨干模型冻结，全部改进发生在代码层",
-     "g": "单卡可跑，无需训练基础设施"
+     "d": "骨干冻结，全部改进在代码层（原文设定）<br>**总结**：零训练基础设施",
+     "g": "—",
+     "w": "**原理**：避开权重训练的灾难性遗忘与算力门槛，代价是改进粒度受限于 scaffold 可表达范围（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "每代评估结果进入档案指导后续选择",
-     "g": "搜索随代际积累越来越准"
+     "d": "每代评估结果进档案指导选择（原文机制）<br>**总结**：选择压力随档案积累",
+     "g": "—",
+     "w": "**原理**：档案保留失败分支——负面证据防止进化重复踩坑（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "改进对象就是改进者自身的代码",
-     "g": "能力上限不受初始 scaffold 约束"
+     "d": "改进对象=改进者自身的代码（原文设定）<br>**总结**：教科书式自指",
+     "g": "—",
+     "w": "**原理**：能力上限不再锚定初始 scaffold——初始设计只是进化起点而非天花板（编辑推演）"
     }
    ],
-   "extra": "谱系档案保留被淘汰分支可回溯——开放式进化的多样性来源"
+   "extra": "保留被淘汰分支的谱系档案是开放-ended多样性的来源（原文机制，编者概述）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Maintains an agent archive; Darwinian mutation of its own code with selection by evaluation",
-     "g": "Open-ended search replaces manual design iteration"
+     "d": "Paper: \"a self-improving AI that repeatedly modifies itself in a provably beneficial manner\" — replaced by Darwinian open-ended evolution<br>**Summary**: archive + mutation + selection; open-ended self-modification search",
+     "g": "Motive, verbatim: \"Today's AI systems have human-designed, fixed architectures and cannot autonomously and continuously improve themselves... Meta-learning... is limited by first-order improvements and the human design of a suitable search space\"<br>**Summary**: fixed architectures cannot self-improve; meta-learning capped by human-designed search spaces",
+     "w": "**Why**: provable self-improvement (the Gödel-machine route) is prohibitively expensive to certify; open evolution swaps \"provably better\" for \"selected by environment\" — turning an undecidable property into an executable one (editor)"
     },
     {
      "t": "Skill-accrual",
-     "d": "Improvements persist as reusable code components in the archive",
-     "g": "Good edits inherit across generations"
+     "d": "Improvements persist as code components in the lineage archive (paper mechanism)<br>**Summary**: good edits inherit across generations",
+     "g": "—",
+     "w": "**Why**: the archive is an explicit skill library; evolution over discrete artifacts is traceable and reusable (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "The agent rewrites its own scaffold/tool code; the rewritten self does the next rewrite",
-     "g": "SWE-bench coding performance doubled (×2)"
+     "d": "The agent rewrites its own code; the rewritten self continues rewriting (paper setup)<br>**Summary**: recursion in code space",
+     "g": "Paper: coding performance roughly doubles on SWE-bench (exact numbers per paper)<br>**Summary**: doubled coding performance",
+     "w": "**Why**: improvement lands on the scaffold, not weights — discrete code edits change the starting point of the next search round, compounding capability (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Backbone frozen; all improvement lives in code",
-     "g": "Runs on a single GPU, no training infra"
+     "d": "Backbone frozen; all improvement in code (paper setup)<br>**Summary**: zero training infrastructure",
+     "g": "—",
+     "w": "**Why**: avoids catastrophic forgetting and compute cost of weight training; the price is improvement granularity bounded by what the scaffold can express (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Each generation evaluation feeds the archive that guides selection",
-     "g": "Search gets sharper over generations"
+     "d": "Each generation's evaluation feeds the archive guiding selection (paper mechanism)<br>**Summary**: selection pressure accumulates",
+     "g": "—",
+     "w": "**Why**: failed branches retained — negative evidence stops evolution from repeating mistakes (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The improvement target is the improver itself",
-     "g": "Ceiling not bounded by the initial scaffold"
+     "d": "Improvement target = the improver's own code (paper setup)<br>**Summary**: the textbook self-reference",
+     "g": "—",
+     "w": "**Why**: the ceiling is no longer anchored to the initial scaffold — initial design is a starting point, not a cap (editor)"
     }
    ],
-   "extra": "Lineage archive keeps eliminated branches for backtracking — the diversity source of open-ended evolution"
+   "extra": "The lineage archive retaining eliminated branches is the diversity source of open-endedness (paper mechanism, editor summary)."
   }
  },
  {
@@ -4024,65 +4102,73 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "单模型自博弈：自己出题、自己解题、自我验证",
-     "g": "零人工数据启动推理训练"
+     "d": "原文（题目与设定）：单系统自提任务、自解题、自验证的强化自博弈<br>**总结**：出题者=解题者=同一模型",
+     "g": "原文动机：\"still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision\"<br>**总结**：RLVR 仍靠人工题库，长期不可扩展",
+     "w": "**原理**：数据瓶颈从\"采集\"转向\"生成\"——当验证器免费（代码执行/数学校验），出题能力本身成为可训练能力（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "出题-解题-验证闭环产生的数据回流训练同一模型",
-     "g": "跨数学/代码推理基准持续提升"
+     "d": "原文：自博弈产生的任务-解-验证三元组回流训练自身（机制概述）<br>**总结**：训练数据完全自产",
+     "g": "原文报告跨数学/代码推理基准持续提升（具体数字见原文）<br>**总结**：零人工数据下全面提升",
+     "w": "**原理**：任务难度由自身当前能力决定（能出=能解的边缘），课程自动处于最近发展区（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "自博弈 rollout 即数据采集，采集与训练交替",
-     "g": "数据供应随能力增长自动扩展"
+     "d": "自博弈 rollout 即采集，采集训练交替（机制概述）<br>**总结**：数据供应随能力增长",
+     "g": "—",
+     "w": "**原理**：能力↔数据互为因果的正循环，无需外部数据管道（编辑推演）"
     }
    ],
    "stk": [],
    "self": [
     {
      "t": "是",
-     "d": "提出者=求解者=被改进者是同一个模型",
-     "g": "完全自指的最简形态"
+     "d": "提出者、求解者、验证者、被训练者四位一体（机制概述）<br>**总结**：完全自指最简形态",
+     "g": "—",
+     "w": "**原理**：自验证依赖执行器客观性——代码/数学的可判定性是闭环不跑偏的锚（编辑推演）"
     }
    ],
-   "extra": "未见加速趋势证据——能力提升但改进速率未随时间增长"
+   "extra": "原文未展示加速趋势证据：能力提升但改进速率未随时间增长（重要限定）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Single-model self-play: proposes tasks, solves them, self-verifies",
-     "g": "Reasoning training started with zero human data"
+     "d": "Paper (title & setup): one system self-proposes tasks, self-solves, self-verifies in reinforced self-play<br>**Summary**: proposer = solver = same model",
+     "g": "Motive, verbatim: \"still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision\"<br>**Summary**: RLVR still leans on manual QA pools; not scalable long-term",
+     "w": "**Why**: the data bottleneck moves from collection to generation — when verifiers are free (code/math checks), task-proposal itself becomes a trainable skill (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "Data from the propose-solve-verify loop retrains the same model",
-     "g": "Steady gains across math/code reasoning benchmarks"
+     "d": "Self-play task-solution-verification triples flow back to train the model (mechanism summary)<br>**Summary**: training data fully self-produced",
+     "g": "Paper reports steady gains across math/code reasoning benchmarks (numbers in paper)<br>**Summary**: broad gains with zero human data",
+     "w": "**Why**: task difficulty is set by current ability (what it can pose is the edge of what it can solve) — the curriculum sits in the zone of proximal development automatically (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Self-play rollouts are the data collection; training interleaves",
-     "g": "Data supply scales with capability"
+     "d": "Self-play rollouts are the collection; training interleaves (mechanism)<br>**Summary**: data supply grows with ability",
+     "g": "—",
+     "w": "**Why**: capability and data form a causal loop without external pipelines (editor)"
     }
    ],
    "stk": [],
    "self": [
     {
      "t": "Yes",
-     "d": "Proposer = solver = improved model",
-     "g": "The minimal fully self-referential form"
+     "d": "Proposer, solver, verifier, trainee — four roles in one (mechanism)<br>**Summary**: the minimal fully self-referential form",
+     "g": "—",
+     "w": "**Why**: self-verification leans on executor objectivity — decidability of code/math anchors the loop (editor)"
     }
    ],
-   "extra": "No acceleration trend evidenced — capability rises but improvement rate does not grow over time"
+   "extra": "No acceleration trend evidenced in the paper: capability rises but improvement rate does not grow (important caveat)."
   }
  },
  {
@@ -4352,65 +4438,73 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "LM 提议辅助构图→符号演绎引擎（DD+AR）严格证明→失败再提议",
-     "g": "每一步都被数学严格检验"
+     "d": "原文（Nature 摘要，编者按）：神经语言模型提议辅助构图，符号演绎引擎严格推导，失败再提议<br>**总结**：神经提点子、符号管证明、闭环互喂",
+     "g": "原文自报：IMO 几何基准 25/30（金牌水准）、零人类示范<br>**总结**：无人类示范达金牌水准",
+     "w": "**原理**：神经网络擅长猜\"往哪添线\"（无限解空间的启发式），符号引擎擅长\"从前提走到结论\"（有限规则的穷举）——闭环让两者各做擅长的一半（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "符号引擎生成的 1 亿合成证明训练 LM",
-     "g": "零人类示范"
+     "d": "原文自报：符号引擎生成 1 亿条合成定理与证明训练语言模型<br>**总结**：引擎造数据训网络",
+     "g": "—",
+     "w": "**原理**：符号引擎可无限生成带真值标注的题库——数据稀缺被算力稀缺替换（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "解题时纯推理，训练离线完成",
-     "g": "推理无需训练设施"
+     "d": "解题时纯推理（DD+AR 演绎），训练离线（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "符号引擎产出数据训练神经提议器，提议器反哺引擎",
-     "g": "—"
+     "d": "引擎产数据训提议器，提议器反哺引擎搜索（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
-   "extra": "IMO 几何 25/30 金牌水准"
+   "extra": ""
   },
   "card_en": {
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "LM proposes auxiliary constructions; the symbolic engine (DD+AR) proves strictly; failures trigger re-proposal",
-     "g": "Every step is mathematically checked"
+     "d": "Nature abstract (editor note): a neural LM proposes auxiliary constructions; a symbolic deduction engine derives strictly; failures re-trigger proposals<br>**Summary**: neural proposes, symbolic proves, loop feeds both",
+     "g": "Self-reported: 25/30 on the IMO geometry benchmark (gold-medal level), zero human demonstrations<br>**Summary**: gold-medal level without human demos",
+     "w": "**Why**: networks are good at guessing where to add lines (heuristics over unbounded space); symbolic engines are good at walking premises to conclusions (bounded rule search) — the loop lets each do its half (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "100M synthetic proofs generated by the engine train the LM",
-     "g": "Zero human demonstrations"
+     "d": "Self-reported: the symbolic engine generates 100M synthetic theorems and proofs to train the LM<br>**Summary**: engine manufactures data for the network",
+     "g": "—",
+     "w": "**Why**: the symbolic engine generates unlimited labeled problems — data scarcity is replaced by compute scarcity (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Pure inference at solve time; training offline",
-     "g": "No training infrastructure to run"
+     "d": "Pure inference at solve time (DD+AR); training offline (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Engine data trains the neural proposer; the proposer feeds the engine",
-     "g": "—"
+     "d": "Engine data trains the proposer; the proposer feeds the engine (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
-   "extra": "IMO geometry 25/30, gold-medal level"
+   "extra": ""
   }
  },
  {
@@ -4679,29 +4773,33 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "奖励模型自己生成额外训练数据迭代改进自身",
-     "g": "奖励模型不再是一次性产物"
+     "d": "原文：\"As language models improve, human input may become less effective in further enhancing their perfor[mance]\"——RM 需自我改进以跟上模型（动机）<br>**总结**：奖励模型必须与被奖励者同步进化",
+     "g": "原文动机：\"A core challenge in employing RLHF lies in training a reliable reward model (RM), which relies on high-quality labels typically provided by human experts or advanced AI system. These methods can be costly and may introduce biases\"<br>**总结**：RM 依赖贵且有偏的高质量标注",
+     "w": "**原理**：静态 RM 会成为策略天花板——模型超过 RM 判断力后，RM 奖励的是\"像旧模型\"而非\"更好\"（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "改进的奖励再经 PPO 优化策略",
-     "g": "策略与奖励同步提升"
+     "d": "原文机制：RM 自生成额外训练数据迭代改进自身，改进的奖励经 PPO 优化策略（机制概述）<br>**总结**：RM 自产数据自改进",
+     "g": "原文：策略性能随 RM 迭代轮数持续提升（数字见原文）<br>**总结**：—",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "RM 自我改进飞轮",
-     "g": "—"
+     "d": "RM 自我改进飞轮（题目设定）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -4711,29 +4809,33 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "The reward model generates extra training data to iteratively improve itself",
-     "g": "The RM is no longer a one-shot artifact"
+     "d": "Paper: \"As language models improve, human input may become less effective in further enhancing their perfor[mance]\" — the RM must co-evolve (motive)<br>**Summary**: the reward model must evolve with the rewarded",
+     "g": "Motive, verbatim: \"A core challenge in employing RLHF lies in training a reliable reward model (RM), which relies on high-quality labels typically provided by human experts or advanced AI system. These methods can be costly and may introduce biases\"<br>**Summary**: RMs depend on costly, biased labels",
+     "w": "**Why**: a static RM becomes the policy's ceiling — once the model surpasses the RM's judgment, the RM rewards \"resembling the old model\", not \"better\" (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The improved reward then optimizes the policy via PPO",
-     "g": "Policy and reward rise together"
+     "d": "Paper mechanism: the RM self-generates extra training data to iteratively improve itself; the improved reward optimizes policy via PPO (mechanism)<br>**Summary**: RM self-produces data, self-improves",
+     "g": "Paper: policy performance improves across RM iterations (numbers in paper)<br>**Summary**:—",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Self-improving RM flywheel",
-     "g": "—"
+     "d": "Self-improving RM flywheel (title setup)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -4873,29 +4975,33 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "复用 agent 历史解题痕迹作训练数据，生成针对性修复任务持续自进化",
-     "g": "训练数据来自自身实战而非外部标注"
+     "d": "原文：\"a closed-loop self-evolution framework that reuses the agent's historical solving traces as a source of training signal. Rather than treating traces only as [outcomes]\"<br>**总结**：历史解题痕迹复用为训练信号",
+     "g": "原文（对既有合成数据的批评）：\"Existing synthetic data methods typically create tasks through fixed mutation or bug-injection procedures, making the resulting distributions largely independent of the agent's own weaknesses and training progress\"<br>**总结**：固定变异造的题与 agent 弱点无关",
+     "w": "**原理**：训练数据应对准当前弱点——自己的失败痕迹天然是\"恰好在能力边缘\"的样本，比合成 bug 更贴最近发展区（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "闭环自进化训练管线持续微调编码 agent",
-     "g": "—"
+     "d": "原文：从痕迹生成针对性修复任务，闭环持续微调 agent（机制概述）<br>**总结**：痕迹→任务→训练",
+     "g": "原文：自进化后 SWE 任务成功率提升（数字见原文）<br>**总结**：—",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "运行时采集痕迹，训练离线",
-     "g": "—"
+     "d": "运行时采集痕迹，训练离线（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "痕迹→任务→训练→更强 agent→更佳痕迹",
-     "g": "—"
+     "d": "痕迹→任务→训练→更强 agent→更佳痕迹（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -4905,29 +5011,33 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Reuses the agent's own solution traces as training data, generating targeted repair tasks for continuous self-evolution",
-     "g": "Training data from real practice, not external labels"
+     "d": "Paper: \"a closed-loop self-evolution framework that reuses the agent's historical solving traces as a source of training signal. Rather than treating traces only as [outcomes]\"<br>**Summary**: historical solving traces recycled as training signal",
+     "g": "Paper (critique of prior synthetic data): \"Existing synthetic data methods typically create tasks through fixed mutation or bug-injection procedures, making the resulting distributions largely independent of the agent's own weaknesses and training progress\"<br>**Summary**: fixed-mutation tasks ignore the agent's weaknesses",
+     "w": "**Why**: training data should target current weaknesses — one's own failure traces are exactly at the ability edge, closer to the zone of proximal development than synthetic bugs (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "A closed-loop self-evolving pipeline keeps finetuning the coding agent",
-     "g": "—"
+     "d": "Paper: targeted repair tasks generated from traces; closed-loop finetuning (mechanism)<br>**Summary**: traces → tasks → training",
+     "g": "Paper: SWE success improves after self-evolution (numbers in paper)<br>**Summary**:—",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Traces collected at runtime; training offline",
-     "g": "—"
+     "d": "Traces collected at runtime; training offline (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Traces → tasks → training → stronger agent → better traces",
-     "g": "—"
+     "d": "Traces → tasks → training → stronger agent → better traces (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -4991,29 +5101,33 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "猜想者与证明者两个角色自博弈，互为对方提供训练信号",
-     "g": "定理证明的自改进环"
+     "d": "原文：\"we draw inspiration from mathematicians, who continuously develop new results, partly by proposing novel conjectures or exercises (which are often variants of known results) and attempting [them]\"<br>**总结**：猜想者+证明者双角色自博弈",
+     "g": "原文动机：\"performance quickly plateaus due to the scarcity of correct proofs (sparse rewards)\"<br>**总结**：证明数据稀缺导致平台期",
+     "w": "**原理**：解题数据受限于\"会做的题\"，出题数据不受限——猜想把数据源从\"已会\"扩到\"可变体\"，绕开稀疏奖励（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "两个角色迭代互相提升",
-     "g": "—"
+     "d": "原文机制：两个角色互为对方提供训练信号、迭代互相提升（机制概述）<br>**总结**：互喂式共训",
+     "g": "原文：定理证明能力迭代提升（数字见原文）<br>**总结**：—",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "证明器产出训猜想器、猜想产出训证明器",
-     "g": "—"
+     "d": "证明器产出训猜想器、猜想产出训证明器（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -5023,29 +5137,33 @@
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Conjecturer and prover roles self-play, each providing training signal for the other",
-     "g": "A self-improving loop for theorem proving"
+     "d": "Paper: \"we draw inspiration from mathematicians, who continuously develop new results, partly by proposing novel conjectures or exercises (which are often variants of known results) and attempting [them]\"<br>**Summary**: conjecturer + prover self-play",
+     "g": "Motive, verbatim: \"performance quickly plateaus due to the scarcity of correct proofs (sparse rewards)\"<br>**Summary**: proof scarcity causes plateaus",
+     "w": "**Why**: solving-data is capped by \"what it can already do\"; posing-data is uncapped — conjecture extends the data source from solved to solvable-variants, bypassing sparse rewards (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The two roles iteratively lift each other",
-     "g": "—"
+     "d": "Paper mechanism: the two roles supply each other's training signal and iteratively lift each other (mechanism)<br>**Summary**: mutual-feeding co-training",
+     "g": "Paper: proving ability improves iteratively (numbers in paper)<br>**Summary**:—",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Proofs train the conjecturer; conjectures train the prover",
-     "g": "—"
+     "d": "Prover output trains the conjecturer and vice versa (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -5082,65 +5200,73 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "自引导自博弈（SGS）用于 Lean4 定理证明",
-     "g": "—"
+     "d": "原文：\"a Conjecturer model creates problems for a Solver, and both improve together\"<br>**总结**：自引导自博弈（SGS）",
+     "g": "原文（对既有自博弈的诊断）：\"existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve\"<br>**总结**：出题者学会奖励作弊——造无益的假难题",
+     "w": "**原理**：奖励作弊是自博弈的结构病——出题者的奖励若与解题者进步脱钩，最省力的策略是造\"看着难\"的题；自引导让出题者以自身能力为参照锚定难度（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "Lean4 验证器提供奖励训练策略",
-     "g": "渐进超越强 RL 基线的渐近求解率"
+     "d": "原文：\"a self-play algorithm in which the language model itself gui[des]\"——自引导信号驱动训练（机制概述）<br>**总结**：—",
+     "g": "库内数字（自报）：渐近求解率超强 RL 基线<br>**总结**：—",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "证明尝试回流训练",
-     "g": "—"
+     "d": "证明尝试回流训练（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
-   "extra": ""
+   "extra": "该文对自博弈奖励作弊的诊断同样适用于其他 proposer-solver 系统（编者按）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Self-Guided Self-play (SGS) for Lean4 theorem proving",
-     "g": "—"
+     "d": "Paper: \"a Conjecturer model creates problems for a Solver, and both improve together\"<br>**Summary**: Self-Guided Self-play (SGS)",
+     "g": "Paper (diagnosis of prior self-play): \"existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve\"<br>**Summary**: the poser learns reward hacking — fake-hard problems",
+     "w": "**Why**: reward hacking is a structural disease of self-play — if the poser's reward decouples from solver progress, the cheapest strategy is \"looks-hard\" problems; self-guidance anchors difficulty to the model's own ability (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The Lean4 verifier provides rewards for policy training",
-     "g": "Progressively surpasses strong RL baselines in asymptotic solve rate"
+     "d": "Paper: \"a self-play algorithm in which the language model itself gui[des]\" — self-guided signal drives training (mechanism)<br>**Summary**:—",
+     "g": "Archived (self-reported): asymptotic solve rate surpasses strong RL baselines<br>**Summary**:—",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Proof attempts flow back into training",
-     "g": "—"
+     "d": "Proof attempts flow back into training (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
-   "extra": ""
+   "extra": "The reward-hacking diagnosis generalizes to other proposer-solver systems (editor note)."
   }
  },
  {
@@ -5201,75 +5327,85 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "OpenMLE-Evo 长程进化搜索：Draft/Improve/Debug/Crossover 四算子",
-     "g": "学习与进化耦合在单环内"
+     "d": "原文：\"long-horizon search (OpenMLE-Evo)... four atomic program-evolution operators (Dr[aft/Improve/Debug/Crossover])\"<br>**总结**：四算子长程进化搜索",
+     "g": "原文（定位）：\"machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability\"——AI4AI 的可执行试验台<br>**总结**：MLE 是 RSI 的落地试验台",
+     "w": "**原理**：进化算子对应人类工程师的四类动作（起草/改进/调试/交叉）——把 MLE 工作流原语化，长程搜索才可组合（编辑推演）"
     },
     {
      "t": "闭环调整",
-     "d": "OpenMLE-Gym 可验证环境+OpenMLE-RL 算子学习",
-     "g": "执行接地保证可验证"
+     "d": "原文：\"spanning verifiable task environments with execution feedback (OpenMLE-Gym), operator learning (OpenMLE-RL)\"<br>**总结**：可验证环境+算子学习",
+     "g": "—",
+     "w": "**原理**：执行反馈让每个算子的好坏可判定——搜索的每步都有裁判（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "35B 模型经执行接地 SFT+RL 后训练为 MLE 元进化 agent",
-     "g": "MLE-Bench Lite 39→71%，超 GPT-5.5+Codex，接近 Kimi K3（2.8T）"
+     "d": "原文：\"we post-train Frontis-MA1 (35B) as a meta-evolution agent for MLE, aligning post-training and inference around four atomic program-evolution operators\"<br>**总结**：35B 后训练为元进化 agent",
+     "g": "库内数字（自报）：MLE-Bench Lite 39→71%、超 GPT-5.5+Codex、接近 Kimi K3（2.8T）<br>**总结**：35B 越级对抗超大模型",
+     "w": "**原理**：训练与推理对齐同一组算子——学的就是推理时要执行的动作分布，无 train-inference 错位（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "部署时跑进化搜索，训练离线",
-     "g": "—"
+     "d": "部署时跑进化搜索，训练离线（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "进化搜索结果回流算子训练",
-     "g": "—"
+     "d": "进化搜索结果回流算子训练（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
-   "extra": "AI4AI：RSI 近邻（未展示加速趋势）；框架与 35B 权重全开源"
+   "extra": "库内标注：RSI 近邻（未展示加速趋势）；框架与 35B 权重全开源。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "OpenMLE-Evo long-horizon search with Draft/Improve/Debug/Crossover operators",
-     "g": "Learning and evolution coupled in one loop"
+     "d": "Paper: \"long-horizon search (OpenMLE-Evo)... four atomic program-evolution operators (Dr[aft/Improve/Debug/Crossover])\"<br>**Summary**: four-operator long-horizon search",
+     "g": "Paper (positioning): \"machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability\" — an executable testbed for AI4AI<br>**Summary**: MLE as RSI's landing testbed",
+     "w": "**Why**: operators mirror human engineering actions (draft/improve/debug/crossover) — primitivizing the MLE workflow makes long-horizon search composable (editor)"
     },
     {
      "t": "Closed-loop",
-     "d": "OpenMLE-Gym verifiable environment + OpenMLE-RL operator learning",
-     "g": "Execution-grounded and verifiable"
+     "d": "Paper: \"spanning verifiable task environments with execution feedback (OpenMLE-Gym), operator learning (OpenMLE-RL)\"<br>**Summary**: verifiable environments + operator learning",
+     "g": "—",
+     "w": "**Why**: execution feedback makes every operator's quality decidable — each search step has a referee (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "A 35B model post-trained via execution-grounded SFT+RL into an MLE meta-evolution agent",
-     "g": "MLE-Bench Lite 39→71%, beating GPT-5.5+Codex, near Kimi K3 (2.8T)"
+     "d": "Paper: \"we post-train Frontis-MA1 (35B) as a meta-evolution agent for MLE, aligning post-training and inference around four atomic program-evolution operators\"<br>**Summary**: 35B post-trained as a meta-evolution agent",
+     "g": "Archived (self-reported): MLE-Bench Lite 39→71%, beating GPT-5.5+Codex, near Kimi K3 (2.8T)<br>**Summary**: 35B punches far above its scale",
+     "w": "**Why**: training and inference align on the same operators — learning exactly the action distribution inference executes, no train/inference skew (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Evolutionary search at deployment; training offline",
-     "g": "—"
+     "d": "Evolutionary search at deployment; training offline (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Search results flow back into operator training",
-     "g": "—"
+     "d": "Search results flow back into operator training (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
-   "extra": "AI4AI: an RSI neighbor (no acceleration trend shown); framework and 35B weights fully open-sourced"
+   "extra": "Archived note: RSI neighbor (no acceleration trend shown); framework and 35B weights fully open."
   }
  },
  {
@@ -5303,36 +5439,41 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "RLVR 训练循环中嵌入合成教师蒸馏环节",
-     "g": "稀疏结果奖励变密集 token 级监督"
+     "d": "原文：\"constructs a synthetic teacher directly from the model's own RLVR training trajectory. By extrapolating the displacement between the current checkpoint and a trailing anchor—in parameter space or output logit space\"<br>**总结**：从自身 RLVR 轨迹外推 checkpoint 位移构造合成教师",
+     "g": "原文（双瓶颈）：\"external teachers suffer from distribution mismatch, while self-distillation with privileged conditioning is limited by in-context learning capacity\"<br>**总结**：外部教师分布失配；特权条件自蒸馏受限于上下文容量",
+     "w": "**原理**：位移外推=把多步离散更新近似为其线性延拓——参数空间的\"动量\"假说：沿已有改进方向多走一步，大概率仍在改进流形上（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "从自身 RLVR 轨迹外推 checkpoint 位移（参数或 logit 空间）构造合成教师，再以教师信号监督训练",
-     "g": "胜 RLVR-only 与单向自蒸馏"
+     "d": "原文：\"RISE converts a sparse outcome-induced parameter update into a dense token-level ta[rget]\"<br>**总结**：稀疏结果奖励→密集 token 级监督",
+     "g": "原文：胜 RLVR-only 与单向自蒸馏基线（数字见原文）<br>**总结**：两条已知路线之外的第三条",
+     "w": "**原理**：稀疏奖励的信用分配要经多轮传播才到 token；外推的密集目标把信用直接铺到每个 token 上（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "训练轨迹本身被回收为蒸馏素材",
-     "g": "无需外部教师模型"
+     "d": "训练轨迹本身回收为蒸馏素材（机制概述）<br>**总结**：零额外数据成本",
+     "g": "—",
+     "w": "**原理**：教师由学生轨迹派生，训练分布永远匹配（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "教师随学生每轮重新外推生成",
-     "g": "递归而非一次性压缩，监督质量随学生进步水涨船高"
+     "d": "教师随学生每轮重新外推（机制概述）<br>**总结**：递归而非一次性",
+     "g": "—",
+     "w": "**原理**：学生变强→位移更准→教师更好→学生更强，正循环（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "教师从学生自己的参数位移中外推而来",
-     "g": "自监督不引入外部分布失配"
+     "d": "原文（编者按）：教师从学生自己的参数位移外推而来<br>**总结**：自监督无外部锚",
+     "g": "—",
+     "w": "**原理**：自指的失效模式是自嗨（错误自我强化）；此处锚是 RLVR 验证器，外推只放大已验证的改进（编辑推演）"
     }
    ],
    "extra": ""
@@ -5341,36 +5482,41 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "A synthetic-teacher distillation step embedded in the RLVR loop",
-     "g": "Sparse outcome rewards become dense token-level supervision"
+     "d": "Paper: \"constructs a synthetic teacher directly from the model's own RLVR training trajectory. By extrapolating the displacement between the current checkpoint and a trailing anchor—in parameter space or output logit space\"<br>**Summary**: a synthetic teacher extrapolated from checkpoint displacement in its own RLVR trajectory",
+     "g": "Paper (twin bottleneck): \"external teachers suffer from distribution mismatch, while self-distillation with privileged conditioning is limited by in-context learning capacity\"<br>**Summary**: external teachers mismatch; privileged self-distillation capped by ICL capacity",
+     "w": "**Why**: displacement extrapolation ≈ linear continuation of multi-step discrete updates — a momentum hypothesis: one more step along a proven improvement direction likely stays on the improvement manifold (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Extrapolates checkpoint displacement (parameter or logit space) from its own RLVR trajectory to build a synthetic teacher",
-     "g": "Beats RLVR-only and one-way self-distillation"
+     "d": "Paper: \"RISE converts a sparse outcome-induced parameter update into a dense token-level ta[rget]\"<br>**Summary**: sparse outcome reward → dense token-level supervision",
+     "g": "Paper: beats RLVR-only and one-way self-distillation baselines (numbers in paper)<br>**Summary**: a third route beyond the two known ones",
+     "w": "**Why**: credit assignment under sparse rewards must propagate over rounds to reach tokens; the extrapolated dense target lays credit directly on every token (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Training trajectories are recycled as distillation material",
-     "g": "No external teacher model needed"
+     "d": "Training trajectories recycled as distillation material (mechanism)<br>**Summary**: zero extra data cost",
+     "g": "—",
+     "w": "**Why**: the teacher derives from the student's trajectory — training distribution always matches (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "The teacher is re-extrapolated every round as the student improves",
-     "g": "Recursive, not one-shot compression"
+     "d": "The teacher is re-extrapolated each round (mechanism)<br>**Summary**: recursive, not one-shot",
+     "g": "—",
+     "w": "**Why**: stronger student → more accurate displacement → better teacher → stronger student (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The teacher is extrapolated from the student's own parameter motion",
-     "g": "No external distribution mismatch"
+     "d": "Paper (editor note): the teacher is extrapolated from the student's own parameter motion<br>**Summary**: self-supervised, no external anchor",
+     "g": "—",
+     "w": "**Why**: self-reference's failure mode is self-reinforcing error; here the anchor is the RLVR verifier — extrapolation only amplifies verified improvement (editor)"
     }
    ],
    "extra": ""
@@ -5560,36 +5706,41 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "LLM 自己当裁判给自己的指令跟随输出打分（自奖励）",
-     "g": "奖励信号无需外部 RM"
+     "d": "原文：\"the language model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training\"<br>**总结**：LLM 当自己的裁判发奖励",
+     "g": "原文动机：\"Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training\"<br>**总结**：人类偏好封顶+冻结 RM 无法共进",
+     "w": "**原理**：奖励来源与被训者同一模型——奖励随模型进步水涨船高，绕开人类天花板与 RM 过时两个瓶颈（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "自奖励数据经 DPO 迭代训练自身",
-     "g": "指令跟随与对话质量三轮持续提升"
+     "d": "原文：\"during Iterative DPO training that not only does instr[uction following improve]\"——自奖励数据经迭代 DPO 训练（机制概述）<br>**总结**：自奖励+迭代 DPO",
+     "g": "原文：指令跟随与对话质量多轮持续提升（数字见原文）<br>**总结**：—",
+     "w": "**原理**：DPO 免显式 RM——偏好对直接进策略，自裁判的输出恰好就是偏好对（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "每轮自奖励数据训练更强的自裁判",
-     "g": "—"
+     "d": "每轮自奖励数据训练更强的自裁判（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "裁判、数据来源、被训练者是同一个模型",
-     "g": "自指的经典形态：奖励来自内部"
+     "d": "原文（编者按）：裁判、数据来源、被训练者是同一个模型<br>**总结**：自指的经典形态",
+     "g": "—",
+     "w": "**原理**：自指失效模式=自我偏好漂移（自己偏爱自己的风格）；原文缓解：裁判时以指令跟随准则为锚而非自由偏好（编辑推演）"
     }
    ],
    "extra": ""
@@ -5598,36 +5749,41 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "The LLM judges its own instruction-following outputs (self-reward)",
-     "g": "Reward signal without an external RM"
+     "d": "Paper: \"the language model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training\"<br>**Summary**: the LLM judges itself to issue rewards",
+     "g": "Motive, verbatim: \"Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training\"<br>**Summary**: human ceiling + frozen-RM staleness",
+     "w": "**Why**: reward source and trainee are the same model — the reward rises with the model, bypassing both the human ceiling and RM staleness (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Self-rewarded data trains the model via iterative DPO",
-     "g": "Sustained gains across three rounds on instruction following and chat"
+     "d": "Paper: \"during Iterative DPO training that not only does instr[uction following improve]\" — self-rewarded data via iterative DPO (mechanism)<br>**Summary**: self-reward + iterative DPO",
+     "g": "Paper: sustained multi-round gains on instruction following and chat (numbers in paper)<br>**Summary**:—",
+     "w": "**Why**: DPO needs no explicit RM — preference pairs go straight into policy, and the self-judge's output is exactly the pairs (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Each round of self-rewarded data trains a stronger self-judge",
-     "g": "—"
+     "d": "Each round's self-rewarded data trains a stronger self-judge (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "Judge, data source, and trainee are the same model",
-     "g": "The canonical self-referential form: reward comes from inside"
+     "d": "Paper (editor note): judge, data source, and trainee are one model<br>**Summary**: the canonical self-referential form",
+     "g": "—",
+     "w": "**Why**: the failure mode is self-preference drift (favoring one's own style); mitigation per paper: judging anchored to instruction-following criteria rather than free preference (editor)"
     }
    ],
    "extra": ""
@@ -5664,29 +5820,33 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "MCTS 自博弈搜索产生高质量推理轨迹",
-     "g": "小模型获得远超其规模的推理数据"
+     "d": "原文：\"exercising 'deep thinking' through Monte Carlo Tree Search (MCTS), where a math policy SLM performs test-time search guided by an SLM-based process reward model\"<br>**总结**：MCTS 深度思考+小模型过程奖励引导",
+     "g": "原文（定位）：\"small language models (SLMs) can rival or even surpass the math reasoning capability of OpenAI o1, without distillation from superior models\"<br>**总结**：小模型不蒸馏对抗 o1 级推理",
+     "w": "**原理**：MCTS 把\"一步答对\"换成\"搜索后答对\"——推理算力换模型参数，7B 借搜索树够到 100B+ 的推理质量（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "自进化深度思考：策略模型+过程奖励模型（SSM）自举训练",
-     "g": "7B 级小模型达到奥数级推理"
+     "d": "原文：\"a novel code-augmented CoT data synthesis method, which performs extensive MCTS rollouts to generate step-by-step verified r[easoning]\"（三大创新之一）<br>**总结**：MCTS rollout 产逐步验证数据训双 SLM",
+     "g": "原文：奥数级基准大幅提升（数字见原文，含 MATH/GSM8K 等）<br>**总结**：小模型奥数级",
+     "w": "**原理**：过程奖励模型学会\"这步对不对\"——步级监督比结果级监督的信用分配密度高一个量级（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "更好的策略产生更好的轨迹，训出更好的过程奖励",
-     "g": "—"
+     "d": "更好的策略产生更好轨迹，训出更好过程奖励（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [],
@@ -5696,29 +5856,33 @@
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "MCTS self-play search produces high-quality reasoning trajectories",
-     "g": "Small models get reasoning data far beyond their scale"
+     "d": "Paper: \"exercising 'deep thinking' through Monte Carlo Tree Search (MCTS), where a math policy SLM performs test-time search guided by an SLM-based process reward model\"<br>**Summary**: MCTS deep thinking + small-model process rewards",
+     "g": "Paper (positioning): \"small language models (SLMs) can rival or even surpass the math reasoning capability of OpenAI o1, without distillation from superior models\"<br>**Summary**: SLMs rival o1-level reasoning without distillation",
+     "w": "**Why**: MCTS swaps \"answer in one pass\" for \"answer after search\" — inference compute trades for model parameters; 7B reaches 100B+ reasoning quality via the tree (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Self-evolved deep thinking: policy + process-reward model (SSM) bootstrapped together",
-     "g": "7B-class models reach olympiad-level math"
+     "d": "Paper: \"a novel code-augmented CoT data synthesis method, which performs extensive MCTS rollouts to generate step-by-step verified r[easoning]\" (one of three innovations)<br>**Summary**: MCTS rollouts produce step-verified data training both SLMs",
+     "g": "Paper: large gains on olympiad-level benchmarks (numbers in paper, incl. MATH/GSM8K)<br>**Summary**: olympiad level for small models",
+     "w": "**Why**: the process reward model learns \"is this step right\" — step-level supervision is an order denser in credit assignment than outcome-level (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
      "d": "—",
-     "g": "—"
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Better policies yield better trajectories that train better process rewards",
-     "g": "—"
+     "d": "Better policies yield better trajectories training better process rewards (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [],
@@ -5864,36 +6028,41 @@
    "dir": [
     {
      "t": "多智能体",
-     "d": "课程 agent 出题、执行 agent 解题，两者协同进化",
-     "g": "任务难度自动匹配执行者当前能力"
+     "d": "原文：\"a fully autonomous framework that evolves high-performing agents without external data through multi-step co-evolution and seamless tool i[ntegration]\"<br>**总结**：零外部数据，多步共进化+工具集成",
+     "g": "原文动机：\"constrained by a dependency on human-curated data, limiting scalability and tethering AI to human knowledge... restricted by the model's inherent capabilities and single-round interactions\"<br>**总结**：人工数据限制扩展；现有自进化受单轮交互限制",
+     "w": "**原理**：课程与执行分工——出题方维持任务在执行方能力边缘，多步交互让课程可以包含工具使用与动态推理的组合题（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "零数据起步，两个 agent 互为对方的训练信号源",
-     "g": "从零数据冷启动共进化"
+     "d": "原文：\"multi-step co-evolution\"——两角色互为训练信号（机制概述）<br>**总结**：零数据冷启动共进化",
+     "g": "原文报告全程无外部数据下持续提升（数字见原文）<br>**总结**：自举成功",
+     "w": "**原理**：角色分工打破了\"自己给自己出题必然偏简单\"的退化——出题方奖励挂钩解题方进步，出难题才有回报（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "执行轨迹即时回流训练",
-     "g": "课程与能力同步增长"
+     "d": "多步 rollout 轨迹即时回流（机制概述）<br>**总结**：采集训练交替",
+     "g": "—",
+     "w": "**原理**：课程难度与执行能力同步生长，训练信号始终有效（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "课程难度随执行者进步动态调整",
-     "g": "始终维持有效训练优势"
+     "d": "课程难度动态跟随执行者水平（机制概述）<br>**总结**：始终有效优势",
+     "g": "—",
+     "w": "**原理**：难度自适应=自动课程学习，避免固定课程过易（无信号）或过难（无成功样本）（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "课程 agent 改进执行 agent，执行表现反过来改进课程",
-     "g": "双向自指闭环"
+     "d": "课程 agent 与执行 agent 互相改进（机制概述）<br>**总结**：双向自指",
+     "g": "—",
+     "w": "**原理**：交叉自指比单点自指稳定——两个互补视角互相纠偏（编辑推演）"
     }
    ],
    "extra": ""
@@ -5902,36 +6071,41 @@
    "dir": [
     {
      "t": "Multi-agent",
-     "d": "A curriculum agent poses tasks, an executor solves them; both co-evolve",
-     "g": "Task difficulty auto-matches executor capability"
+     "d": "Paper: \"a fully autonomous framework that evolves high-performing agents without external data through multi-step co-evolution and seamless tool i[ntegration]\"<br>**Summary**: zero external data; multi-step co-evolution + tool integration",
+     "g": "Motive, verbatim: \"constrained by a dependency on human-curated data, limiting scalability and tethering AI to human knowledge... restricted by the model's inherent capabilities and single-round interactions\"<br>**Summary**: human data caps scale; prior self-evolution capped by single-round interaction",
+     "w": "**Why**: curriculum and executor split roles — the poser keeps tasks at the executor's ability edge, and multi-step interaction lets curricula involve tool use with dynamic reasoning (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "Starts from zero data; the two agents are each other's training signal",
-     "g": "Cold-start co-evolution"
+     "d": "Paper: \"multi-step co-evolution\" — the two roles are each other's training signal (mechanism)<br>**Summary**: zero-data cold-start co-evolution",
+     "g": "Paper reports sustained improvement with no external data (numbers in paper)<br>**Summary**: successful bootstrapping",
+     "w": "**Why**: role split breaks the degenerate \"self-posed tasks drift easy\" — the poser's reward ties to the solver's progress, so hard tasks pay (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Execution trajectories flow back into training immediately",
-     "g": "Curriculum and capability grow in lockstep"
+     "d": "Multi-step rollouts flow back immediately (mechanism)<br>**Summary**: collect-train alternation",
+     "g": "—",
+     "w": "**Why**: difficulty and capability grow in lockstep, keeping training signal valid (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Curriculum difficulty adapts as the executor improves",
-     "g": "Keeps effective training advantage alive"
+     "d": "Curriculum difficulty tracks the executor (mechanism)<br>**Summary**: perpetually effective advantage",
+     "g": "—",
+     "w": "**Why**: adaptive difficulty = automatic curriculum learning — avoiding fixed curricula that are too easy (no signal) or too hard (no successes) (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "Curriculum improves executor; executor performance improves curriculum",
-     "g": "Bidirectional self-referential loop"
+     "d": "Curriculum and executor improve each other (mechanism)<br>**Summary**: bidirectional self-reference",
+     "g": "—",
+     "w": "**Why**: cross self-reference is stabler than single-point — two complementary views correct each other (editor)"
     }
    ],
    "extra": ""
@@ -9249,97 +9423,111 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "Data(𝒟)/Harness(ℋ)/Model(θ) 三个可写面统一为同一循环内核的算子实例化",
-     "g": "三类自我改进共用一套验证与调度"
+     "d": "原文（系统构造）：Data(𝒟)/Harness(ℋ)/Model(θ) 三可写面统一为同一循环内核的算子（编者概述）<br>**总结**：三类自我改进共用一套验证调度",
+     "g": "原文：\"RSI has been validated almost exclusively on coding and formal benchmarks... This format bound limits RSI to improvement within a machine-checkable slice, not general capability where questions are open and correctness is settled by argument, replication, or measurement\"<br>**总结**：现有 RSI 被锁在机器可判定切片里",
+     "w": "**原理**：统一内核消除了 D/H/M 三线各自的验证逻辑碎片——一份权限边界与新鲜度规则服务全部改进类型（编辑推演）"
     },
     {
      "t": "进化搜索",
-     "d": "RSI² 调度器在类型化契约下编排算子序列并改写提案策略",
-     "g": "改进步骤本身可被搜索优化"
+     "d": "RSI² 调度器在类型化契约下编排算子序列（系统构造，编者概述）<br>**总结**：改进步骤本身可搜索",
+     "g": "—",
+     "w": "**原理**：改进顺序是组合空间，搜索优于固定管线（编辑推演）"
     },
     {
      "t": "记忆上下文",
-     "d": "改进历史与信号新鲜度规则持久化（H→M 与 M→M 禁止——数据不应早于能力变化）",
-     "g": "防止用过时数据训新能力"
+     "d": "信号新鲜度规则：H→M 与 M→M 禁止（系统构造）<br>**总结**：数据不得早于能力变化",
+     "g": "—",
+     "w": "**原理**：过时信号训新能力=用旧地图走新路，禁止规则强制信息因果序（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "MetaRSI² 再改进调度器本身——RSI 应用于 RSI",
-     "g": "平均 +10.9、胜固定管线 +3.6；SWE-bench Pro 10.3→19.5"
+     "d": "MetaRSI² 再改进调度器——RSI 应用于 RSI（系统构造）<br>**总结**：元层也进闭环",
+     "g": "原文数字（nums 存档）：平均 +10.9、胜固定管线 +3.6、SWE-bench Pro 10.3→19.5<br>**总结**：调度本身承重",
+     "w": "**原理**：调度器决定算子序列——改进\"怎么改进\"的杠杆比单次改进高一阶（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "模型只做提案，确定性代码执行验证/打分/发布",
-     "g": "权限边界保证每步可复核"
+     "d": "模型只提案，确定性代码验证/打分/发布（系统构造）<br>**总结**：权限边界可复核",
+     "g": "—",
+     "w": "**原理**：提案/执行分离=信息流单向闸门，模型幻觉进不了发布通道（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "全链路闭环追踪信号",
-     "g": "普查发现闭环形成追踪验证格式而非能力（ρ=-0.75）——oracle 类型决定 RSI 上限"
+     "d": "全链路闭环追踪（系统构造）<br>**总结**：闭环可观测",
+     "g": "原文普查：闭环形成追踪验证格式而非能力（ρ=-0.75）<br>**总结**：oracle 类型决定 RSI 上限的定量证据",
+     "w": "**原理**：可判定的验证格式自然先形成闭环——因果方向是格式→闭环，不是能力→闭环（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "调度器改进调度器自身",
-     "g": "改进步骤的元层也在闭环内"
+     "d": "调度器改进调度器自身（系统构造）<br>**总结**：元自指",
+     "g": "—",
+     "w": "**原理**：元层自指的约束是类型化契约——无限自指被类型系统截断为有限层级（编辑推演）"
     }
    ],
-   "extra": "定量验证 oracle 类型决定论：闭环追踪的是验证格式而非能力"
+   "extra": "论文主张 RSI 下一步须进入\"论证/复现/测量\"裁决的开放科学域（原文立场）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Three writable surfaces — Data/Harness/Model — unified as operators of one loop kernel",
-     "g": "All three self-improvement kinds share one verification and scheduling machinery"
+     "d": "Paper (system): Data/Harness/Model as three writable surfaces unified as operators of one loop kernel (editor summary)<br>**Summary**: all three improvement kinds share one verification/scheduling machinery",
+     "g": "Paper: \"RSI has been validated almost exclusively on coding and formal benchmarks... This format bound limits RSI to improvement within a machine-checkable slice, not general capability where questions are settled by argument, replication, or measurement\"<br>**Summary**: existing RSI locked inside a machine-checkable slice",
+     "w": "**Why**: one kernel removes verification-logic fragmentation across D/H/M — one permission boundary and freshness rule serve all improvement types (editor)"
     },
     {
      "t": "Evolutionary",
-     "d": "An RSI² scheduler composes operator sequences under typed contracts and rewrites proposal policies",
-     "g": "The improvement steps themselves are searchable"
+     "d": "An RSI² scheduler composes operator sequences under typed contracts (system, editor summary)<br>**Summary**: improvement steps themselves are searchable",
+     "g": "—",
+     "w": "**Why**: improvement order is a combinatorial space; search beats fixed pipelines (editor)"
     },
     {
      "t": "Memory",
-     "d": "Improvement history and signal-freshness rules persist (H→M and M→M banned — data must not predate capability change)",
-     "g": "Prevents training new capabilities on stale data"
+     "d": "Signal-freshness rules: H→M and M→M banned (system)<br>**Summary**: data must not predate capability change",
+     "g": "—",
+     "w": "**Why**: stale signals training new capability = old map, new road; the ban enforces informational causal order (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "MetaRSI² improves the scheduler itself — RSI applied to RSI",
-     "g": "+10.9 avg, +3.6 over fixed pipelines; SWE-bench Pro 10.3→19.5"
+     "d": "MetaRSI² improves the scheduler itself — RSI applied to RSI (system)<br>**Summary**: the meta level joins the loop",
+     "g": "Paper numbers (archived): +10.9 avg, +3.6 over fixed pipelines, SWE-bench Pro 10.3→19.5<br>**Summary**: scheduling itself carries weight",
+     "w": "**Why**: the scheduler decides operator sequences — improving \"how to improve\" is one order higher leverage than any single improvement (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Model only proposes; deterministic code verifies, scores, and releases",
-     "g": "Permission boundary keeps every step auditable"
+     "d": "Model proposes; deterministic code verifies/scores/releases (system)<br>**Summary**: auditable permission boundary",
+     "g": "—",
+     "w": "**Why**: propose/execute separation is a one-way gate — model hallucination cannot enter the release channel (editor)"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Closed-loop tracking across the chain",
-     "g": "Survey: loop formation tracks verification format, not capability (ρ=-0.75) — oracle type bounds RSI"
+     "d": "Closed-loop tracking across the chain (system)<br>**Summary**: observable loops",
+     "g": "Paper survey: loop formation tracks verification format, not capability (ρ=-0.75)<br>**Summary**: quantitative evidence that oracle type bounds RSI",
+     "w": "**Why**: decidable verification formats naturally form loops first — causation runs format→loop, not capability→loop (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The scheduler improves the scheduler",
-     "g": "The meta level of improvement is inside the loop"
+     "d": "The scheduler improves the scheduler (system)<br>**Summary**: meta self-reference",
+     "g": "—",
+     "w": "**Why**: the constraint on meta self-reference is the typed contract — infinite regress is cut to finite levels by the type system (editor)"
     }
    ],
-   "extra": "Quantitative oracle determinism: what the loop tracks is verification format, not capability"
+   "extra": "The paper argues RSI must next enter open scientific domains judged by \"argument, replication, or measurement\" (position, verbatim fragments)."
   }
  },
  {
@@ -10255,77 +10443,87 @@
    "dir": [
     {
      "t": "单次生成",
-     "d": "纲领文档而非算法实现：定义 P1-P5 因果位置与 PIPE（物理改进-生产边）形式化",
-     "g": "给物理 RSI 提供统一坐标系"
+     "d": "原文（纲领定义，编者按）：Physical Recursive Self-Improvement（PRSI）与 Physical Improvement-Production Edge（PIPE）的形式化；P1 硬件接口→P5 产生后续机器的算子五级因果位置<br>**总结**：物理 RSI 的统一坐标系",
+     "g": "原文主张（定位）：让机器加速造机器、人类需求引导方向——信息端终点 DFM 的物理镜像<br>**总结**：纲领而非实现",
+     "w": "**原理**：把\"AI 进物理世界\"从连续谱切成五个可判定的档位——位置决定能力上限与风险敞口，形式化使讨论可证（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "P5=产生后续机器的算子——改进物理制造能力本身",
-     "g": "4 个数学定理：可构造性/几何收缩/选择遗憾界/劳动系数收缩"
+     "d": "原文（P5 定义，编者概述）：产生后续机器的算子——改进物理制造能力本身<br>**总结**：P5=物理 RSI",
+     "g": "原文定理（编者按）：证书链可构造性、几何收缩、选择遗憾界、劳动系数收缩<br>**总结**：四定理给可行性骨架",
+     "w": "**原理**：几何收缩=选择空间随证书链证据积累而收缩——递归收敛的前提是信息增益单调，证书链正是信息增益的载体（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "运行时全冻结",
-     "d": "纯理论框架，无运行系统",
-     "g": "形式化结论不依赖具体实现"
+     "d": "纯理论框架，无运行系统（编者按）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "证书链：每台机器的制造过程可追溯可验证",
-     "g": "几何收缩定理成立的前提——选择空间随证据收缩"
+     "d": "原文机制：证书链——每台机器制造过程可追溯可验证<br>**总结**：制造史即证据链",
+     "g": "—",
+     "w": "**原理**：可追溯性把\"这台机器为什么可信\"变成可查证的记录，而非信任制造商（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "机器造更好的机器，人类需求环引导改进方向",
-     "g": "避免能力陷阱（系统只改进自己擅长改进的）"
+     "d": "原文双环：需求环引导方向+物理环执行改进（编者概述）<br>**总结**：人类需求防能力陷阱",
+     "g": "—",
+     "w": "**原理**：纯内生改进会陷入\"只改进自己擅长改进的\"——外环给改进方向一个系统外锚点（编辑推演）"
     }
    ],
-   "extra": "人类需求引导双环：需求环决定改进方向，物理环执行改进——信息端终点是 DFM，物理端终点是 PRSI"
+   "extra": "引语来自论文自定义术语与结构（编者按）；本条目为 PDF 纲领文档。"
   },
   "card_en": {
    "dir": [
     {
      "t": "One-shot",
-     "d": "A manifesto, not an implementation: defines causal positions P1-P5 and formalizes the Physical Improvement-Production Edge (PIPE)",
-     "g": "A unified coordinate system for physical RSI"
+     "d": "Paper (manifesto definitions, editor note): formalization of Physical Recursive Self-Improvement (PRSI) and the Physical Improvement-Production Edge (PIPE); five causal positions P1 hardware interface → P5 the operator producing subsequent machines<br>**Summary**: a unified coordinate system for physical RSI",
+     "g": "Paper claim (positioning): machines accelerating machine-making, steered by human demand — the physical mirror of the DFM endpoint<br>**Summary**: manifesto, not implementation",
+     "w": "**Why**: slicing \"AI into the physical world\" into five decidable grades — position determines capability ceiling and risk exposure; formalization makes the debate provable (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "P5 = the operator that produces the next machines — improving physical manufacturing itself",
-     "g": "Four theorems: constructibility, geometric contraction, selection regret bound, labor contraction"
+     "d": "Paper (P5, editor summary): the operator producing subsequent machines — improving physical manufacturing itself<br>**Summary**: P5 = physical RSI",
+     "g": "Paper theorems (editor note): certificate-chain constructibility, geometric contraction, selection regret bound, labor contraction<br>**Summary**: four theorems as the feasibility skeleton",
+     "w": "**Why**: geometric contraction = the selection space shrinks as certificate-chain evidence accumulates — recursive convergence presupposes monotone information gain, and the certificate chain is its carrier (editor)"
     }
    ],
    "rt": [
     {
      "t": "Frozen at runtime",
-     "d": "Pure theory, no running system",
-     "g": "Formal results are implementation-independent"
+     "d": "Pure theory, no running system (editor note)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Certificate chains: every machine's making is traceable and verifiable",
-     "g": "Precondition of geometric contraction — the selection space shrinks with evidence"
+     "d": "Paper mechanism: certificate chains — every machine's making is traceable and verifiable<br>**Summary**: manufacturing history as an evidence chain",
+     "g": "—",
+     "w": "**Why**: traceability turns \"why trust this machine\" into a checkable record rather than trust in the maker (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "Machines make better machines; a human-demand loop steers the direction",
-     "g": "Avoids the capability trap (only improving what it is already good at improving)"
+     "d": "Paper dual loop: demand ring steers direction + physical ring executes (editor summary)<br>**Summary**: human demand against the capability trap",
+     "g": "—",
+     "w": "**Why**: purely endogenous improvement falls into \"improving only what it is good at improving\" — the outer ring gives direction an exogenous anchor (editor)"
     }
    ],
-   "extra": "Dual loop: demand ring sets direction, physical ring executes — DFM is the informational endpoint, PRSI the physical one"
+   "extra": "Quotes are the paper's own defined terms and structure (editor note); this entry is a PDF manifesto."
   }
  },
  {
@@ -10391,41 +10589,47 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "rubric 生成器与判官交替 RL、轮流进化",
-     "g": "评测标准与执行共演，不锁死在初始 rubric"
+     "d": "原文：\"jointly optimizes a rubric generator and a judge using reinforcement learning from preference feedback\"<br>**总结**：rubric 生成器与判官交替 RL、轮流进化",
+     "g": "原文定位（对既有方法）：\"Unlike existing methods that rely on st[atic...]\"——静态 rubric 不可进化<br>**总结**：标准与执行共演",
+     "w": "**原理**：rubric 与判官是评价体系的两半——固定一半优化另一半只能到局部最优，交替优化逼近联合最优（编辑推演）"
     },
     {
      "t": "多智能体",
-     "d": "生成器 πr 与判官 πj 职责分离",
-     "g": "各自目标清晰、可独立优化"
+     "d": "生成器 πr 与判官 πj 职责分离（原文构造）<br>**总结**：分工使各自目标清晰",
+     "g": "—",
+     "w": "**原理**：职责分离让奖励归因明确——判官的错与标准的错可分开追责（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "两者都从偏好反馈被 RL 训练",
-     "g": "奖励建模基准平均 +4.7%"
+     "d": "两者都从偏好反馈被 RL 训练（原文构造）<br>**总结**：双角色都进权重层",
+     "g": "原文：\"achieving a +4.7% average gain on reward-modeling [benchmarks]\"（9 个奖励建模+6 个策略基准）<br>**总结**：+4.7% 平均增益",
+     "w": "**原理**：交替训练类似坐标上升——每次固定一方优化另一方，单调可证地爬坡（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "偏好对在训练中采集并消费",
-     "g": "—"
+     "d": "偏好对训练中采集消费（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "验证反馈",
-     "d": "判官按 rubric 逐条核对评分",
-     "g": "可解释、可审计的奖励信号"
+     "d": "判官按 rubric 逐条核对（机制概述）<br>**总结**：结构化评分",
+     "g": "—",
+     "w": "**原理**：rubric 把\"好不好\"拆成可逐项核对的谓词——评价从整体印象变成可审计清单（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "判官给生成器打分，两者互为训练信号",
-     "g": "回答「谁来给判官打分」的自指难题"
+     "d": "判官给生成器打分，两者互为训练信号（机制概述）<br>**总结**：回答\"谁给判官打分\"",
+     "g": "—",
+     "w": "**原理**：裁判的裁判=偏好数据本身——外部偏好锚定交替优化的不动点，防止共谋退化（编辑推演）"
     }
    ],
    "extra": ""
@@ -10434,41 +10638,47 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Rubric generator and judge evolve in turns via alternating RL",
-     "g": "Criteria and judging co-evolve instead of freezing"
+     "d": "Paper: \"jointly optimizes a rubric generator and a judge using reinforcement learning from preference feedback\"<br>**Summary**: rubric generator and judge evolve in alternating RL",
+     "g": "Paper (on prior work): \"Unlike existing methods that rely on st[atic...]\" — static rubrics cannot evolve<br>**Summary**: criteria and execution co-evolve",
+     "w": "**Why**: rubric and judge are two halves of an evaluation system — fixing one and optimizing the other reaches only local optima; alternation approaches the joint optimum (editor)"
     },
     {
      "t": "Multi-agent",
-     "d": "Generator πr and judge πj with separated duties",
-     "g": "Each optimizable independently"
+     "d": "Generator πr and judge πj with separated duties (paper construction)<br>**Summary**: clear per-role objectives",
+     "g": "—",
+     "w": "**Why**: separation makes credit assignable — judge errors and criteria errors are separately attributable (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "Both are RL-trained from preference feedback",
-     "g": "+4.7% average on reward-modeling benchmarks"
+     "d": "Both RL-trained from preference feedback (paper construction)<br>**Summary**: both roles reach the weight layer",
+     "g": "Paper: \"achieving a +4.7% average gain on reward-modeling [benchmarks]\" (9 reward-modeling + 6 policy benchmarks)<br>**Summary**: +4.7% average gain",
+     "w": "**Why**: alternating training is coordinate ascent — fix one side, optimize the other; monotone hill-climbing (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Preference pairs collected and consumed during training",
-     "g": "—"
+     "d": "Preference pairs collected and consumed during training (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Verification feedback",
-     "d": "Judge scores against rubric items",
-     "g": "Interpretable, auditable reward"
+     "d": "Judge scores rubric item by item (mechanism)<br>**Summary**: structured scoring",
+     "g": "—",
+     "w": "**Why**: rubrics decompose \"is it good\" into checkable predicates — evaluation becomes an auditable checklist, not a gestalt impression (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The judge grades the generator; both train each other",
-     "g": "Answers \"who grades the grader\""
+     "d": "The judge grades the generator; both train each other (mechanism)<br>**Summary**: answers \"who grades the grader\"",
+     "g": "—",
+     "w": "**Why**: the judge's judge is the preference data itself — external preference anchors the alternation's fixed point, preventing collusive degeneration (editor)"
     }
    ],
    "extra": ""
@@ -10653,36 +10863,41 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "合成响应对→推理偏好理由→训练判官→更高质量的合成，循环迭代",
-     "g": "零人类标注训练出强判官"
+     "d": "原文：\"an iterative self-training algorithm... starting from a small seed set of instructions, responses are generated, and pairs of responses are compared\"<br>**总结**：合成响应对→偏好推理→训练判官，循环",
+     "g": "原文动机：\"the standard approach is to collect a large amount of human preference judgments over model responses, which is costly and the data becomes stale as models improve\"<br>**总结**：人类偏好贵且随模型进步过时",
+     "w": "**原理**：判官随被评者共同进化才不过时——静态 RM 在模型变强后系统性失准（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "判官在自己合成的偏好标签上迭代微调",
-     "g": "RewardBench 75.4→88.3，匹敌人类标注训练的奖励模型"
+     "d": "原文：\"improve a strong LLM (Llama3-70B-Instruct) from 75.4 to 88.3 (88.7 with...) [on RewardBench]\"<br>**总结**：自训判官 75.4→88.3",
+     "g": "原文：\"Without any labeled preference data\"<br>**总结**：零标注达成，匹敌人类标注 RM",
+     "w": "**原理**：偏好判断能力已潜伏在强模型里——自训练只是把这种潜能对齐到评测任务格式（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "合成数据即时用于训练",
-     "g": "数据成本≈推理成本"
+     "d": "合成数据即产即用（机制概述）<br>**总结**：数据成本≈推理成本",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "验证反馈",
-     "d": "偏好推理链为每个标签提供依据",
-     "g": "判官结论可追溯"
+     "d": "原文：生成\"analysis of the differences between the responses\"作为偏好理由（机制概述）<br>**总结**：每个标签带推理链",
+     "g": "—",
+     "w": "**原理**：推理链=标签的显式理由，错标签可定位到错误推理步（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "判官给自己造训练数据",
-     "g": "评测器随被评模型一起进化，不会过时"
+     "d": "判官给自己造训练数据（机制概述）<br>**总结**：评测器自指",
+     "g": "—",
+     "w": "**原理**：自指风险=偏好漂移；缓解=从强种子模型的相对判断起步，锚在模型间一致性而非绝对真理（编辑推演）"
     }
    ],
    "extra": ""
@@ -10691,36 +10906,41 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Synthesize response pairs → reason preferences → train the judge → better synthesis, iteratively",
-     "g": "Strong judge trained with zero human labels"
+     "d": "Paper: \"an iterative self-training algorithm... starting from a small seed set of instructions, responses are generated, and pairs of responses are compared\"<br>**Summary**: synthesize response pairs → reason preferences → train the judge, loop",
+     "g": "Motive, verbatim: \"the standard approach is to collect a large amount of human preference judgments over model responses, which is costly and the data becomes stale as models improve\"<br>**Summary**: human preferences are costly and go stale",
+     "w": "**Why**: only a judge evolving with the judged stays fresh — static RMs systematically miscalibrate as models strengthen (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The judge is iteratively finetuned on its own synthetic preference labels",
-     "g": "RewardBench 75.4→88.3, matching human-labeled RMs"
+     "d": "Paper: \"improve a strong LLM (Llama3-70B-Instruct) from 75.4 to 88.3 (88.7 with...) [on RewardBench]\"<br>**Summary**: self-trained judge 75.4→88.3",
+     "g": "Paper: \"Without any labeled preference data\"<br>**Summary**: zero labels, matching human-labeled RMs",
+     "w": "**Why**: preference-judgment ability already latents in strong models — self-training aligns that potential to the evaluation format (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Synthetic data used for training as it is produced",
-     "g": "Data cost ≈ inference cost"
+     "d": "Synthetic data used as produced (mechanism)<br>**Summary**: data cost ≈ inference cost",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Verification feedback",
-     "d": "A preference reasoning chain backs every label",
-     "g": "Judge verdicts are traceable"
+     "d": "Paper: generates \"analysis of the differences between the responses\" as preference rationale (mechanism)<br>**Summary**: every label carries a reasoning chain",
+     "g": "—",
+     "w": "**Why**: the chain is the label's explicit rationale — wrong labels localize to wrong reasoning steps (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The judge creates its own training data",
-     "g": "The evaluator evolves with the evaluated, never going stale"
+     "d": "The judge creates its own training data (mechanism)<br>**Summary**: evaluator self-reference",
+     "g": "—",
+     "w": "**Why**: self-reference risk = preference drift; mitigation = start from a strong seed's relative judgments, anchored in inter-model consistency (editor)"
     }
    ],
    "extra": ""
@@ -10969,87 +11189,99 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "自动研究循环在越来越多样环境中 rollout harness 改进，机制经选择存活",
-     "g": "4 个机制胜出且可迁移到开发环境之外"
+     "d": "原文：\"scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts... the process yields reusable improvements that transfer beyond their development setting\"<br>**总结**：研究循环跨环境 rollout，机制经选择存活且可迁移",
+     "g": "原文动机：\"before scaling agent loops, can agents first make the harness itself more efficient?\"<br>**总结**：先优化 harness 再扩大循环",
+     "w": "**原理**：跨环境选择压力过滤掉环境特定技巧——活下来的机制必然抓住的是 harness 的通用低效（编辑推演）"
     },
     {
      "t": "闭环调整",
-     "d": "研究循环发现的 harness 改进直接部署回运行它的 harness",
-     "g": "研究工具自己成为研究成果"
+     "d": "研究循环发现的改进直接部署回运行它的 harness（机制概述）<br>**总结**：研究工具成为研究成果",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "RSI 作用于 harness 层：让 agent 先优化 harness 本身（token 效率）",
-     "g": "长任务 token 成本显著下降——Action Fusion、ObservationPack、Evidence-Preserving Reducer、Online Context Compact 四机制"
+     "d": "原文：\"We take an RSI-inspired approach at the harness layer\"<br>**总结**：RSI 作用于 harness 层（token 效率）",
+     "g": "四个存活机制：Action Fusion、ObservationPack、Evidence-Preserving Reducer、Online Context Compact（README 自述，长任务 token 成本显著下降）<br>**总结**：四机制全部命中 token 效率",
+     "w": "**原理**：长任务的主要成本是重复验证调用、过期观测回放、日志过度读取——四机制分别消灭一种重复开销（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "骨干模型冻结，改进全部落在 harness 机制上",
-     "g": "生产级开源（3476 星），MIT 协议"
+     "d": "骨干冻结，改进落在 harness 机制（原文设定）<br>**总结**：生产级开源（3.4k 星）",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "跨环境 rollout 证据筛选机制",
-     "g": "可迁移性经选择压力验证"
+     "d": "跨环境 rollout 证据筛选机制（机制概述）<br>**总结**：可迁移性经选择验证",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "自动研究循环改进的是运行这个循环的 harness",
-     "g": "改进者与被改进者是同一系统"
+     "d": "自动研究循环改进运行它的 harness（机制概述）<br>**总结**：改进者=被改进者",
+     "g": "—",
+     "w": "**原理**：harness 效率决定研究循环本身的可扩展性——自指在此是实用的：优化载体和优化对象是同一个（编辑推演）"
     }
    ],
-   "extra": "四个存活机制全部作用于 harness 不同部位：动作执行、上下文压缩、观测处理、委派"
+   "extra": "开源为 Pi 编码 agent 的扩展（github.com/NVlabs/SoL-Pi），MIT 协议，3476 星。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Auto-research loops roll out harness improvements across increasingly diverse environments; mechanisms survive selection",
-     "g": "Four mechanisms survived and transfer beyond their development settings"
+     "d": "Paper: \"scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts... the process yields reusable improvements that transfer beyond their development setting\"<br>**Summary**: research loops roll out cross-environment; surviving mechanisms transfer",
+     "g": "Motive, verbatim: \"before scaling agent loops, can agents first make the harness itself more efficient?\"<br>**Summary**: optimize the harness before scaling the loop",
+     "w": "**Why**: cross-environment selection filters out environment-specific tricks — survivors must capture harness-universal inefficiencies (editor)"
     },
     {
      "t": "Closed-loop",
-     "d": "Harness improvements found by the loop deploy back into the loop's own harness",
-     "g": "The research tool becomes the research output"
+     "d": "Discovered improvements deploy back into the loop's own harness (mechanism)<br>**Summary**: the research tool becomes the research output",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "RSI at the harness layer: the agent first optimizes its own harness (token efficiency)",
-     "g": "Large token-cost cuts on long tasks — Action Fusion, ObservationPack, Evidence-Preserving Reducer, Online Context Compact"
+     "d": "Paper: \"We take an RSI-inspired approach at the harness layer\"<br>**Summary**: RSI at the harness layer (token efficiency)",
+     "g": "Four surviving mechanisms: Action Fusion, ObservationPack, Evidence-Preserving Reducer, Online Context Compact (README; large token-cost cuts on long tasks)<br>**Summary**: all four target token efficiency",
+     "w": "**Why**: long-task cost is dominated by repeated validation calls, stale observation replay, over-reading logs — each mechanism kills one repeated overhead (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Backbone frozen; all improvement lives in harness mechanisms",
-     "g": "Production-grade open source (3.4k stars), MIT"
+     "d": "Backbone frozen; improvement lives in harness mechanisms (paper setup)<br>**Summary**: production-grade open source (3.4k stars)",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Cross-environment rollout evidence filters mechanisms",
-     "g": "Transferability validated by selection pressure"
+     "d": "Cross-environment rollout evidence filters mechanisms (mechanism)<br>**Summary**: transferability validated by selection",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The auto-research loop improves the harness that runs it",
-     "g": "Improver and improved are the same system"
+     "d": "The auto-research loop improves the harness that runs it (mechanism)<br>**Summary**: improver = improved",
+     "g": "—",
+     "w": "**Why**: harness efficiency bounds the research loop's own scalability — here self-reference is practical: carrier and target coincide (editor)"
     }
    ],
-   "extra": "All four surviving mechanisms target different harness parts: action execution, context compaction, observation handling, delegation"
+   "extra": "Open-sourced as a Pi coding-agent extension (github.com/NVlabs/SoL-Pi), MIT, 3,476 stars."
   }
  },
  {
@@ -11396,87 +11628,99 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "迭代提出并选择 harness 组件编辑",
-     "g": "harness 优化全自动化"
+     "d": "原文：\"iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level\"<br>**总结**：迭代提出+选择 harness 组件编辑",
+     "g": "—",
+     "w": "**原理**：组件级编辑让搜索空间可控——整体重写不可评估，组件编辑可隔离归因（编辑推演）"
     },
     {
      "t": "闭环调整",
-     "d": "以评估成绩作为选择信号",
-     "g": "无需人工审阅每个编辑"
+     "d": "以评估成绩为选择信号（机制概述）<br>**总结**：成绩选编辑",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "harness-RSI：递归修改 agent 的提示/控制流/工具/记忆组件",
-     "g": "分布内性能大涨"
+     "d": "harness-RSI：递归修改提示/控制流/工具/记忆组件（原文设定）<br>**总结**：agent 系统层 RSI",
+     "g": "原文：\"such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks\"——诊断结论<br>**总结**：分布内大涨、OOD 消失（过拟合病）",
+     "w": "**原理**：选择信号=训练任务成绩时，编辑可以记忆任务而非提升能力——评价集即优化目标时过拟合不可避免（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "只采集数据，不训练",
-     "d": "冻结骨干上做编辑搜索",
-     "g": "—"
+     "d": "冻结骨干上做编辑搜索（原文设定）<br>**总结**：零训练开销",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "把正则化原则引入自改进循环",
-     "g": "OOD 增益保持——修复 harness-RSI 过拟合"
+     "d": "原文：\"incorporates the principles of regularizations into harness self-improvement\"<br>**总结**：正则化进自改进循环",
+     "g": "原文：OOD 增益保持（数字见原文）<br>**总结**：修复过拟合后增益可迁移",
+     "w": "**原理**：权重训练的过拟合解法（正则/早停/held-out 选择）原样移植到代码编辑搜索——ML 基础课对 harness-RSI 的适用性（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "harness 编辑流程改进 harness 自身",
-     "g": "—"
+     "d": "harness 编辑流程改进 harness 自身（机制概述）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
-   "extra": "首次系统诊断 harness-RSI 过拟合病：编辑会记忆训练任务，分布内大涨而 OOD 增益消失甚至为负"
+   "extra": "首次系统诊断 harness-RSI 过拟合：分布内增益与 OOD 增益脱钩甚至反号。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Iteratively proposes and selects edits of harness components",
-     "g": "Fully automated harness optimization"
+     "d": "Paper: \"iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level\"<br>**Summary**: iterative propose-and-select of harness component edits",
+     "g": "—",
+     "w": "**Why**: component-level edits keep the search space tractable — whole rewrites are unattributable; component edits isolate causality (editor)"
     },
     {
      "t": "Closed-loop",
-     "d": "Evaluation scores serve as the selection signal",
-     "g": "No manual review of each edit"
+     "d": "Evaluation scores select edits (mechanism)<br>**Summary**: scores pick edits",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "Harness-RSI: recursively rewrites the agent's prompts/control flow/tools/memory",
-     "g": "Large in-distribution gains"
+     "d": "Harness-RSI: recursively rewrites prompts/control flow/tools/memory (paper setup)<br>**Summary**: RSI at the agent-system level",
+     "g": "Paper: \"such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks\" — the diagnosis<br>**Summary**: big in-distribution, vanishing OOD (overfitting)",
+     "w": "**Why**: when selection signal = training-task scores, edits can memorize tasks instead of raising capability — optimizing the metric breaks the goal (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects, no training",
-     "d": "Edit search on a frozen backbone",
-     "g": "—"
+     "d": "Edit search on a frozen backbone (paper setup)<br>**Summary**: zero training overhead",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Regularization principles injected into the self-improvement loop",
-     "g": "OOD gains preserved — fixes harness-RSI overfitting"
+     "d": "Paper: \"incorporates the principles of regularizations into harness self-improvement\"<br>**Summary**: regularization enters the self-improvement loop",
+     "g": "Paper: OOD gains preserved (numbers in paper)<br>**Summary**: gains transfer after the fix",
+     "w": "**Why**: weight-training anti-overfitting tools (regularization/early stopping/held-out selection) transplant directly to code-edit search — ML 101 applies to harness-RSI (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The harness-editing pipeline improves the harness itself",
-     "g": "—"
+     "d": "The harness-editing pipeline improves the harness itself (mechanism)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
-   "extra": "First systematic diagnosis of harness-RSI overfitting: edits memorize training tasks; in-distribution gains vanish OOD or turn negative"
+   "extra": "First systematic diagnosis of harness-RSI overfitting: in-distribution and OOD gains decouple or invert."
   }
  },
  {
@@ -11613,36 +11857,41 @@
    "dir": [
     {
      "t": "闭环调整",
-     "d": "基准设计：目标操作化→选数据→选更新方法→自评是否进步",
-     "g": "测出现有自进化研究漏测的元能力"
+     "d": "原文（基准设计）：\"ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods\"<br>**总结**：只给模糊目标，评测任务隐藏，agent 自己操作化目标",
+     "g": "原文（缺口定位）：\"existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn\"<br>**总结**：现有自进化=优化人类给定的目标，不是决定学什么",
+     "w": "**原理**：把\"元决策\"从训练目标里剥离出来单独评测——任务隐藏使目标操作化无法被作弊为记住任务（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "权重训练",
-     "d": "agent 自选更新方法（含训练）作用于自身",
-     "g": "「怎么学」本身成为被评测对象"
+     "d": "原文：\"choosing data and update methods, and determining whether they have actually improved\"<br>**总结**：自选数据、自选更新方法、自评进步",
+     "g": "基准属性：测\"学与不学\"的元能力（无单一 SOTA 数字）<br>**总结**：元能力成为被测对象",
+     "w": "**原理**：—"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "数据选择在运行时由 agent 决定",
-     "g": "—"
+     "d": "数据选择在运行时由 agent 决定（基准设定）<br>**总结**：—",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "验证反馈",
-     "d": "隐藏评测任务校验是否真有进步",
-     "g": "防止自我感觉良好式进化"
+     "d": "隐藏评测任务校验真实进步（基准设定）<br>**总结**：防自我感觉良好",
+     "g": "—",
+     "w": "**原理**：评测对 agent 不可见=盲测——自我报告的进步与盲测进步的差值就是自欺程度（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "学与不学、学什么的决策由 agent 自己做",
-     "g": "补上「任务和指标都由人类给好」的盲区"
+     "d": "学与不学、学什么的决策由 agent 自己做（基准设定）<br>**总结**：补测元决策盲区",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "extra": ""
@@ -11651,36 +11900,41 @@
    "dir": [
     {
      "t": "Closed-loop",
-     "d": "Benchmark design: operationalize goal → pick data → pick update method → self-assess progress",
-     "g": "Tests the meta-capability existing self-evolution work skips"
+     "d": "Paper (benchmark design): \"ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods\"<br>**Summary**: vague goal only; hidden eval; agent operationalizes the goal itself",
+     "g": "Paper (gap): \"existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn\"<br>**Summary**: prior self-evolution optimizes human-given goals, not deciding what to learn",
+     "w": "**Why**: isolating meta-decision for measurement — hidden tasks prevent goal-operationalization from degenerating into memorization (editor)"
     }
    ],
    "upd": [
     {
      "t": "Weight training",
-     "d": "The agent chooses its own update methods (including training)",
-     "g": "\"How to learn\" itself becomes the evaluated object"
+     "d": "Paper: \"choosing data and update methods, and determining whether they have actually improved\"<br>**Summary**: self-chosen data, methods, self-assessed progress",
+     "g": "Benchmark property: measures the meta-capability (no single SOTA number)<br>**Summary**: the meta-capability becomes the measured object",
+     "w": "**Why**:—"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Data selection decided at runtime by the agent",
-     "g": "—"
+     "d": "Data selection decided at runtime by the agent (benchmark setup)<br>**Summary**:—",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Verification feedback",
-     "d": "Hidden evaluation tasks verify real progress",
-     "g": "Guards against feel-good pseudo-evolution"
+     "d": "Hidden evaluation tasks verify real progress (setup)<br>**Summary**: guards against feel-good evolution",
+     "g": "—",
+     "w": "**Why**: hidden eval = blind testing — the gap between self-reported and blind-tested progress measures self-deception (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The agent decides whether and what to learn",
-     "g": "Fills the blind spot where tasks and metrics are human-given"
+     "d": "The agent decides whether and what to learn (setup)<br>**Summary**: fills the meta-decision blind spot",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "extra": ""
@@ -11871,36 +12125,41 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "LLM 同时充当任务提出者与求解者自博弈",
-     "g": "免人工构造任务与标准答案"
+     "d": "原文：\"the learning LLM utilizes multi-turn search engine calling and acts simultaneously as both a task proposer and [a solver]\"<br>**总结**：多轮搜索中同时当出题者与求解者",
+     "g": "原文动机：\"RLVR highly depends on well-crafted task queries and corresponding ground-truth answers... which requires significant human effort and hinders the scaling of RL processes\"<br>**总结**：RLVR 靠人工题库，阻碍规模化",
+     "w": "**原理**：真实搜索引擎当环境=无限免费的任务源与裁判，出题成本从人工转为推理成本（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "自博弈控制任务难度以产生有效训练优势，RL 训练自身",
-     "g": "解除 agent RL 的人工数据瓶颈"
+     "d": "原文：\"the difficulty of the generated agentic tasks can hardly be controlled to provide effective RL training advantages\"——以自博弈控制难度（机制概述）<br>**总结**：自博弈=难度控制器",
+     "g": "原文：持续提升搜索 agent 能力（数字见原文）<br>**总结**：解除 agent RL 数据瓶颈",
+     "w": "**原理**：难度失控是合成任务的通病（过易无优势、过难无成功样本）；提出者奖励挂钩求解者进步，难度自动落在有效区（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "多轮真实搜索引擎调用即数据采集",
-     "g": "任务分布真实而非合成"
+     "d": "原文：多轮真实搜索引擎调用即数据采集<br>**总结**：任务分布真实",
+     "g": "—",
+     "w": "**原理**：真实环境出题避免合成任务的分布窄化（编辑推演）"
     }
    ],
    "stk": [
     {
      "t": "验证反馈",
-     "d": "真实搜索引擎结果充当裁判",
-     "g": "ground truth 免费且无限"
+     "d": "真实搜索引擎结果做裁判（机制概述）<br>**总结**：ground truth 免费无限",
+     "g": "—",
+     "w": "**原理**：检索结果是客观物理反馈，不像模型裁判可被说服（编辑推演）"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "提出者=求解者同一模型",
-     "g": "与 Absolute Zero 同构，oracle 从代码执行器换成真实环境"
+     "d": "提出者=求解者同一模型（原文设定）<br>**总结**：与 AZR 同构、oracle 换真实环境",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "extra": ""
@@ -11909,36 +12168,41 @@
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "The LLM acts as both task proposer and solver in self-play",
-     "g": "No manual task/answer construction"
+     "d": "Paper: \"the learning LLM utilizes multi-turn search engine calling and acts simultaneously as both a task proposer and [a solver]\"<br>**Summary**: proposer and solver at once, in multi-turn real search",
+     "g": "Motive, verbatim: \"RLVR highly depends on well-crafted task queries and corresponding ground-truth answers... which requires significant human effort and hinders the scaling of RL processes\"<br>**Summary**: RLVR's human QA pools block scaling",
+     "w": "**Why**: a real search engine as environment = an unlimited free task source and judge; proposal cost moves from human labor to inference (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "Self-play calibrates task difficulty for effective advantage; RL trains the model itself",
-     "g": "Removes the human-data bottleneck of agent RL"
+     "d": "Paper: \"the difficulty of the generated agentic tasks can hardly be controlled to provide effective RL training advantages\" — self-play as the difficulty controller (mechanism)<br>**Summary**: self-play = difficulty control",
+     "g": "Paper: sustained gains for search agents (numbers in paper)<br>**Summary**: removes the agent-RL data bottleneck",
+     "w": "**Why**: difficulty blowup is the synthetic-task disease (too easy → no advantage, too hard → no successes); poser reward tied to solver progress pins difficulty in the effective band (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Multi-turn real search-engine calls are the data collection",
-     "g": "Real rather than synthetic task distribution"
+     "d": "Paper: multi-turn real search-engine calls are the collection<br>**Summary**: real task distribution",
+     "g": "—",
+     "w": "**Why**: real-environment posing avoids synthetic distribution narrowing (editor)"
     }
    ],
    "stk": [
     {
      "t": "Verification feedback",
-     "d": "Real search results act as the judge",
-     "g": "Ground truth is free and unlimited"
+     "d": "Real search results as judge (mechanism)<br>**Summary**: ground truth free and unlimited",
+     "g": "—",
+     "w": "**Why**: retrieval results are objective physical feedback — unlike model judges, they cannot be persuaded (editor)"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "Proposer = solver, same model",
-     "g": "Isomorphic to Absolute Zero with the oracle swapped to the real environment"
+     "d": "Proposer = solver, same model (paper setup)<br>**Summary**: AZR-isomorphic with a real-environment oracle",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "extra": ""
@@ -12200,87 +12464,99 @@
    "dir": [
     {
      "t": "进化搜索",
-     "d": "harness 编辑的提出-测试-选择进化",
-     "g": "Polyglot 82.1%（最强基线 62.6%）"
+     "d": "原文：\"a unified dual-role pipeline that a single policy serves as both a Proposer, which writes harness edits, and a Reflector, which diagnoses their effects and guides revision\"<br>**总结**：单策略双角色——Proposer 写编辑、Reflector 诊断引导",
+     "g": "原文：\"Polyglot 82.1%... compared with 62.6%... for the strongest baseline\"（原文数字）<br>**总结**：Polyglot 82.1% vs 基线 62.6%",
+     "w": "**原理**：提议与反思分离=生成与检验分工——同一模型两个视角互相制衡，避免单角色的自我确认（编辑推演）"
     },
     {
      "t": "闭环调整",
-     "d": "单一策略双角色：Proposer 写 harness 编辑、Reflector 诊断效果引导修订",
-     "g": "SWE-bench Verified 48.3%（最强基线 41.0%）"
+     "d": "原文：\"harness modifications and their execution outcomes guide the training of both the Proposer and the Reflector\"<br>**总结**：编辑的执行结果反过来训练两个角色",
+     "g": "原文：\"48.3% on SWE-bench Verified, compared with... 41.0% for the strongest baseline\"<br>**总结**：SWE-bench Verified 48.3% vs 41.0%",
+     "w": "**原理**：权重更新以 harness 变化为条件——两层的时序错位（先改代码后训权重）被消除（编辑推演）"
     }
    ],
    "upd": [
     {
      "t": "递归自我改进",
-     "d": "EvoTIDE：编辑提取+前缀续写回收轨迹，SFT+双角色交错 GRPO 训练 Proposer/Reflector——进化器本身被进化",
-     "g": "把此前独立的权重线与 harness 线连成一体"
+     "d": "原文：\"EvoTIDE, a training pipeline that recovers usable trajectories through edit extraction and prefix continuation, then combines SFT with interleaved GRPO across the two roles\"<br>**总结**：EvoTIDE 回收轨迹+SFT+交错 GRPO——进化器本身被训练",
+     "g": "原文（迁移性）：\"the evolved harnesses transfer to different tasks without further evolution and rank first in cross-benchmark evaluations\"<br>**总结**：进化产物跨基准第一、免继续进化",
+     "w": "**原理**：进化器学到的是\"哪类编辑有效\"的规律而非具体编辑——规律可迁移，编辑不可迁移（编辑推演）"
     }
    ],
    "rt": [
     {
      "t": "采集数据＋训练",
-     "d": "harness 修改的执行结果即时成为训练数据",
-     "g": "权重更新与 harness 变化不再错位"
+     "d": "harness 修改的执行结果即时成为训练数据（机制概述）<br>**总结**：权重与 harness 同步",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "stk": [
     {
      "t": "数据飞轮",
-     "d": "更好的 harness 产生更好轨迹、训练出更好的进化器",
-     "g": "进化出的 harness 跨基准迁移第一，无需继续进化"
+     "d": "更好的 harness→更好轨迹→更好进化器（机制概述）<br>**总结**：双层飞轮",
+     "g": "—",
+     "w": "**原理**：—"
     }
    ],
    "self": [
     {
      "t": "是",
-     "d": "进化器（Proposer/Reflector）被自己的产物训练",
-     "g": "GPT-5-mini agent 24.4%→48.3%——闭源模型同样适用"
+     "d": "原文（编者按）：进化器（双角色）被自己的产物训练<br>**总结**：GPT-5-mini agent 24.4%→48.3%（闭源模型同样适用）",
+     "g": "—",
+     "w": "**原理**：闭源模型权重不可训，但 harness 可写——双角色框架把\"自指\"落在可写面上，绕开权重封锁（编辑推演）"
     }
    ],
-   "extra": "双角色框架对闭源模型也成立：只改 harness 即可复现大半增益"
+   "extra": "连上此前独立的权重线与 harness 线（原文贡献定位）。"
   },
   "card_en": {
    "dir": [
     {
      "t": "Evolutionary",
-     "d": "Propose-test-select evolution of harness edits",
-     "g": "Polyglot 82.1% (strongest baseline 62.6%)"
+     "d": "Paper: \"a unified dual-role pipeline that a single policy serves as both a Proposer, which writes harness edits, and a Reflector, which diagnoses their effects and guides revision\"<br>**Summary**: one policy, two roles — Proposer writes, Reflector diagnoses",
+     "g": "Paper: \"Polyglot 82.1%... compared with 62.6%... for the strongest baseline\"<br>**Summary**: Polyglot 82.1% vs 62.6% baseline",
+     "w": "**Why**: proposal/reflection split = generation/verification division — two views of one model check each other, defeating single-role self-confirmation (editor)"
     },
     {
      "t": "Closed-loop",
-     "d": "One policy, two roles: Proposer writes harness edits; Reflector diagnoses effects and guides revision",
-     "g": "SWE-bench Verified 48.3% (strongest baseline 41.0%)"
+     "d": "Paper: \"harness modifications and their execution outcomes guide the training of both the Proposer and the Reflector\"<br>**Summary**: edit outcomes retrain both roles",
+     "g": "Paper: \"48.3% on SWE-bench Verified, compared with... 41.0% for the strongest baseline\"<br>**Summary**: SWE-bench Verified 48.3% vs 41.0%",
+     "w": "**Why**: weight updates condition on harness changes — the temporal mismatch (code first, weights later) disappears (editor)"
     }
    ],
    "upd": [
     {
      "t": "Recursive self-improvement",
-     "d": "EvoTIDE recovers trajectories via edit extraction + prefix continuation; SFT + interleaved GRPO trains both roles — the evolver itself evolves",
-     "g": "Bridges the formerly separate weight-line and harness-line"
+     "d": "Paper: \"EvoTIDE, a training pipeline that recovers usable trajectories through edit extraction and prefix continuation, then combines SFT with interleaved GRPO across the two roles\"<br>**Summary**: EvoTIDE recovers trajectories + SFT + interleaved GRPO — the evolver itself is trained",
+     "g": "Paper: \"the evolved harnesses transfer to different tasks without further evolution and rank first in cross-benchmark evaluations\"<br>**Summary**: evolved harnesses transfer, ranked first, no further evolution",
+     "w": "**Why**: the evolver learns which kinds of edits work, not specific edits — kinds transfer, artifacts don't (editor)"
     }
    ],
    "rt": [
     {
      "t": "Collects + trains",
-     "d": "Execution outcomes of harness edits become training data immediately",
-     "g": "Weight updates never lag harness changes"
+     "d": "Execution outcomes of harness edits become training data immediately (mechanism)<br>**Summary**: weights and harness in sync",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "stk": [
     {
      "t": "Data flywheel",
-     "d": "Better harness → better trajectories → better evolver",
-     "g": "Evolved harnesses transfer cross-benchmark, ranked first, with no further evolution"
+     "d": "Better harness → better trajectories → better evolver (mechanism)<br>**Summary**: two-layer flywheel",
+     "g": "—",
+     "w": "**Why**:—"
     }
    ],
    "self": [
     {
      "t": "Yes",
-     "d": "The evolver (Proposer/Reflector) is trained by its own products",
-     "g": "GPT-5-mini agent 24.4%→48.3% — works with proprietary models too"
+     "d": "Paper (editor note): the dual-role evolver is trained by its own products<br>**Summary**: GPT-5-mini agent 24.4%→48.3% (works for proprietary models)",
+     "g": "—",
+     "w": "**Why**: proprietary weights are frozen but harnesses are writable — self-reference lands on the writable surface, bypassing the weight lock (editor)"
     }
    ],
-   "extra": "The dual-role framework holds for closed models: harness-only edits recover much of the gain"
+   "extra": "Bridges the formerly separate weight-line and harness-line (paper's own positioning)."
   }
  }
 ]

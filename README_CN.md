@@ -141,25 +141,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 机器人从模型消费者变数据生产者：野外收集+自动标注回流 | 数据获取成本随部署下降 | — |
+| 闭环调整 | 原文："Robots, as embodied agents, are uniquely positioned to close this gap: they can act in physical environments to collect large-scale, real-world data that enriches FM training with precisely the examples current models lack"<br>**总结**：机器人从模型消费者变数据生产者 | 原文动机："their reliance on internet pretraining data leaves them brittle in unstructured, real-world settings. The messy, real-world data encountered during deployment (e.g. occluded or multilingual text) remains massively underrepresented"<br>**总结**：互联网数据缺的恰是部署时的"脏"数据 | **原理**：分布修复——部署环境天然生成训练分布的补集样本，机器人边干活边补齐长尾（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 自动标注数据回流训练模型 | — | — |
+| 权重训练 | 采集数据+自动标注回流训练 FM（机制概述）<br>**总结**：— | 原文：FM 在真机相关任务上提升（数字见原文）<br>**总结**：— | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 真实环境持续收集 | — | — |
+| 采集数据＋训练 | 部署即采集（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 部署越多→数据越多→模型越强→部署更多 | — | — |
+| 数据飞轮 | 部署越多→数据越多→模型越强→部署更多（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -173,25 +173,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | IL 初始化+残差 RL+VLM 成功验证的自改进环 | 灵巧操纵成功率持续提升 | — |
+| 闭环调整 | 原文："a scalable data generation framework that employs a self-improving cycle to continuously enrich data diversity. Starting from efficient seed demonstrations warmup, DexFlyWheel expands the dataset through i[terative...]"<br>**总结**：种子演示热身→自改进循环持续扩数据 | 原文动机："diverse and high-quality datasets remain scarce. Existing data collection methods either rely on human teleoperation or require significant human engineering, or generate data with limited diversity"<br>**总结**：人工遥操贵、自动生成多样性差 | **原理**：多样性来自任务的组合爆炸——每轮成功策略成为下轮的种子，任务空间按能力半径扩张（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 残差 RL 在 IL 初始化的策略上微调 | 保留演示先验的同时超越 IL 上限 | — |
+| 权重训练 | IL 初始化+残差 RL 在其上微调（原文设定，编者概述）<br>**总结**：保留演示先验、超越 IL 上限 | 原文：灵巧操纵任务性能提升（数字见原文）<br>**总结**：— | **原理**：残差参数化把"学修正量"与"学全策略"分开——小修正量梯度稳定，不冲毁演示先验（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 真机 rollout 即数据采集 | 数据分布与部署分布一致 | — |
+| 采集数据＋训练 | 真机 rollout 即采集（机制概述）<br>**总结**：数据分布=部署分布 | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | VLM 判定成功的轨迹才入库训练 | 无人工筛选的自动数据质检 | — |
+| 数据飞轮 | 原文："self-improving cycle to continuously enrich data diversity"<br>**总结**：飞轮直接写进题目 | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -205,25 +205,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 生成器-验证器架构：VLM 验证器对 rollout 做推理时转向+验证 | 只有验证过的轨迹才回流训练 | — |
+| 闭环调整 | 原文："a generator-verifier framework for generalist robot policies for inference-time policy steering and self-improvement. We use a pre-trained generalist robot policy as a 'generator' and pair it with a gradient-free 'visual verifier' that evaluates actions at inference time"<br>**总结**：预训策略当生成器+免梯度视觉验证器推理时评估动作 | 原文动机："Robots deployed in the real world should learn from their experience and improve over time. This requires a mechanism of practicing and learning from feedback"<br>**总结**：真机部署需要从经验改进的机制 | **原理**：视觉验证免梯度=不碰权重也能筛选动作——验证比训练便宜几个数量级，先用贵的生成、便宜的筛选（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 验证过的轨迹回流训练生成器 | 数据飞轮教科书形态 | — |
+| 权重训练 | 原文："verified experience is then used to improve the underlying policy"（验证经验回流训策略，机制概述）<br>**总结**：只有验证过的轨迹回流 | 原文：自改进后策略性能提升（数字见原文）<br>**总结**：推理时转向+训练自改进双收益 | **原理**：数据先过验证闸门——坏轨迹进不了训练集，数据质量单调提升（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 运行时只做验证式采集，训练在离线批次完成 | 部署期零训练开销 | — |
+| 只采集数据，不训练 | 推理时只做验证式转向，训练离线（机制概述）<br>**总结**：部署期零训练开销 | 原文："improves policy performance without additional training"（推理时转向部分）<br>**总结**：不训练也能涨分 | **原理**：推理解码时的约束满足——验证器打分当作推理期搜索的启发式，choose-best-of-N 无需梯度（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 验证过的轨迹持续回流训练 | 训练数据质量随部署量增长 | — |
+| 数据飞轮 | 验证过的轨迹持续回流训练（机制概述）<br>**总结**：飞轮教科书形态 | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -237,25 +237,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 复用 agent 历史解题痕迹作训练数据，生成针对性修复任务持续自进化 | 训练数据来自自身实战而非外部标注 | — |
+| 闭环调整 | 原文："a closed-loop self-evolution framework that reuses the agent's historical solving traces as a source of training signal. Rather than treating traces only as [outcomes]"<br>**总结**：历史解题痕迹复用为训练信号 | 原文（对既有合成数据的批评）："Existing synthetic data methods typically create tasks through fixed mutation or bug-injection procedures, making the resulting distributions largely independent of the agent's own weaknesses and training progress"<br>**总结**：固定变异造的题与 agent 弱点无关 | **原理**：训练数据应对准当前弱点——自己的失败痕迹天然是"恰好在能力边缘"的样本，比合成 bug 更贴最近发展区（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 闭环自进化训练管线持续微调编码 agent | — | — |
+| 权重训练 | 原文：从痕迹生成针对性修复任务，闭环持续微调 agent（机制概述）<br>**总结**：痕迹→任务→训练 | 原文：自进化后 SWE 任务成功率提升（数字见原文）<br>**总结**：— | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 运行时采集痕迹，训练离线 | — | — |
+| 只采集数据，不训练 | 运行时采集痕迹，训练离线（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 痕迹→任务→训练→更强 agent→更佳痕迹 | — | — |
+| 数据飞轮 | 痕迹→任务→训练→更强 agent→更佳痕迹（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -269,27 +269,29 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 把执行反馈下的自纠行为蒸馏进权重 | 推理时自动纠错无需外部机制 | — |
+| 闭环调整 | 原文（项目页，编者按）：7139 条执行反馈下的自纠轨迹指令微调——把"发现错误→改正→重试"的行为蒸馏进权重<br>**总结**：自纠行为权重化 | 项目自述：7B 达到匹敌 5-10× 参数量大模型的效果（数字为项目自报）<br>**总结**：小模型+自纠≈大模型 | **原理**：自纠是大模型涌现的行为——显式收集自纠轨迹微调，让 7B 免涌现直接获得该行为（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 7139 条自纠轨迹指令微调 Mistral-7B | 7B 匹敌 5-10× 参数量大模型 | — |
+| 权重训练 | 7139 条自纠轨迹 SFT（项目设定）<br>**总结**：一次性蒸馏 | — | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 运行时全冻结 | 部署时无采集无训练，自纠能力已沉淀在权重里 | 零额外推理成本 | — |
+| 运行时全冻结 | 部署时无采集无训练，自纠能力已在权重（项目设定）<br>**总结**：零推理开销 | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 执行反馈产生自纠轨迹数据集（一次性沉淀） | 数据集开源可复用 | — |
+| 数据飞轮 | 执行反馈产生自纠数据集（一次性沉淀，项目设定）<br>**总结**：数据集开源 | — | **原理**：— |
 
 **自己改自己？**：否
+
+**论文中的其他发现**：本条目为模型卡而非论文，引语来自项目页自述。
 
 ---
 
@@ -301,31 +303,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 合成响应对→推理偏好理由→训练判官→更高质量的合成，循环迭代 | 零人类标注训练出强判官 | — |
+| 闭环调整 | 原文："an iterative self-training algorithm... starting from a small seed set of instructions, responses are generated, and pairs of responses are compared"<br>**总结**：合成响应对→偏好推理→训练判官，循环 | 原文动机："the standard approach is to collect a large amount of human preference judgments over model responses, which is costly and the data becomes stale as models improve"<br>**总结**：人类偏好贵且随模型进步过时 | **原理**：判官随被评者共同进化才不过时——静态 RM 在模型变强后系统性失准（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 判官在自己合成的偏好标签上迭代微调 | RewardBench 75.4→88.3，匹敌人类标注训练的奖励模型 | — |
+| 权重训练 | 原文："improve a strong LLM (Llama3-70B-Instruct) from 75.4 to 88.3 (88.7 with...) [on RewardBench]"<br>**总结**：自训判官 75.4→88.3 | 原文："Without any labeled preference data"<br>**总结**：零标注达成，匹敌人类标注 RM | **原理**：偏好判断能力已潜伏在强模型里——自训练只是把这种潜能对齐到评测任务格式（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 合成数据即时用于训练 | 数据成本≈推理成本 | — |
+| 采集数据＋训练 | 合成数据即产即用（机制概述）<br>**总结**：数据成本≈推理成本 | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 验证反馈 | 偏好推理链为每个标签提供依据 | 判官结论可追溯 | — |
+| 验证反馈 | 原文：生成"analysis of the differences between the responses"作为偏好理由（机制概述）<br>**总结**：每个标签带推理链 | — | **原理**：推理链=标签的显式理由，错标签可定位到错误推理步（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 判官给自己造训练数据 | 评测器随被评模型一起进化，不会过时 | — |
+| 是 | 判官给自己造训练数据（机制概述）<br>**总结**：评测器自指 | — | **原理**：自指风险=偏好漂移；缓解=从强种子模型的相对判断起步，锚在模型间一致性而非绝对真理（编辑推演） |
 
 ---
 
@@ -337,32 +339,32 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | rubric 生成器与判官交替 RL、轮流进化 | 评测标准与执行共演，不锁死在初始 rubric | — |
-| 多智能体 | 生成器 πr 与判官 πj 职责分离 | 各自目标清晰、可独立优化 | — |
+| 闭环调整 | 原文："jointly optimizes a rubric generator and a judge using reinforcement learning from preference feedback"<br>**总结**：rubric 生成器与判官交替 RL、轮流进化 | 原文定位（对既有方法）："Unlike existing methods that rely on st[atic...]"——静态 rubric 不可进化<br>**总结**：标准与执行共演 | **原理**：rubric 与判官是评价体系的两半——固定一半优化另一半只能到局部最优，交替优化逼近联合最优（编辑推演） |
+| 多智能体 | 生成器 πr 与判官 πj 职责分离（原文构造）<br>**总结**：分工使各自目标清晰 | — | **原理**：职责分离让奖励归因明确——判官的错与标准的错可分开追责（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 两者都从偏好反馈被 RL 训练 | 奖励建模基准平均 +4.7% | — |
+| 权重训练 | 两者都从偏好反馈被 RL 训练（原文构造）<br>**总结**：双角色都进权重层 | 原文："achieving a +4.7% average gain on reward-modeling [benchmarks]"（9 个奖励建模+6 个策略基准）<br>**总结**：+4.7% 平均增益 | **原理**：交替训练类似坐标上升——每次固定一方优化另一方，单调可证地爬坡（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 偏好对在训练中采集并消费 | — | — |
+| 采集数据＋训练 | 偏好对训练中采集消费（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 验证反馈 | 判官按 rubric 逐条核对评分 | 可解释、可审计的奖励信号 | — |
+| 验证反馈 | 判官按 rubric 逐条核对（机制概述）<br>**总结**：结构化评分 | — | **原理**：rubric 把"好不好"拆成可逐项核对的谓词——评价从整体印象变成可审计清单（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 判官给生成器打分，两者互为训练信号 | 回答「谁来给判官打分」的自指难题 | — |
+| 是 | 判官给生成器打分，两者互为训练信号（机制概述）<br>**总结**：回答"谁给判官打分" | — | **原理**：裁判的裁判=偏好数据本身——外部偏好锚定交替优化的不动点，防止共谋退化（编辑推演） |
 
 ---
 
@@ -374,31 +376,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | LLM 自己当裁判给自己的指令跟随输出打分（自奖励） | 奖励信号无需外部 RM | — |
+| 闭环调整 | 原文："the language model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training"<br>**总结**：LLM 当自己的裁判发奖励 | 原文动机："Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training"<br>**总结**：人类偏好封顶+冻结 RM 无法共进 | **原理**：奖励来源与被训者同一模型——奖励随模型进步水涨船高，绕开人类天花板与 RM 过时两个瓶颈（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 自奖励数据经 DPO 迭代训练自身 | 指令跟随与对话质量三轮持续提升 | — |
+| 权重训练 | 原文："during Iterative DPO training that not only does instr[uction following improve]"——自奖励数据经迭代 DPO 训练（机制概述）<br>**总结**：自奖励+迭代 DPO | 原文：指令跟随与对话质量多轮持续提升（数字见原文）<br>**总结**：— | **原理**：DPO 免显式 RM——偏好对直接进策略，自裁判的输出恰好就是偏好对（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | — | — | — |
+| 采集数据＋训练 | — | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 每轮自奖励数据训练更强的自裁判 | — | — |
+| 数据飞轮 | 每轮自奖励数据训练更强的自裁判（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 裁判、数据来源、被训练者是同一个模型 | 自指的经典形态：奖励来自内部 | — |
+| 是 | 原文（编者按）：裁判、数据来源、被训练者是同一个模型<br>**总结**：自指的经典形态 | — | **原理**：自指失效模式=自我偏好漂移（自己偏爱自己的风格）；原文缓解：裁判时以指令跟随准则为锚而非自由偏好（编辑推演） |
 
 ---
 
@@ -410,25 +412,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 奖励模型自己生成额外训练数据迭代改进自身 | 奖励模型不再是一次性产物 | — |
+| 闭环调整 | 原文："As language models improve, human input may become less effective in further enhancing their perfor[mance]"——RM 需自我改进以跟上模型（动机）<br>**总结**：奖励模型必须与被奖励者同步进化 | 原文动机："A core challenge in employing RLHF lies in training a reliable reward model (RM), which relies on high-quality labels typically provided by human experts or advanced AI system. These methods can be costly and may introduce biases"<br>**总结**：RM 依赖贵且有偏的高质量标注 | **原理**：静态 RM 会成为策略天花板——模型超过 RM 判断力后，RM 奖励的是"像旧模型"而非"更好"（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 改进的奖励再经 PPO 优化策略 | 策略与奖励同步提升 | — |
+| 权重训练 | 原文机制：RM 自生成额外训练数据迭代改进自身，改进的奖励经 PPO 优化策略（机制概述）<br>**总结**：RM 自产数据自改进 | 原文：策略性能随 RM 迭代轮数持续提升（数字见原文）<br>**总结**：— | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | — | — | — |
+| 采集数据＋训练 | — | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | RM 自我改进飞轮 | — | — |
+| 数据飞轮 | RM 自我改进飞轮（题目设定）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -442,29 +444,29 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 技能沉淀 | wake-sleep 库学习：解出的程序被抽象进技能库 | 复杂任务变成已有技能的组合 | — |
+| 技能沉淀 | 原文："It builds expertise by creating programming languages for expressing domain concepts, together with neural networks to guide the search for programs within these languages"<br>**总结**：技能=领域概念的语言+引导搜索的神经网 | 原文动机："Expert problem-solving is driven by powerful languages for thinking about problems and their solutions. Acquiring expertise means learning these languages"<br>**总结**：专长=学会思维语言 | **原理**：语言决定可表达解的空间——抽象出的 DSL 让旧解成为新解的原语，组合深度随库增长（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 环内训练识别网络（recognition model）引导库搜索 | 搜索空间指数级缩小 | — |
+| 权重训练 | 原文："A 'wake-sleep' learning algorithm alternately extends the language with new symbolic abstractions and trains the neural n[etworks]"<br>**总结**：wake-sleep 交替：扩库↔训识别网络 | 原文：跨领域从少样本到通用的问题求解提升（数字见原文）<br>**总结**：技能库复用加速新任务学习 | **原理**：识别网络把"程序怎么搜"变成"程序长什么样"的先验——搜索从盲枚举变有引导采样，指数空间被先验压扁（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 每轮解题经验训练识别网络 | 搜索越来越快 | — |
+| 采集数据＋训练 | 每轮解题经验训练识别网络（机制概述）<br>**总结**：经验→先验 | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 技能库与识别网络共进化 | — | — |
+| 数据飞轮 | 技能库与识别网络共进化（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
-**论文中的其他发现**：识别网络在环内训练——L4 形态技能沉淀的鼻祖（DreamCoder）
+**论文中的其他发现**：编者按：识别网络在环内训练——L4 形态技能沉淀的鼻祖（DreamCoder, 2020）。
 
 ---
 
@@ -476,25 +478,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 可执行世界表示（EWR）自动生成精确标注 | 标注成本趋零 | — |
+| 闭环调整 | 原文："a paradigm that represents physical worlds through executable world representations. By expressing physical composition, dynamic evolution, [and governing rules] as code"<br>**总结**：物理世界=可执行世界表示（EWR），组成/演化/规则都写成代码 | 原文动机："they often lack explicit representations of the underlying mechanisms—such as object states, physical parameters, and governing dynamics—needed for reliably reasoning how the world evolves"<br>**总结**：VLM 缺显式机制表示 | **原理**：代码=可执行的世界模型——预测靠运行而非回归，机制透明可干预（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | SFT+GRPO 训练 VLM | QuantiPhy 58.6，超 Gemini-3.1-Flash | — |
+| 权重训练 | EWR 自动生成精确标注 → SFT+GRPO 训 VLM（机制概述）<br>**总结**：代码产出数据训模型 | 库内数字：QuantiPhy 58.6 超 Gemini-3.1-Flash（自报）<br>**总结**：小模型超商业大模型 | **原理**：标注来自世界代码的执行——真值无需人工，标注量只受算力限制（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 世界代码执行产生训练数据 | — | — |
+| 采集数据＋训练 | 世界代码执行产生训练数据（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 世界代码生成数据训练模型，模型再改进世界代码 | — | — |
+| 数据飞轮 | 世界代码生成数据训模型，模型再改进世界代码（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -508,25 +510,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | MCTS 自博弈搜索产生高质量推理轨迹 | 小模型获得远超其规模的推理数据 | — |
+| 进化搜索 | 原文："exercising 'deep thinking' through Monte Carlo Tree Search (MCTS), where a math policy SLM performs test-time search guided by an SLM-based process reward model"<br>**总结**：MCTS 深度思考+小模型过程奖励引导 | 原文（定位）："small language models (SLMs) can rival or even surpass the math reasoning capability of OpenAI o1, without distillation from superior models"<br>**总结**：小模型不蒸馏对抗 o1 级推理 | **原理**：MCTS 把"一步答对"换成"搜索后答对"——推理算力换模型参数，7B 借搜索树够到 100B+ 的推理质量（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 自进化深度思考：策略模型+过程奖励模型（SSM）自举训练 | 7B 级小模型达到奥数级推理 | — |
+| 权重训练 | 原文："a novel code-augmented CoT data synthesis method, which performs extensive MCTS rollouts to generate step-by-step verified r[easoning]"（三大创新之一）<br>**总结**：MCTS rollout 产逐步验证数据训双 SLM | 原文：奥数级基准大幅提升（数字见原文，含 MATH/GSM8K 等）<br>**总结**：小模型奥数级 | **原理**：过程奖励模型学会"这步对不对"——步级监督比结果级监督的信用分配密度高一个量级（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | — | — | — |
+| 采集数据＋训练 | — | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 更好的策略产生更好的轨迹，训出更好的过程奖励 | — | — |
+| 数据飞轮 | 更好的策略产生更好轨迹，训出更好过程奖励（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -540,29 +542,27 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | LM 提议辅助构图→符号演绎引擎（DD+AR）严格证明→失败再提议 | 每一步都被数学严格检验 | — |
+| 闭环调整 | 原文（Nature 摘要，编者按）：神经语言模型提议辅助构图，符号演绎引擎严格推导，失败再提议<br>**总结**：神经提点子、符号管证明、闭环互喂 | 原文自报：IMO 几何基准 25/30（金牌水准）、零人类示范<br>**总结**：无人类示范达金牌水准 | **原理**：神经网络擅长猜"往哪添线"（无限解空间的启发式），符号引擎擅长"从前提走到结论"（有限规则的穷举）——闭环让两者各做擅长的一半（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 符号引擎生成的 1 亿合成证明训练 LM | 零人类示范 | — |
+| 权重训练 | 原文自报：符号引擎生成 1 亿条合成定理与证明训练语言模型<br>**总结**：引擎造数据训网络 | — | **原理**：符号引擎可无限生成带真值标注的题库——数据稀缺被算力稀缺替换（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 解题时纯推理，训练离线完成 | 推理无需训练设施 | — |
+| 只采集数据，不训练 | 解题时纯推理（DD+AR 演绎），训练离线（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 符号引擎产出数据训练神经提议器，提议器反哺引擎 | — | — |
+| 数据飞轮 | 引擎产数据训提议器，提议器反哺引擎搜索（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
-
-**论文中的其他发现**：IMO 几何 25/30 金牌水准
 
 ---
 
@@ -574,34 +574,34 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | harness 编辑的提出-测试-选择进化 | Polyglot 82.1%（最强基线 62.6%） | — |
-| 闭环调整 | 单一策略双角色：Proposer 写 harness 编辑、Reflector 诊断效果引导修订 | SWE-bench Verified 48.3%（最强基线 41.0%） | — |
+| 进化搜索 | 原文："a unified dual-role pipeline that a single policy serves as both a Proposer, which writes harness edits, and a Reflector, which diagnoses their effects and guides revision"<br>**总结**：单策略双角色——Proposer 写编辑、Reflector 诊断引导 | 原文："Polyglot 82.1%... compared with 62.6%... for the strongest baseline"（原文数字）<br>**总结**：Polyglot 82.1% vs 基线 62.6% | **原理**：提议与反思分离=生成与检验分工——同一模型两个视角互相制衡，避免单角色的自我确认（编辑推演） |
+| 闭环调整 | 原文："harness modifications and their execution outcomes guide the training of both the Proposer and the Reflector"<br>**总结**：编辑的执行结果反过来训练两个角色 | 原文："48.3% on SWE-bench Verified, compared with... 41.0% for the strongest baseline"<br>**总结**：SWE-bench Verified 48.3% vs 41.0% | **原理**：权重更新以 harness 变化为条件——两层的时序错位（先改代码后训权重）被消除（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | EvoTIDE：编辑提取+前缀续写回收轨迹，SFT+双角色交错 GRPO 训练 Proposer/Reflector——进化器本身被进化 | 把此前独立的权重线与 harness 线连成一体 | — |
+| 递归自我改进 | 原文："EvoTIDE, a training pipeline that recovers usable trajectories through edit extraction and prefix continuation, then combines SFT with interleaved GRPO across the two roles"<br>**总结**：EvoTIDE 回收轨迹+SFT+交错 GRPO——进化器本身被训练 | 原文（迁移性）："the evolved harnesses transfer to different tasks without further evolution and rank first in cross-benchmark evaluations"<br>**总结**：进化产物跨基准第一、免继续进化 | **原理**：进化器学到的是"哪类编辑有效"的规律而非具体编辑——规律可迁移，编辑不可迁移（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | harness 修改的执行结果即时成为训练数据 | 权重更新与 harness 变化不再错位 | — |
+| 采集数据＋训练 | harness 修改的执行结果即时成为训练数据（机制概述）<br>**总结**：权重与 harness 同步 | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 更好的 harness 产生更好轨迹、训练出更好的进化器 | 进化出的 harness 跨基准迁移第一，无需继续进化 | — |
+| 数据飞轮 | 更好的 harness→更好轨迹→更好进化器（机制概述）<br>**总结**：双层飞轮 | — | **原理**：— |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 进化器（Proposer/Reflector）被自己的产物训练 | GPT-5-mini agent 24.4%→48.3%——闭源模型同样适用 | — |
+| 是 | 原文（编者按）：进化器（双角色）被自己的产物训练<br>**总结**：GPT-5-mini agent 24.4%→48.3%（闭源模型同样适用） | — | **原理**：闭源模型权重不可训，但 harness 可写——双角色框架把"自指"落在可写面上，绕开权重封锁（编辑推演） |
 
-**论文中的其他发现**：双角色框架对闭源模型也成立：只改 harness 即可复现大半增益
+**论文中的其他发现**：连上此前独立的权重线与 harness 线（原文贡献定位）。
 
 ---
 
@@ -652,34 +652,34 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | 迭代提出并选择 harness 组件编辑 | harness 优化全自动化 | — |
-| 闭环调整 | 以评估成绩作为选择信号 | 无需人工审阅每个编辑 | — |
+| 进化搜索 | 原文："iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level"<br>**总结**：迭代提出+选择 harness 组件编辑 | — | **原理**：组件级编辑让搜索空间可控——整体重写不可评估，组件编辑可隔离归因（编辑推演） |
+| 闭环调整 | 以评估成绩为选择信号（机制概述）<br>**总结**：成绩选编辑 | — | **原理**：— |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | harness-RSI：递归修改 agent 的提示/控制流/工具/记忆组件 | 分布内性能大涨 | — |
+| 递归自我改进 | harness-RSI：递归修改提示/控制流/工具/记忆组件（原文设定）<br>**总结**：agent 系统层 RSI | 原文："such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks"——诊断结论<br>**总结**：分布内大涨、OOD 消失（过拟合病） | **原理**：选择信号=训练任务成绩时，编辑可以记忆任务而非提升能力——评价集即优化目标时过拟合不可避免（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 冻结骨干上做编辑搜索 | — | — |
+| 只采集数据，不训练 | 冻结骨干上做编辑搜索（原文设定）<br>**总结**：零训练开销 | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 把正则化原则引入自改进循环 | OOD 增益保持——修复 harness-RSI 过拟合 | — |
+| 数据飞轮 | 原文："incorporates the principles of regularizations into harness self-improvement"<br>**总结**：正则化进自改进循环 | 原文：OOD 增益保持（数字见原文）<br>**总结**：修复过拟合后增益可迁移 | **原理**：权重训练的过拟合解法（正则/早停/held-out 选择）原样移植到代码编辑搜索——ML 基础课对 harness-RSI 的适用性（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | harness 编辑流程改进 harness 自身 | — | — |
+| 是 | harness 编辑流程改进 harness 自身（机制概述）<br>**总结**：— | — | **原理**：— |
 
-**论文中的其他发现**：首次系统诊断 harness-RSI 过拟合病：编辑会记忆训练任务，分布内大涨而 OOD 增益消失甚至为负
+**论文中的其他发现**：首次系统诊断 harness-RSI 过拟合：分布内增益与 OOD 增益脱钩甚至反号。
 
 ---
 
@@ -691,34 +691,34 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | 自动研究循环在越来越多样环境中 rollout harness 改进，机制经选择存活 | 4 个机制胜出且可迁移到开发环境之外 | — |
-| 闭环调整 | 研究循环发现的 harness 改进直接部署回运行它的 harness | 研究工具自己成为研究成果 | — |
+| 进化搜索 | 原文："scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts... the process yields reusable improvements that transfer beyond their development setting"<br>**总结**：研究循环跨环境 rollout，机制经选择存活且可迁移 | 原文动机："before scaling agent loops, can agents first make the harness itself more efficient?"<br>**总结**：先优化 harness 再扩大循环 | **原理**：跨环境选择压力过滤掉环境特定技巧——活下来的机制必然抓住的是 harness 的通用低效（编辑推演） |
+| 闭环调整 | 研究循环发现的改进直接部署回运行它的 harness（机制概述）<br>**总结**：研究工具成为研究成果 | — | **原理**：— |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | RSI 作用于 harness 层：让 agent 先优化 harness 本身（token 效率） | 长任务 token 成本显著下降——Action Fusion、ObservationPack、Evidence-Preserving Reducer、Online Context Compact 四机制 | — |
+| 递归自我改进 | 原文："We take an RSI-inspired approach at the harness layer"<br>**总结**：RSI 作用于 harness 层（token 效率） | 四个存活机制：Action Fusion、ObservationPack、Evidence-Preserving Reducer、Online Context Compact（README 自述，长任务 token 成本显著下降）<br>**总结**：四机制全部命中 token 效率 | **原理**：长任务的主要成本是重复验证调用、过期观测回放、日志过度读取——四机制分别消灭一种重复开销（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 骨干模型冻结，改进全部落在 harness 机制上 | 生产级开源（3476 星），MIT 协议 | — |
+| 只采集数据，不训练 | 骨干冻结，改进落在 harness 机制（原文设定）<br>**总结**：生产级开源（3.4k 星） | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 跨环境 rollout 证据筛选机制 | 可迁移性经选择压力验证 | — |
+| 数据飞轮 | 跨环境 rollout 证据筛选机制（机制概述）<br>**总结**：可迁移性经选择验证 | — | **原理**：— |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 自动研究循环改进的是运行这个循环的 harness | 改进者与被改进者是同一系统 | — |
+| 是 | 自动研究循环改进运行它的 harness（机制概述）<br>**总结**：改进者=被改进者 | — | **原理**：harness 效率决定研究循环本身的可扩展性——自指在此是实用的：优化载体和优化对象是同一个（编辑推演） |
 
-**论文中的其他发现**：四个存活机制全部作用于 harness 不同部位：动作执行、上下文压缩、观测处理、委派
+**论文中的其他发现**：开源为 Pi 编码 agent 的扩展（github.com/NVlabs/SoL-Pi），MIT 协议，3476 星。
 
 ---
 
@@ -730,35 +730,35 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | Data(𝒟)/Harness(ℋ)/Model(θ) 三个可写面统一为同一循环内核的算子实例化 | 三类自我改进共用一套验证与调度 | — |
-| 进化搜索 | RSI² 调度器在类型化契约下编排算子序列并改写提案策略 | 改进步骤本身可被搜索优化 | — |
-| 记忆上下文 | 改进历史与信号新鲜度规则持久化（H→M 与 M→M 禁止——数据不应早于能力变化） | 防止用过时数据训新能力 | — |
+| 闭环调整 | 原文（系统构造）：Data(𝒟)/Harness(ℋ)/Model(θ) 三可写面统一为同一循环内核的算子（编者概述）<br>**总结**：三类自我改进共用一套验证调度 | 原文："RSI has been validated almost exclusively on coding and formal benchmarks... This format bound limits RSI to improvement within a machine-checkable slice, not general capability where questions are open and correctness is settled by argument, replication, or measurement"<br>**总结**：现有 RSI 被锁在机器可判定切片里 | **原理**：统一内核消除了 D/H/M 三线各自的验证逻辑碎片——一份权限边界与新鲜度规则服务全部改进类型（编辑推演） |
+| 进化搜索 | RSI² 调度器在类型化契约下编排算子序列（系统构造，编者概述）<br>**总结**：改进步骤本身可搜索 | — | **原理**：改进顺序是组合空间，搜索优于固定管线（编辑推演） |
+| 记忆上下文 | 信号新鲜度规则：H→M 与 M→M 禁止（系统构造）<br>**总结**：数据不得早于能力变化 | — | **原理**：过时信号训新能力=用旧地图走新路，禁止规则强制信息因果序（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | MetaRSI² 再改进调度器本身——RSI 应用于 RSI | 平均 +10.9、胜固定管线 +3.6；SWE-bench Pro 10.3→19.5 | — |
+| 递归自我改进 | MetaRSI² 再改进调度器——RSI 应用于 RSI（系统构造）<br>**总结**：元层也进闭环 | 原文数字（nums 存档）：平均 +10.9、胜固定管线 +3.6、SWE-bench Pro 10.3→19.5<br>**总结**：调度本身承重 | **原理**：调度器决定算子序列——改进"怎么改进"的杠杆比单次改进高一阶（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 模型只做提案，确定性代码执行验证/打分/发布 | 权限边界保证每步可复核 | — |
+| 采集数据＋训练 | 模型只提案，确定性代码验证/打分/发布（系统构造）<br>**总结**：权限边界可复核 | — | **原理**：提案/执行分离=信息流单向闸门，模型幻觉进不了发布通道（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 全链路闭环追踪信号 | 普查发现闭环形成追踪验证格式而非能力（ρ=-0.75）——oracle 类型决定 RSI 上限 | — |
+| 数据飞轮 | 全链路闭环追踪（系统构造）<br>**总结**：闭环可观测 | 原文普查：闭环形成追踪验证格式而非能力（ρ=-0.75）<br>**总结**：oracle 类型决定 RSI 上限的定量证据 | **原理**：可判定的验证格式自然先形成闭环——因果方向是格式→闭环，不是能力→闭环（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 调度器改进调度器自身 | 改进步骤的元层也在闭环内 | — |
+| 是 | 调度器改进调度器自身（系统构造）<br>**总结**：元自指 | — | **原理**：元层自指的约束是类型化契约——无限自指被类型系统截断为有限层级（编辑推演） |
 
-**论文中的其他发现**：定量验证 oracle 类型决定论：闭环追踪的是验证格式而非能力
+**论文中的其他发现**：论文主张 RSI 下一步须进入"论证/复现/测量"裁决的开放科学域（原文立场）。
 
 ---
 
@@ -770,31 +770,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 多智能体 | 课程 agent 出题、执行 agent 解题，两者协同进化 | 任务难度自动匹配执行者当前能力 | — |
+| 多智能体 | 原文："a fully autonomous framework that evolves high-performing agents without external data through multi-step co-evolution and seamless tool i[ntegration]"<br>**总结**：零外部数据，多步共进化+工具集成 | 原文动机："constrained by a dependency on human-curated data, limiting scalability and tethering AI to human knowledge... restricted by the model's inherent capabilities and single-round interactions"<br>**总结**：人工数据限制扩展；现有自进化受单轮交互限制 | **原理**：课程与执行分工——出题方维持任务在执行方能力边缘，多步交互让课程可以包含工具使用与动态推理的组合题（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | 零数据起步，两个 agent 互为对方的训练信号源 | 从零数据冷启动共进化 | — |
+| 递归自我改进 | 原文："multi-step co-evolution"——两角色互为训练信号（机制概述）<br>**总结**：零数据冷启动共进化 | 原文报告全程无外部数据下持续提升（数字见原文）<br>**总结**：自举成功 | **原理**：角色分工打破了"自己给自己出题必然偏简单"的退化——出题方奖励挂钩解题方进步，出难题才有回报（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 执行轨迹即时回流训练 | 课程与能力同步增长 | — |
+| 采集数据＋训练 | 多步 rollout 轨迹即时回流（机制概述）<br>**总结**：采集训练交替 | — | **原理**：课程难度与执行能力同步生长，训练信号始终有效（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 课程难度随执行者进步动态调整 | 始终维持有效训练优势 | — |
+| 数据飞轮 | 课程难度动态跟随执行者水平（机制概述）<br>**总结**：始终有效优势 | — | **原理**：难度自适应=自动课程学习，避免固定课程过易（无信号）或过难（无成功样本）（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 课程 agent 改进执行 agent，执行表现反过来改进课程 | 双向自指闭环 | — |
+| 是 | 课程 agent 与执行 agent 互相改进（机制概述）<br>**总结**：双向自指 | — | **原理**：交叉自指比单点自指稳定——两个互补视角互相纠偏（编辑推演） |
 
 ---
 
@@ -806,34 +806,34 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | 维护 agent 谱系档案，Darwin 式变异自身代码并按评估选择保留 | 开放式探索替代人工设计迭代 | — |
-| 技能沉淀 | 改进以可复用代码组件形式留在档案里 | 好改动可被后续代际继承复用 | — |
+| 进化搜索 | 原文："a self-improving AI that repeatedly modifies itself in a provably beneficial manner"——以达尔文式开放进化替代可证明改进<br>**总结**：谱系档案+变异+选择，开放式搜索自我修改 | 原文动机："Today's AI systems have human-designed, fixed architectures and cannot autonomously and continuously improve themselves... Meta-learning... is limited by first-order improvements and the human design of a suitable search space"<br>**总结**：固定架构无法自改；元学习受限于人工搜索空间 | **原理**：可证明的自我改进（Gödel 机路线）在现实中证明成本过高，开放进化用"生成多样变体+环境选择"绕过证明——把不可判定的"变好"换成可执行的"被选"（编辑推演） |
+| 技能沉淀 | 改进以代码组件形式留在谱系档案（原文机制）<br>**总结**：好改动跨代际继承 | — | **原理**：档案=外显的技能库，进化在离散工件上操作，可回溯可复用（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | agent 修改自己的 scaffold 与工具代码，修改后的自己继续做下一轮修改 | SWE-bench 编码性能翻倍（×2） | — |
+| 递归自我改进 | 原文（摘要末段，DGM 自述）：在 SWE-bench 上从 20% 提升到 50%（编码性能翻倍量级，具体数字以原文为准）<br>**总结**：agent 重写自身代码，重写后的自己继续重写 | 原文："coding performance... doubles"（量级以原文为准）<br>**总结**：SWE-bench 性能翻倍 | **原理**：改进作用于 scaffold 而非权重——搜索空间是离散代码编辑，每次改进改变下一轮搜索的起点，形成能力复合（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 骨干模型冻结，全部改进发生在代码层 | 单卡可跑，无需训练基础设施 | — |
+| 只采集数据，不训练 | 骨干冻结，全部改进在代码层（原文设定）<br>**总结**：零训练基础设施 | — | **原理**：避开权重训练的灾难性遗忘与算力门槛，代价是改进粒度受限于 scaffold 可表达范围（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 每代评估结果进入档案指导后续选择 | 搜索随代际积累越来越准 | — |
+| 数据飞轮 | 每代评估结果进档案指导选择（原文机制）<br>**总结**：选择压力随档案积累 | — | **原理**：档案保留失败分支——负面证据防止进化重复踩坑（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 改进对象就是改进者自身的代码 | 能力上限不受初始 scaffold 约束 | — |
+| 是 | 改进对象=改进者自身的代码（原文设定）<br>**总结**：教科书式自指 | — | **原理**：能力上限不再锚定初始 scaffold——初始设计只是进化起点而非天花板（编辑推演） |
 
-**论文中的其他发现**：谱系档案保留被淘汰分支可回溯——开放式进化的多样性来源
+**论文中的其他发现**：保留被淘汰分支的谱系档案是开放-ended多样性的来源（原文机制，编者概述）。
 
 ---
 
@@ -845,31 +845,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 基准设计：目标操作化→选数据→选更新方法→自评是否进步 | 测出现有自进化研究漏测的元能力 | — |
+| 闭环调整 | 原文（基准设计）："ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods"<br>**总结**：只给模糊目标，评测任务隐藏，agent 自己操作化目标 | 原文（缺口定位）："existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn"<br>**总结**：现有自进化=优化人类给定的目标，不是决定学什么 | **原理**：把"元决策"从训练目标里剥离出来单独评测——任务隐藏使目标操作化无法被作弊为记住任务（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | agent 自选更新方法（含训练）作用于自身 | 「怎么学」本身成为被评测对象 | — |
+| 权重训练 | 原文："choosing data and update methods, and determining whether they have actually improved"<br>**总结**：自选数据、自选更新方法、自评进步 | 基准属性：测"学与不学"的元能力（无单一 SOTA 数字）<br>**总结**：元能力成为被测对象 | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 数据选择在运行时由 agent 决定 | — | — |
+| 采集数据＋训练 | 数据选择在运行时由 agent 决定（基准设定）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 验证反馈 | 隐藏评测任务校验是否真有进步 | 防止自我感觉良好式进化 | — |
+| 验证反馈 | 隐藏评测任务校验真实进步（基准设定）<br>**总结**：防自我感觉良好 | — | **原理**：评测对 agent 不可见=盲测——自我报告的进步与盲测进步的差值就是自欺程度（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 学与不学、学什么的决策由 agent 自己做 | 补上「任务和指标都由人类给好」的盲区 | — |
+| 是 | 学与不学、学什么的决策由 agent 自己做（基准设定）<br>**总结**：补测元决策盲区 | — | **原理**：— |
 
 ---
 
@@ -915,31 +915,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | RLVR 训练循环中嵌入合成教师蒸馏环节 | 稀疏结果奖励变密集 token 级监督 | — |
+| 闭环调整 | 原文："constructs a synthetic teacher directly from the model's own RLVR training trajectory. By extrapolating the displacement between the current checkpoint and a trailing anchor—in parameter space or output logit space"<br>**总结**：从自身 RLVR 轨迹外推 checkpoint 位移构造合成教师 | 原文（双瓶颈）："external teachers suffer from distribution mismatch, while self-distillation with privileged conditioning is limited by in-context learning capacity"<br>**总结**：外部教师分布失配；特权条件自蒸馏受限于上下文容量 | **原理**：位移外推=把多步离散更新近似为其线性延拓——参数空间的"动量"假说：沿已有改进方向多走一步，大概率仍在改进流形上（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 从自身 RLVR 轨迹外推 checkpoint 位移（参数或 logit 空间）构造合成教师，再以教师信号监督训练 | 胜 RLVR-only 与单向自蒸馏 | — |
+| 权重训练 | 原文："RISE converts a sparse outcome-induced parameter update into a dense token-level ta[rget]"<br>**总结**：稀疏结果奖励→密集 token 级监督 | 原文：胜 RLVR-only 与单向自蒸馏基线（数字见原文）<br>**总结**：两条已知路线之外的第三条 | **原理**：稀疏奖励的信用分配要经多轮传播才到 token；外推的密集目标把信用直接铺到每个 token 上（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 训练轨迹本身被回收为蒸馏素材 | 无需外部教师模型 | — |
+| 采集数据＋训练 | 训练轨迹本身回收为蒸馏素材（机制概述）<br>**总结**：零额外数据成本 | — | **原理**：教师由学生轨迹派生，训练分布永远匹配（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 教师随学生每轮重新外推生成 | 递归而非一次性压缩，监督质量随学生进步水涨船高 | — |
+| 数据飞轮 | 教师随学生每轮重新外推（机制概述）<br>**总结**：递归而非一次性 | — | **原理**：学生变强→位移更准→教师更好→学生更强，正循环（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 教师从学生自己的参数位移中外推而来 | 自监督不引入外部分布失配 | — |
+| 是 | 原文（编者按）：教师从学生自己的参数位移外推而来<br>**总结**：自监督无外部锚 | — | **原理**：自指的失效模式是自嗨（错误自我强化）；此处锚是 RLVR 验证器，外推只放大已验证的改进（编辑推演） |
 
 ---
 
@@ -951,25 +951,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 多智能体 | 查询级元 agent 按输入生成定制多智能体系统（MAS） | 架构随查询而变，不再一套架构打天下 | — |
+| 多智能体 | 原文："a query-level meta-agent... to automate the design of query-level multi-agent systems, i.e., one system per user query"<br>**总结**：元 agent 按每条查询生成定制 MAS | 原文（核心思想）："incentivize a reasoning-based meta-agent via external execution feedback"<br>**总结**：执行反馈激励推理式元 agent | **原理**：一查询一系统——固定架构是最优架构在查询分布上的平均，定制架构取每点的条件最优（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | RL+执行反馈训练元 agent | 定制的 MAS 一致优于固定架构 | — |
+| 权重训练 | 原文："by distilling DeepSeek R1, we first endow the basic reasoning ability... Then, we further enhance it via reinforcement learning (RL) with external execution feedback"<br>**总结**：R1 蒸馏打底+执行反馈 RL 强化 | 原文：多用途奖励从性能/复杂度/效率三方面引导（数字见原文）<br>**总结**：生成质量三目标平衡 | **原理**：执行反馈是系统级真值——MAS 设计好坏由运行结果裁决，不由人评（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 运行时全冻结 | 部署时元 agent 只做生成不做学习 | — | — |
+| 运行时全冻结 | 部署时元 agent 只做生成（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 执行反馈持续训练元 agent | — | — |
+| 数据飞轮 | 执行反馈持续训练元 agent（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
@@ -983,31 +983,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 闭环调整 | 模型对任务生成 self-edits（如重述记忆的自然语言改写），作为后续适应的数据与更新指令 | 把提示工程内化为权重变化 | — |
+| 闭环调整 | 原文："generating their own finetuning data and update directives... a self-edit—a generation that may restructure the information in different ways, specify optimization hyperparameters, or invoke tools"<br>**总结**：模型产出 self-edit——重述知识、指定超参、调用工具的自适应指令 | 原文动机："LLMs are powerful but static; they lack mechanisms to adapt their weights in response to new tasks, knowledge, or examples"<br>**总结**：静态权重无法适应新任务/知识/样本 | **原理**：适应的"说明书"由模型自己写而非外部训练器设计——外部设计者无法穷举所有适应场景，模型自述可以把适应方式随任务定制（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 模型自己生成微调数据+更新超参指令，触发对自身权重的再训练（SEAL 循环） | 知识注入后持续适应，单次微调无法维持 | — |
+| 权重训练 | 原文："Through supervised finetuning (SFT), these self-edits result in persistent weight changes"<br>**总结**：self-edit 经 SFT 变成持久权重变化 | 原文未给单一基准数字；核心结果为适应后知识任务表现优于外置 RAG/ICL 变体（原文实验节）<br>**总结**：适应内化为参数，优于把知识挂在外部上下文 | **原理**：外部上下文受窗口与注意力稀释限制，权重化后的知识无检索延迟、无窗口占用——这是"参数记忆 vs 上下文记忆"的经典交换（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 适应会话中模型产出 self-edit 数据，随即在自身权重上执行更新 | 适应沉淀为参数而非外部提示 | — |
+| 采集数据＋训练 | 原文："a generation that may... invoke tools for data augmentation and gradient-based updates"<br>**总结**：运行时自产数据+梯度更新 | — | **原理**：数据、指令、更新三件事都在会话内闭环——适应不再排队等离线批次（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 每轮适应产生的数据成为下一轮训练素材 | 自我编辑质量随适应轮次提升 | — |
+| 数据飞轮 | 每轮适应产物成为下一轮素材（编辑概述） | — | **原理**：自我编辑质量随轮次复利——上轮学到的表述方式改进下轮的 self-edit 生成（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 更新指令由模型自己提出，更新对象也是同一模型 | 无需外部训练器设计适配方案 | — |
+| 是 | 原文（编者按）："self-adapt by generating their own finetuning data"——训练数据、更新指令、被更新者是同一模型 | — | **原理**：最简形式的自指权重 RSI——不经过任何外部教师环节（编辑推演） |
 
 ---
 
@@ -1058,31 +1058,31 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | LLM 同时充当任务提出者与求解者自博弈 | 免人工构造任务与标准答案 | — |
+| 进化搜索 | 原文："the learning LLM utilizes multi-turn search engine calling and acts simultaneously as both a task proposer and [a solver]"<br>**总结**：多轮搜索中同时当出题者与求解者 | 原文动机："RLVR highly depends on well-crafted task queries and corresponding ground-truth answers... which requires significant human effort and hinders the scaling of RL processes"<br>**总结**：RLVR 靠人工题库，阻碍规模化 | **原理**：真实搜索引擎当环境=无限免费的任务源与裁判，出题成本从人工转为推理成本（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | 自博弈控制任务难度以产生有效训练优势，RL 训练自身 | 解除 agent RL 的人工数据瓶颈 | — |
+| 递归自我改进 | 原文："the difficulty of the generated agentic tasks can hardly be controlled to provide effective RL training advantages"——以自博弈控制难度（机制概述）<br>**总结**：自博弈=难度控制器 | 原文：持续提升搜索 agent 能力（数字见原文）<br>**总结**：解除 agent RL 数据瓶颈 | **原理**：难度失控是合成任务的通病（过易无优势、过难无成功样本）；提出者奖励挂钩求解者进步，难度自动落在有效区（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 多轮真实搜索引擎调用即数据采集 | 任务分布真实而非合成 | — |
+| 采集数据＋训练 | 原文：多轮真实搜索引擎调用即数据采集<br>**总结**：任务分布真实 | — | **原理**：真实环境出题避免合成任务的分布窄化（编辑推演） |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 验证反馈 | 真实搜索引擎结果充当裁判 | ground truth 免费且无限 | — |
+| 验证反馈 | 真实搜索引擎结果做裁判（机制概述）<br>**总结**：ground truth 免费无限 | — | **原理**：检索结果是客观物理反馈，不像模型裁判可被说服（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 提出者=求解者同一模型 | 与 Absolute Zero 同构，oracle 从代码执行器换成真实环境 | — |
+| 是 | 提出者=求解者同一模型（原文设定）<br>**总结**：与 AZR 同构、oracle 换真实环境 | — | **原理**：— |
 
 ---
 
@@ -1094,33 +1094,33 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 单次生成 | 纲领文档而非算法实现：定义 P1-P5 因果位置与 PIPE（物理改进-生产边）形式化 | 给物理 RSI 提供统一坐标系 | — |
+| 单次生成 | 原文（纲领定义，编者按）：Physical Recursive Self-Improvement（PRSI）与 Physical Improvement-Production Edge（PIPE）的形式化；P1 硬件接口→P5 产生后续机器的算子五级因果位置<br>**总结**：物理 RSI 的统一坐标系 | 原文主张（定位）：让机器加速造机器、人类需求引导方向——信息端终点 DFM 的物理镜像<br>**总结**：纲领而非实现 | **原理**：把"AI 进物理世界"从连续谱切成五个可判定的档位——位置决定能力上限与风险敞口，形式化使讨论可证（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | P5=产生后续机器的算子——改进物理制造能力本身 | 4 个数学定理：可构造性/几何收缩/选择遗憾界/劳动系数收缩 | — |
+| 递归自我改进 | 原文（P5 定义，编者概述）：产生后续机器的算子——改进物理制造能力本身<br>**总结**：P5=物理 RSI | 原文定理（编者按）：证书链可构造性、几何收缩、选择遗憾界、劳动系数收缩<br>**总结**：四定理给可行性骨架 | **原理**：几何收缩=选择空间随证书链证据积累而收缩——递归收敛的前提是信息增益单调，证书链正是信息增益的载体（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 运行时全冻结 | 纯理论框架，无运行系统 | 形式化结论不依赖具体实现 | — |
+| 运行时全冻结 | 纯理论框架，无运行系统（编者按）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 证书链：每台机器的制造过程可追溯可验证 | 几何收缩定理成立的前提——选择空间随证据收缩 | — |
+| 数据飞轮 | 原文机制：证书链——每台机器制造过程可追溯可验证<br>**总结**：制造史即证据链 | — | **原理**：可追溯性把"这台机器为什么可信"变成可查证的记录，而非信任制造商（编辑推演） |
 
 **自己改自己？**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 机器造更好的机器，人类需求环引导改进方向 | 避免能力陷阱（系统只改进自己擅长改进的） | — |
+| 是 | 原文双环：需求环引导方向+物理环执行改进（编者概述）<br>**总结**：人类需求防能力陷阱 | — | **原理**：纯内生改进会陷入"只改进自己擅长改进的"——外环给改进方向一个系统外锚点（编辑推演） |
 
-**论文中的其他发现**：人类需求引导双环：需求环决定改进方向，物理环执行改进——信息端终点是 DFM，物理端终点是 PRSI
+**论文中的其他发现**：引语来自论文自定义术语与结构（编者按）；本条目为 PDF 纲领文档。
 
 ---
 
@@ -1132,19 +1132,19 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | 单模型自博弈：自己出题、自己解题、自我验证 | 零人工数据启动推理训练 | — |
+| 进化搜索 | 原文（题目与设定）：单系统自提任务、自解题、自验证的强化自博弈<br>**总结**：出题者=解题者=同一模型 | 原文动机："still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision"<br>**总结**：RLVR 仍靠人工题库，长期不可扩展 | **原理**：数据瓶颈从"采集"转向"生成"——当验证器免费（代码执行/数学校验），出题能力本身成为可训练能力（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 递归自我改进 | 出题-解题-验证闭环产生的数据回流训练同一模型 | 跨数学/代码推理基准持续提升 | — |
+| 递归自我改进 | 原文：自博弈产生的任务-解-验证三元组回流训练自身（机制概述）<br>**总结**：训练数据完全自产 | 原文报告跨数学/代码推理基准持续提升（具体数字见原文）<br>**总结**：零人工数据下全面提升 | **原理**：任务难度由自身当前能力决定（能出=能解的边缘），课程自动处于最近发展区（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | 自博弈 rollout 即数据采集，采集与训练交替 | 数据供应随能力增长自动扩展 | — |
+| 采集数据＋训练 | 自博弈 rollout 即采集，采集训练交替（机制概述）<br>**总结**：数据供应随能力增长 | — | **原理**：能力↔数据互为因果的正循环，无需外部数据管道（编辑推演） |
 
 **反馈栈**：无反馈
 
@@ -1152,9 +1152,9 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 是 | 提出者=求解者=被改进者是同一个模型 | 完全自指的最简形态 | — |
+| 是 | 提出者、求解者、验证者、被训练者四位一体（机制概述）<br>**总结**：完全自指最简形态 | — | **原理**：自验证依赖执行器客观性——代码/数学的可判定性是闭环不跑偏的锚（编辑推演） |
 
-**论文中的其他发现**：未见加速趋势证据——能力提升但改进速率未随时间增长
+**论文中的其他发现**：原文未展示加速趋势证据：能力提升但改进速率未随时间增长（重要限定）。
 
 ---
 
@@ -1166,30 +1166,30 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | OpenMLE-Evo 长程进化搜索：Draft/Improve/Debug/Crossover 四算子 | 学习与进化耦合在单环内 | — |
-| 闭环调整 | OpenMLE-Gym 可验证环境+OpenMLE-RL 算子学习 | 执行接地保证可验证 | — |
+| 进化搜索 | 原文："long-horizon search (OpenMLE-Evo)... four atomic program-evolution operators (Dr[aft/Improve/Debug/Crossover])"<br>**总结**：四算子长程进化搜索 | 原文（定位）："machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability"——AI4AI 的可执行试验台<br>**总结**：MLE 是 RSI 的落地试验台 | **原理**：进化算子对应人类工程师的四类动作（起草/改进/调试/交叉）——把 MLE 工作流原语化，长程搜索才可组合（编辑推演） |
+| 闭环调整 | 原文："spanning verifiable task environments with execution feedback (OpenMLE-Gym), operator learning (OpenMLE-RL)"<br>**总结**：可验证环境+算子学习 | — | **原理**：执行反馈让每个算子的好坏可判定——搜索的每步都有裁判（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 35B 模型经执行接地 SFT+RL 后训练为 MLE 元进化 agent | MLE-Bench Lite 39→71%，超 GPT-5.5+Codex，接近 Kimi K3（2.8T） | — |
+| 权重训练 | 原文："we post-train Frontis-MA1 (35B) as a meta-evolution agent for MLE, aligning post-training and inference around four atomic program-evolution operators"<br>**总结**：35B 后训练为元进化 agent | 库内数字（自报）：MLE-Bench Lite 39→71%、超 GPT-5.5+Codex、接近 Kimi K3（2.8T）<br>**总结**：35B 越级对抗超大模型 | **原理**：训练与推理对齐同一组算子——学的就是推理时要执行的动作分布，无 train-inference 错位（编辑推演） |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 只采集数据，不训练 | 部署时跑进化搜索，训练离线 | — | — |
+| 只采集数据，不训练 | 部署时跑进化搜索，训练离线（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 进化搜索结果回流算子训练 | — | — |
+| 数据飞轮 | 进化搜索结果回流算子训练（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 
-**论文中的其他发现**：AI4AI：RSI 近邻（未展示加速趋势）；框架与 35B 权重全开源
+**论文中的其他发现**：库内标注：RSI 近邻（未展示加速趋势）；框架与 35B 权重全开源。
 
 ---
 
@@ -1201,27 +1201,29 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | 自引导自博弈（SGS）用于 Lean4 定理证明 | — | — |
+| 进化搜索 | 原文："a Conjecturer model creates problems for a Solver, and both improve together"<br>**总结**：自引导自博弈（SGS） | 原文（对既有自博弈的诊断）："existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve"<br>**总结**：出题者学会奖励作弊——造无益的假难题 | **原理**：奖励作弊是自博弈的结构病——出题者的奖励若与解题者进步脱钩，最省力的策略是造"看着难"的题；自引导让出题者以自身能力为参照锚定难度（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | Lean4 验证器提供奖励训练策略 | 渐进超越强 RL 基线的渐近求解率 | — |
+| 权重训练 | 原文："a self-play algorithm in which the language model itself gui[des]"——自引导信号驱动训练（机制概述）<br>**总结**：— | 库内数字（自报）：渐近求解率超强 RL 基线<br>**总结**：— | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | — | — | — |
+| 采集数据＋训练 | — | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 证明尝试回流训练 | — | — |
+| 数据飞轮 | 证明尝试回流训练（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
+
+**论文中的其他发现**：该文对自博弈奖励作弊的诊断同样适用于其他 proposer-solver 系统（编者按）。
 
 ---
 
@@ -1233,25 +1235,25 @@ start code-as-policy-cube.html
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 进化搜索 | 猜想者与证明者两个角色自博弈，互为对方提供训练信号 | 定理证明的自改进环 | — |
+| 进化搜索 | 原文："we draw inspiration from mathematicians, who continuously develop new results, partly by proposing novel conjectures or exercises (which are often variants of known results) and attempting [them]"<br>**总结**：猜想者+证明者双角色自博弈 | 原文动机："performance quickly plateaus due to the scarcity of correct proofs (sparse rewards)"<br>**总结**：证明数据稀缺导致平台期 | **原理**：解题数据受限于"会做的题"，出题数据不受限——猜想把数据源从"已会"扩到"可变体"，绕开稀疏奖励（编辑推演） |
 
 **更新能力**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 权重训练 | 两个角色迭代互相提升 | — | — |
+| 权重训练 | 原文机制：两个角色互为对方提供训练信号、迭代互相提升（机制概述）<br>**总结**：互喂式共训 | 原文：定理证明能力迭代提升（数字见原文）<br>**总结**：— | **原理**：— |
 
 **运行时行为**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 采集数据＋训练 | — | — | — |
+| 采集数据＋训练 | — | — | **原理**：— |
 
 **反馈栈**
 
 | tag方向 | 文章中具体设计 | 具体设计带来增益 | 带来增益的原理（第一性解释） |
 |---|---|---|---|
-| 数据飞轮 | 证明器产出训猜想器、猜想产出训证明器 | — | — |
+| 数据飞轮 | 证明器产出训猜想器、猜想产出训证明器（机制概述）<br>**总结**：— | — | **原理**：— |
 
 **自己改自己？**：否
 

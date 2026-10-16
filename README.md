@@ -141,25 +141,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Robot turns from model consumer to data producer: in-the-wild collection + auto-labeling flows back | Data acquisition cost falls with deployment | — |
+| Closed-loop | Paper: "Robots, as embodied agents, are uniquely positioned to close this gap: they can act in physical environments to collect large-scale, real-world data that enriches FM training with precisely the examples current models lack"<br>**Summary**: robots turn from model consumers into data producers | Motive, verbatim: "their reliance on internet pretraining data leaves them brittle in unstructured, real-world settings. The messy, real-world data encountered during deployment (e.g. occluded or multilingual text) remains massively underrepresented"<br>**Summary**: internet corpora miss exactly the messy deployment data | **Why**: distribution repair — deployment naturally generates complement-of-training samples; the robot fills the long tail while working (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Auto-labeled data retrains the model | — | — |
+| Weight training | Collected data + auto-labeling flow back to FM training (mechanism)<br>**Summary**:— | Paper: FM gains on real-robot tasks (numbers in paper)<br>**Summary**:— | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Continuous collection in the real environment | — | — |
+| Collects + trains | Deployment is collection (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | More deployment → more data → stronger model → more deployment | — | — |
+| Data flywheel | More deployment → more data → stronger model → more deployment (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -173,25 +173,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | IL init + residual RL + VLM success verification in a self-improvement loop | Dexterous manipulation success keeps rising | — |
+| Closed-loop | Paper: "a scalable data generation framework that employs a self-improving cycle to continuously enrich data diversity. Starting from efficient seed demonstrations warmup, DexFlyWheel expands the dataset through i[terative...]"<br>**Summary**: seed-demo warmup → self-improving cycle expands data | Motive, verbatim: "diverse and high-quality datasets remain scarce. Existing data collection methods either rely on human teleoperation or require significant human engineering, or generate data with limited diversity"<br>**Summary**: teleop is costly; auto-generation lacks diversity | **Why**: diversity comes from combinatorial task explosion — each round's successful policies seed the next; task space grows with the capability radius (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Residual RL finetunes on top of the IL-initialized policy | Keeps demo priors while exceeding the IL ceiling | — |
+| Weight training | IL init + residual RL on top (paper setup, editor summary)<br>**Summary**: keeps demo priors, exceeds the IL ceiling | Paper: dexterous manipulation gains (numbers in paper)<br>**Summary**:— | **Why**: residual parameterization separates "learn corrections" from "learn the whole policy" — small correction gradients are stable and don't wash out demo priors (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Real-robot rollouts are the collection | Data distribution matches deployment | — |
+| Collects + trains | Real-robot rollouts are the collection (mechanism)<br>**Summary**: data distribution = deployment distribution | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Only VLM-verified successes enter the training pool | Automatic data QC without humans | — |
+| Data flywheel | Paper: "self-improving cycle to continuously enrich data diversity"<br>**Summary**: flywheel in the title | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -205,25 +205,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Generator-verifier: a VLM verifier does inference-time steering and verifies rollouts | Only verified trajectories flow back | — |
+| Closed-loop | Paper: "a generator-verifier framework for generalist robot policies for inference-time policy steering and self-improvement. We use a pre-trained generalist robot policy as a 'generator' and pair it with a gradient-free 'visual verifier' that evaluates actions at inference time"<br>**Summary**: pretrained policy as generator + gradient-free visual verifier scoring actions at inference | Motive, verbatim: "Robots deployed in the real world should learn from their experience and improve over time. This requires a mechanism of practicing and learning from feedback"<br>**Summary**: deployed robots need experience-based improvement | **Why**: gradient-free verification filters actions without touching weights — verification is orders cheaper than training: generate expensively, filter cheaply (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Verified trajectories retrain the generator | The textbook data-flywheel shape | — |
+| Weight training | Paper: verified experience flows back to retrain the policy (mechanism)<br>**Summary**: only verified trajectories return | Paper: post-self-improvement gains (numbers in paper)<br>**Summary**: both inference-time steering and training-time gains | **Why**: data passes a verification gate first — bad trajectories never enter training; data quality monotonically improves (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Runtime only verifies and collects; training happens offline | Zero training overhead at deployment | — |
+| Collects, no training | Inference-time verification-only steering; training offline (mechanism)<br>**Summary**: zero training overhead at deployment | Paper: "improves policy performance without additional training" (steering part)<br>**Summary**: gains without training | **Why**: constraint satisfaction at decoding — the verifier's score acts as a search heuristic; best-of-N needs no gradients (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Verified trajectories keep flowing back | Training data quality grows with deployment | — |
+| Data flywheel | Verified trajectories keep flowing back (mechanism)<br>**Summary**: the textbook flywheel | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -237,25 +237,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Reuses the agent's own solution traces as training data, generating targeted repair tasks for continuous self-evolution | Training data from real practice, not external labels | — |
+| Closed-loop | Paper: "a closed-loop self-evolution framework that reuses the agent's historical solving traces as a source of training signal. Rather than treating traces only as [outcomes]"<br>**Summary**: historical solving traces recycled as training signal | Paper (critique of prior synthetic data): "Existing synthetic data methods typically create tasks through fixed mutation or bug-injection procedures, making the resulting distributions largely independent of the agent's own weaknesses and training progress"<br>**Summary**: fixed-mutation tasks ignore the agent's weaknesses | **Why**: training data should target current weaknesses — one's own failure traces are exactly at the ability edge, closer to the zone of proximal development than synthetic bugs (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | A closed-loop self-evolving pipeline keeps finetuning the coding agent | — | — |
+| Weight training | Paper: targeted repair tasks generated from traces; closed-loop finetuning (mechanism)<br>**Summary**: traces → tasks → training | Paper: SWE success improves after self-evolution (numbers in paper)<br>**Summary**:— | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Traces collected at runtime; training offline | — | — |
+| Collects, no training | Traces collected at runtime; training offline (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Traces → tasks → training → stronger agent → better traces | — | — |
+| Data flywheel | Traces → tasks → training → stronger agent → better traces (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -269,27 +269,29 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Distills execution-feedback self-correction behavior into weights | Self-correction at inference with no external machinery | — |
+| Closed-loop | Project page (editor note): 7,139 execution-feedback self-correction trajectories instruction-tune the model — distill notice-error → fix → retry into weights<br>**Summary**: self-correction behavior into weights | Project claim: 7B matches models 5-10× larger (self-reported)<br>**Summary**: small model + self-correction ≈ big model | **Why**: self-correction is emergent in large models — explicitly collecting and SFT-ing these trajectories gives 7B the behavior without the emergence (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | 7,139 self-correction trajectories instruction-tune Mistral-7B | 7B matches models 5-10× larger | — |
+| Weight training | 7,139 self-correction trajectories SFT (project setup)<br>**Summary**: one-time distillation | — | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Frozen at runtime | No collection or training at deployment; self-correction lives in weights | Zero extra inference cost | — |
+| Frozen at runtime | No collection or training at deployment; self-correction lives in weights (setup)<br>**Summary**: zero inference overhead | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Execution feedback produced the self-correction dataset (one-time distillation) | Dataset open-sourced | — |
+| Data flywheel | Execution feedback produced the dataset (one-time; open-sourced)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
+
+**Other findings in the paper**: This entry is a model card, not a paper; quotes from the project page.
 
 ---
 
@@ -301,31 +303,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Synthesize response pairs → reason preferences → train the judge → better synthesis, iteratively | Strong judge trained with zero human labels | — |
+| Closed-loop | Paper: "an iterative self-training algorithm... starting from a small seed set of instructions, responses are generated, and pairs of responses are compared"<br>**Summary**: synthesize response pairs → reason preferences → train the judge, loop | Motive, verbatim: "the standard approach is to collect a large amount of human preference judgments over model responses, which is costly and the data becomes stale as models improve"<br>**Summary**: human preferences are costly and go stale | **Why**: only a judge evolving with the judged stays fresh — static RMs systematically miscalibrate as models strengthen (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The judge is iteratively finetuned on its own synthetic preference labels | RewardBench 75.4→88.3, matching human-labeled RMs | — |
+| Weight training | Paper: "improve a strong LLM (Llama3-70B-Instruct) from 75.4 to 88.3 (88.7 with...) [on RewardBench]"<br>**Summary**: self-trained judge 75.4→88.3 | Paper: "Without any labeled preference data"<br>**Summary**: zero labels, matching human-labeled RMs | **Why**: preference-judgment ability already latents in strong models — self-training aligns that potential to the evaluation format (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Synthetic data used for training as it is produced | Data cost ≈ inference cost | — |
+| Collects + trains | Synthetic data used as produced (mechanism)<br>**Summary**: data cost ≈ inference cost | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Verification feedback | A preference reasoning chain backs every label | Judge verdicts are traceable | — |
+| Verification feedback | Paper: generates "analysis of the differences between the responses" as preference rationale (mechanism)<br>**Summary**: every label carries a reasoning chain | — | **Why**: the chain is the label's explicit rationale — wrong labels localize to wrong reasoning steps (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The judge creates its own training data | The evaluator evolves with the evaluated, never going stale | — |
+| Yes | The judge creates its own training data (mechanism)<br>**Summary**: evaluator self-reference | — | **Why**: self-reference risk = preference drift; mitigation = start from a strong seed's relative judgments, anchored in inter-model consistency (editor) |
 
 ---
 
@@ -337,32 +339,32 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Rubric generator and judge evolve in turns via alternating RL | Criteria and judging co-evolve instead of freezing | — |
-| Multi-agent | Generator πr and judge πj with separated duties | Each optimizable independently | — |
+| Closed-loop | Paper: "jointly optimizes a rubric generator and a judge using reinforcement learning from preference feedback"<br>**Summary**: rubric generator and judge evolve in alternating RL | Paper (on prior work): "Unlike existing methods that rely on st[atic...]" — static rubrics cannot evolve<br>**Summary**: criteria and execution co-evolve | **Why**: rubric and judge are two halves of an evaluation system — fixing one and optimizing the other reaches only local optima; alternation approaches the joint optimum (editor) |
+| Multi-agent | Generator πr and judge πj with separated duties (paper construction)<br>**Summary**: clear per-role objectives | — | **Why**: separation makes credit assignable — judge errors and criteria errors are separately attributable (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Both are RL-trained from preference feedback | +4.7% average on reward-modeling benchmarks | — |
+| Weight training | Both RL-trained from preference feedback (paper construction)<br>**Summary**: both roles reach the weight layer | Paper: "achieving a +4.7% average gain on reward-modeling [benchmarks]" (9 reward-modeling + 6 policy benchmarks)<br>**Summary**: +4.7% average gain | **Why**: alternating training is coordinate ascent — fix one side, optimize the other; monotone hill-climbing (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Preference pairs collected and consumed during training | — | — |
+| Collects + trains | Preference pairs collected and consumed during training (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Verification feedback | Judge scores against rubric items | Interpretable, auditable reward | — |
+| Verification feedback | Judge scores rubric item by item (mechanism)<br>**Summary**: structured scoring | — | **Why**: rubrics decompose "is it good" into checkable predicates — evaluation becomes an auditable checklist, not a gestalt impression (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The judge grades the generator; both train each other | Answers "who grades the grader" | — |
+| Yes | The judge grades the generator; both train each other (mechanism)<br>**Summary**: answers "who grades the grader" | — | **Why**: the judge's judge is the preference data itself — external preference anchors the alternation's fixed point, preventing collusive degeneration (editor) |
 
 ---
 
@@ -374,31 +376,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | The LLM judges its own instruction-following outputs (self-reward) | Reward signal without an external RM | — |
+| Closed-loop | Paper: "the language model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training"<br>**Summary**: the LLM judges itself to issue rewards | Motive, verbatim: "Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training"<br>**Summary**: human ceiling + frozen-RM staleness | **Why**: reward source and trainee are the same model — the reward rises with the model, bypassing both the human ceiling and RM staleness (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Self-rewarded data trains the model via iterative DPO | Sustained gains across three rounds on instruction following and chat | — |
+| Weight training | Paper: "during Iterative DPO training that not only does instr[uction following improve]" — self-rewarded data via iterative DPO (mechanism)<br>**Summary**: self-reward + iterative DPO | Paper: sustained multi-round gains on instruction following and chat (numbers in paper)<br>**Summary**:— | **Why**: DPO needs no explicit RM — preference pairs go straight into policy, and the self-judge's output is exactly the pairs (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | — | — | — |
+| Collects + trains | — | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Each round of self-rewarded data trains a stronger self-judge | — | — |
+| Data flywheel | Each round's self-rewarded data trains a stronger self-judge (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | Judge, data source, and trainee are the same model | The canonical self-referential form: reward comes from inside | — |
+| Yes | Paper (editor note): judge, data source, and trainee are one model<br>**Summary**: the canonical self-referential form | — | **Why**: the failure mode is self-preference drift (favoring one's own style); mitigation per paper: judging anchored to instruction-following criteria rather than free preference (editor) |
 
 ---
 
@@ -410,25 +412,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | The reward model generates extra training data to iteratively improve itself | The RM is no longer a one-shot artifact | — |
+| Closed-loop | Paper: "As language models improve, human input may become less effective in further enhancing their perfor[mance]" — the RM must co-evolve (motive)<br>**Summary**: the reward model must evolve with the rewarded | Motive, verbatim: "A core challenge in employing RLHF lies in training a reliable reward model (RM), which relies on high-quality labels typically provided by human experts or advanced AI system. These methods can be costly and may introduce biases"<br>**Summary**: RMs depend on costly, biased labels | **Why**: a static RM becomes the policy's ceiling — once the model surpasses the RM's judgment, the RM rewards "resembling the old model", not "better" (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The improved reward then optimizes the policy via PPO | Policy and reward rise together | — |
+| Weight training | Paper mechanism: the RM self-generates extra training data to iteratively improve itself; the improved reward optimizes policy via PPO (mechanism)<br>**Summary**: RM self-produces data, self-improves | Paper: policy performance improves across RM iterations (numbers in paper)<br>**Summary**:— | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | — | — | — |
+| Collects + trains | — | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Self-improving RM flywheel | — | — |
+| Data flywheel | Self-improving RM flywheel (title setup)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -442,29 +444,29 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Skill-accrual | Wake-sleep library learning: solved programs are abstracted into the skill library | Hard tasks become compositions of known skills | — |
+| Skill-accrual | Paper: "It builds expertise by creating programming languages for expressing domain concepts, together with neural networks to guide the search for programs within these languages"<br>**Summary**: skill = a language for domain concepts + nets guiding search | Motive, verbatim: "Expert problem-solving is driven by powerful languages for thinking about problems and their solutions. Acquiring expertise means learning these languages"<br>**Summary**: expertise = learning languages of thought | **Why**: language determines the expressible solution space — an abstracted DSL makes old solutions primitives of new ones; composition depth grows with the library (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | A recognition model is trained inside the loop to guide library search | Exponentially smaller search space | — |
+| Weight training | Paper: "A 'wake-sleep' learning algorithm alternately extends the language with new symbolic abstractions and trains the neural n[etworks]"<br>**Summary**: wake-sleep alternation: extend library ↔ train recognition | Paper: gains from few-shot to general problem solving (numbers in paper)<br>**Summary**: library reuse accelerates new-task learning | **Why**: the recognition model turns "how to search programs" into a prior of "what programs look like" — blind enumeration becomes guided sampling; the exponential space flattens (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Each round of solving trains the recognition model | Search accelerates over time | — |
+| Collects + trains | Each round's solving trains the recognition model (mechanism)<br>**Summary**: experience → prior | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Skill library and recognition model co-evolve | — | — |
+| Data flywheel | Library and recognition model co-evolve (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
-**Other findings in the paper**: Recognition model trained in the loop — the ancestor of L4-style skill accrual (DreamCoder)
+**Other findings in the paper**: Editor note: recognition model trained inside the loop — the ancestor of L4-style skill accrual (DreamCoder, 2020).
 
 ---
 
@@ -476,25 +478,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Executable world representations (EWR) auto-generate precise annotations | Annotation cost approaches zero | — |
+| Closed-loop | Paper: "a paradigm that represents physical worlds through executable world representations. By expressing physical composition, dynamic evolution, [and governing rules] as code"<br>**Summary**: physical world = executable world representation (EWR) | Motive, verbatim: "they often lack explicit representations of the underlying mechanisms—such as object states, physical parameters, and governing dynamics—needed for reliably reasoning how the world evolves"<br>**Summary**: VLMs lack explicit mechanism representations | **Why**: code = an executable world model — prediction by running, not regression; mechanisms stay transparent and intervenable (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | SFT + GRPO train the VLM | QuantiPhy 58.6, beating Gemini-3.1-Flash | — |
+| Weight training | EWR auto-generates precise annotations → SFT+GRPO train the VLM (mechanism)<br>**Summary**: code produces data that trains the model | Archived number: QuantiPhy 58.6 beating Gemini-3.1-Flash (self-reported)<br>**Summary**: small model beats a commercial giant | **Why**: annotations come from executing world code — ground truth needs no humans; label volume is compute-bound only (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Executing world code yields training data | — | — |
+| Collects + trains | Executing world code yields training data (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | World code generates data that trains the model; the model improves the world code | — | — |
+| Data flywheel | World code generates data that trains the model; the model improves the world code (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -508,25 +510,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | MCTS self-play search produces high-quality reasoning trajectories | Small models get reasoning data far beyond their scale | — |
+| Evolutionary | Paper: "exercising 'deep thinking' through Monte Carlo Tree Search (MCTS), where a math policy SLM performs test-time search guided by an SLM-based process reward model"<br>**Summary**: MCTS deep thinking + small-model process rewards | Paper (positioning): "small language models (SLMs) can rival or even surpass the math reasoning capability of OpenAI o1, without distillation from superior models"<br>**Summary**: SLMs rival o1-level reasoning without distillation | **Why**: MCTS swaps "answer in one pass" for "answer after search" — inference compute trades for model parameters; 7B reaches 100B+ reasoning quality via the tree (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Self-evolved deep thinking: policy + process-reward model (SSM) bootstrapped together | 7B-class models reach olympiad-level math | — |
+| Weight training | Paper: "a novel code-augmented CoT data synthesis method, which performs extensive MCTS rollouts to generate step-by-step verified r[easoning]" (one of three innovations)<br>**Summary**: MCTS rollouts produce step-verified data training both SLMs | Paper: large gains on olympiad-level benchmarks (numbers in paper, incl. MATH/GSM8K)<br>**Summary**: olympiad level for small models | **Why**: the process reward model learns "is this step right" — step-level supervision is an order denser in credit assignment than outcome-level (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | — | — | — |
+| Collects + trains | — | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Better policies yield better trajectories that train better process rewards | — | — |
+| Data flywheel | Better policies yield better trajectories training better process rewards (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -540,29 +542,27 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | LM proposes auxiliary constructions; the symbolic engine (DD+AR) proves strictly; failures trigger re-proposal | Every step is mathematically checked | — |
+| Closed-loop | Nature abstract (editor note): a neural LM proposes auxiliary constructions; a symbolic deduction engine derives strictly; failures re-trigger proposals<br>**Summary**: neural proposes, symbolic proves, loop feeds both | Self-reported: 25/30 on the IMO geometry benchmark (gold-medal level), zero human demonstrations<br>**Summary**: gold-medal level without human demos | **Why**: networks are good at guessing where to add lines (heuristics over unbounded space); symbolic engines are good at walking premises to conclusions (bounded rule search) — the loop lets each do its half (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | 100M synthetic proofs generated by the engine train the LM | Zero human demonstrations | — |
+| Weight training | Self-reported: the symbolic engine generates 100M synthetic theorems and proofs to train the LM<br>**Summary**: engine manufactures data for the network | — | **Why**: the symbolic engine generates unlimited labeled problems — data scarcity is replaced by compute scarcity (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Pure inference at solve time; training offline | No training infrastructure to run | — |
+| Collects, no training | Pure inference at solve time (DD+AR); training offline (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Engine data trains the neural proposer; the proposer feeds the engine | — | — |
+| Data flywheel | Engine data trains the proposer; the proposer feeds the engine (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
-
-**Other findings in the paper**: IMO geometry 25/30, gold-medal level
 
 ---
 
@@ -574,34 +574,34 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Propose-test-select evolution of harness edits | Polyglot 82.1% (strongest baseline 62.6%) | — |
-| Closed-loop | One policy, two roles: Proposer writes harness edits; Reflector diagnoses effects and guides revision | SWE-bench Verified 48.3% (strongest baseline 41.0%) | — |
+| Evolutionary | Paper: "a unified dual-role pipeline that a single policy serves as both a Proposer, which writes harness edits, and a Reflector, which diagnoses their effects and guides revision"<br>**Summary**: one policy, two roles — Proposer writes, Reflector diagnoses | Paper: "Polyglot 82.1%... compared with 62.6%... for the strongest baseline"<br>**Summary**: Polyglot 82.1% vs 62.6% baseline | **Why**: proposal/reflection split = generation/verification division — two views of one model check each other, defeating single-role self-confirmation (editor) |
+| Closed-loop | Paper: "harness modifications and their execution outcomes guide the training of both the Proposer and the Reflector"<br>**Summary**: edit outcomes retrain both roles | Paper: "48.3% on SWE-bench Verified, compared with... 41.0% for the strongest baseline"<br>**Summary**: SWE-bench Verified 48.3% vs 41.0% | **Why**: weight updates condition on harness changes — the temporal mismatch (code first, weights later) disappears (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | EvoTIDE recovers trajectories via edit extraction + prefix continuation; SFT + interleaved GRPO trains both roles — the evolver itself evolves | Bridges the formerly separate weight-line and harness-line | — |
+| Recursive self-improvement | Paper: "EvoTIDE, a training pipeline that recovers usable trajectories through edit extraction and prefix continuation, then combines SFT with interleaved GRPO across the two roles"<br>**Summary**: EvoTIDE recovers trajectories + SFT + interleaved GRPO — the evolver itself is trained | Paper: "the evolved harnesses transfer to different tasks without further evolution and rank first in cross-benchmark evaluations"<br>**Summary**: evolved harnesses transfer, ranked first, no further evolution | **Why**: the evolver learns which kinds of edits work, not specific edits — kinds transfer, artifacts don't (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Execution outcomes of harness edits become training data immediately | Weight updates never lag harness changes | — |
+| Collects + trains | Execution outcomes of harness edits become training data immediately (mechanism)<br>**Summary**: weights and harness in sync | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Better harness → better trajectories → better evolver | Evolved harnesses transfer cross-benchmark, ranked first, with no further evolution | — |
+| Data flywheel | Better harness → better trajectories → better evolver (mechanism)<br>**Summary**: two-layer flywheel | — | **Why**:— |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The evolver (Proposer/Reflector) is trained by its own products | GPT-5-mini agent 24.4%→48.3% — works with proprietary models too | — |
+| Yes | Paper (editor note): the dual-role evolver is trained by its own products<br>**Summary**: GPT-5-mini agent 24.4%→48.3% (works for proprietary models) | — | **Why**: proprietary weights are frozen but harnesses are writable — self-reference lands on the writable surface, bypassing the weight lock (editor) |
 
-**Other findings in the paper**: The dual-role framework holds for closed models: harness-only edits recover much of the gain
+**Other findings in the paper**: Bridges the formerly separate weight-line and harness-line (paper's own positioning).
 
 ---
 
@@ -652,34 +652,34 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Iteratively proposes and selects edits of harness components | Fully automated harness optimization | — |
-| Closed-loop | Evaluation scores serve as the selection signal | No manual review of each edit | — |
+| Evolutionary | Paper: "iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level"<br>**Summary**: iterative propose-and-select of harness component edits | — | **Why**: component-level edits keep the search space tractable — whole rewrites are unattributable; component edits isolate causality (editor) |
+| Closed-loop | Evaluation scores select edits (mechanism)<br>**Summary**: scores pick edits | — | **Why**:— |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | Harness-RSI: recursively rewrites the agent's prompts/control flow/tools/memory | Large in-distribution gains | — |
+| Recursive self-improvement | Harness-RSI: recursively rewrites prompts/control flow/tools/memory (paper setup)<br>**Summary**: RSI at the agent-system level | Paper: "such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks" — the diagnosis<br>**Summary**: big in-distribution, vanishing OOD (overfitting) | **Why**: when selection signal = training-task scores, edits can memorize tasks instead of raising capability — optimizing the metric breaks the goal (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Edit search on a frozen backbone | — | — |
+| Collects, no training | Edit search on a frozen backbone (paper setup)<br>**Summary**: zero training overhead | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Regularization principles injected into the self-improvement loop | OOD gains preserved — fixes harness-RSI overfitting | — |
+| Data flywheel | Paper: "incorporates the principles of regularizations into harness self-improvement"<br>**Summary**: regularization enters the self-improvement loop | Paper: OOD gains preserved (numbers in paper)<br>**Summary**: gains transfer after the fix | **Why**: weight-training anti-overfitting tools (regularization/early stopping/held-out selection) transplant directly to code-edit search — ML 101 applies to harness-RSI (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The harness-editing pipeline improves the harness itself | — | — |
+| Yes | The harness-editing pipeline improves the harness itself (mechanism)<br>**Summary**:— | — | **Why**:— |
 
-**Other findings in the paper**: First systematic diagnosis of harness-RSI overfitting: edits memorize training tasks; in-distribution gains vanish OOD or turn negative
+**Other findings in the paper**: First systematic diagnosis of harness-RSI overfitting: in-distribution and OOD gains decouple or invert.
 
 ---
 
@@ -691,34 +691,34 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Auto-research loops roll out harness improvements across increasingly diverse environments; mechanisms survive selection | Four mechanisms survived and transfer beyond their development settings | — |
-| Closed-loop | Harness improvements found by the loop deploy back into the loop's own harness | The research tool becomes the research output | — |
+| Evolutionary | Paper: "scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts... the process yields reusable improvements that transfer beyond their development setting"<br>**Summary**: research loops roll out cross-environment; surviving mechanisms transfer | Motive, verbatim: "before scaling agent loops, can agents first make the harness itself more efficient?"<br>**Summary**: optimize the harness before scaling the loop | **Why**: cross-environment selection filters out environment-specific tricks — survivors must capture harness-universal inefficiencies (editor) |
+| Closed-loop | Discovered improvements deploy back into the loop's own harness (mechanism)<br>**Summary**: the research tool becomes the research output | — | **Why**:— |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | RSI at the harness layer: the agent first optimizes its own harness (token efficiency) | Large token-cost cuts on long tasks — Action Fusion, ObservationPack, Evidence-Preserving Reducer, Online Context Compact | — |
+| Recursive self-improvement | Paper: "We take an RSI-inspired approach at the harness layer"<br>**Summary**: RSI at the harness layer (token efficiency) | Four surviving mechanisms: Action Fusion, ObservationPack, Evidence-Preserving Reducer, Online Context Compact (README; large token-cost cuts on long tasks)<br>**Summary**: all four target token efficiency | **Why**: long-task cost is dominated by repeated validation calls, stale observation replay, over-reading logs — each mechanism kills one repeated overhead (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Backbone frozen; all improvement lives in harness mechanisms | Production-grade open source (3.4k stars), MIT | — |
+| Collects, no training | Backbone frozen; improvement lives in harness mechanisms (paper setup)<br>**Summary**: production-grade open source (3.4k stars) | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Cross-environment rollout evidence filters mechanisms | Transferability validated by selection pressure | — |
+| Data flywheel | Cross-environment rollout evidence filters mechanisms (mechanism)<br>**Summary**: transferability validated by selection | — | **Why**:— |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The auto-research loop improves the harness that runs it | Improver and improved are the same system | — |
+| Yes | The auto-research loop improves the harness that runs it (mechanism)<br>**Summary**: improver = improved | — | **Why**: harness efficiency bounds the research loop's own scalability — here self-reference is practical: carrier and target coincide (editor) |
 
-**Other findings in the paper**: All four surviving mechanisms target different harness parts: action execution, context compaction, observation handling, delegation
+**Other findings in the paper**: Open-sourced as a Pi coding-agent extension (github.com/NVlabs/SoL-Pi), MIT, 3,476 stars.
 
 ---
 
@@ -730,35 +730,35 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Three writable surfaces — Data/Harness/Model — unified as operators of one loop kernel | All three self-improvement kinds share one verification and scheduling machinery | — |
-| Evolutionary | An RSI² scheduler composes operator sequences under typed contracts and rewrites proposal policies | The improvement steps themselves are searchable | — |
-| Memory | Improvement history and signal-freshness rules persist (H→M and M→M banned — data must not predate capability change) | Prevents training new capabilities on stale data | — |
+| Closed-loop | Paper (system): Data/Harness/Model as three writable surfaces unified as operators of one loop kernel (editor summary)<br>**Summary**: all three improvement kinds share one verification/scheduling machinery | Paper: "RSI has been validated almost exclusively on coding and formal benchmarks... This format bound limits RSI to improvement within a machine-checkable slice, not general capability where questions are settled by argument, replication, or measurement"<br>**Summary**: existing RSI locked inside a machine-checkable slice | **Why**: one kernel removes verification-logic fragmentation across D/H/M — one permission boundary and freshness rule serve all improvement types (editor) |
+| Evolutionary | An RSI² scheduler composes operator sequences under typed contracts (system, editor summary)<br>**Summary**: improvement steps themselves are searchable | — | **Why**: improvement order is a combinatorial space; search beats fixed pipelines (editor) |
+| Memory | Signal-freshness rules: H→M and M→M banned (system)<br>**Summary**: data must not predate capability change | — | **Why**: stale signals training new capability = old map, new road; the ban enforces informational causal order (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | MetaRSI² improves the scheduler itself — RSI applied to RSI | +10.9 avg, +3.6 over fixed pipelines; SWE-bench Pro 10.3→19.5 | — |
+| Recursive self-improvement | MetaRSI² improves the scheduler itself — RSI applied to RSI (system)<br>**Summary**: the meta level joins the loop | Paper numbers (archived): +10.9 avg, +3.6 over fixed pipelines, SWE-bench Pro 10.3→19.5<br>**Summary**: scheduling itself carries weight | **Why**: the scheduler decides operator sequences — improving "how to improve" is one order higher leverage than any single improvement (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Model only proposes; deterministic code verifies, scores, and releases | Permission boundary keeps every step auditable | — |
+| Collects + trains | Model proposes; deterministic code verifies/scores/releases (system)<br>**Summary**: auditable permission boundary | — | **Why**: propose/execute separation is a one-way gate — model hallucination cannot enter the release channel (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Closed-loop tracking across the chain | Survey: loop formation tracks verification format, not capability (ρ=-0.75) — oracle type bounds RSI | — |
+| Data flywheel | Closed-loop tracking across the chain (system)<br>**Summary**: observable loops | Paper survey: loop formation tracks verification format, not capability (ρ=-0.75)<br>**Summary**: quantitative evidence that oracle type bounds RSI | **Why**: decidable verification formats naturally form loops first — causation runs format→loop, not capability→loop (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The scheduler improves the scheduler | The meta level of improvement is inside the loop | — |
+| Yes | The scheduler improves the scheduler (system)<br>**Summary**: meta self-reference | — | **Why**: the constraint on meta self-reference is the typed contract — infinite regress is cut to finite levels by the type system (editor) |
 
-**Other findings in the paper**: Quantitative oracle determinism: what the loop tracks is verification format, not capability
+**Other findings in the paper**: The paper argues RSI must next enter open scientific domains judged by "argument, replication, or measurement" (position, verbatim fragments).
 
 ---
 
@@ -770,31 +770,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Multi-agent | A curriculum agent poses tasks, an executor solves them; both co-evolve | Task difficulty auto-matches executor capability | — |
+| Multi-agent | Paper: "a fully autonomous framework that evolves high-performing agents without external data through multi-step co-evolution and seamless tool i[ntegration]"<br>**Summary**: zero external data; multi-step co-evolution + tool integration | Motive, verbatim: "constrained by a dependency on human-curated data, limiting scalability and tethering AI to human knowledge... restricted by the model's inherent capabilities and single-round interactions"<br>**Summary**: human data caps scale; prior self-evolution capped by single-round interaction | **Why**: curriculum and executor split roles — the poser keeps tasks at the executor's ability edge, and multi-step interaction lets curricula involve tool use with dynamic reasoning (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | Starts from zero data; the two agents are each other's training signal | Cold-start co-evolution | — |
+| Recursive self-improvement | Paper: "multi-step co-evolution" — the two roles are each other's training signal (mechanism)<br>**Summary**: zero-data cold-start co-evolution | Paper reports sustained improvement with no external data (numbers in paper)<br>**Summary**: successful bootstrapping | **Why**: role split breaks the degenerate "self-posed tasks drift easy" — the poser's reward ties to the solver's progress, so hard tasks pay (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Execution trajectories flow back into training immediately | Curriculum and capability grow in lockstep | — |
+| Collects + trains | Multi-step rollouts flow back immediately (mechanism)<br>**Summary**: collect-train alternation | — | **Why**: difficulty and capability grow in lockstep, keeping training signal valid (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Curriculum difficulty adapts as the executor improves | Keeps effective training advantage alive | — |
+| Data flywheel | Curriculum difficulty tracks the executor (mechanism)<br>**Summary**: perpetually effective advantage | — | **Why**: adaptive difficulty = automatic curriculum learning — avoiding fixed curricula that are too easy (no signal) or too hard (no successes) (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | Curriculum improves executor; executor performance improves curriculum | Bidirectional self-referential loop | — |
+| Yes | Curriculum and executor improve each other (mechanism)<br>**Summary**: bidirectional self-reference | — | **Why**: cross self-reference is stabler than single-point — two complementary views correct each other (editor) |
 
 ---
 
@@ -806,34 +806,34 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Maintains an agent archive; Darwinian mutation of its own code with selection by evaluation | Open-ended search replaces manual design iteration | — |
-| Skill-accrual | Improvements persist as reusable code components in the archive | Good edits inherit across generations | — |
+| Evolutionary | Paper: "a self-improving AI that repeatedly modifies itself in a provably beneficial manner" — replaced by Darwinian open-ended evolution<br>**Summary**: archive + mutation + selection; open-ended self-modification search | Motive, verbatim: "Today's AI systems have human-designed, fixed architectures and cannot autonomously and continuously improve themselves... Meta-learning... is limited by first-order improvements and the human design of a suitable search space"<br>**Summary**: fixed architectures cannot self-improve; meta-learning capped by human-designed search spaces | **Why**: provable self-improvement (the Gödel-machine route) is prohibitively expensive to certify; open evolution swaps "provably better" for "selected by environment" — turning an undecidable property into an executable one (editor) |
+| Skill-accrual | Improvements persist as code components in the lineage archive (paper mechanism)<br>**Summary**: good edits inherit across generations | — | **Why**: the archive is an explicit skill library; evolution over discrete artifacts is traceable and reusable (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | The agent rewrites its own scaffold/tool code; the rewritten self does the next rewrite | SWE-bench coding performance doubled (×2) | — |
+| Recursive self-improvement | The agent rewrites its own code; the rewritten self continues rewriting (paper setup)<br>**Summary**: recursion in code space | Paper: coding performance roughly doubles on SWE-bench (exact numbers per paper)<br>**Summary**: doubled coding performance | **Why**: improvement lands on the scaffold, not weights — discrete code edits change the starting point of the next search round, compounding capability (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Backbone frozen; all improvement lives in code | Runs on a single GPU, no training infra | — |
+| Collects, no training | Backbone frozen; all improvement in code (paper setup)<br>**Summary**: zero training infrastructure | — | **Why**: avoids catastrophic forgetting and compute cost of weight training; the price is improvement granularity bounded by what the scaffold can express (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Each generation evaluation feeds the archive that guides selection | Search gets sharper over generations | — |
+| Data flywheel | Each generation's evaluation feeds the archive guiding selection (paper mechanism)<br>**Summary**: selection pressure accumulates | — | **Why**: failed branches retained — negative evidence stops evolution from repeating mistakes (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The improvement target is the improver itself | Ceiling not bounded by the initial scaffold | — |
+| Yes | Improvement target = the improver's own code (paper setup)<br>**Summary**: the textbook self-reference | — | **Why**: the ceiling is no longer anchored to the initial scaffold — initial design is a starting point, not a cap (editor) |
 
-**Other findings in the paper**: Lineage archive keeps eliminated branches for backtracking — the diversity source of open-ended evolution
+**Other findings in the paper**: The lineage archive retaining eliminated branches is the diversity source of open-endedness (paper mechanism, editor summary).
 
 ---
 
@@ -845,31 +845,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | Benchmark design: operationalize goal → pick data → pick update method → self-assess progress | Tests the meta-capability existing self-evolution work skips | — |
+| Closed-loop | Paper (benchmark design): "ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods"<br>**Summary**: vague goal only; hidden eval; agent operationalizes the goal itself | Paper (gap): "existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn"<br>**Summary**: prior self-evolution optimizes human-given goals, not deciding what to learn | **Why**: isolating meta-decision for measurement — hidden tasks prevent goal-operationalization from degenerating into memorization (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The agent chooses its own update methods (including training) | "How to learn" itself becomes the evaluated object | — |
+| Weight training | Paper: "choosing data and update methods, and determining whether they have actually improved"<br>**Summary**: self-chosen data, methods, self-assessed progress | Benchmark property: measures the meta-capability (no single SOTA number)<br>**Summary**: the meta-capability becomes the measured object | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Data selection decided at runtime by the agent | — | — |
+| Collects + trains | Data selection decided at runtime by the agent (benchmark setup)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Verification feedback | Hidden evaluation tasks verify real progress | Guards against feel-good pseudo-evolution | — |
+| Verification feedback | Hidden evaluation tasks verify real progress (setup)<br>**Summary**: guards against feel-good evolution | — | **Why**: hidden eval = blind testing — the gap between self-reported and blind-tested progress measures self-deception (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The agent decides whether and what to learn | Fills the blind spot where tasks and metrics are human-given | — |
+| Yes | The agent decides whether and what to learn (setup)<br>**Summary**: fills the meta-decision blind spot | — | **Why**:— |
 
 ---
 
@@ -915,31 +915,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | A synthetic-teacher distillation step embedded in the RLVR loop | Sparse outcome rewards become dense token-level supervision | — |
+| Closed-loop | Paper: "constructs a synthetic teacher directly from the model's own RLVR training trajectory. By extrapolating the displacement between the current checkpoint and a trailing anchor—in parameter space or output logit space"<br>**Summary**: a synthetic teacher extrapolated from checkpoint displacement in its own RLVR trajectory | Paper (twin bottleneck): "external teachers suffer from distribution mismatch, while self-distillation with privileged conditioning is limited by in-context learning capacity"<br>**Summary**: external teachers mismatch; privileged self-distillation capped by ICL capacity | **Why**: displacement extrapolation ≈ linear continuation of multi-step discrete updates — a momentum hypothesis: one more step along a proven improvement direction likely stays on the improvement manifold (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | Extrapolates checkpoint displacement (parameter or logit space) from its own RLVR trajectory to build a synthetic teacher | Beats RLVR-only and one-way self-distillation | — |
+| Weight training | Paper: "RISE converts a sparse outcome-induced parameter update into a dense token-level ta[rget]"<br>**Summary**: sparse outcome reward → dense token-level supervision | Paper: beats RLVR-only and one-way self-distillation baselines (numbers in paper)<br>**Summary**: a third route beyond the two known ones | **Why**: credit assignment under sparse rewards must propagate over rounds to reach tokens; the extrapolated dense target lays credit directly on every token (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Training trajectories are recycled as distillation material | No external teacher model needed | — |
+| Collects + trains | Training trajectories recycled as distillation material (mechanism)<br>**Summary**: zero extra data cost | — | **Why**: the teacher derives from the student's trajectory — training distribution always matches (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | The teacher is re-extrapolated every round as the student improves | Recursive, not one-shot compression | — |
+| Data flywheel | The teacher is re-extrapolated each round (mechanism)<br>**Summary**: recursive, not one-shot | — | **Why**: stronger student → more accurate displacement → better teacher → stronger student (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The teacher is extrapolated from the student's own parameter motion | No external distribution mismatch | — |
+| Yes | Paper (editor note): the teacher is extrapolated from the student's own parameter motion<br>**Summary**: self-supervised, no external anchor | — | **Why**: self-reference's failure mode is self-reinforcing error; here the anchor is the RLVR verifier — extrapolation only amplifies verified improvement (editor) |
 
 ---
 
@@ -951,25 +951,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Multi-agent | A query-level meta-agent generates a custom multi-agent system per input | Architecture adapts per query instead of one-size-fits-all | — |
+| Multi-agent | Paper: "a query-level meta-agent... to automate the design of query-level multi-agent systems, i.e., one system per user query"<br>**Summary**: a meta-agent emits a custom MAS per query | Paper (core idea): "incentivize a reasoning-based meta-agent via external execution feedback"<br>**Summary**: execution feedback incentivizes the reasoning meta-agent | **Why**: one query, one system — a fixed architecture is the query-distribution average of optimal architectures; customization takes the per-point conditional optimum (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The meta-agent is trained with RL + execution feedback | Custom MAS consistently beats fixed architectures | — |
+| Weight training | Paper: "by distilling DeepSeek R1, we first endow the basic reasoning ability... Then, we further enhance it via reinforcement learning (RL) with external execution feedback"<br>**Summary**: R1 distillation base + execution-feedback RL | Paper: a multi-purpose reward guides performance/complexity/efficiency (numbers in paper)<br>**Summary**: three-objective balance | **Why**: execution feedback is system-level ground truth — MAS quality is judged by running results, not human review (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Frozen at runtime | At deployment the meta-agent only generates | — | — |
+| Frozen at runtime | At deployment the meta-agent only generates (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Execution feedback keeps training the meta-agent | — | — |
+| Data flywheel | Execution feedback keeps training the meta-agent (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
@@ -983,31 +983,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Closed-loop | The model emits self-edits (e.g., natural-language rephrasings of knowledge) that serve as adaptation data and update instructions | Internalizes prompt engineering into weights | — |
+| Closed-loop | Paper: "generating their own finetuning data and update directives... a self-edit—a generation that may restructure the information in different ways, specify optimization hyperparameters, or invoke tools"<br>**Summary**: the model emits self-edits — restructured knowledge, hyperparameters, tool calls as adaptation directives | Motive, verbatim: "LLMs are powerful but static; they lack mechanisms to adapt their weights in response to new tasks, knowledge, or examples"<br>**Summary**: static weights cannot absorb new tasks/knowledge/examples | **Why**: the adaptation "manual" is written by the model itself — an external designer cannot enumerate all adaptation scenarios; self-authored edits customize adaptation per task (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The model generates its own finetuning data and update hyperparameters, then retrains itself (SEAL loop) | Sustained adaptation where one-shot finetuning fails | — |
+| Weight training | Paper: "Through supervised finetuning (SFT), these self-edits result in persistent weight changes"<br>**Summary**: self-edits become persistent weight changes via SFT | No single headline number; adaptation outperforms external RAG/ICL variants (paper experiments)<br>**Summary**: adaptation internalized into parameters beats context-externalized knowledge | **Why**: external context pays window and attention-dilution costs; parameterized knowledge has no retrieval latency and no window占用 — the classic parametric-vs-contextual memory trade (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Self-edit data is produced during the session and applied to its own weights immediately | Adaptation persists as parameters, not prompts | — |
+| Collects + trains | Paper: "a generation that may... invoke tools for data augmentation and gradient-based updates"<br>**Summary**: runtime self-generated data + gradient updates | — | **Why**: data, directives, and updates all close inside the session — adaptation no longer queues for offline batches (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Each adaptation round yields data for the next | Self-edit quality compounds | — |
+| Data flywheel | Each round's adaptation output feeds the next (editor) | — | **Why**: self-edit quality compounds — last round's learned phrasing improves this round's edit generation (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | The model proposes its own update instructions and is also the update target | No external trainer needed | — |
+| Yes | Paper (editor note): "self-adapt by generating their own finetuning data" — data, directives, and trainee are one model | — | **Why**: the minimal self-referential weight-level RSI — no external teacher in the loop (editor) |
 
 ---
 
@@ -1058,31 +1058,31 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | The LLM acts as both task proposer and solver in self-play | No manual task/answer construction | — |
+| Evolutionary | Paper: "the learning LLM utilizes multi-turn search engine calling and acts simultaneously as both a task proposer and [a solver]"<br>**Summary**: proposer and solver at once, in multi-turn real search | Motive, verbatim: "RLVR highly depends on well-crafted task queries and corresponding ground-truth answers... which requires significant human effort and hinders the scaling of RL processes"<br>**Summary**: RLVR's human QA pools block scaling | **Why**: a real search engine as environment = an unlimited free task source and judge; proposal cost moves from human labor to inference (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | Self-play calibrates task difficulty for effective advantage; RL trains the model itself | Removes the human-data bottleneck of agent RL | — |
+| Recursive self-improvement | Paper: "the difficulty of the generated agentic tasks can hardly be controlled to provide effective RL training advantages" — self-play as the difficulty controller (mechanism)<br>**Summary**: self-play = difficulty control | Paper: sustained gains for search agents (numbers in paper)<br>**Summary**: removes the agent-RL data bottleneck | **Why**: difficulty blowup is the synthetic-task disease (too easy → no advantage, too hard → no successes); poser reward tied to solver progress pins difficulty in the effective band (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Multi-turn real search-engine calls are the data collection | Real rather than synthetic task distribution | — |
+| Collects + trains | Paper: multi-turn real search-engine calls are the collection<br>**Summary**: real task distribution | — | **Why**: real-environment posing avoids synthetic distribution narrowing (editor) |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Verification feedback | Real search results act as the judge | Ground truth is free and unlimited | — |
+| Verification feedback | Real search results as judge (mechanism)<br>**Summary**: ground truth free and unlimited | — | **Why**: retrieval results are objective physical feedback — unlike model judges, they cannot be persuaded (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | Proposer = solver, same model | Isomorphic to Absolute Zero with the oracle swapped to the real environment | — |
+| Yes | Proposer = solver, same model (paper setup)<br>**Summary**: AZR-isomorphic with a real-environment oracle | — | **Why**:— |
 
 ---
 
@@ -1094,33 +1094,33 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| One-shot | A manifesto, not an implementation: defines causal positions P1-P5 and formalizes the Physical Improvement-Production Edge (PIPE) | A unified coordinate system for physical RSI | — |
+| One-shot | Paper (manifesto definitions, editor note): formalization of Physical Recursive Self-Improvement (PRSI) and the Physical Improvement-Production Edge (PIPE); five causal positions P1 hardware interface → P5 the operator producing subsequent machines<br>**Summary**: a unified coordinate system for physical RSI | Paper claim (positioning): machines accelerating machine-making, steered by human demand — the physical mirror of the DFM endpoint<br>**Summary**: manifesto, not implementation | **Why**: slicing "AI into the physical world" into five decidable grades — position determines capability ceiling and risk exposure; formalization makes the debate provable (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | P5 = the operator that produces the next machines — improving physical manufacturing itself | Four theorems: constructibility, geometric contraction, selection regret bound, labor contraction | — |
+| Recursive self-improvement | Paper (P5, editor summary): the operator producing subsequent machines — improving physical manufacturing itself<br>**Summary**: P5 = physical RSI | Paper theorems (editor note): certificate-chain constructibility, geometric contraction, selection regret bound, labor contraction<br>**Summary**: four theorems as the feasibility skeleton | **Why**: geometric contraction = the selection space shrinks as certificate-chain evidence accumulates — recursive convergence presupposes monotone information gain, and the certificate chain is its carrier (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Frozen at runtime | Pure theory, no running system | Formal results are implementation-independent | — |
+| Frozen at runtime | Pure theory, no running system (editor note)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Certificate chains: every machine's making is traceable and verifiable | Precondition of geometric contraction — the selection space shrinks with evidence | — |
+| Data flywheel | Paper mechanism: certificate chains — every machine's making is traceable and verifiable<br>**Summary**: manufacturing history as an evidence chain | — | **Why**: traceability turns "why trust this machine" into a checkable record rather than trust in the maker (editor) |
 
 **Improves itself?**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | Machines make better machines; a human-demand loop steers the direction | Avoids the capability trap (only improving what it is already good at improving) | — |
+| Yes | Paper dual loop: demand ring steers direction + physical ring executes (editor summary)<br>**Summary**: human demand against the capability trap | — | **Why**: purely endogenous improvement falls into "improving only what it is good at improving" — the outer ring gives direction an exogenous anchor (editor) |
 
-**Other findings in the paper**: Dual loop: demand ring sets direction, physical ring executes — DFM is the informational endpoint, PRSI the physical one
+**Other findings in the paper**: Quotes are the paper's own defined terms and structure (editor note); this entry is a PDF manifesto.
 
 ---
 
@@ -1132,19 +1132,19 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Single-model self-play: proposes tasks, solves them, self-verifies | Reasoning training started with zero human data | — |
+| Evolutionary | Paper (title & setup): one system self-proposes tasks, self-solves, self-verifies in reinforced self-play<br>**Summary**: proposer = solver = same model | Motive, verbatim: "still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision"<br>**Summary**: RLVR still leans on manual QA pools; not scalable long-term | **Why**: the data bottleneck moves from collection to generation — when verifiers are free (code/math checks), task-proposal itself becomes a trainable skill (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Recursive self-improvement | Data from the propose-solve-verify loop retrains the same model | Steady gains across math/code reasoning benchmarks | — |
+| Recursive self-improvement | Self-play task-solution-verification triples flow back to train the model (mechanism summary)<br>**Summary**: training data fully self-produced | Paper reports steady gains across math/code reasoning benchmarks (numbers in paper)<br>**Summary**: broad gains with zero human data | **Why**: task difficulty is set by current ability (what it can pose is the edge of what it can solve) — the curriculum sits in the zone of proximal development automatically (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | Self-play rollouts are the data collection; training interleaves | Data supply scales with capability | — |
+| Collects + trains | Self-play rollouts are the collection; training interleaves (mechanism)<br>**Summary**: data supply grows with ability | — | **Why**: capability and data form a causal loop without external pipelines (editor) |
 
 **Feedback Stack**：No feedback
 
@@ -1152,9 +1152,9 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Yes | Proposer = solver = improved model | The minimal fully self-referential form | — |
+| Yes | Proposer, solver, verifier, trainee — four roles in one (mechanism)<br>**Summary**: the minimal fully self-referential form | — | **Why**: self-verification leans on executor objectivity — decidability of code/math anchors the loop (editor) |
 
-**Other findings in the paper**: No acceleration trend evidenced — capability rises but improvement rate does not grow over time
+**Other findings in the paper**: No acceleration trend evidenced in the paper: capability rises but improvement rate does not grow (important caveat).
 
 ---
 
@@ -1166,30 +1166,30 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | OpenMLE-Evo long-horizon search with Draft/Improve/Debug/Crossover operators | Learning and evolution coupled in one loop | — |
-| Closed-loop | OpenMLE-Gym verifiable environment + OpenMLE-RL operator learning | Execution-grounded and verifiable | — |
+| Evolutionary | Paper: "long-horizon search (OpenMLE-Evo)... four atomic program-evolution operators (Dr[aft/Improve/Debug/Crossover])"<br>**Summary**: four-operator long-horizon search | Paper (positioning): "machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability" — an executable testbed for AI4AI<br>**Summary**: MLE as RSI's landing testbed | **Why**: operators mirror human engineering actions (draft/improve/debug/crossover) — primitivizing the MLE workflow makes long-horizon search composable (editor) |
+| Closed-loop | Paper: "spanning verifiable task environments with execution feedback (OpenMLE-Gym), operator learning (OpenMLE-RL)"<br>**Summary**: verifiable environments + operator learning | — | **Why**: execution feedback makes every operator's quality decidable — each search step has a referee (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | A 35B model post-trained via execution-grounded SFT+RL into an MLE meta-evolution agent | MLE-Bench Lite 39→71%, beating GPT-5.5+Codex, near Kimi K3 (2.8T) | — |
+| Weight training | Paper: "we post-train Frontis-MA1 (35B) as a meta-evolution agent for MLE, aligning post-training and inference around four atomic program-evolution operators"<br>**Summary**: 35B post-trained as a meta-evolution agent | Archived (self-reported): MLE-Bench Lite 39→71%, beating GPT-5.5+Codex, near Kimi K3 (2.8T)<br>**Summary**: 35B punches far above its scale | **Why**: training and inference align on the same operators — learning exactly the action distribution inference executes, no train/inference skew (editor) |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects, no training | Evolutionary search at deployment; training offline | — | — |
+| Collects, no training | Evolutionary search at deployment; training offline (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Search results flow back into operator training | — | — |
+| Data flywheel | Search results flow back into operator training (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
-**Other findings in the paper**: AI4AI: an RSI neighbor (no acceleration trend shown); framework and 35B weights fully open-sourced
+**Other findings in the paper**: Archived note: RSI neighbor (no acceleration trend shown); framework and 35B weights fully open.
 
 ---
 
@@ -1201,27 +1201,29 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Self-Guided Self-play (SGS) for Lean4 theorem proving | — | — |
+| Evolutionary | Paper: "a Conjecturer model creates problems for a Solver, and both improve together"<br>**Summary**: Self-Guided Self-play (SGS) | Paper (diagnosis of prior self-play): "existing LLM self-play methods do not scale well with large amounts of compute, instead hitting learning plateaus. We argue this is because over long training runs, the Conjecturer learns to hack its reward, collapsing to artificially complex problems that do not help the Solver improve"<br>**Summary**: the poser learns reward hacking — fake-hard problems | **Why**: reward hacking is a structural disease of self-play — if the poser's reward decouples from solver progress, the cheapest strategy is "looks-hard" problems; self-guidance anchors difficulty to the model's own ability (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The Lean4 verifier provides rewards for policy training | Progressively surpasses strong RL baselines in asymptotic solve rate | — |
+| Weight training | Paper: "a self-play algorithm in which the language model itself gui[des]" — self-guided signal drives training (mechanism)<br>**Summary**:— | Archived (self-reported): asymptotic solve rate surpasses strong RL baselines<br>**Summary**:— | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | — | — | — |
+| Collects + trains | — | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Proof attempts flow back into training | — | — |
+| Data flywheel | Proof attempts flow back into training (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
+
+**Other findings in the paper**: The reward-hacking diagnosis generalizes to other proposer-solver systems (editor note).
 
 ---
 
@@ -1233,25 +1235,25 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Evolutionary | Conjecturer and prover roles self-play, each providing training signal for the other | A self-improving loop for theorem proving | — |
+| Evolutionary | Paper: "we draw inspiration from mathematicians, who continuously develop new results, partly by proposing novel conjectures or exercises (which are often variants of known results) and attempting [them]"<br>**Summary**: conjecturer + prover self-play | Motive, verbatim: "performance quickly plateaus due to the scarcity of correct proofs (sparse rewards)"<br>**Summary**: proof scarcity causes plateaus | **Why**: solving-data is capped by "what it can already do"; posing-data is uncapped — conjecture extends the data source from solved to solvable-variants, bypassing sparse rewards (editor) |
 
 **Update Capability**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Weight training | The two roles iteratively lift each other | — | — |
+| Weight training | Paper mechanism: the two roles supply each other's training signal and iteratively lift each other (mechanism)<br>**Summary**: mutual-feeding co-training | Paper: proving ability improves iteratively (numbers in paper)<br>**Summary**:— | **Why**:— |
 
 **Runtime Behavior**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Collects + trains | — | — | — |
+| Collects + trains | — | — | **Why**:— |
 
 **Feedback Stack**
 
 | Tag | Design in the paper | Gain from the design | Why the gain happens (first-principles) |
 |---|---|---|---|
-| Data flywheel | Proofs train the conjecturer; conjectures train the prover | — | — |
+| Data flywheel | Prover output trains the conjecturer and vice versa (mechanism)<br>**Summary**:— | — | **Why**:— |
 
 **Improves itself?**：No
 
