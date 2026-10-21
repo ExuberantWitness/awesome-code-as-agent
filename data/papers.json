@@ -12558,5 +12558,464 @@
    ],
    "extra": "Bridges the formerly separate weight-line and harness-line (paper's own positioning)."
   }
+ },
+ {
+  "n": "PhyScene: Physically Interactable 3D Scene Synthesis for Embodied AI",
+  "l": "https://arxiv.org/abs/2404.09465",
+  "m": "CVPR 2025 · BIGAI",
+  "d": "可交互 3D 场景合成：在场景生成中显式优化物理合理性与可交互性——真实布局+铰链 articulation+物理约束，为具身 AI 产高质量交互场景。此前场景合成只顾自然感，物理可交互性基本未探索。",
+  "v": "ok",
+  "nums": [
+   "物理合理+可交互",
+   "铰链对象建模"
+  ],
+  "scenes": [
+   "world",
+   "design"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p370",
+  "combo": true
+ },
+ {
+  "n": "Material Palette: Extraction of Materials from a Single Image",
+  "l": "https://astra-vision.github.io/MaterialPalette/",
+  "m": "CVPR 2024 · Inria + Oxford",
+  "d": "单张真实照片提取 PBR 材质：两阶段——微调 Stable Diffusion 学区域材质概念并生成干净纹理，多任务网络分解为 SVBRDF 贴图（反照率/法线/粗糙度）；TexSD 合成域+扩散纹理无监督域适配弥合真实差距。可产出 2048² 无缝可平铺材质，附 TexSD 万张数据集。",
+  "v": "ok",
+  "nums": [
+   "单图→PBR 贴图",
+   "2048² 无缝",
+   "TexSD 数据集"
+  ],
+  "scenes": [
+   "design"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "real"
+  ],
+  "dom": "cad",
+  "selfref": false,
+  "id": "p371",
+  "combo": false
+ },
+ {
+  "n": "3D Constitutive Gaussians for General Physics-Based Simulation",
+  "l": "https://openreview.net/forum?id=9HZtP6I5lv",
+  "m": "OpenReview · Lin et al. · ~86 引用",
+  "d": "本构（材料定律）高斯表示的通用物理仿真：把材料本构关系嵌入 3D 高斯，一套表示自动建模多种物理现象与材料（弹性/塑性/流体类），实现通用的物理 3D 动态场景合成——PhysGaussian 路线的本构化推广。",
+  "v": "ok",
+  "nums": [
+   "本构关系×高斯",
+   "多材料统一仿真"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p372",
+  "combo": false
+ },
+ {
+  "n": "PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation",
+  "l": "https://arxiv.org/abs/2404.13026",
+  "m": "ECCV 2024 Oral · MIT/Stanford/Columbia/Cornell",
+  "d": "用视频生成模型的动力学先验给静态 3D 物体注入交互动态：蒸馏预训练视频模型估计物体材料场（如刚度），再做物理仿真合成对新型交互（外力/操纵）的响应——绕开真实材质真值难获得的困境。8 个弹性物体上用户研究证明合成交互更真实。",
+  "v": "ok",
+  "nums": [
+   "视频先验→材料场",
+   "免真实材质标注",
+   "ECCV Oral"
+  ],
+  "scenes": [
+   "world",
+   "design"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "real",
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p373",
+  "combo": true
+ },
+ {
+  "n": "PhysGaussian: Physics-Integrated 3D Gaussians for Generative Dynamics",
+  "l": "https://arxiv.org/abs/2311.12198",
+  "m": "CVPR 2024 · UCLA/USD 等",
+  "d": "物理与渲染无缝一体的 3D 高斯动力学：定制 MPM（物质点法）给高斯核赋予运动学变形与机械应力属性，按连续介质力学演化——仿真即渲染，无需网格转换。物理仿真×神经渲染融合的标志作。",
+  "v": "ok",
+  "nums": [
+   "MPM×高斯",
+   "仿真即渲染",
+   "连续介质力学"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p374",
+  "combo": false
+ },
+ {
+  "n": "NeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics",
+  "l": "https://arxiv.org/abs/2410.08257",
+  "m": "NeurIPS 2024",
+  "d": "灰盒动力学建模：已有物理定律+可学习修正——黑盒神经仿真器可能违反物理，白盒专家方程覆盖不全，NeuMA 用神经材料适配器在物理先验上叠加学到的修正项，从视频视觉接地内在动力学，跨材质泛化。",
+  "v": "ok",
+  "nums": [
+   "物理定律+学习修正",
+   "灰盒仿真",
+   "视频接地"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm",
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p375",
+  "combo": true
+ },
+ {
+  "n": "PAC-NeRF: Physics Augmented Continuum NeRF for Geometry-Agnostic System Identification",
+  "l": "https://arxiv.org/abs/2303.05512",
+  "m": "ICML 2023 · MIT/UCLA 等",
+  "d": "几何未知的系统辨识：从多视角视频估计物理参数，不假设物体几何拓扑——物理增强的连续介质 NeRF 把 PDE 约束（质量/动量守恒）嵌入表示，可微仿真求参数。系统辨识与神经场结合的开山作。",
+  "v": "ok",
+  "nums": [
+   "几何无关辨识",
+   "PDE 约束嵌入",
+   "可微仿真"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p376",
+  "combo": false
+ },
+ {
+  "n": "PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos",
+  "l": "https://arxiv.org/abs/2503.17973",
+  "m": "2025-03 · NVIDIA 等",
+  "d": "可变形物体的物理数字孪生：稀疏交互视频→照片级+物理级双真实、可实时交互的虚拟副本。弹簧-质点模型（物理仿真）+生成式形状模型（几何）+高斯泼溅（外观）三件套，优化材料参数后可对新型交互实时响应。",
+  "v": "ok",
+  "nums": [
+   "弹簧质点+生成形状+高斯",
+   "实时交互孪生",
+   "照片+物理双真实"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p377",
+  "combo": false
+ },
+ {
+  "n": "GaussianProperty: Integrating Physical Properties to 3D Gaussians with LMMs",
+  "l": "https://arxiv.org/abs/2412.11258",
+  "m": "2024-12",
+  "d": "免训练给 3D 高斯赋物理属性：SAM 分割+GPT-4V 估计材质类别（摩擦/密度等），对比学习对齐视觉-材质后赋值到高斯——机器人抓取与物理仿真的属性桥。属性估计歧义大的老大难问题用 LMM 先验绕开。",
+  "v": "ok",
+  "nums": [
+   "免训练",
+   "SAM+GPT-4V",
+   "抓取/仿真属性"
+  ],
+  "scenes": [
+   "design",
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p378",
+  "combo": true
+ },
+ {
+  "n": "Atlas3D: Physically Constrained Self-Supporting Text-to-3D for Simulation and Fabrication",
+  "l": "https://neurips.cc/virtual/2024/poster/96557",
+  "m": "NeurIPS 2024 · UCLA 等",
+  "d": "物理约束的文本到 3D：扩散式 text-to-3D 只管好看不管物理（仿真里倒、打印后塌），Atlas3D 给任意 SDS 管线加可微仿真损失+物理正则——重力/接触/摩擦下的稳定性，产物可直立打印。即插即用的\"物理守门员\"模块。",
+  "v": "ok",
+  "nums": [
+   "SDS 管线即插即用",
+   "可直立打印",
+   "重力/接触/摩擦约束"
+  ],
+  "scenes": [
+   "design",
+   "constraint"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "cad",
+  "selfref": false,
+  "id": "p379",
+  "combo": true
+ },
+ {
+  "n": "Articulate-Anything: Automatic Modeling of Articulated Objects via a Vision-Language Foundation Model",
+  "l": "https://arxiv.org/abs/2410.13882",
+  "m": "2024-10 · 项目页 articulate-anymesh.github.io",
+  "d": "VLM 自动建模铰接物体：从文本/图像/视频输入生成 URDF 铰接模型，渲染回给 VLM 自检、按视觉反馈迭代修正——铰接建模从专家手工变成 VLM 闭环自动化。AR/VR、动画、机器人仿真的资产瓶颈解法。",
+  "v": "ok",
+  "nums": [
+   "多模态输入→URDF",
+   "VLM 渲染自检闭环",
+   "免专家建模"
+  ],
+  "scenes": [
+   "design"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model",
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p380",
+  "combo": false
+ },
+ {
+  "n": "RoboCousin: Build Your Own Simulation Playground for Robust Bimanual Robotic Manipulation",
+  "l": "https://arxiv.org/abs/2609.08339",
+  "m": "2026-09",
+  "d": "自建仿真操场：新观测到的物体/环境自动重建几何、指定物理与语义属性、标注交互并集成进可执行任务——打破封闭资产库限制，双臂操纵策略在海量自建仿真数据上训练，实机迁移鲁棒。",
+  "v": "ok",
+  "nums": [
+   "观测→可执行仿真资产",
+   "开放资产库",
+   "双臂操纵"
+  ],
+  "scenes": [
+   "world",
+   "skill"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p381",
+  "combo": true
+ },
+ {
+  "n": "URDFormer: A Pipeline for Constructing Articulated Simulation Environments from Real-world Images",
+  "l": "https://www.roboticsproceedings.org/rss20/p124.pdf",
+  "m": "RSS 2024 · KAIST 等",
+  "d": "真实图像→铰接仿真环境流水线：从互联网图像廉价生成任意数量的现实感仿真资产，配套 RealityGym 大规模仿真基准——具身 AI 训练环境从手工搭到图像批量产的关键一步。",
+  "v": "ok",
+  "nums": [
+   "图像→铰接环境",
+   "RealityGym 基准",
+   "RSS 2024"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim",
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p382",
+  "combo": false
+ },
+ {
+  "n": "SPARK: Sim-ready Part-level Articulated Reconstruction with VLM Knowledge",
+  "l": "https://arxiv.org/abs/2512.01629",
+  "m": "2025-12",
+  "d": "单张 RGB 图→仿真就绪的部件级铰接物体：VLM 先抽粗略 URDF 参数+部件参考图，再逐部件优化几何/关节/外观，物理一致可直接进仿真——部件层级与运动结构的专家建模被 VLM 知识替代。",
+  "v": "ok",
+  "nums": [
+   "单图→部件级 URDF",
+   "VLM 先验+优化",
+   "仿真就绪"
+  ],
+  "scenes": [
+   "design",
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p383",
+  "combo": true
+ },
+ {
+  "n": "PhysX-3D: Physical-Grounded 3D Asset Generation",
+  "l": "https://arxiv.org/abs/2507.12465",
+  "m": "2025-07",
+  "d": "物理接地的 3D 资产生成：现有 3D 生成只管几何纹理，物理属性缺失导致仿真/具身应用受阻——端到端范式把物理属性（材质/力学）纳入生成目标，产物开箱即可进物理域。附 PhysXNet 数据集。",
+  "v": "ok",
+  "nums": [
+   "几何+物理一体生成",
+   "PhysXNet 数据集",
+   "仿真就绪资产"
+  ],
+  "scenes": [
+   "design",
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "cad",
+  "selfref": false,
+  "id": "p384",
+  "combo": true
  }
 ]
