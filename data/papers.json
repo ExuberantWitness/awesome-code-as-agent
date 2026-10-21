@@ -13017,5 +13017,1292 @@
   "selfref": false,
   "id": "p384",
   "combo": true
+ },
+ {
+  "n": "IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas",
+  "l": "https://arxiv.org/abs/2610.08781",
+  "m": "2026-10",
+  "d": "文献到研究想法的结构化监督：以\"锚点\"把多篇相关论文的要素显式对齐再综合，替代提示式或反馈式的无结构 ideation——补上\"论文该怎么被综合\"的训练信号空白。",
+  "v": "ok",
+  "nums": [
+   "锚点式结构监督",
+   "文献接地 ideation"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym",
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p385",
+  "combo": false
+ },
+ {
+  "n": "CoTranslator: Reverse to Forward Chain-of-Thought Translator for Reasoning Distillation",
+  "l": "https://arxiv.org/abs/2610.20828",
+  "m": "2026-10",
+  "d": "反向 CoT 生成（已知答案反推过程）比正向生成+拒绝采样便宜得多——把 RCG 翻译成 FCG 风格做蒸馏数据，难题的教师调用成本大幅下降。",
+  "v": "ok",
+  "nums": [
+   "RCG→FCG 翻译",
+   "降教师调用成本"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p386",
+  "combo": false
+ },
+ {
+  "n": "Can LLMs Anticipate Their Cruxes?",
+  "l": "https://arxiv.org/abs/2610.21006",
+  "m": "2026-10",
+  "d": "从海量输出文本中抽取模型推荐背后的\"关键前提\"（crux）——可解释性从\"给理由\"进化到\"提前说出决定性变量\"。",
+  "v": "ok",
+  "nums": [
+   "crux 抽取",
+   "决策前提显式化"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p387",
+  "combo": false
+ },
+ {
+  "n": "EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence",
+  "l": "https://arxiv.org/abs/2610.18867",
+  "m": "2026-10",
+  "d": "具身智能的自进化编码 agent：程序化机器人接口上观察场景-执行控制程序-按物理结果改程序，episode 内闭环适应+跨 episode 进化沉淀——免目标任务的具身闭环策略。",
+  "v": "ok",
+  "nums": [
+   "代码即具身策略",
+   "跨 episode 进化"
+  ],
+  "scenes": [
+   "policy",
+   "agentself"
+  ],
+  "dirs": [
+   "loop",
+   "skill"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p388",
+  "combo": true
+ },
+ {
+  "n": "Self-Building Labs",
+  "l": "https://arxiv.org/abs/2610.23826",
+  "m": "2026-10",
+  "d": "自建实验室：现有自动驾驶实验室（SDL）只能跑建好的流程，适配新实验仍需大量人工工程——让 SDL 自己改造自己，实验室柔性成为科学发现规模化的瓶颈突破口。PRSI 论文 P5 位置的现实雏形。",
+  "v": "ok",
+  "nums": [
+   "SDL 自我改造",
+   "实验室柔性瓶颈",
+   "P5 雏形"
+  ],
+  "scenes": [
+   "research",
+   "design"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "real"
+  ],
+  "dom": "general",
+  "selfref": true,
+  "id": "p389",
+  "combo": true
+ },
+ {
+  "n": "RARE: Reinforcement Learning with Adaptive Rubric Evolution for Open-Ended Generation",
+  "l": "https://arxiv.org/abs/2610.25434",
+  "m": "2026-10",
+  "d": "rubric 自适应进化做 RL 奖励：开放任务无总体验证器、多需求联合满足、多有效答案——rubric 按需求满足度给反馈并随训练进化，自动 rubric 线与 RL 的正面会师。",
+  "v": "ok",
+  "nums": [
+   "rubric 进化×RL",
+   "开放域奖励"
+  ],
+  "scenes": [
+   "reward"
+  ],
+  "dirs": [
+   "evo",
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p390",
+  "combo": true
+ },
+ {
+  "n": "Training Reasoning Models to Generate Diverse Scientific Ideas",
+  "l": "https://arxiv.org/abs/2610.22324",
+  "m": "2026-10",
+  "d": "科学想法生成聚焦多样性而非单点质量：文档接地的 ideation 训练，想法空间覆盖度成为优化目标——对冲\"LLM 想法趋同\"的系统性风险。",
+  "v": "ok",
+  "nums": [
+   "多样性为目标",
+   "文档接地"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model",
+   "human"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p391",
+  "combo": false
+ },
+ {
+  "n": "LatentLoop: Scaling Looped MoE Models with Asymmetric Compute Allocation",
+  "l": "https://arxiv.org/abs/2610.19975",
+  "m": "2026-10",
+  "d": "循环 MoE 的非对称算力分配：不同 loop 访问扮演不同角色，为各次访问学独立残差系数——参数复用×稀疏计算的新组合。",
+  "v": "ok",
+  "nums": [
+   "循环×MoE",
+   "访问角色分化"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 0,
+  "rtc": 0,
+  "rtt": 1,
+  "ts": "c",
+  "oracle": [
+   "na"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p392",
+  "combo": false
+ },
+ {
+  "n": "Harness^2: Recursive Agent Harnessing for an Open World",
+  "l": "https://arxiv.org/abs/2610.14224",
+  "m": "2026-10",
+  "d": "开放世界的递归 harness 改造：开放任务在设计期未见过、novelty 层出——harness-RSI 线在开放世界场景的推进。",
+  "v": "ok",
+  "nums": [
+   "开放世界 RSI",
+   "harness 线新作"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "evo",
+   "loop"
+  ],
+  "lvl": 4,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": true,
+  "id": "p393",
+  "combo": true
+ },
+ {
+  "n": "TreeFlex: Agents Navigating Their Own Search Trees",
+  "l": "https://arxiv.org/abs/2610.20334",
+  "m": "2026-10",
+  "d": "agent 的策略自己决定在哪搜索：把 ReAct 单上下文改为树结构——陈旧/离线信息不再占用有限容量，agent 在自己的搜索树上导航。",
+  "v": "ok",
+  "nums": [
+   "搜索树式上下文",
+   "策略决定搜索"
+  ],
+  "scenes": [
+   "reasoning",
+   "agentself"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p394",
+  "combo": true
+ },
+ {
+  "n": "Memorizing Who, Knowing How: Benchmarking Personal and Procedural Memory for Persistent Assistants",
+  "l": "https://arxiv.org/abs/2610.20022",
+  "m": "2026-10",
+  "d": "持久助理的记忆基准：个人记忆（服务谁）+程序记忆（怎么做）双系统——程序本质上是用户条件化的：个人上下文决定哪些程序适用、如何实例化。",
+  "v": "ok",
+  "nums": [
+   "个人+程序双记忆",
+   "用户条件化程序"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "mem"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "human"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p395",
+  "combo": false
+ },
+ {
+  "n": "DuoDiscover: Scaling Autonomous Discovery Beyond the Evaluation Bottleneck",
+  "l": "https://arxiv.org/abs/2610.17184",
+  "m": "2026-10",
+  "d": "自主发现的评测瓶颈：真实场景一次真评测（全量基准/服务 trace）要几小时，搜索只够跑几次——双系统用廉价代理评测扩搜索、真评测定标，突破评测成本对发现规模的封锁。",
+  "v": "ok",
+  "nums": [
+   "代理评测×真评测",
+   "评测成本瓶颈"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "multi",
+   "loop"
+  ],
+  "lvl": 1,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p396",
+  "combo": true
+ },
+ {
+  "n": "Compositional Machine Design as Program Synthesis with LLMs",
+  "l": "https://arxiv.org/abs/2510.14980",
+  "m": "2025-10",
+  "d": "组合式机器设计=物理接地的程序合成：机器写成标准零件的组合程序，成功与否由物理执行决定——程序合成基准从符号世界搬到物理世界，PRSI P4/P5 的可直接引用前驱。",
+  "v": "ok",
+  "nums": [
+   "机器=零件组合程序",
+   "物理执行判成功"
+  ],
+  "scenes": [
+   "design",
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "real",
+   "sym"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p397",
+  "combo": true
+ },
+ {
+  "n": "Hy-Memory-30B-A3B: Attributed Reinforcement Learning for Long-Term Memory Writing",
+  "l": "https://arxiv.org/abs/2610.22196",
+  "m": "2026-10",
+  "d": "记忆写入的专用模型+归因 RL：外部记忆系统的质量取决于写入路径（留什么/多精确/如何更新持久状态），通用 LLM 挂提示词不够——30B-A3B 专用记忆模型用归因强化学习训练写入决策。",
+  "v": "ok",
+  "nums": [
+   "记忆写入专用模型",
+   "归因 RL",
+   "MoE 30B-A3B"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "mem"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p398",
+  "combo": false
+ },
+ {
+  "n": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+  "l": "https://arxiv.org/abs/2610.22344",
+  "m": "2026-10",
+  "d": "通用 MLE agent 模型：AI4AI→RSI 路径上，工作流驱动的 MLE 系统通过复杂编排管理长程任务——走向自主开发改进 AI 系统的通才模型（与 Frontis-MA1 同赛道）。",
+  "v": "ok",
+  "nums": [
+   "AI4AI 通才",
+   "长程编排"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "selfref": false,
+  "id": "p399",
+  "combo": false
+ },
+ {
+  "n": "HybridAgents: Hybrid Reasoning Agents",
+  "l": "https://arxiv.org/abs/2610.18861",
+  "m": "2026-10",
+  "d": "混合推理 agent：潜空间推理高效但缺工具访问与透明性，文本推理反之——动态切换两种介质，思考超越人类语言、行动仍通过语言接口。",
+  "v": "ok",
+  "nums": [
+   "潜/文本双模推理",
+   "动态切换"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p400",
+  "combo": false
+ },
+ {
+  "n": "Cogentic: Multi-Agent Orchestration for Automated Proof Discovery",
+  "l": "https://arxiv.org/abs/2609.40324",
+  "m": "2026-09",
+  "d": "开放问题的多智能体证明发现 harness：单次生成不足以应付需探索多个竞争猜想、跨越技术障碍、保留中间进展的开放问题——编排式证明工作流。",
+  "v": "ok",
+  "nums": [
+   "多智能体证明",
+   "开放问题"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "multi"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "math",
+  "selfref": false,
+  "id": "p401",
+  "combo": false
+ },
+ {
+  "n": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
+  "l": "https://arxiv.org/abs/2610.22192",
+  "m": "2026-10",
+  "d": "终端 agent 的 RSI：验证轨迹的递归自重写（RSR）与批评家继承的递归策略精炼（RPR）交替；Turn-Boundary Skip-Observation GAE 保留 token 级基线——把验证器结果转化为有用的策略更新。",
+  "v": "ok",
+  "nums": [
+   "RSR+RPR 交替",
+   "TB-GAE",
+   "终端 agent"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 4,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "swe",
+  "selfref": true,
+  "id": "p402",
+  "combo": false
+ },
+ {
+  "n": "Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability",
+  "l": "https://arxiv.org/abs/2610.08448",
+  "m": "2026-10",
+  "d": "跨 tokenizer OPD 的再审视：对齐覆盖率扩大不一定提升学习——监督可靠性才是关键变量，三对异构师生在数学推理上给出实证。",
+  "v": "ok",
+  "nums": [
+   "对齐覆盖≠更好",
+   "监督可靠性优先"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p403",
+  "combo": false
+ },
+ {
+  "n": "Fysiverse-3D-SimReady: Agentic Physical Simulation for Pragmatic 3D World Reconstruction",
+  "l": "https://arxiv.org/abs/2609.31715",
+  "m": "Fysics-AI · 2026-09 · 开源",
+  "d": "务实 3D 世界重建的 agentic 物理仿真：单图 3D 生成只出\"好看的物体资产\"而非\"仿真就绪的场景状态\"——独立生成的网格组合起来物理不成立，agentic 流程直接产出可仿真场景（开源 github.com/Fysics-AI/Fysics-3D-SimReady）。",
+  "v": "ok",
+  "nums": [
+   "仿真就绪场景",
+   "agentic 重建",
+   "开源"
+  ],
+  "scenes": [
+   "world",
+   "design"
+  ],
+  "dirs": [
+   "multi"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim",
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p404",
+  "combo": true
+ },
+ {
+  "n": "Agent-Reflex: Teaching Language Agents to Act Reflectively",
+  "l": "https://arxiv.org/abs/2610.17953",
+  "m": "2026-10",
+  "d": "反思性行动学习：MCP 工具返回噪声反馈、用户中途纠正——为反思学习与失败恢复提供监督信号，agent 学会\"边做边反思\"而非只会执行。",
+  "v": "ok",
+  "nums": [
+   "噪声反馈反思",
+   "失败恢复"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model",
+   "human"
+  ],
+  "dom": "gui",
+  "selfref": false,
+  "id": "p405",
+  "combo": false
+ },
+ {
+  "n": "Recursive Self-Improvement via On-Policy Distillation for Reasoning",
+  "l": "https://arxiv.org/abs/2609.30652",
+  "m": "2026-09",
+  "d": "OPSD 消灭外部教师：学生自身冻结副本看参考答案（特权条件）监督学生采样前缀——token 级密集自监督，RSI 的蒸馏形态。",
+  "v": "ok",
+  "nums": [
+   "OPSD 免教师",
+   "特权条件自监督"
+  ],
+  "scenes": [
+   "reasoning",
+   "agentself"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "math",
+  "selfref": true,
+  "id": "p406",
+  "combo": true
+ },
+ {
+  "n": "Better Supervision Is Nearby: Neighborhood On-Policy Self-Distillation",
+  "l": "https://arxiv.org/abs/2609.39687",
+  "m": "2026-09",
+  "d": "邻域 OPSD：固定参数配置只给一种监督，局部参数扰动揭示互补的参考对齐修正——附近的参数设置藏着更好的老师。",
+  "v": "ok",
+  "nums": [
+   "参数邻域",
+   "互补监督"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "math",
+  "selfref": false,
+  "id": "p407",
+  "combo": false
+ },
+ {
+  "n": "YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality",
+  "l": "https://arxiv.org/abs/2609.33757",
+  "m": "2026-09",
+  "d": "符号与音频音乐生成统一：符号模型显式旋律/和声/节奏但止步于谱面，音频模型出完整歌曲但作曲隐式——AR-NAR MoT 先写可读总谱再渲染成录音，符号规划统一两条路。",
+  "v": "ok",
+  "nums": [
+   "符号规划→音频",
+   "AR-NAR MoT"
+  ],
+  "scenes": [
+   "design"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p408",
+  "combo": false
+ },
+ {
+  "n": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning",
+  "l": "https://arxiv.org/abs/2609.38147",
+  "m": "2026-09",
+  "d": "agentic 元推理：长任务中\"控制执行\"本身成为任务（基于哪份部分成果、是否重开、何时停止）——推理时 harness 把控制选择变成显式结构化推理，worker 干活、元推理者调度。",
+  "v": "ok",
+  "nums": [
+   "控制即任务",
+   "元推理 harness"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "multi",
+   "loop"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p409",
+  "combo": true
+ },
+ {
+  "n": "Gan Jiang: A Self-Learning Scientific Agent for X-ray Diffraction",
+  "l": "https://arxiv.org/abs/2610.07862",
+  "m": "2026-10",
+  "d": "X 射线衍射的自学习科学 agent：把分析经验转化为物理证据接地的可复用专长——XMatcher/XQueryer/XDecomposer/WPEM 四引擎覆盖物相识别到多相分解，经验沉淀为专业知识的垂直 RSI 实例。",
+  "v": "ok",
+  "nums": [
+   "XRD 垂直 RSI",
+   "四引擎生态",
+   "经验→专长"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "loop",
+   "mem"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym",
+   "real"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p410",
+  "combo": true
+ },
+ {
+  "n": "CarryOn: Building Object-Oriented Context for Long-Horizon Agents",
+  "l": "https://arxiv.org/abs/2610.18784",
+  "m": "2026-10",
+  "d": "面向对象的长程上下文：agent 的进度存在持久任务状态里，却反复处理\"进度怎么来的\"交互历史——上下文围绕可复用进度而非历史组织，面向对象的 agent 运行时。",
+  "v": "ok",
+  "nums": [
+   "进度对象化",
+   "历史→对象"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "mem"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p411",
+  "combo": false
+ },
+ {
+  "n": "Self-Challenging Language Model Agents",
+  "l": "https://arxiv.org/abs/2506.01716",
+  "m": "2025-06",
+  "d": "自我挑战框架：agent 自己生成高质量挑战任务、自评执行、失败轨迹转训练信号——绕开人工构造任务/工具/评测标准的成本。",
+  "v": "ok",
+  "nums": [
+   "自造任务自评",
+   "免人工任务集"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop",
+   "skill"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "gui",
+  "selfref": true,
+  "id": "p412",
+  "combo": true
+ },
+ {
+  "n": "AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning",
+  "l": "https://arxiv.org/abs/2610.22194",
+  "m": "2026-10",
+  "d": "SFT 数据研究的自动化 agent：给 agent 全训练栈时它们收敛到改数据——但现有系统只给\"从固定池选行\"一种控制；人类数据工程师会调比例、剪枝、修复、替换、合成多手并用，AutoSFT 把完整数据工程动作空间交给 agent。",
+  "v": "ok",
+  "nums": [
+   "数据工程动作全集",
+   "自动化 SFT 研究"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p413",
+  "combo": false
+ },
+ {
+  "n": "Large Language Models Extend Known Research But Do Not Create New Research Directions",
+  "l": "https://arxiv.org/abs/2610.17439",
+  "m": "2026-10",
+  "d": "冷静实证：人类评审常给 LLM 想法打更高新颖度分，但 LLM 只是延伸已知方向、并不开辟新方向——自主研究系统的能力上限被此证据锚定。",
+  "v": "ok",
+  "nums": [
+   "延伸≠开辟",
+   "新颖度幻觉"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "human"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p414",
+  "combo": false
+ },
+ {
+  "n": "Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning",
+  "l": "https://arxiv.org/abs/2609.33781",
+  "m": "2026-09",
+  "d": "熵引导信用分配：策略熵是现成信号但直接按熵优先会同时放大\"惊喜成功\"与\"重复失败\"——区分两者，无需辅助模型/额外采样/特权信息的细粒度信用分配。",
+  "v": "ok",
+  "nums": [
+   "熵=免费信号",
+   "区分惊喜与重复失败"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "math",
+  "selfref": false,
+  "id": "p415",
+  "combo": false
+ },
+ {
+  "n": "Contextual Credit Policy Optimization",
+  "l": "https://arxiv.org/abs/2610.19103",
+  "m": "2026-10",
+  "d": "上下文信用策略优化：观察匹配的同伴轨迹做步级信用——但相同观察可处于不同上下文，同伴对不同决策的信息量不等，上下文条件化修正组相对信用。",
+  "v": "ok",
+  "nums": [
+   "上下文条件信用",
+   "组相对修正"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p416",
+  "combo": false
+ },
+ {
+  "n": "JEPA-Anything: Learning Predictive Models across Different Worlds",
+  "l": "https://arxiv.org/abs/2609.20800",
+  "m": "2026-09",
+  "d": "跨世界的域无关预测模型：正交预测分解（OPF）扩展 JEPA——一个学习原理支撑从物理到离散符号的激进不同系统的世界建模。RSI-Anything 的底座、世界模型泛化线的关键节点。",
+  "v": "ok",
+  "nums": [
+   "正交预测分解",
+   "域无关世界模型",
+   "RSI-Anything 底座"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p417",
+  "combo": false
+ },
+ {
+  "n": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+  "l": "https://arxiv.org/abs/2610.20665",
+  "m": "2026-10",
+  "d": "实时时钟下的 agent 评测：推理和工具调用耗时，持续变化环境里正确的动作可能到得太晚——RealtimeBench 180 任务六种游戏，游戏在推理期间继续运行，测\"来不及\"这件事本身。Live RL 的评测侧配套。",
+  "v": "ok",
+  "nums": [
+   "活时钟评测",
+   "迟到即失败",
+   "180 任务"
+  ],
+  "scenes": [
+   "reasoning",
+   "policy"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 2,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p418",
+  "combo": true
+ },
+ {
+  "n": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+  "l": "https://arxiv.org/abs/2610.23839",
+  "m": "2026-10",
+  "d": "有价值假设的可操作定义：证据接地的重大不确定性主张+可行调查+显式决策标准——把\"发现什么值得研究\"本身变成可递归学习的对象，RSI 上探研究方向选择层。",
+  "v": "ok",
+  "nums": [
+   "假设价值可操作化",
+   "方向选择可学习"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "loop",
+   "evo"
+  ],
+  "lvl": 4,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym",
+   "model"
+  ],
+  "dom": "general",
+  "selfref": true,
+  "id": "p419",
+  "combo": true
+ },
+ {
+  "n": "QwenGyre: An Elastic Reinforcement Learning Framework for Training xLong-Horizon Agents",
+  "l": "https://arxiv.org/abs/2609.33848",
+  "m": "2026-09",
+  "d": "超长程 agent 的弹性 RL：单次执行跨小时、数百次交互、近 1M token——执行方差与 rollout 延迟致大量样本作废，弹性框架驯服 xLong-horizon 的在线 RL。Live RL 基础设施线。",
+  "v": "ok",
+  "nums": [
+   "1M token rollout",
+   "弹性 RL",
+   "小时级任务"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p420",
+  "combo": false
+ },
+ {
+  "n": "ChunkAct: Action Chunking for Agentic Robotics",
+  "l": "https://arxiv.org/abs/2610.18874",
+  "m": "2026-10",
+  "d": "agentic 机器人的动作分块：LLM 编排感知/运动/VLA 工具泛化强但每个原语都要全量推理一轮——动作分块摊薄推理成本，效率换回可用性。",
+  "v": "ok",
+  "nums": [
+   "动作分块",
+   "推理成本摊薄"
+  ],
+  "scenes": [
+   "action",
+   "policy"
+  ],
+  "dirs": [
+   "skill"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p421",
+  "combo": true
+ },
+ {
+  "n": "Player-1: Learning to Play from Synthetic Experience",
+  "l": "https://arxiv.org/abs/2610.20584",
+  "m": "2026-10 · 项目页 player-1-project.github.io",
+  "d": "从合成经验学习游戏控制：程序化构造 16 个 2D/3D 合成环境（Player-1-Gym），围绕游戏共享的控制需求设计，SFT+RL 在无人玩游戏数据的情况下教会基础模型玩游戏。",
+  "v": "ok",
+  "nums": [
+   "16 个合成环境",
+   "SFT+RL 零人类数据"
+  ],
+  "scenes": [
+   "policy",
+   "skill"
+  ],
+  "dirs": [
+   "skill"
+  ],
+  "lvl": 3,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "mc",
+  "selfref": false,
+  "id": "p422",
+  "combo": true
+ },
+ {
+  "n": "JiuwenSymbiosis（Physical AI 助手）",
+  "l": "https://github.com/openJiuwen-ai/jiuwensymbiosis",
+  "m": "GitHub · 68 星 · 2026-10",
+  "d": "基于 openJiuwen agent-core 框架的 Physical AI 助手——物理世界的 agent 应用层开源实现。",
+  "v": "ok",
+  "nums": [
+   "agent-core 框架",
+   "Physical AI"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "multi"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model",
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p423",
+  "combo": false
+ },
+ {
+  "n": "Hypoloom（自主研究框架）",
+  "l": "https://github.com/EIMP-Lab/Hypoloom",
+  "m": "GitHub · 17 星 · 2026-10",
+  "d": "开源自主研究框架：假设生成→实验执行→证据驱动迭代的全流程，从假设到证据的闭环研究基础设施。",
+  "v": "ok",
+  "nums": [
+   "假设→实验→证据",
+   "开源全流程"
+  ],
+  "scenes": [
+   "research"
+  ],
+  "dirs": [
+   "loop",
+   "multi"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p424",
+  "combo": true
+ },
+ {
+  "n": "WaypointOPD（航点在线策略蒸馏实现）",
+  "l": "https://github.com/hhhbxloveai/WaypointOPD",
+  "m": "GitHub · 9 星 · 2026-10",
+  "d": "Waypoint-OPD 的匿名开源实现：补丁版 verl 运行时+训练数据，Qwen3-8B 学生/Qwen3-4B 教师的航点在线策略蒸馏。",
+  "v": "ok",
+  "nums": [
+   "verl 补丁",
+   "航点 OPD"
+  ],
+  "scenes": [
+   "policy"
+  ],
+  "dirs": [
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 2,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p425",
+  "combo": false
+ },
+ {
+  "n": "AgentGarten: Code Worlds for Evolving Agents",
+  "l": "https://arxiv.org/abs/2610.12374",
+  "m": "MirroS-Lab · 201 星 · 2026-10",
+  "d": "进化 agent 的代码世界：\"代码决定世界怎么变，渲染器学习这些变化看起来什么样\"——世界=代码、agent 在代码世界里进化，code-as-world 与 evolving agents 的正面会师。",
+  "v": "ok",
+  "nums": [
+   "代码世界×进化 agent",
+   "渲染器学习外观",
+   "201 星"
+  ],
+  "scenes": [
+   "world",
+   "agentself"
+  ],
+  "dirs": [
+   "evo",
+   "skill"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p426",
+  "combo": true
+ },
+ {
+  "n": "WorldStream（流式 3D 世界生成）",
+  "l": "https://krennic999.github.io/WorldStream/",
+  "m": "项目页 · 2026",
+  "d": "探索时流式生成 3D 世界：结构化代码与状态上的分层规划——宏规划器塑区域（地形/聚落/道路）、微规划器临近视时定 tile 级细节、局部编译成可玩场景。五种生态、语言引导编辑、93km 长距漫游，Jev 规划器响应 ~0.7s（Claude ~30s）。",
+  "v": "ok",
+  "nums": [
+   "宏-微-局部三层",
+   "93km 漫游",
+   "0.7s 响应"
+  ],
+  "scenes": [
+   "world",
+   "design"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p427",
+  "combo": true
  }
 ]
