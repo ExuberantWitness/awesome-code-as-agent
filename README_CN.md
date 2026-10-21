@@ -2,7 +2,7 @@
 
 **中文版** | **[English](README.md)**
 
-> 一张可导航的 3D 知识地图，收录 **427 篇论文**——LLM agent 如何用可执行代码感知、行动、学习和自我改进。覆盖 **10 个场景 × 7 个方向 × 5 层更新能力 × 4 象限运行时行为**。
+> 一张可导航的 3D 知识地图，收录 **428 篇论文**——LLM agent 如何用可执行代码感知、行动、学习和自我改进。覆盖 **10 个场景 × 7 个方向 × 5 层更新能力 × 4 象限运行时行为**。
 
 **不只是读列表——导航整个空间。**
 
@@ -110,17 +110,17 @@ start code-as-policy-cube.html
 
 ## 更新日志
 
-- **2026-10-21 ——新增 43 篇（共 427 篇）**
+- **2026-10-21 ——新增 43 篇（共 428 篇）**
   - harness-RSI 线加厚（Harness²、Terminal-RSI、DiscoveryRSI）；rubric×RL 会师（RARE）；自蒸馏线（OPSD、邻域 OPSD）；记忆线（Hy-Memory-30B、CarryOn）；JEPA-Anything（RSI-Anything 底座）；Self-Building Labs 与组合式机器设计（PRSI P4/P5 近邻）；RealtimeBench 活时钟评测；代码世界线（AgentGarten、WorldStream、Player-1）
 
-- **2026-10-21 ——新增 15 篇（共 427 篇）：物理接地 3D 生成与仿真聚类**
+- **2026-10-21 ——新增 15 篇（共 428 篇）：物理接地 3D 生成与仿真聚类**
   - PhysGaussian/3D Constitutive Gaussians/PhysDreamer（物理×3D 高斯线）、PAC-NeRF/NeuMA/PhysTwin（系统辨识与数字孪生）、Atlas3D/PhysX-3D/GaussianProperty（物理接地资产）、URDFormer/Articulate-Anything/SPARK/RoboCousin（VLM 建仿真环境）、PhyScene、Material Palette
 
 - **2026-10-16 ——论文索引改版为 GPT-3 基线增量卡片**
   - 每张卡片按五维度（方向/更新能力/运行时行为/反馈栈/自己改自己？）给出相对最简 chatbot 问答的具体设计与增益
   - 试点 30 张卡片已上线（RSI 集群+自指+数据飞轮论文）；其余 339 篇暂列待迁移表格，全部完成后自动消失
 
-- **2026-10-16 ——新增 26 篇（共 427 篇）**
+- **2026-10-16 ——新增 26 篇（共 428 篇）**
   - **权重×harness 桥接**——[Evo²](https://arxiv.org/abs/2610.13025) 用双角色 Proposer/Reflector 协同进化模型权重与 agent harness，连「进化器本身被进化」（L4）；进化出的 harness 无需继续进化即可跨基准迁移
   - 🎯 **填上最后一块前沿空白格：世界模型 × L4**——[RSI-Anything](https://arxiv.org/abs/2610.13912)（JEPA-Anything 底座）让预测性世界模型同时选择动作与学习数据，保留更新需过兼容性检查
   - **Harness-RSI 集群成型**——[SoL-Pi](https://arxiv.org/abs/2609.20519)（NVIDIA，3.4k 星：自动研究循环递归优化 agent 自己的 harness）+ [RRSI](https://arxiv.org/abs/2609.24972)（对 harness 过拟合加正则——DGM 路线缺的机器学习 101 一课）
@@ -130,14 +130,14 @@ start code-as-policy-cube.html
   - **自动 rubric 线入库**（RaR、Rubric-ARM、RM-R1、Self-Taught Evaluators、AutoBencher 等）——验证器库的第二条自动填充路径
   - **PRSI 纲领论文**——物理递归自我改进（P1–P5 因果位置），DFM 终点的物理世界镜像
 
-## 论文索引（427 篇）
+## 论文索引（428 篇）
 
 <!-- PAPER-INDEX:START -->
 <!-- 论文索引（由 tools/gen_paper_table.js 生成，勿手改） -->
 
 本索引的参照基线是**最简 chatbot 问答（GPT-3 模式）**：冻结模型、单轮提示→回答、无工具、无反馈、无记忆。每张卡片回答一个问题——这篇论文相对该基线引入了哪些具体设计，各带来什么增益。五个维度（方向/更新能力/运行时行为/反馈栈/自己改自己？）各一张四列子表：**tag方向**（哪一维）→ **文章中具体设计**（做了什么）→ **具体设计带来增益**（得到什么）→ **带来增益的原理**（为什么会得到，第一性解释）。设计列与增益列尽量**直接引用论文原文**（原句+一句话总结）；**原理列默认为编者推演**（论文很少自解释 why），论文自己给出机理时则引原文。无原文支撑处标「编者按」。维度语义见 [四维分类体系](#四维分类体系) 与 [附加-tag](#附加-tag)。
 
-**进度**：已迁移卡片 32 篇 ｜ 待迁移 395 篇（暂列下方表格，全部迁移完成后表格自动消失）
+**进度**：已迁移卡片 32 篇 ｜ 待迁移 396 篇（暂列下方表格，全部迁移完成后表格自动消失）
 
 ### 1. [Robot-Powered Data Flywheel (RPDF)](https://arxiv.org/abs/2511.19647)
 
@@ -1266,7 +1266,7 @@ start code-as-policy-cube.html
 ---
 
 
-## 待迁移论文表（395 篇）
+## 待迁移论文表（396 篇）
 
 | # | 论文 | 场景 | 方向 | 更新能力 | 运行时行为 | 反馈栈 | Oracle | 领域 | 自己改自己？ |
 |---|---|---|---|---|---|---|---|---|---|
@@ -1570,101 +1570,102 @@ start code-as-policy-cube.html
 | 298 | [AgentArk](https://arxiv.org/abs/2602.03955) | 自我 | 多智能体 | 权重训练 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
 | 299 | [Continual Learning, Not Training: Online Adaptation for Deployed Agents](https://arxiv.org/abs/2511.01093) | 自我, 动作 | 闭环调整, 记忆上下文 | 运行时适应 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
 | 300 | [MemRL: Self-Evolving Agents via Runtime Non-Parametric Reinforcement Learning on Memory](https://arxiv.org/abs/2601.03192) | 自我 | 记忆上下文, 闭环调整 | 运行时适应 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 301 | [RSI Agent: Autonomous Exploration for Recursive Self-improvement in New Environments](https://arxiv.org/abs/2609.15364) | 自我 | 多智能体, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 图形界面 | 否 |
-| 302 | [Observability-Driven Automatic Evolution of Coding Agents](https://arxiv.org/abs/2604.25850) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
-| 303 | [Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory](https://arxiv.org/abs/2606.05922) | 自我 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
-| 304 | [The Last Harness You Will Ever Build: Evolution Agent Modifies Harness End-to-End](https://arxiv.org/abs/2604.21003) | 自我 | 进化搜索, 闭环调整 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
-| 305 | [Worth Remembering: Surprise-Gated Robot Episodic Memory via World Model Loss](https://arxiv.org/abs/2606.03787) | 自我, 世界 | 记忆上下文, 世界模型 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 机器人 | 否 |
-| 306 | [Agentic Context Engineering (ACE): Evolving Contexts for Long-Horizon Agents](https://arxiv.org/abs/2510.04618) | 自我 | 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 软件工程 | 否 |
-| 307 | [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) | 自我 | 记忆上下文, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 308 | [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](https://arxiv.org/abs/2504.19413) | 自我 | 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 309 | [EvolveMem: Self-Evolving Memory Architecture](https://arxiv.org/abs/2605.13941) | 自我 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 310 | [MemSkill: Learning and Evolving Memory Skills for Self-Evolving LLM Agents](https://arxiv.org/abs/2602.02474) | 自我 | 技能沉淀, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 311 | [Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052) | 自我 | 闭环调整, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 是 |
-| 312 | [MetaSkill-Evolve: Two-Timescale Skill and Meta-Skill Loops](https://arxiv.org/abs/2607.05297) | 自我 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 313 | [STOP: Recursively Self-Improving Scaffolding](https://arxiv.org/abs/2310.02304) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 是 |
-| 314 | [Promptbreeder: Self-Referential Evolution of Prompts](https://arxiv.org/abs/2309.16797) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 是 |
-| 315 | [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 是 |
-| 316 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms](https://arxiv.org/abs/2309.08532) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 317 | [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 318 | [AgentSquare: Automatic LLM Agent Search in Modular Design Space](https://arxiv.org/abs/2410.06153) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
-| 319 | [EvoAgent: Towards Automatic Multi-Agent Generation](https://arxiv.org/abs/2406.14228) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 320 | [GPTSwarm: Language Agents as Optimizable Graphs](https://arxiv.org/abs/2402.16823) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 321 | [AFlow: Automating Agentic Workflow Generation](https://arxiv.org/abs/2410.10762) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 322 | [Automated Design of Agentic Systems (ADAS / Meta Agent Search)](https://arxiv.org/abs/2408.08435) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 323 | [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 324 | [TextGrad: Automatic “Differentiation” via Text](https://arxiv.org/abs/2406.07496) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 325 | [JiuwenSymbiosis（Physical AI 助手）](https://github.com/openJiuwen-ai/jiuwensymbiosis) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型, 真实环境 | 机器人 | 否 |
-| 326 | [CarryOn: Building Object-Oriented Context for Long-Horizon Agents](https://arxiv.org/abs/2610.18784) | 自我 | 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 327 | [Memorizing Who, Knowing How: Benchmarking Personal and Procedural Memory for Persistent Assistants](https://arxiv.org/abs/2610.20022) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 验证反馈 | 人类 | 通用 | 否 |
-| 328 | [AgentVerse: Dynamic Multi-Agent Collaboration with Emergent Team Composition](https://arxiv.org/abs/2308.10848) | 自我 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 329 | [Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
-| 330 | [Next-Generation Agentic Reinforcement Learning Systems](https://arxiv.org/abs/2607.01120) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 331 | [Deployed Reinforcement Learning should be Continual](https://arxiv.org/abs/2606.04029) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 332 | [LMAC: LLM-Guided Communication for Cooperative Multi-Agent RL](https://arxiv.org/abs/2605.18077) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 333 | [HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?](https://arxiv.org/abs/2609.01437) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 软件工程 | 否 |
-| 334 | [SwarmSys: Decentralized Swarm-Inspired Multi-Agent Reasoning](https://arxiv.org/abs/2510.10047) | 自我 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 335 | [Context Engineering: From Prompts to Corporate Multi-Agent Architecture](https://arxiv.org/abs/2603.09619) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 336 | [HIMM: Human-Inspired Long-Term Memory Modeling for Embodied Agents](https://arxiv.org/abs/2602.15513) | 自我 | 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 模型 | 机器人 | 否 |
-| 337 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 338 | [Scaling Self-Evolving Agents via Parametric Memory](https://arxiv.org/abs/2606.04536) | 自我 | 闭环调整, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
-| 339 | [Sleep-time Compute: Beyond Inference Scaling at Test-time](https://arxiv.org/abs/2504.13171) | 自我 | 技能沉淀, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 340 | [Gödel Machine: Self-Referential Optimal Problem Solvers](https://arxiv.org/abs/cs/0309048) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 数学 | 否 |
-| 341 | [The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
-| 342 | [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
-| 343 | [A Dynamic LLM-Powered Agent Network for Task-Oriented Collaboration (DyLAN)](https://arxiv.org/abs/2310.02170) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 344 | [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839) | 研究 | 闭环调整, 进化搜索 | 递归自我改进 | 采集数据＋训练 | 数据飞轮 | 符号, 模型 | 通用 | 是 |
-| 345 | [AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning](https://arxiv.org/abs/2610.22194) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | NLP | 否 |
-| 346 | [MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering](https://arxiv.org/abs/2610.22344) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
-| 347 | [Training Reasoning Models to Generate Diverse Scientific Ideas](https://arxiv.org/abs/2610.22324) | 研究 | 单次生成 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型, 人类 | 通用 | 否 |
-| 348 | [IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas](https://arxiv.org/abs/2610.08781) | 研究 | 单次生成 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号, 模型 | 通用 | 否 |
-| 349 | [IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation](https://arxiv.org/abs/2610.04074) | 研究 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 350 | [From Self-Evolving Synthetic Data to Verifiable-Reward RL for Multi-Turn Tool-Using Agents](https://arxiv.org/abs/2601.22607) | 研究, 自我 | 闭环调整, 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 通用 | 否 |
-| 351 | [MatBrain: Collaborative Dual-Model Agent for Autonomous Crystal Materials Research](https://arxiv.org/abs/2604.11540) | 研究, 设计 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 352 | [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning](https://arxiv.org/abs/2506.24119) | 研究, 自我 | 进化搜索, 多智能体 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 数学 | 否 |
-| 353 | [RefineCoder](https://arxiv.org/abs/2502.09183) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 无反馈 | 符号 | 通用 | 否 |
-| 354 | [DreamProver](https://arxiv.org/abs/2604.26311) | 研究 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
-| 355 | [EvoTune](https://claire-labo.github.io/EvoTune/) | 研究 | 进化搜索 | 权重训练 | 采集数据＋训练 | 无反馈 | 仿真 | 通用 | 否 |
-| 356 | [Scaling Automatic Research Agents via World Models (WMRL)](https://arxiv.org/abs/2608.12564) | 研究 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 软件工程 | 否 |
-| 357 | [Sample Efficient Generative Molecular Optimization](https://arxiv.org/abs/2602.10984) | 研究 | 闭环调整 | 运行时适应 | 只采集数据，不训练 | 验证反馈 | 模型 | 药物研发 | 否 |
-| 358 | [Hypoloom（自主研究框架）](https://github.com/EIMP-Lab/Hypoloom) | 研究 | 闭环调整, 多智能体 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
-| 359 | [Gan Jiang: A Self-Learning Scientific Agent for X-ray Diffraction](https://arxiv.org/abs/2610.07862) | 研究 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号, 真实环境 | 通用 | 否 |
-| 360 | [DuoDiscover: Scaling Autonomous Discovery Beyond the Evaluation Bottleneck](https://arxiv.org/abs/2610.17184) | 研究 | 多智能体, 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 361 | [Self-Building Labs](https://arxiv.org/abs/2610.23826) | 研究, 设计 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 真实环境 | 通用 | 是 |
-| 362 | [FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution](https://arxiv.org/abs/2610.03675) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 数学 | 否 |
-| 363 | [Arbor: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement](https://arxiv.org/abs/2606.11926) | 研究 | 多智能体, 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
-| 364 | [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://github.com/zhengkid/Dream-RSI) | 研究, 自我 | 世界模型, 记忆上下文, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
-| 365 | [MLEvolve: Progressive Graph Search with Retrospective Memory](https://arxiv.org/abs/2606.06473) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 366 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 无反馈 | 符号 | 软件工程 | 否 |
-| 367 | [Large Language Models Extend Known Research But Do Not Create New Research Directions](https://arxiv.org/abs/2610.17439) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 人类 | 通用 | 否 |
-| 368 | [Cogentic: Multi-Agent Orchestration for Automated Proof Discovery](https://arxiv.org/abs/2609.40324) | 研究 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 数学 | 否 |
-| 369 | [Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents](https://arxiv.org/abs/2610.07447) | 研究 | 多智能体, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 370 | [Benchmark Radar: A Living Database and Search Engine for AI Benchmarks](https://arxiv.org/abs/2609.11115) | 研究 | 单次生成 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
-| 371 | [OmniScientist: An Omni-Modal Omni-Discipline AI Scientist](https://arxiv.org/abs/2608.13558) | 研究 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 真实环境 | 通用 | 否 |
-| 372 | [ExplorationBench: Measuring AI Systems Exploration in Verifiable Alien Worlds](https://arxiv.org/abs/2609.30199) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
-| 373 | [ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research](https://arxiv.org/abs/2610.02202) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 人类 | 通用 | 否 |
-| 374 | [awesome-rubric-rewards（论文清单库）](https://github.com/chrisliu298/awesome-rubric-rewards) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
-| 375 | [RubricEval: A Rubric-Level Meta-Evaluation Benchmark for LLM Judges](https://arxiv.org/abs/2603.25133) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | NLP | 是 |
-| 376 | [AutoBencher: Towards Declarative Benchmark Construction](https://arxiv.org/abs/2407.08351) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号, 模型 | 通用 | 否 |
-| 377 | [AI for Scientific Discovery is a Social Problem](https://www.cell.com/patterns/fulltext/S2666-3899(26)00006-1) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 378 | [Automating the Search for Artificial Life with Foundation Models](https://arxiv.org/abs/2412.17799) | 研究, 世界 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | Minecraft | 否 |
-| 379 | [Autonomous Agents for Scientific Discovery: Vision and Roadmap](https://arxiv.org/abs/2510.09901) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 380 | [Sparks: Multi-Agent AI Model Discovers Novel Scientific Ideas](https://arxiv.org/abs/2504.19017) | 研究 | 多智能体, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 381 | [Foundation Models for Scientific Discovery: From Paradigm Enhancement to Paradigm Transition](https://arxiv.org/abs/2510.15280) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 382 | [Discovery Foundation Models: Toward Open-Ended Discovery Intelligence](https://arxiv.org/abs/2609.15973) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
-| 383 | [Evolutionary Discovery of RL Algorithms via LLMs](https://arxiv.org/abs/2603.28416) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 384 | [FT-Dojo: Fine-Tuning Pipeline as an Executable Environment](https://arxiv.org/abs/2603.01712) | 研究 | 世界模型 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 385 | [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) | 研究 | 闭环调整, 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
-| 386 | [CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation](https://arxiv.org/abs/2503.22708) | 研究 | 进化搜索, 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
-| 387 | [Towards an AI Co-Scientist](https://arxiv.org/abs/2502.18864) | 研究 | 多智能体, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 药物研发 | 否 |
-| 388 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
-| 389 | [The AI Scientist](https://arxiv.org/abs/2408.06292) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
-| 390 | [ChatDev](https://arxiv.org/abs/2307.07924) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
-| 391 | [MetaGPT](https://arxiv.org/abs/2308.00352) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
-| 392 | [Self-Collaboration Code Generation](https://arxiv.org/abs/2304.07590) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
-| 393 | [Digital Red Queen](https://pub.sakana.ai/drq/) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 仿真 | 通用 | 否 |
-| 394 | [FunSearch](https://www.nature.com/articles/s41586-023-06924-6) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 数学 | 否 |
-| 395 | [Learning to Evaluate Before Improving (AutoSciRub)](https://arxiv.org/abs/2608.31076) | 研究 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 软件工程 | 否 |
+| 301 | [Raven: The Harness of Harnesses for Composable Agentic Intelligence](https://arxiv.org/abs/2609.33439) | 自我 | 进化搜索, 多智能体 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型, 符号 | 通用 | 否 |
+| 302 | [RSI Agent: Autonomous Exploration for Recursive Self-improvement in New Environments](https://arxiv.org/abs/2609.15364) | 自我 | 多智能体, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 图形界面 | 否 |
+| 303 | [Observability-Driven Automatic Evolution of Coding Agents](https://arxiv.org/abs/2604.25850) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
+| 304 | [Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory](https://arxiv.org/abs/2606.05922) | 自我 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
+| 305 | [The Last Harness You Will Ever Build: Evolution Agent Modifies Harness End-to-End](https://arxiv.org/abs/2604.21003) | 自我 | 进化搜索, 闭环调整 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
+| 306 | [Worth Remembering: Surprise-Gated Robot Episodic Memory via World Model Loss](https://arxiv.org/abs/2606.03787) | 自我, 世界 | 记忆上下文, 世界模型 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 机器人 | 否 |
+| 307 | [Agentic Context Engineering (ACE): Evolving Contexts for Long-Horizon Agents](https://arxiv.org/abs/2510.04618) | 自我 | 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 软件工程 | 否 |
+| 308 | [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) | 自我 | 记忆上下文, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
+| 309 | [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](https://arxiv.org/abs/2504.19413) | 自我 | 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
+| 310 | [EvolveMem: Self-Evolving Memory Architecture](https://arxiv.org/abs/2605.13941) | 自我 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 311 | [MemSkill: Learning and Evolving Memory Skills for Self-Evolving LLM Agents](https://arxiv.org/abs/2602.02474) | 自我 | 技能沉淀, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
+| 312 | [Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052) | 自我 | 闭环调整, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 是 |
+| 313 | [MetaSkill-Evolve: Two-Timescale Skill and Meta-Skill Loops](https://arxiv.org/abs/2607.05297) | 自我 | 技能沉淀 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
+| 314 | [STOP: Recursively Self-Improving Scaffolding](https://arxiv.org/abs/2310.02304) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 是 |
+| 315 | [Promptbreeder: Self-Referential Evolution of Prompts](https://arxiv.org/abs/2309.16797) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 是 |
+| 316 | [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 是 |
+| 317 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms](https://arxiv.org/abs/2309.08532) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 318 | [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 319 | [AgentSquare: Automatic LLM Agent Search in Modular Design Space](https://arxiv.org/abs/2410.06153) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
+| 320 | [EvoAgent: Towards Automatic Multi-Agent Generation](https://arxiv.org/abs/2406.14228) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
+| 321 | [GPTSwarm: Language Agents as Optimizable Graphs](https://arxiv.org/abs/2402.16823) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
+| 322 | [AFlow: Automating Agentic Workflow Generation](https://arxiv.org/abs/2410.10762) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
+| 323 | [Automated Design of Agentic Systems (ADAS / Meta Agent Search)](https://arxiv.org/abs/2408.08435) | 自我 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
+| 324 | [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
+| 325 | [TextGrad: Automatic “Differentiation” via Text](https://arxiv.org/abs/2406.07496) | 自我 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 326 | [JiuwenSymbiosis（Physical AI 助手）](https://github.com/openJiuwen-ai/jiuwensymbiosis) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型, 真实环境 | 机器人 | 否 |
+| 327 | [CarryOn: Building Object-Oriented Context for Long-Horizon Agents](https://arxiv.org/abs/2610.18784) | 自我 | 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 328 | [Memorizing Who, Knowing How: Benchmarking Personal and Procedural Memory for Persistent Assistants](https://arxiv.org/abs/2610.20022) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 验证反馈 | 人类 | 通用 | 否 |
+| 329 | [AgentVerse: Dynamic Multi-Agent Collaboration with Emergent Team Composition](https://arxiv.org/abs/2308.10848) | 自我 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 330 | [Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
+| 331 | [Next-Generation Agentic Reinforcement Learning Systems](https://arxiv.org/abs/2607.01120) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
+| 332 | [Deployed Reinforcement Learning should be Continual](https://arxiv.org/abs/2606.04029) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
+| 333 | [LMAC: LLM-Guided Communication for Cooperative Multi-Agent RL](https://arxiv.org/abs/2605.18077) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
+| 334 | [HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?](https://arxiv.org/abs/2609.01437) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 软件工程 | 否 |
+| 335 | [SwarmSys: Decentralized Swarm-Inspired Multi-Agent Reasoning](https://arxiv.org/abs/2510.10047) | 自我 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 336 | [Context Engineering: From Prompts to Corporate Multi-Agent Architecture](https://arxiv.org/abs/2603.09619) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
+| 337 | [HIMM: Human-Inspired Long-Term Memory Modeling for Embodied Agents](https://arxiv.org/abs/2602.15513) | 自我 | 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 模型 | 机器人 | 否 |
+| 338 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | 自我 | 记忆上下文 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
+| 339 | [Scaling Self-Evolving Agents via Parametric Memory](https://arxiv.org/abs/2606.04536) | 自我 | 闭环调整, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 数据飞轮 | 模型 | 通用 | 否 |
+| 340 | [Sleep-time Compute: Beyond Inference Scaling at Test-time](https://arxiv.org/abs/2504.13171) | 自我 | 技能沉淀, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 341 | [Gödel Machine: Self-Referential Optimal Problem Solvers](https://arxiv.org/abs/cs/0309048) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 数学 | 否 |
+| 342 | [The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
+| 343 | [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) | 自我 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 不适用 | 通用 | 否 |
+| 344 | [A Dynamic LLM-Powered Agent Network for Task-Oriented Collaboration (DyLAN)](https://arxiv.org/abs/2310.02170) | 自我 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
+| 345 | [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839) | 研究 | 闭环调整, 进化搜索 | 递归自我改进 | 采集数据＋训练 | 数据飞轮 | 符号, 模型 | 通用 | 是 |
+| 346 | [AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning](https://arxiv.org/abs/2610.22194) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | NLP | 否 |
+| 347 | [MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering](https://arxiv.org/abs/2610.22344) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 软件工程 | 否 |
+| 348 | [Training Reasoning Models to Generate Diverse Scientific Ideas](https://arxiv.org/abs/2610.22324) | 研究 | 单次生成 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型, 人类 | 通用 | 否 |
+| 349 | [IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas](https://arxiv.org/abs/2610.08781) | 研究 | 单次生成 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号, 模型 | 通用 | 否 |
+| 350 | [IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation](https://arxiv.org/abs/2610.04074) | 研究 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 351 | [From Self-Evolving Synthetic Data to Verifiable-Reward RL for Multi-Turn Tool-Using Agents](https://arxiv.org/abs/2601.22607) | 研究, 自我 | 闭环调整, 进化搜索 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 通用 | 否 |
+| 352 | [MatBrain: Collaborative Dual-Model Agent for Autonomous Crystal Materials Research](https://arxiv.org/abs/2604.11540) | 研究, 设计 | 多智能体 | 权重训练 | 采集数据＋训练 | 验证反馈 | 符号 | 通用 | 否 |
+| 353 | [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning](https://arxiv.org/abs/2506.24119) | 研究, 自我 | 进化搜索, 多智能体 | 权重训练 | 采集数据＋训练 | 数据飞轮 | 符号 | 数学 | 否 |
+| 354 | [RefineCoder](https://arxiv.org/abs/2502.09183) | 研究 | 闭环调整 | 权重训练 | 采集数据＋训练 | 无反馈 | 符号 | 通用 | 否 |
+| 355 | [DreamProver](https://arxiv.org/abs/2604.26311) | 研究 | 技能沉淀 | 权重训练 | 只采集数据，不训练 | 无反馈 | 模型 | 通用 | 否 |
+| 356 | [EvoTune](https://claire-labo.github.io/EvoTune/) | 研究 | 进化搜索 | 权重训练 | 采集数据＋训练 | 无反馈 | 仿真 | 通用 | 否 |
+| 357 | [Scaling Automatic Research Agents via World Models (WMRL)](https://arxiv.org/abs/2608.12564) | 研究 | 世界模型 | 权重训练 | 采集数据＋训练 | 验证反馈 | 模型 | 软件工程 | 否 |
+| 358 | [Sample Efficient Generative Molecular Optimization](https://arxiv.org/abs/2602.10984) | 研究 | 闭环调整 | 运行时适应 | 只采集数据，不训练 | 验证反馈 | 模型 | 药物研发 | 否 |
+| 359 | [Hypoloom（自主研究框架）](https://github.com/EIMP-Lab/Hypoloom) | 研究 | 闭环调整, 多智能体 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
+| 360 | [Gan Jiang: A Self-Learning Scientific Agent for X-ray Diffraction](https://arxiv.org/abs/2610.07862) | 研究 | 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号, 真实环境 | 通用 | 否 |
+| 361 | [DuoDiscover: Scaling Autonomous Discovery Beyond the Evaluation Bottleneck](https://arxiv.org/abs/2610.17184) | 研究 | 多智能体, 闭环调整 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 362 | [Self-Building Labs](https://arxiv.org/abs/2610.23826) | 研究, 设计 | 闭环调整 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 真实环境 | 通用 | 是 |
+| 363 | [FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution](https://arxiv.org/abs/2610.03675) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 符号 | 数学 | 否 |
+| 364 | [Arbor: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement](https://arxiv.org/abs/2606.11926) | 研究 | 多智能体, 闭环调整, 记忆上下文 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
+| 365 | [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://github.com/zhengkid/Dream-RSI) | 研究, 自我 | 世界模型, 记忆上下文, 进化搜索 | 机制自进化 | 只采集数据，不训练 | 数据飞轮 | 符号 | 通用 | 否 |
+| 366 | [MLEvolve: Progressive Graph Search with Retrospective Memory](https://arxiv.org/abs/2606.06473) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
+| 367 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | 研究 | 进化搜索 | 机制自进化 | 只采集数据，不训练 | 无反馈 | 符号 | 软件工程 | 否 |
+| 368 | [Large Language Models Extend Known Research But Do Not Create New Research Directions](https://arxiv.org/abs/2610.17439) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 人类 | 通用 | 否 |
+| 369 | [Cogentic: Multi-Agent Orchestration for Automated Proof Discovery](https://arxiv.org/abs/2609.40324) | 研究 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 数学 | 否 |
+| 370 | [Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents](https://arxiv.org/abs/2610.07447) | 研究 | 多智能体, 记忆上下文 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
+| 371 | [Benchmark Radar: A Living Database and Search Engine for AI Benchmarks](https://arxiv.org/abs/2609.11115) | 研究 | 单次生成 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 通用 | 否 |
+| 372 | [OmniScientist: An Omni-Modal Omni-Discipline AI Scientist](https://arxiv.org/abs/2608.13558) | 研究 | 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 真实环境 | 通用 | 否 |
+| 373 | [ExplorationBench: Measuring AI Systems Exploration in Verifiable Alien Worlds](https://arxiv.org/abs/2609.30199) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
+| 374 | [ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research](https://arxiv.org/abs/2610.02202) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 人类 | 通用 | 否 |
+| 375 | [awesome-rubric-rewards（论文清单库）](https://github.com/chrisliu298/awesome-rubric-rewards) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号 | 通用 | 否 |
+| 376 | [RubricEval: A Rubric-Level Meta-Evaluation Benchmark for LLM Judges](https://arxiv.org/abs/2603.25133) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | NLP | 是 |
+| 377 | [AutoBencher: Towards Declarative Benchmark Construction](https://arxiv.org/abs/2407.08351) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 验证反馈 | 符号, 模型 | 通用 | 否 |
+| 378 | [AI for Scientific Discovery is a Social Problem](https://www.cell.com/patterns/fulltext/S2666-3899(26)00006-1) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
+| 379 | [Automating the Search for Artificial Life with Foundation Models](https://arxiv.org/abs/2412.17799) | 研究, 世界 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | Minecraft | 否 |
+| 380 | [Autonomous Agents for Scientific Discovery: Vision and Roadmap](https://arxiv.org/abs/2510.09901) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
+| 381 | [Sparks: Multi-Agent AI Model Discovers Novel Scientific Ideas](https://arxiv.org/abs/2504.19017) | 研究 | 多智能体, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 382 | [Foundation Models for Scientific Discovery: From Paradigm Enhancement to Paradigm Transition](https://arxiv.org/abs/2510.15280) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
+| 383 | [Discovery Foundation Models: Toward Open-Ended Discovery Intelligence](https://arxiv.org/abs/2609.15973) | 研究 | 单次生成 | 机制冻结 | 运行时全冻结 | 证据反馈 | 模型 | 通用 | 否 |
+| 384 | [Evolutionary Discovery of RL Algorithms via LLMs](https://arxiv.org/abs/2603.28416) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
+| 385 | [FT-Dojo: Fine-Tuning Pipeline as an Executable Environment](https://arxiv.org/abs/2603.01712) | 研究 | 世界模型 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
+| 386 | [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) | 研究 | 闭环调整, 多智能体 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 模型 | 通用 | 否 |
+| 387 | [CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation](https://arxiv.org/abs/2503.22708) | 研究 | 进化搜索, 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 通用 | 否 |
+| 388 | [Towards an AI Co-Scientist](https://arxiv.org/abs/2502.18864) | 研究 | 多智能体, 进化搜索 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 仿真 | 药物研发 | 否 |
+| 389 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 390 | [The AI Scientist](https://arxiv.org/abs/2408.06292) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 验证反馈 | 模型 | 通用 | 否 |
+| 391 | [ChatDev](https://arxiv.org/abs/2307.07924) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 392 | [MetaGPT](https://arxiv.org/abs/2308.00352) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 393 | [Self-Collaboration Code Generation](https://arxiv.org/abs/2304.07590) | 研究 | 多智能体 | 机制冻结 | 运行时全冻结 | 无反馈 | 模型 | 通用 | 否 |
+| 394 | [Digital Red Queen](https://pub.sakana.ai/drq/) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 仿真 | 通用 | 否 |
+| 395 | [FunSearch](https://www.nature.com/articles/s41586-023-06924-6) | 研究 | 进化搜索 | 机制冻结 | 只采集数据，不训练 | 无反馈 | 符号 | 数学 | 否 |
+| 396 | [Learning to Evaluate Before Improving (AutoSciRub)](https://arxiv.org/abs/2608.31076) | 研究 | 闭环调整 | 机制冻结 | 只采集数据，不训练 | 验证反馈 | 符号 | 软件工程 | 否 |
 <!-- PAPER-INDEX:END -->
 
 ## 仓库结构
@@ -1676,7 +1677,7 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D 交互立方体
 ├── code-as-policy-spectrum.html    # 2D 矩阵（旧版）
 ├── data/
-│   └── papers.json                 # 427 篇论文，8 维 tag
+│   └── papers.json                 # 428 篇论文，8 维 tag
 ├── tools/
 │   └── gen_paper_table.js      # Regenerate README paper tables
 ├── screenshots/

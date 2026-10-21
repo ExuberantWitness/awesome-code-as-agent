@@ -14304,5 +14304,37 @@
   "selfref": false,
   "id": "p427",
   "combo": true
+ },
+ {
+  "n": "Raven: The Harness of Harnesses for Composable Agentic Intelligence",
+  "l": "https://arxiv.org/abs/2609.33439",
+  "m": "EverMind AI · 2026-09 · 开源",
+  "d": "harness 的 harness：开源多智能体生态，自动为特定模型+领域构造模块化 harness 并随经验进化，每个可执行的模型-harness 对被视为可组合的智能单元。Host Agent 分解目标、调度全领域协作网络——问题从「为单一领域造更强 harness」升级为「自主构造、经验改进、跨领域编排专用 harness」。",
+  "v": "ok",
+  "nums": [
+   "harness 工厂+编排",
+   "模型-harness 对=组合单元",
+   "全领域协作网络"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "evo",
+   "multi"
+  ],
+  "lvl": 1,
+  "stk": 3,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "model",
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p428",
+  "combo": true
  }
 ]

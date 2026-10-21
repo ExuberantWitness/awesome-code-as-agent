@@ -2,7 +2,7 @@
 
 **[中文版](README_CN.md)** | **English**
 
-> A navigable 3D knowledge map of **427 papers** on how LLM agents use executable code to perceive, act, learn, and improve — spanning **10 scenes × 7 directions × 5 update levels × 4 runtime quadrants**.
+> A navigable 3D knowledge map of **428 papers** on how LLM agents use executable code to perceive, act, learn, and improve — spanning **10 scenes × 7 directions × 5 update levels × 4 runtime quadrants**.
 
 **Don't just read the list — navigate the space.**
 
@@ -137,7 +137,7 @@ start code-as-policy-cube.html
 
 The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)**: a frozen model, single-turn prompt→answer, no tools, no feedback, no memory. Each card answers one question — what concrete designs the paper introduces over that baseline, and the gain each design brings. The five dimensions (Direction / Update Capability / Runtime Behavior / Feedback Stack / Improves itself?) each get a four-column sub-table: **Tag** (which dimension) → **Design in the paper** (what was done) → **Gain from the design** (what was achieved) → **Why the gain happens** (first-principles explanation). Design and gain cells quote the paper's original wording wherever possible (quote + one-line summary); the **why column is editorial by default** (papers rarely explain their own why) and quotes the paper when it does. Editorial inference is marked "编者按"/"editor". See [The Taxonomy](#the-taxonomy) and [Additional Tags](#additional-tags).
 
-**Progress**: 32 papers migrated to cards | 395 pending (listed in the table below until fully migrated)
+**Progress**: 32 papers migrated to cards | 396 pending (listed in the table below until fully migrated)
 
 ### 1. [Robot-Powered Data Flywheel (RPDF)](https://arxiv.org/abs/2511.19647)
 
@@ -1266,7 +1266,7 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 ---
 
 
-## Pending Migration Table (395 papers)
+## Pending Migration Table (396 papers)
 
 | # | Paper | Scene | Direction | Update Capability | Runtime Behavior | Feedback Stack | Oracle | Domain | Improves itself? |
 |---|---|---|---|---|---|---|---|---|---|
@@ -1570,101 +1570,102 @@ The reference baseline of this index is the **simplest chatbot Q&A (GPT-3 mode)*
 | 298 | [AgentArk](https://arxiv.org/abs/2602.03955) | Agent-Self | Multi-agent | Weight training | Frozen at runtime | No feedback | Model | General | No |
 | 299 | [Continual Learning, Not Training: Online Adaptation for Deployed Agents](https://arxiv.org/abs/2511.01093) | Agent-Self, Action | Closed-loop, Memory | Adapts at runtime | Collects data + trains | Verification feedback | Model | General | No |
 | 300 | [MemRL: Self-Evolving Agents via Runtime Non-Parametric Reinforcement Learning on Memory](https://arxiv.org/abs/2601.03192) | Agent-Self | Memory, Closed-loop | Adapts at runtime | Collects data, no training | Verification feedback | Model | General | No |
-| 301 | [RSI Agent: Autonomous Exploration for Recursive Self-improvement in New Environments](https://arxiv.org/abs/2609.15364) | Agent-Self | Multi-agent, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | GUI | No |
-| 302 | [Observability-Driven Automatic Evolution of Coding Agents](https://arxiv.org/abs/2604.25850) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | Software | No |
-| 303 | [Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory](https://arxiv.org/abs/2606.05922) | Agent-Self | Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | Software | No |
-| 304 | [The Last Harness You Will Ever Build: Evolution Agent Modifies Harness End-to-End](https://arxiv.org/abs/2604.21003) | Agent-Self | Evolutionary, Closed-loop | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | Software | No |
-| 305 | [Worth Remembering: Surprise-Gated Robot Episodic Memory via World Model Loss](https://arxiv.org/abs/2606.03787) | Agent-Self, World | Memory, World-model | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | Robotics | No |
-| 306 | [Agentic Context Engineering (ACE): Evolving Contexts for Long-Horizon Agents](https://arxiv.org/abs/2510.04618) | Agent-Self | Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | Software | No |
-| 307 | [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) | Agent-Self | Memory, Evolutionary | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
-| 308 | [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](https://arxiv.org/abs/2504.19413) | Agent-Self | Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
-| 309 | [EvolveMem: Self-Evolving Memory Architecture](https://arxiv.org/abs/2605.13941) | Agent-Self | Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
-| 310 | [MemSkill: Learning and Evolving Memory Skills for Self-Evolving LLM Agents](https://arxiv.org/abs/2602.02474) | Agent-Self | Skill-accrual, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
-| 311 | [Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052) | Agent-Self | Closed-loop, Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | Yes |
-| 312 | [MetaSkill-Evolve: Two-Timescale Skill and Meta-Skill Loops](https://arxiv.org/abs/2607.05297) | Agent-Self | Skill-accrual | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
-| 313 | [STOP: Recursively Self-Improving Scaffolding](https://arxiv.org/abs/2310.02304) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | Yes |
-| 314 | [Promptbreeder: Self-Referential Evolution of Prompts](https://arxiv.org/abs/2309.16797) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | Yes |
-| 315 | [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | Yes |
-| 316 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms](https://arxiv.org/abs/2309.08532) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
-| 317 | [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
-| 318 | [AgentSquare: Automatic LLM Agent Search in Modular Design Space](https://arxiv.org/abs/2410.06153) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
-| 319 | [EvoAgent: Towards Automatic Multi-Agent Generation](https://arxiv.org/abs/2406.14228) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | No |
-| 320 | [GPTSwarm: Language Agents as Optimizable Graphs](https://arxiv.org/abs/2402.16823) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | No |
-| 321 | [AFlow: Automating Agentic Workflow Generation](https://arxiv.org/abs/2410.10762) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | No |
-| 322 | [Automated Design of Agentic Systems (ADAS / Meta Agent Search)](https://arxiv.org/abs/2408.08435) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | No |
-| 323 | [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | No |
-| 324 | [TextGrad: Automatic “Differentiation” via Text](https://arxiv.org/abs/2406.07496) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
-| 325 | [JiuwenSymbiosis（Physical AI 助手）](https://github.com/openJiuwen-ai/jiuwensymbiosis) | Agent-Self | Multi-agent | Frozen mechanism | Frozen at runtime | Evidence feedback | Model, Real-world | Robotics | No |
-| 326 | [CarryOn: Building Object-Oriented Context for Long-Horizon Agents](https://arxiv.org/abs/2610.18784) | Agent-Self | Memory | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
-| 327 | [Memorizing Who, Knowing How: Benchmarking Personal and Procedural Memory for Persistent Assistants](https://arxiv.org/abs/2610.20022) | Agent-Self | Memory | Frozen mechanism | Frozen at runtime | Verification feedback | Human | General | No |
-| 328 | [AgentVerse: Dynamic Multi-Agent Collaboration with Emergent Team Composition](https://arxiv.org/abs/2308.10848) | Agent-Self | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
-| 329 | [Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | General | No |
-| 330 | [Next-Generation Agentic Reinforcement Learning Systems](https://arxiv.org/abs/2607.01120) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
-| 331 | [Deployed Reinforcement Learning should be Continual](https://arxiv.org/abs/2606.04029) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
-| 332 | [LMAC: LLM-Guided Communication for Cooperative Multi-Agent RL](https://arxiv.org/abs/2605.18077) | Agent-Self | Multi-agent | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
-| 333 | [HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?](https://arxiv.org/abs/2609.01437) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | Software | No |
-| 334 | [SwarmSys: Decentralized Swarm-Inspired Multi-Agent Reasoning](https://arxiv.org/abs/2510.10047) | Agent-Self | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
-| 335 | [Context Engineering: From Prompts to Corporate Multi-Agent Architecture](https://arxiv.org/abs/2603.09619) | Agent-Self | Memory | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
-| 336 | [HIMM: Human-Inspired Long-Term Memory Modeling for Embodied Agents](https://arxiv.org/abs/2602.15513) | Agent-Self | Memory | Frozen mechanism | Collects data, no training | Data flywheel | Model | Robotics | No |
-| 337 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | Agent-Self | Memory | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
-| 338 | [Scaling Self-Evolving Agents via Parametric Memory](https://arxiv.org/abs/2606.04536) | Agent-Self | Closed-loop, Memory | Frozen mechanism | Collects data, no training | Data flywheel | Model | General | No |
-| 339 | [Sleep-time Compute: Beyond Inference Scaling at Test-time](https://arxiv.org/abs/2504.13171) | Agent-Self | Skill-accrual, Memory | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
-| 340 | [Gödel Machine: Self-Referential Optimal Problem Solvers](https://arxiv.org/abs/cs/0309048) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | N/A | Math | No |
-| 341 | [The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | N/A | General | No |
-| 342 | [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | N/A | General | No |
-| 343 | [A Dynamic LLM-Powered Agent Network for Task-Oriented Collaboration (DyLAN)](https://arxiv.org/abs/2310.02170) | Agent-Self | Multi-agent | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
-| 344 | [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839) | Research | Closed-loop, Evolutionary | Recursive self-improvement | Collects data + trains | Data flywheel | Symbolic, Model | General | Yes |
-| 345 | [AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning](https://arxiv.org/abs/2610.22194) | Research | Closed-loop | Weight training | Collects data + trains | Data flywheel | Symbolic | NLP | No |
-| 346 | [MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering](https://arxiv.org/abs/2610.22344) | Research | Closed-loop | Weight training | Collects data + trains | Data flywheel | Symbolic | Software | No |
-| 347 | [Training Reasoning Models to Generate Diverse Scientific Ideas](https://arxiv.org/abs/2610.22324) | Research | One-shot | Weight training | Collects data + trains | Verification feedback | Model, Human | General | No |
-| 348 | [IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas](https://arxiv.org/abs/2610.08781) | Research | One-shot | Weight training | Collects data + trains | Verification feedback | Symbolic, Model | General | No |
-| 349 | [IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation](https://arxiv.org/abs/2610.04074) | Research | Multi-agent | Weight training | Collects data + trains | Verification feedback | Model | General | No |
-| 350 | [From Self-Evolving Synthetic Data to Verifiable-Reward RL for Multi-Turn Tool-Using Agents](https://arxiv.org/abs/2601.22607) | Research, Agent-Self | Closed-loop, Evolutionary | Weight training | Collects data + trains | Data flywheel | Symbolic | General | No |
-| 351 | [MatBrain: Collaborative Dual-Model Agent for Autonomous Crystal Materials Research](https://arxiv.org/abs/2604.11540) | Research, Design | Multi-agent | Weight training | Collects data + trains | Verification feedback | Symbolic | General | No |
-| 352 | [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning](https://arxiv.org/abs/2506.24119) | Research, Agent-Self | Evolutionary, Multi-agent | Weight training | Collects data + trains | Data flywheel | Symbolic | Math | No |
-| 353 | [RefineCoder](https://arxiv.org/abs/2502.09183) | Research | Closed-loop | Weight training | Collects data + trains | No feedback | Symbolic | General | No |
-| 354 | [DreamProver](https://arxiv.org/abs/2604.26311) | Research | Skill-accrual | Weight training | Collects data, no training | No feedback | Model | General | No |
-| 355 | [EvoTune](https://claire-labo.github.io/EvoTune/) | Research | Evolutionary | Weight training | Collects data + trains | No feedback | Simulation | General | No |
-| 356 | [Scaling Automatic Research Agents via World Models (WMRL)](https://arxiv.org/abs/2608.12564) | Research | World-model | Weight training | Collects data + trains | Verification feedback | Model | Software | No |
-| 357 | [Sample Efficient Generative Molecular Optimization](https://arxiv.org/abs/2602.10984) | Research | Closed-loop | Adapts at runtime | Collects data, no training | Verification feedback | Model | Drug discovery | No |
-| 358 | [Hypoloom（自主研究框架）](https://github.com/EIMP-Lab/Hypoloom) | Research | Closed-loop, Multi-agent | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
-| 359 | [Gan Jiang: A Self-Learning Scientific Agent for X-ray Diffraction](https://arxiv.org/abs/2610.07862) | Research | Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic, Real-world | General | No |
-| 360 | [DuoDiscover: Scaling Autonomous Discovery Beyond the Evaluation Bottleneck](https://arxiv.org/abs/2610.17184) | Research | Multi-agent, Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
-| 361 | [Self-Building Labs](https://arxiv.org/abs/2610.23826) | Research, Design | Closed-loop | Mechanism self-evolves | Collects data, no training | Data flywheel | Real-world | General | Yes |
-| 362 | [FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution](https://arxiv.org/abs/2610.03675) | Research | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | Math | No |
-| 363 | [Arbor: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement](https://arxiv.org/abs/2606.11926) | Research | Multi-agent, Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
-| 364 | [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://github.com/zhengkid/Dream-RSI) | Research, Agent-Self | World-model, Memory, Evolutionary | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
-| 365 | [MLEvolve: Progressive Graph Search with Retrospective Memory](https://arxiv.org/abs/2606.06473) | Research | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | No |
-| 366 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | Research | Evolutionary | Mechanism self-evolves | Collects data, no training | No feedback | Symbolic | Software | No |
-| 367 | [Large Language Models Extend Known Research But Do Not Create New Research Directions](https://arxiv.org/abs/2610.17439) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Human | General | No |
-| 368 | [Cogentic: Multi-Agent Orchestration for Automated Proof Discovery](https://arxiv.org/abs/2609.40324) | Research | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | Math | No |
-| 369 | [Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents](https://arxiv.org/abs/2610.07447) | Research | Multi-agent, Memory | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | General | No |
-| 370 | [Benchmark Radar: A Living Database and Search Engine for AI Benchmarks](https://arxiv.org/abs/2609.11115) | Research | One-shot | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | General | No |
-| 371 | [OmniScientist: An Omni-Modal Omni-Discipline AI Scientist](https://arxiv.org/abs/2608.13558) | Research | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Real-world | General | No |
-| 372 | [ExplorationBench: Measuring AI Systems Exploration in Verifiable Alien Worlds](https://arxiv.org/abs/2609.30199) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | General | No |
-| 373 | [ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research](https://arxiv.org/abs/2610.02202) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Human | General | No |
-| 374 | [awesome-rubric-rewards（论文清单库）](https://github.com/chrisliu298/awesome-rubric-rewards) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | General | No |
-| 375 | [RubricEval: A Rubric-Level Meta-Evaluation Benchmark for LLM Judges](https://arxiv.org/abs/2603.25133) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Model | NLP | Yes |
-| 376 | [AutoBencher: Towards Declarative Benchmark Construction](https://arxiv.org/abs/2407.08351) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic, Model | General | No |
-| 377 | [AI for Scientific Discovery is a Social Problem](https://www.cell.com/patterns/fulltext/S2666-3899(26)00006-1) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
-| 378 | [Automating the Search for Artificial Life with Foundation Models](https://arxiv.org/abs/2412.17799) | Research, World | Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | Minecraft | No |
-| 379 | [Autonomous Agents for Scientific Discovery: Vision and Roadmap](https://arxiv.org/abs/2510.09901) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
-| 380 | [Sparks: Multi-Agent AI Model Discovers Novel Scientific Ideas](https://arxiv.org/abs/2504.19017) | Research | Multi-agent, Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
-| 381 | [Foundation Models for Scientific Discovery: From Paradigm Enhancement to Paradigm Transition](https://arxiv.org/abs/2510.15280) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
-| 382 | [Discovery Foundation Models: Toward Open-Ended Discovery Intelligence](https://arxiv.org/abs/2609.15973) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
-| 383 | [Evolutionary Discovery of RL Algorithms via LLMs](https://arxiv.org/abs/2603.28416) | Research | Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | General | No |
-| 384 | [FT-Dojo: Fine-Tuning Pipeline as an Executable Environment](https://arxiv.org/abs/2603.01712) | Research | World-model | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
-| 385 | [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) | Research | Closed-loop, Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
-| 386 | [CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation](https://arxiv.org/abs/2503.22708) | Research | Evolutionary, Closed-loop | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | General | No |
-| 387 | [Towards an AI Co-Scientist](https://arxiv.org/abs/2502.18864) | Research | Multi-agent, Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | Drug discovery | No |
-| 388 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
-| 389 | [The AI Scientist](https://arxiv.org/abs/2408.06292) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
-| 390 | [ChatDev](https://arxiv.org/abs/2307.07924) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
-| 391 | [MetaGPT](https://arxiv.org/abs/2308.00352) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
-| 392 | [Self-Collaboration Code Generation](https://arxiv.org/abs/2304.07590) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
-| 393 | [Digital Red Queen](https://pub.sakana.ai/drq/) | Research | Evolutionary | Frozen mechanism | Collects data, no training | No feedback | Simulation | General | No |
-| 394 | [FunSearch](https://www.nature.com/articles/s41586-023-06924-6) | Research | Evolutionary | Frozen mechanism | Collects data, no training | No feedback | Symbolic | Math | No |
-| 395 | [Learning to Evaluate Before Improving (AutoSciRub)](https://arxiv.org/abs/2608.31076) | Research | Closed-loop | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | Software | No |
+| 301 | [Raven: The Harness of Harnesses for Composable Agentic Intelligence](https://arxiv.org/abs/2609.33439) | Agent-Self | Evolutionary, Multi-agent | Mechanism self-evolves | Collects data, no training | Data flywheel | Model, Symbolic | General | No |
+| 302 | [RSI Agent: Autonomous Exploration for Recursive Self-improvement in New Environments](https://arxiv.org/abs/2609.15364) | Agent-Self | Multi-agent, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | GUI | No |
+| 303 | [Observability-Driven Automatic Evolution of Coding Agents](https://arxiv.org/abs/2604.25850) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | Software | No |
+| 304 | [Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory](https://arxiv.org/abs/2606.05922) | Agent-Self | Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | Software | No |
+| 305 | [The Last Harness You Will Ever Build: Evolution Agent Modifies Harness End-to-End](https://arxiv.org/abs/2604.21003) | Agent-Self | Evolutionary, Closed-loop | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | Software | No |
+| 306 | [Worth Remembering: Surprise-Gated Robot Episodic Memory via World Model Loss](https://arxiv.org/abs/2606.03787) | Agent-Self, World | Memory, World-model | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | Robotics | No |
+| 307 | [Agentic Context Engineering (ACE): Evolving Contexts for Long-Horizon Agents](https://arxiv.org/abs/2510.04618) | Agent-Self | Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | Software | No |
+| 308 | [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) | Agent-Self | Memory, Evolutionary | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
+| 309 | [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](https://arxiv.org/abs/2504.19413) | Agent-Self | Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
+| 310 | [EvolveMem: Self-Evolving Memory Architecture](https://arxiv.org/abs/2605.13941) | Agent-Self | Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
+| 311 | [MemSkill: Learning and Evolving Memory Skills for Self-Evolving LLM Agents](https://arxiv.org/abs/2602.02474) | Agent-Self | Skill-accrual, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
+| 312 | [Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052) | Agent-Self | Closed-loop, Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | Yes |
+| 313 | [MetaSkill-Evolve: Two-Timescale Skill and Meta-Skill Loops](https://arxiv.org/abs/2607.05297) | Agent-Self | Skill-accrual | Mechanism self-evolves | Collects data, no training | Data flywheel | Model | General | No |
+| 314 | [STOP: Recursively Self-Improving Scaffolding](https://arxiv.org/abs/2310.02304) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | Yes |
+| 315 | [Promptbreeder: Self-Referential Evolution of Prompts](https://arxiv.org/abs/2309.16797) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | Yes |
+| 316 | [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | Yes |
+| 317 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms](https://arxiv.org/abs/2309.08532) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
+| 318 | [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
+| 319 | [AgentSquare: Automatic LLM Agent Search in Modular Design Space](https://arxiv.org/abs/2410.06153) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
+| 320 | [EvoAgent: Towards Automatic Multi-Agent Generation](https://arxiv.org/abs/2406.14228) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | No |
+| 321 | [GPTSwarm: Language Agents as Optimizable Graphs](https://arxiv.org/abs/2402.16823) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | No |
+| 322 | [AFlow: Automating Agentic Workflow Generation](https://arxiv.org/abs/2410.10762) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | No |
+| 323 | [Automated Design of Agentic Systems (ADAS / Meta Agent Search)](https://arxiv.org/abs/2408.08435) | Agent-Self | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | No |
+| 324 | [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | General | No |
+| 325 | [TextGrad: Automatic “Differentiation” via Text](https://arxiv.org/abs/2406.07496) | Agent-Self | Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
+| 326 | [JiuwenSymbiosis（Physical AI 助手）](https://github.com/openJiuwen-ai/jiuwensymbiosis) | Agent-Self | Multi-agent | Frozen mechanism | Frozen at runtime | Evidence feedback | Model, Real-world | Robotics | No |
+| 327 | [CarryOn: Building Object-Oriented Context for Long-Horizon Agents](https://arxiv.org/abs/2610.18784) | Agent-Self | Memory | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
+| 328 | [Memorizing Who, Knowing How: Benchmarking Personal and Procedural Memory for Persistent Assistants](https://arxiv.org/abs/2610.20022) | Agent-Self | Memory | Frozen mechanism | Frozen at runtime | Verification feedback | Human | General | No |
+| 329 | [AgentVerse: Dynamic Multi-Agent Collaboration with Emergent Team Composition](https://arxiv.org/abs/2308.10848) | Agent-Self | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
+| 330 | [Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | General | No |
+| 331 | [Next-Generation Agentic Reinforcement Learning Systems](https://arxiv.org/abs/2607.01120) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
+| 332 | [Deployed Reinforcement Learning should be Continual](https://arxiv.org/abs/2606.04029) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
+| 333 | [LMAC: LLM-Guided Communication for Cooperative Multi-Agent RL](https://arxiv.org/abs/2605.18077) | Agent-Self | Multi-agent | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
+| 334 | [HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?](https://arxiv.org/abs/2609.01437) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | Software | No |
+| 335 | [SwarmSys: Decentralized Swarm-Inspired Multi-Agent Reasoning](https://arxiv.org/abs/2510.10047) | Agent-Self | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
+| 336 | [Context Engineering: From Prompts to Corporate Multi-Agent Architecture](https://arxiv.org/abs/2603.09619) | Agent-Self | Memory | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
+| 337 | [HIMM: Human-Inspired Long-Term Memory Modeling for Embodied Agents](https://arxiv.org/abs/2602.15513) | Agent-Self | Memory | Frozen mechanism | Collects data, no training | Data flywheel | Model | Robotics | No |
+| 338 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | Agent-Self | Memory | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
+| 339 | [Scaling Self-Evolving Agents via Parametric Memory](https://arxiv.org/abs/2606.04536) | Agent-Self | Closed-loop, Memory | Frozen mechanism | Collects data, no training | Data flywheel | Model | General | No |
+| 340 | [Sleep-time Compute: Beyond Inference Scaling at Test-time](https://arxiv.org/abs/2504.13171) | Agent-Self | Skill-accrual, Memory | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
+| 341 | [Gödel Machine: Self-Referential Optimal Problem Solvers](https://arxiv.org/abs/cs/0309048) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | N/A | Math | No |
+| 342 | [The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | N/A | General | No |
+| 343 | [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) | Agent-Self | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | N/A | General | No |
+| 344 | [A Dynamic LLM-Powered Agent Network for Task-Oriented Collaboration (DyLAN)](https://arxiv.org/abs/2310.02170) | Agent-Self | Multi-agent | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
+| 345 | [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839) | Research | Closed-loop, Evolutionary | Recursive self-improvement | Collects data + trains | Data flywheel | Symbolic, Model | General | Yes |
+| 346 | [AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning](https://arxiv.org/abs/2610.22194) | Research | Closed-loop | Weight training | Collects data + trains | Data flywheel | Symbolic | NLP | No |
+| 347 | [MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering](https://arxiv.org/abs/2610.22344) | Research | Closed-loop | Weight training | Collects data + trains | Data flywheel | Symbolic | Software | No |
+| 348 | [Training Reasoning Models to Generate Diverse Scientific Ideas](https://arxiv.org/abs/2610.22324) | Research | One-shot | Weight training | Collects data + trains | Verification feedback | Model, Human | General | No |
+| 349 | [IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas](https://arxiv.org/abs/2610.08781) | Research | One-shot | Weight training | Collects data + trains | Verification feedback | Symbolic, Model | General | No |
+| 350 | [IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation](https://arxiv.org/abs/2610.04074) | Research | Multi-agent | Weight training | Collects data + trains | Verification feedback | Model | General | No |
+| 351 | [From Self-Evolving Synthetic Data to Verifiable-Reward RL for Multi-Turn Tool-Using Agents](https://arxiv.org/abs/2601.22607) | Research, Agent-Self | Closed-loop, Evolutionary | Weight training | Collects data + trains | Data flywheel | Symbolic | General | No |
+| 352 | [MatBrain: Collaborative Dual-Model Agent for Autonomous Crystal Materials Research](https://arxiv.org/abs/2604.11540) | Research, Design | Multi-agent | Weight training | Collects data + trains | Verification feedback | Symbolic | General | No |
+| 353 | [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning](https://arxiv.org/abs/2506.24119) | Research, Agent-Self | Evolutionary, Multi-agent | Weight training | Collects data + trains | Data flywheel | Symbolic | Math | No |
+| 354 | [RefineCoder](https://arxiv.org/abs/2502.09183) | Research | Closed-loop | Weight training | Collects data + trains | No feedback | Symbolic | General | No |
+| 355 | [DreamProver](https://arxiv.org/abs/2604.26311) | Research | Skill-accrual | Weight training | Collects data, no training | No feedback | Model | General | No |
+| 356 | [EvoTune](https://claire-labo.github.io/EvoTune/) | Research | Evolutionary | Weight training | Collects data + trains | No feedback | Simulation | General | No |
+| 357 | [Scaling Automatic Research Agents via World Models (WMRL)](https://arxiv.org/abs/2608.12564) | Research | World-model | Weight training | Collects data + trains | Verification feedback | Model | Software | No |
+| 358 | [Sample Efficient Generative Molecular Optimization](https://arxiv.org/abs/2602.10984) | Research | Closed-loop | Adapts at runtime | Collects data, no training | Verification feedback | Model | Drug discovery | No |
+| 359 | [Hypoloom（自主研究框架）](https://github.com/EIMP-Lab/Hypoloom) | Research | Closed-loop, Multi-agent | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
+| 360 | [Gan Jiang: A Self-Learning Scientific Agent for X-ray Diffraction](https://arxiv.org/abs/2610.07862) | Research | Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic, Real-world | General | No |
+| 361 | [DuoDiscover: Scaling Autonomous Discovery Beyond the Evaluation Bottleneck](https://arxiv.org/abs/2610.17184) | Research | Multi-agent, Closed-loop | Mechanism self-evolves | Collects data, no training | Verification feedback | Model | General | No |
+| 362 | [Self-Building Labs](https://arxiv.org/abs/2610.23826) | Research, Design | Closed-loop | Mechanism self-evolves | Collects data, no training | Data flywheel | Real-world | General | Yes |
+| 363 | [FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution](https://arxiv.org/abs/2610.03675) | Research | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Symbolic | Math | No |
+| 364 | [Arbor: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement](https://arxiv.org/abs/2606.11926) | Research | Multi-agent, Closed-loop, Memory | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
+| 365 | [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://github.com/zhengkid/Dream-RSI) | Research, Agent-Self | World-model, Memory, Evolutionary | Mechanism self-evolves | Collects data, no training | Data flywheel | Symbolic | General | No |
+| 366 | [MLEvolve: Progressive Graph Search with Retrospective Memory](https://arxiv.org/abs/2606.06473) | Research | Evolutionary | Mechanism self-evolves | Collects data, no training | Verification feedback | Simulation | General | No |
+| 367 | [AlphaEvolve](https://arxiv.org/abs/2506.13131) | Research | Evolutionary | Mechanism self-evolves | Collects data, no training | No feedback | Symbolic | Software | No |
+| 368 | [Large Language Models Extend Known Research But Do Not Create New Research Directions](https://arxiv.org/abs/2610.17439) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Human | General | No |
+| 369 | [Cogentic: Multi-Agent Orchestration for Automated Proof Discovery](https://arxiv.org/abs/2609.40324) | Research | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | Math | No |
+| 370 | [Fork-and-Flush: Escaping Idea Basins in Autoresearch Agents](https://arxiv.org/abs/2610.07447) | Research | Multi-agent, Memory | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | General | No |
+| 371 | [Benchmark Radar: A Living Database and Search Engine for AI Benchmarks](https://arxiv.org/abs/2609.11115) | Research | One-shot | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | General | No |
+| 372 | [OmniScientist: An Omni-Modal Omni-Discipline AI Scientist](https://arxiv.org/abs/2608.13558) | Research | Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Real-world | General | No |
+| 373 | [ExplorationBench: Measuring AI Systems Exploration in Verifiable Alien Worlds](https://arxiv.org/abs/2609.30199) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | General | No |
+| 374 | [ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research](https://arxiv.org/abs/2610.02202) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Human | General | No |
+| 375 | [awesome-rubric-rewards（论文清单库）](https://github.com/chrisliu298/awesome-rubric-rewards) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic | General | No |
+| 376 | [RubricEval: A Rubric-Level Meta-Evaluation Benchmark for LLM Judges](https://arxiv.org/abs/2603.25133) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Model | NLP | Yes |
+| 377 | [AutoBencher: Towards Declarative Benchmark Construction](https://arxiv.org/abs/2407.08351) | Research | One-shot | Frozen mechanism | Frozen at runtime | Verification feedback | Symbolic, Model | General | No |
+| 378 | [AI for Scientific Discovery is a Social Problem](https://www.cell.com/patterns/fulltext/S2666-3899(26)00006-1) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
+| 379 | [Automating the Search for Artificial Life with Foundation Models](https://arxiv.org/abs/2412.17799) | Research, World | Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | Minecraft | No |
+| 380 | [Autonomous Agents for Scientific Discovery: Vision and Roadmap](https://arxiv.org/abs/2510.09901) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
+| 381 | [Sparks: Multi-Agent AI Model Discovers Novel Scientific Ideas](https://arxiv.org/abs/2504.19017) | Research | Multi-agent, Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
+| 382 | [Foundation Models for Scientific Discovery: From Paradigm Enhancement to Paradigm Transition](https://arxiv.org/abs/2510.15280) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
+| 383 | [Discovery Foundation Models: Toward Open-Ended Discovery Intelligence](https://arxiv.org/abs/2609.15973) | Research | One-shot | Frozen mechanism | Frozen at runtime | Evidence feedback | Model | General | No |
+| 384 | [Evolutionary Discovery of RL Algorithms via LLMs](https://arxiv.org/abs/2603.28416) | Research | Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | General | No |
+| 385 | [FT-Dojo: Fine-Tuning Pipeline as an Executable Environment](https://arxiv.org/abs/2603.01712) | Research | World-model | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
+| 386 | [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) | Research | Closed-loop, Multi-agent | Frozen mechanism | Collects data, no training | Verification feedback | Model | General | No |
+| 387 | [CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation](https://arxiv.org/abs/2503.22708) | Research | Evolutionary, Closed-loop | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | General | No |
+| 388 | [Towards an AI Co-Scientist](https://arxiv.org/abs/2502.18864) | Research | Multi-agent, Evolutionary | Frozen mechanism | Collects data, no training | Verification feedback | Simulation | Drug discovery | No |
+| 389 | [AI Scientist-v2](https://arxiv.org/abs/2504.08066) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
+| 390 | [The AI Scientist](https://arxiv.org/abs/2408.06292) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | Verification feedback | Model | General | No |
+| 391 | [ChatDev](https://arxiv.org/abs/2307.07924) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
+| 392 | [MetaGPT](https://arxiv.org/abs/2308.00352) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
+| 393 | [Self-Collaboration Code Generation](https://arxiv.org/abs/2304.07590) | Research | Multi-agent | Frozen mechanism | Frozen at runtime | No feedback | Model | General | No |
+| 394 | [Digital Red Queen](https://pub.sakana.ai/drq/) | Research | Evolutionary | Frozen mechanism | Collects data, no training | No feedback | Simulation | General | No |
+| 395 | [FunSearch](https://www.nature.com/articles/s41586-023-06924-6) | Research | Evolutionary | Frozen mechanism | Collects data, no training | No feedback | Symbolic | Math | No |
+| 396 | [Learning to Evaluate Before Improving (AutoSciRub)](https://arxiv.org/abs/2608.31076) | Research | Closed-loop | Frozen mechanism | Collects data, no training | Verification feedback | Symbolic | Software | No |
 <!-- PAPER-INDEX:END -->
 
 ## Repository Structure
@@ -1676,7 +1677,7 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D interactive cube
 ├── code-as-policy-spectrum.html    # 2D matrix (legacy)
 ├── data/
-│   └── papers.json                 # 427 papers, 8-dim tags
+│   └── papers.json                 # 428 papers, 8-dim tags
 ├── tools/
 │   └── gen_paper_table.js      # Regenerate README paper tables
 ├── screenshots/
