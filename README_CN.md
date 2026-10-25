@@ -6,6 +6,8 @@
 
 **不只是读列表——导航整个空间。**
 
+## ▶ [在线漫游 3D 知识图谱——无需安装，浏览器直接玩](https://exuberantwitness.github.io/awesome-code-as-agent/code-as-policy-cube.html)
+
 ## 🧊 预览
 
 | 3D 知识立方体 | 论文数据库 |
@@ -14,6 +16,8 @@
 | 拖拽 · 缩放 · 点击立方体 | 搜索 · 过滤 · 8 维 tag |
 
 ## 快速开始
+
+**第 0 步 — 不想安装？** [直接在浏览器里在线漫游](https://exuberantwitness.github.io/awesome-code-as-agent/code-as-policy-cube.html)。
 
 **第 1 步** — 克隆本仓库：
 

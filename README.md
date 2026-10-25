@@ -6,6 +6,8 @@
 
 **Don't just read the list — navigate the space.**
 
+## ▶ [Play the live 3D cube — no install, runs in your browser](https://exuberantwitness.github.io/awesome-code-as-agent/code-as-policy-cube.html)
+
 ## 🧊 Preview
 
 | 3D Knowledge Cube | Paper Database |
@@ -14,6 +16,8 @@
 | Drag · Zoom · Click cubes | Search · Filter · 8-dim tags |
 
 ## Quick Start
+
+**Step 0 — No install?** [Play it live in your browser](https://exuberantwitness.github.io/awesome-code-as-agent/code-as-policy-cube.html).
 
 **Step 1** — Clone this repo:
 
