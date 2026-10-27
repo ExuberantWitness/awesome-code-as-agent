@@ -114,6 +114,10 @@ start code-as-policy-cube.html
 
 ## Recent Updates
 
+- **2026-10-22 — Papers-with-Code integration (live)**
+  - : weekly enrichment (citations/repositories/datasets) + keyword-based candidate discovery; first full sync: 248/370 arXiv-linked papers matched, 62 new candidates found
+  - Weekly automation scheduled (Mon 09:00): sync → commit → push → report top candidates
+
 - **2026-10-21 — +43 papers (427 total)**
   - Harness-RSI line grows: Harness², Terminal-RSI, DiscoveryRSI; rubric×RL meets (RARE); self-distillation line (OPSD, Neighborhood-OPSD, RISE-family); memory line (Hy-Memory-30B, CarryOn); JEPA-Anything (RSI-Anything foundation); Self-Building Labs & Compositional Machine Design (PRSI P4/P5 neighbors); RealtimeBench live-clock eval; code-worlds line (AgentGarten, WorldStream, Player-1)
 
@@ -1681,9 +1685,12 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D interactive cube
 ├── code-as-policy-spectrum.html    # 2D matrix (legacy)
 ├── data/
-│   └── papers.json                 # 428 papers, 8-dim tags
+│   ├── papers.json                 # 428 papers, 8-dim tags
+│   ├── pwc-enrichment.json         # PwC citations/repos/datasets cache
+│   └── candidates.json             # Auto-discovered candidate papers
 ├── tools/
-│   └── gen_paper_table.js      # Regenerate README paper tables
+│   ├── gen_paper_table.js      # Regenerate README paper tables
+│   └── pwc_sync.js             # Weekly Papers-with-Code enrichment sync
 ├── screenshots/
 │   ├── cube-overview.png           # 3D cube view
 │   ├── database-view.png           # Paper database

@@ -114,6 +114,10 @@ start code-as-policy-cube.html
 
 ## 更新日志
 
+- **2026-10-22 ——Papers-with-Code 集成上线**
+  - tools/pwc_sync.js：每周富化（引用数/代码仓库/数据集）+关键词候选发现；首次全量同步：370 篇 arXiv 链接论文命中 248、发现 62 篇新候选
+  - 每周自动任务（周一 09:00）：同步→提交→推送→报告候选
+
 - **2026-10-21 ——新增 43 篇（共 428 篇）**
   - harness-RSI 线加厚（Harness²、Terminal-RSI、DiscoveryRSI）；rubric×RL 会师（RARE）；自蒸馏线（OPSD、邻域 OPSD）；记忆线（Hy-Memory-30B、CarryOn）；JEPA-Anything（RSI-Anything 底座）；Self-Building Labs 与组合式机器设计（PRSI P4/P5 近邻）；RealtimeBench 活时钟评测；代码世界线（AgentGarten、WorldStream、Player-1）
 
@@ -1681,8 +1685,12 @@ awesome-code-as-agent/
 ├── code-as-policy-cube.html        # 3D 交互立方体
 ├── code-as-policy-spectrum.html    # 2D 矩阵（旧版）
 ├── data/
-│   └── papers.json                 # 428 篇论文，8 维 tag
+│   ├── papers.json                 # 428 篇论文，8 维 tag
+│   ├── pwc-enrichment.json         # PwC 引用/仓库/数据集缓存
+│   └── candidates.json             # 自动发现的候选论文
 ├── tools/
+│   ├── gen_paper_table.js      # 重生成 README 论文表
+│   └── pwc_sync.js             # 每周 PwC 富化同步
 │   └── gen_paper_table.js      # Regenerate README paper tables
 ├── screenshots/
 │   ├── cube-overview.png           # 3D 立方体

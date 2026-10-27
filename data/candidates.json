@@ -1,0 +1,377 @@
+{
+ "generated_at": "2026-10-27T02:49:57.215Z",
+ "papers": [
+  {
+   "arxiv_id": "2608.23552",
+   "title": "Prime Agent: A Self-Improving RLM Harness",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2605.09998",
+   "title": "Continual Harness: Online Adaptation for Self-Improving Foundation Agents",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2610.14118",
+   "title": "ClawLoop: Self-Improving Agents via Harness-Native Training Loop",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2608.08466",
+   "title": "Hierarchical Self-Improvement: A Framework for Task-Specific Evolvable Agent Harnesses",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2606.01770",
+   "title": "Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2610.00948",
+   "title": "GUI-HARVEST: Self-Improving GUI Agents through Evidence-Driven Harness Evolution",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2609.37950",
+   "title": "Video-RSI: Recursive Self-Improvement of Video Understanding Agents via Harness Evolution",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2609.08183",
+   "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+   "query": "agent harness self-improvement",
+   "found_at": "2026-10-27T02:50:00.587Z"
+  },
+  {
+   "arxiv_id": "2608.02508",
+   "title": "RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2509.24704",
+   "title": "MemGen: Weaving Generative Latent Memory for Self-Evolving Agents",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2604.07791",
+   "title": "SEARL: Joint Optimization of Policy and Tool Graph Memory for Self-Evolving Agents",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2509.09498",
+   "title": "SEDM: Scalable Self-Evolving Distributed Memory for Agents",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2603.10291",
+   "title": "Hybrid Self-evolving Structured Memory for GUI Agents",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2511.20857",
+   "title": "Evo-Memory: Benchmarking LLM Agent Test-time Learning with Self-Evolving Memory",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2603.03293",
+   "title": "SE-Search: Self-Evolving Search Agent via Memory and Dense Reward",
+   "query": "agent memory self-evolving",
+   "found_at": "2026-10-27T02:50:12.296Z"
+  },
+  {
+   "arxiv_id": "2610.31372",
+   "title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2610.24944",
+   "title": "Epi: Towards a Persistent, Self-Improving Agent for Autonomous Research",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2604.05854",
+   "title": "Deep Researcher Agent: An Autonomous Framework for 24/7 Deep Learning Experimentation with Zero-Cost Monitoring",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2506.22598",
+   "title": "RExBench: Can coding agents autonomously implement AI research extensions?",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2603.13327",
+   "title": "DOVA: Deliberation-First Multi-Agent Orchestration for Autonomous Research Automation",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2605.03042",
+   "title": "ARIS: Autonomous Research via Adversarial Multi-Agent Collaboration",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2610.21055",
+   "title": "Athanor: An Agent-Native System for Autonomous Post-Training Research",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2609.09113",
+   "title": "SAEScientist-Bench: Can AI Agents Conduct Autonomous SAE Interpretability Research?",
+   "query": "autonomous research agent",
+   "found_at": "2026-10-27T02:50:18.062Z"
+  },
+  {
+   "arxiv_id": "2603.10098",
+   "title": "Code-Space Response Oracles: Generating Interpretable Multi-Agent Policies with Large Language Models",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2402.19299",
+   "title": "RL-GPT: Integrating Reinforcement Learning and Code-as-policy",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2606.13097",
+   "title": "Functional Cache Grafting: Robust and Rapid Code-Policy Synthesis for Embodied Agents",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2505.10749",
+   "title": "Code-Driven Planning in Grid Worlds with Large Language Models",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2610.22791",
+   "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2609.05903",
+   "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2610.23479",
+   "title": "HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2508.02629",
+   "title": "HyCodePolicy: Hybrid Language Controllers for Multimodal Monitoring and   Decision in Embodied Agents",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "2512.21024",
+   "title": "Policy-Conditioned Policies for Multi-Agent Task Solving",
+   "query": "code as policy language model",
+   "found_at": "2026-10-27T02:50:08.384Z"
+  },
+  {
+   "arxiv_id": "1805.06610",
+   "title": "A Formulation of Recursive Self-Improvement and Its Possible Efficiency",
+   "query": "recursive self-improvement",
+   "found_at": "2026-10-27T02:49:58.552Z"
+  },
+  {
+   "arxiv_id": "cs/0309048",
+   "title": "Goedel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements",
+   "query": "recursive self-improvement",
+   "found_at": "2026-10-27T02:49:58.552Z"
+  },
+  {
+   "arxiv_id": "1312.6764",
+   "title": "Bounded Recursive Self-Improvement",
+   "query": "recursive self-improvement",
+   "found_at": "2026-10-27T02:49:58.552Z"
+  },
+  {
+   "arxiv_id": "2607.15524",
+   "title": "Recursive Harness Self-Improvement",
+   "query": "recursive self-improvement",
+   "found_at": "2026-10-27T02:49:58.552Z"
+  },
+  {
+   "arxiv_id": "2604.13618",
+   "title": "C2: Scalable Rubric-Augmented Reward Modeling from Binary Preferences",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2605.29156",
+   "title": "RUBRIC-ARROW: Alternating Pointwise Rubric Reward Modeling for LLM Post-training in Non-verifiable Domains",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2506.16507",
+   "title": "Robust Reward Modeling via Causal Rubrics",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2505.13388",
+   "title": "R3: Robust Rubric-Agnostic Reward Models",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2511.16139",
+   "title": "Multidimensional Rubric-oriented Reward Model Learning via Geometric Projection Reference Constraints",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2604.14820",
+   "title": "SWE-TRACE: Optimizing Long-Horizon SWE Agents Through Rubric Process Reward Models and Heuristic Test-Time Scaling",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2510.01146",
+   "title": "mR3: Multilingual Rubric-Agnostic Reward Reasoning Models",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2509.21500",
+   "title": "Chasing the Tail: Effective Rubric-based Reward Modeling for Large\n  Language Model Post-Training",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2603.08035",
+   "title": "CDRRM: Contrast-Driven Rubric Generation for Reliable and Interpretable Reward Modeling",
+   "query": "reward model rubric",
+   "found_at": "2026-10-27T02:50:15.214Z"
+  },
+  {
+   "arxiv_id": "2506.04651",
+   "title": "Agents of Change: Self-Evolving LLM Agents for Strategic Planning",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2602.21158",
+   "title": "SELAUR: Self Evolving LLM Agent via Uncertainty-aware Rewards",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2509.26354",
+   "title": "Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2604.17091",
+   "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2606.07367",
+   "title": "Self-evolving LLM agents with in-distribution Optimization",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2507.02004",
+   "title": "STELLA: Self-Evolving LLM Agent for Biomedical Research",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2608.00155",
+   "title": "AgentStream: How Well Do Self-Evolving LLM Agents Perform Under Streaming Tasks?",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2601.04620",
+   "title": "AgentDevel: Reframing Self-Evolving LLM Agents as Release Engineering",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2606.04703",
+   "title": "Rethinking Continual Experience Internalization for Self-Evolving LLM Agents",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2605.26720",
+   "title": "Towards Feedback-to-Plan Decisions for Self-Evolving LLM Agents in CUDA Kernel Generation",
+   "query": "self-evolving LLM agent",
+   "found_at": "2026-10-27T02:50:03.850Z"
+  },
+  {
+   "arxiv_id": "2605.24517",
+   "title": "ECHO: Terminal Agents Learn World Models for Free",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  },
+  {
+   "arxiv_id": "2402.10877",
+   "title": "Robust agents learn causal world models",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  },
+  {
+   "arxiv_id": "2407.17695",
+   "title": "Enhancing Agent Learning through World Dynamics Modeling",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  },
+  {
+   "arxiv_id": "2601.13247",
+   "title": "Aligning Agentic World Models via Knowledgeable Experience Learning",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  },
+  {
+   "arxiv_id": "2410.13232",
+   "title": "Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  },
+  {
+   "arxiv_id": "2601.08955",
+   "title": "Imagine-then-Plan: Agent Learning from Adaptive Lookahead with World Models",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  },
+  {
+   "arxiv_id": "2501.10116",
+   "title": "GAWM: Global-Aware World Model for Multi-Agent Reinforcement Learning",
+   "query": "world model agent learning",
+   "found_at": "2026-10-27T02:50:10.564Z"
+  }
+ ]
+}
