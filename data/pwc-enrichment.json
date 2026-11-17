@@ -1,111 +1,123 @@
 {
  "stats": {
-  "generated_at": "2026-10-27T02:50:19.628Z",
-  "db_total": 428,
-  "arxiv_linked": 370,
-  "matched": 248,
-  "missing": 109,
-  "error": 11,
+  "generated_at": "2026-11-17T02:16:42.408Z",
+  "db_total": 462,
+  "arxiv_linked": 404,
+  "matched": 285,
+  "missing": 117,
+  "error": 0,
   "candidates_new": 62
  },
  "papers": {
   "2209.07753": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:26:22.294Z"
+   "pwc_id": "79741",
+   "title": "Code as Policies: Language Model Programs for Embodied Control",
+   "cites": 2291,
+   "arxiv": "2209.07753",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:07:36.504Z"
   },
   "2209.11302": {
    "pwc_id": "10385",
    "title": "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models",
-   "cites": 1162,
+   "cites": 1219,
    "arxiv": "2209.11302",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:26.981Z"
+   "synced_at": "2026-11-17T02:07:37.657Z"
   },
   "2307.05973": {
    "pwc_id": "18187",
    "title": "VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models",
-   "cites": 1254,
+   "cites": 1345,
    "arxiv": "2307.05973",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:28.813Z"
+   "synced_at": "2026-11-17T02:07:38.798Z"
   },
   "2306.17582": {
    "pwc_id": "17912",
    "title": "ChatGPT for Robotics: Design Principles and Model Abilities",
-   "cites": 763,
+   "cites": 776,
    "arxiv": "2306.17582",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:29.940Z"
+   "synced_at": "2026-11-17T02:07:39.939Z"
   },
   "2402.16117": {
    "pwc_id": "77760",
    "title": "RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis",
-   "cites": 68,
+   "cites": 77,
    "arxiv": "2402.16117",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:31.052Z"
+   "synced_at": "2026-11-17T02:07:41.081Z"
   },
   "2508.21378": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:32.099Z"
+   "synced_at": "2026-11-17T02:07:42.130Z"
   },
   "2605.02600": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:33.131Z"
+   "synced_at": "2026-11-17T02:07:43.193Z"
   },
   "2501.03841": {
-   "status": "error:HTTP 500",
-   "synced_at": "2026-10-27T02:26:36.289Z"
+   "pwc_id": "42574",
+   "title": "OmniManip: Towards General Robotic Manipulation via Object-Centric   Interaction Primitives as Spatial Constraints",
+   "cites": 118,
+   "arxiv": "2501.03841",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:07:44.326Z"
   },
   "2206.08896": {
    "pwc_id": "9525",
    "title": "Evolution through Large Models",
-   "cites": 183,
+   "cites": 192,
    "arxiv": "2206.08896",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:37.390Z"
+   "synced_at": "2026-11-17T02:07:45.476Z"
   },
   "2601.06845": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:38.436Z"
+   "synced_at": "2026-11-17T02:07:46.538Z"
   },
   "2607.00272": {
    "pwc_id": "99049",
    "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
-   "cites": 91,
+   "cites": 121,
    "arxiv": "2607.00272",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:39.521Z"
+   "synced_at": "2026-11-17T02:07:47.659Z"
   },
   "2501.04268": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:40.557Z"
+   "synced_at": "2026-11-17T02:07:48.707Z"
   },
   "2606.18247": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:41.575Z"
+   "synced_at": "2026-11-17T02:07:49.763Z"
   },
   "2509.23829": {
    "pwc_id": "86410",
    "title": "DexFlyWheel: A Scalable and Self-improving Data Generation Framework for Dexterous Manipulation",
-   "cites": 10,
+   "cites": 11,
    "arxiv": "2509.23829",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:42.688Z"
+   "synced_at": "2026-11-17T02:07:50.894Z"
   },
   "2511.19647": {
    "pwc_id": "64592",
@@ -115,57 +127,57 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:44.050Z"
+   "synced_at": "2026-11-17T02:07:52.025Z"
   },
   "2402.01030": {
    "pwc_id": "26617",
    "title": "Executable Code Actions Elicit Better LLM Agents",
-   "cites": 721,
+   "cites": 774,
    "arxiv": "2402.01030",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:45.224Z"
+   "synced_at": "2026-11-17T02:07:53.191Z"
   },
   "2508.03923": {
    "pwc_id": "109295",
    "title": "CoAct-1: Computer-using Multi-Agent System with Coding Actions",
-   "cites": 36,
+   "cites": 39,
    "arxiv": "2508.03923",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:46.338Z"
+   "synced_at": "2026-11-17T02:07:54.329Z"
   },
   "2310.04406": {
    "pwc_id": "21508",
    "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
-   "cites": 715,
+   "cites": 771,
    "arxiv": "2310.04406",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:47.473Z"
+   "synced_at": "2026-11-17T02:07:55.491Z"
   },
   "2409.07429": {
    "pwc_id": "36777",
    "title": "Agent Workflow Memory",
-   "cites": 400,
+   "cites": 481,
    "arxiv": "2409.07429",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:48.580Z"
+   "synced_at": "2026-11-17T02:07:56.616Z"
   },
   "2504.07079": {
    "pwc_id": "47459",
    "title": "SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills",
-   "cites": 185,
+   "cites": 222,
    "arxiv": "2504.07079",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:49.661Z"
+   "synced_at": "2026-11-17T02:07:57.722Z"
   },
   "2411.01747": {
    "pwc_id": "39576",
@@ -175,85 +187,85 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:50.757Z"
+   "synced_at": "2026-11-17T02:07:58.837Z"
   },
   "2309.17428": {
    "pwc_id": "21107",
    "title": "CRAFT: Customizing LLMs by Creating and Retrieving from Specialized Toolsets",
-   "cites": 161,
+   "cites": 171,
    "arxiv": "2309.17428",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:51.891Z"
+   "synced_at": "2026-11-17T02:07:59.967Z"
   },
   "2310.12823": {
    "pwc_id": "22221",
    "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
-   "cites": 415,
+   "cites": 441,
    "arxiv": "2310.12823",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:52.996Z"
+   "synced_at": "2026-11-17T02:08:01.111Z"
   },
   "2309.11489": {
    "pwc_id": "20687",
    "title": "Text2Reward: Reward Shaping with Language Models for Reinforcement Learning",
-   "cites": 231,
+   "cites": 249,
    "arxiv": "2309.11489",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:54.093Z"
+   "synced_at": "2026-11-17T02:08:02.245Z"
   },
   "2303.00001": {
    "pwc_id": "13396",
    "title": "Reward Design with Language Models",
-   "cites": 352,
+   "cites": 364,
    "arxiv": "2303.00001",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:55.185Z"
+   "synced_at": "2026-11-17T02:08:03.378Z"
   },
   "2410.14660": {
    "pwc_id": "38821",
    "title": "A Large Language Model-Driven Reward Design Framework via Dynamic Feedback for Reinforcement Learning",
-   "cites": 56,
+   "cites": 60,
    "arxiv": "2410.14660",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:56.292Z"
+   "synced_at": "2026-11-17T02:08:04.516Z"
   },
   "2310.12931": {
    "pwc_id": "22228",
    "title": "Eureka: Human-Level Reward Design via Coding Large Language Models",
-   "cites": 820,
+   "cites": 880,
    "arxiv": "2310.12931",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:26:57.686Z"
+   "synced_at": "2026-11-17T02:08:05.963Z"
   },
   "2406.01967": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:58.721Z"
+   "synced_at": "2026-11-17T02:08:07.018Z"
   },
   "2502.10906": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:26:59.790Z"
+   "synced_at": "2026-11-17T02:08:08.080Z"
   },
   "2606.19980": {
    "pwc_id": "98541",
    "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
-   "cites": 51,
+   "cites": 78,
    "arxiv": "2606.19980",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:00.879Z"
+   "synced_at": "2026-11-17T02:08:09.201Z"
   },
   "2601.14032": {
    "pwc_id": "62293",
@@ -263,27 +275,27 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:01.979Z"
+   "synced_at": "2026-11-17T02:08:10.365Z"
   },
   "2310.19791": {
    "pwc_id": "22774",
    "title": "LILO: Learning Interpretable Libraries by Compressing and Documenting Code",
-   "cites": 59,
+   "cites": 65,
    "arxiv": "2310.19791",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:03.060Z"
+   "synced_at": "2026-11-17T02:08:11.500Z"
   },
   "2305.16291": {
    "pwc_id": "16316",
    "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
-   "cites": 2647,
+   "cites": 2854,
    "arxiv": "2305.16291",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:04.207Z"
+   "synced_at": "2026-11-17T02:08:12.649Z"
   },
   "2608.29310": {
    "pwc_id": "113825",
@@ -293,41 +305,41 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:05.295Z"
+   "synced_at": "2026-11-17T02:08:13.794Z"
   },
   "2006.08381": {
    "pwc_id": "3723",
    "title": "DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning",
-   "cites": 278,
+   "cites": 284,
    "arxiv": "2006.08381",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:06.691Z"
+   "synced_at": "2026-11-17T02:08:14.887Z"
   },
   "2603.02766": {
    "pwc_id": "59971",
    "title": "EvoSkill: Automated Skill Discovery for Multi-Agent Systems",
-   "cites": 111,
+   "cites": 126,
    "arxiv": "2603.02766",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:07.823Z"
+   "synced_at": "2026-11-17T02:08:15.990Z"
   },
   "2604.05427": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:08.887Z"
+   "synced_at": "2026-11-17T02:08:17.033Z"
   },
   "2412.04455": {
    "pwc_id": "41077",
    "title": "Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection",
-   "cites": 89,
+   "cites": 97,
    "arxiv": "2412.04455",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:09.960Z"
+   "synced_at": "2026-11-17T02:08:18.144Z"
   },
   "2506.18315": {
    "pwc_id": "51364",
@@ -337,115 +349,115 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:11.040Z"
+   "synced_at": "2026-11-17T02:08:19.311Z"
   },
   "2510.05441": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:12.050Z"
+   "synced_at": "2026-11-17T02:08:20.362Z"
   },
   "2606.00801": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:13.060Z"
+   "synced_at": "2026-11-17T02:08:21.430Z"
   },
   "2607.18711": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:14.113Z"
+   "synced_at": "2026-11-17T02:08:22.458Z"
   },
   "2511.10007": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:15.132Z"
+   "synced_at": "2026-11-17T02:08:23.504Z"
   },
   "2311.01455": {
    "pwc_id": "22915",
    "title": "RoboGen: Towards Unleashing Infinite Data for Automated Robot Learning via Generative Simulation",
-   "cites": 323,
+   "cites": 341,
    "arxiv": "2311.01455",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:16.209Z"
+   "synced_at": "2026-11-17T02:08:24.607Z"
   },
   "2502.02590": {
    "pwc_id": "43672",
    "title": "Articulate AnyMesh: Open-Vocabulary 3D Articulated Objects Modeling",
-   "cites": 60,
+   "cites": 61,
    "arxiv": "2502.02590",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:17.279Z"
+   "synced_at": "2026-11-17T02:08:25.737Z"
   },
   "2605.19587": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:18.305Z"
+   "synced_at": "2026-11-17T02:08:26.785Z"
   },
   "2605.18451": {
    "pwc_id": "83370",
    "title": "Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis",
-   "cites": 6,
+   "cites": 9,
    "arxiv": "2605.18451",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:19.423Z"
+   "synced_at": "2026-11-17T02:08:27.891Z"
   },
   "2604.02580": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:20.447Z"
+   "synced_at": "2026-11-17T02:08:28.943Z"
   },
   "2606.01057": {
    "pwc_id": "87530",
    "title": "3DCodeBench: Benchmarking Agentic Procedural 3D Modeling Via Code",
-   "cites": 21,
+   "cites": 27,
    "arxiv": "2606.01057",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:21.850Z"
+   "synced_at": "2026-11-17T02:08:30.076Z"
   },
   "2608.27549": {
    "pwc_id": "113728",
    "title": "Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning",
-   "cites": 16,
+   "cites": 19,
    "arxiv": "2608.27549",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:35.216Z"
+   "synced_at": "2026-11-17T02:08:48.002Z"
   },
   "2402.12275": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:24.041Z"
+   "synced_at": "2026-11-17T02:08:32.283Z"
   },
   "2510.04542": {
    "pwc_id": "93024",
    "title": "Code World Models for General Game Playing",
-   "cites": 30,
+   "cites": 33,
    "arxiv": "2510.04542",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:25.147Z"
+   "synced_at": "2026-11-17T02:08:34.643Z"
   },
   "2405.15383": {
    "pwc_id": "31686",
    "title": "Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search",
-   "cites": 55,
+   "cites": 61,
    "arxiv": "2405.15383",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:27.602Z"
+   "synced_at": "2026-11-17T02:08:37.529Z"
   },
   "2505.10819": {
    "pwc_id": "48802",
    "title": "PoE-World: Compositional World Modeling with Products of Programmatic Experts",
-   "cites": 32,
+   "cites": 35,
    "arxiv": "2505.10819",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:28.742Z"
+   "synced_at": "2026-11-17T02:08:38.916Z"
   },
   "2512.22336": {
    "pwc_id": "63283",
@@ -455,147 +467,147 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:29.805Z"
+   "synced_at": "2026-11-17T02:08:40.385Z"
   },
   "2305.14078": {
    "pwc_id": "78999",
    "title": "Large Language Models as Commonsense Knowledge for Large-Scale Task\n  Planning",
-   "cites": 423,
+   "cites": 441,
    "arxiv": "2305.14078",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:30.897Z"
+   "synced_at": "2026-11-17T02:08:42.581Z"
   },
   "2411.06559": {
    "pwc_id": "39854",
    "title": "Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents",
-   "cites": 160,
+   "cites": 178,
    "arxiv": "2411.06559",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:32.000Z"
+   "synced_at": "2026-11-17T02:08:44.050Z"
   },
   "2602.05842": {
    "pwc_id": "55824",
    "title": "Reinforcement World Model Learning for LLM-based Agents",
-   "cites": 21,
+   "cites": 24,
    "arxiv": "2602.05842",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:33.109Z"
+   "synced_at": "2026-11-17T02:08:45.525Z"
   },
   "2605.14700": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:34.131Z"
+   "synced_at": "2026-11-17T02:08:46.592Z"
   },
   "2501.03575": {
    "pwc_id": "42563",
    "title": "Cosmos World Foundation Model Platform for Physical AI",
-   "cites": 954,
+   "cites": 1042,
    "arxiv": "2501.03575",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:36.306Z"
+   "synced_at": "2026-11-17T02:08:49.689Z"
   },
   "2403.03163": {
    "pwc_id": "28438",
    "title": "Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering",
-   "cites": 198,
+   "cites": 225,
    "arxiv": "2403.03163",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:37.943Z"
+   "synced_at": "2026-11-17T02:08:51.112Z"
   },
   "2505.06507": {
    "pwc_id": "48592",
    "title": "Text-to-CadQuery: A New Paradigm for CAD Generation with Scalable Large Model Capabilities",
-   "cites": 53,
+   "cites": 61,
    "arxiv": "2505.06507",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:39.021Z"
+   "synced_at": "2026-11-17T02:08:52.481Z"
   },
   "2503.05388": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:40.059Z"
+   "synced_at": "2026-11-17T02:08:53.540Z"
   },
   "2506.01232": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:41.126Z"
+   "synced_at": "2026-11-17T02:08:54.592Z"
   },
   "2304.02711": {
    "pwc_id": "14490",
    "title": "Structured prompt interrogation and recursive extraction of semantics (SPIRES): A method for populating knowledge bases using zero-shot learning",
-   "cites": 163,
+   "cites": 175,
    "arxiv": "2304.02711",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:42.233Z"
+   "synced_at": "2026-11-17T02:08:55.976Z"
   },
   "2507.08432": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:43.267Z"
+   "synced_at": "2026-11-17T02:08:57.008Z"
   },
   "2608.07530": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:44.286Z"
+   "synced_at": "2026-11-17T02:08:58.055Z"
   },
   "2211.11559": {
    "pwc_id": "11492",
    "title": "Visual Programming: Compositional visual reasoning without training",
-   "cites": 785,
+   "cites": 823,
    "arxiv": "2211.11559",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:45.384Z"
+   "synced_at": "2026-11-17T02:08:59.433Z"
   },
   "2303.08128": {
    "pwc_id": "13762",
    "title": "ViperGPT: Visual Inference via Python Execution for Reasoning",
-   "cites": 908,
+   "cites": 951,
    "arxiv": "2303.08128",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:46.734Z"
+   "synced_at": "2026-11-17T02:09:00.746Z"
   },
   "2211.10435": {
    "pwc_id": "11436",
    "title": "PAL: Program-aided Language Models",
-   "cites": 876,
+   "cites": 914,
    "arxiv": "2211.10435",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:47.825Z"
+   "synced_at": "2026-11-17T02:09:02.205Z"
   },
   "2211.12588": {
    "pwc_id": "11541",
    "title": "Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks",
-   "cites": 1531,
+   "cites": 1590,
    "arxiv": "2211.12588",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:48.912Z"
+   "synced_at": "2026-11-17T02:09:03.505Z"
   },
   "2304.11477": {
    "pwc_id": "14895",
    "title": "LLM+P: Empowering Large Language Models with Optimal Planning Proficiency",
-   "cites": 724,
+   "cites": 748,
    "arxiv": "2304.11477",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:50.005Z"
+   "synced_at": "2026-11-17T02:09:04.830Z"
   },
   "2408.02210": {
    "pwc_id": "35531",
@@ -605,201 +617,201 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:51.078Z"
+   "synced_at": "2026-11-17T02:09:06.237Z"
   },
   "2304.05128": {
    "pwc_id": "14606",
    "title": "Teaching Large Language Models to Self-Debug",
-   "cites": 1445,
+   "cites": 1534,
    "arxiv": "2304.05128",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:52.200Z"
+   "synced_at": "2026-11-17T02:09:07.520Z"
   },
   "2310.13032": {
    "pwc_id": "22251",
    "title": "Quality-Diversity through AI Feedback",
-   "cites": 56,
+   "cites": 60,
    "arxiv": "2310.13032",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:53.253Z"
+   "synced_at": "2026-11-17T02:09:08.786Z"
   },
   "2506.05634": {
    "pwc_id": "92804",
    "title": "AutoQD: Automatic Discovery of Diverse Behaviors with Quality-Diversity Optimization",
-   "cites": 5,
+   "cites": 8,
    "arxiv": "2506.05634",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:54.336Z"
+   "synced_at": "2026-11-17T02:09:10.087Z"
   },
   "2509.25140": {
    "pwc_id": "67402",
    "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
-   "cites": 288,
+   "cites": 341,
    "arxiv": "2509.25140",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:55.445Z"
+   "synced_at": "2026-11-17T02:09:11.538Z"
   },
   "2506.15451": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:27:56.458Z"
+   "synced_at": "2026-11-17T02:09:12.596Z"
   },
   "2407.04620": {
    "pwc_id": "34212",
    "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
-   "cites": 409,
+   "cites": 446,
    "arxiv": "2407.04620",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:57.800Z"
+   "synced_at": "2026-11-17T02:09:14.142Z"
   },
   "2501.00663": {
    "pwc_id": "42371",
    "title": "Titans: Learning to Memorize at Test Time",
-   "cites": 393,
+   "cites": 431,
    "arxiv": "2501.00663",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:27:59.002Z"
+   "synced_at": "2026-11-17T02:09:15.515Z"
   },
   "2504.16084": {
    "pwc_id": "48064",
    "title": "TTRL: Test-Time Reinforcement Learning",
-   "cites": 264,
+   "cites": 285,
    "arxiv": "2504.16084",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:00.226Z"
+   "synced_at": "2026-11-17T02:09:17.005Z"
   },
   "2406.07496": {
    "pwc_id": "32724",
    "title": "TextGrad: Automatic \"Differentiation\" via Text",
-   "cites": 270,
+   "cites": 297,
    "arxiv": "2406.07496",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:01.454Z"
+   "synced_at": "2026-11-17T02:09:18.348Z"
   },
   "2310.03714": {
    "pwc_id": "21467",
    "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
-   "cites": 1113,
+   "cites": 1182,
    "arxiv": "2310.03714",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:02.712Z"
+   "synced_at": "2026-11-17T02:09:19.792Z"
   },
   "2506.10943": {
    "pwc_id": "51041",
    "title": "Self-Adapting Language Models",
-   "cites": 91,
+   "cites": 107,
    "arxiv": "2506.10943",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:04.533Z"
+   "synced_at": "2026-11-17T02:09:21.149Z"
   },
   "2408.08435": {
    "pwc_id": "35883",
    "title": "Automated Design of Agentic Systems",
-   "cites": 444,
+   "cites": 525,
    "arxiv": "2408.08435",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:05.705Z"
+   "synced_at": "2026-11-17T02:09:22.414Z"
   },
   "2410.10762": {
    "pwc_id": "38457",
    "title": "AFlow: Automating Agentic Workflow Generation",
-   "cites": 474,
+   "cites": 538,
    "arxiv": "2410.10762",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:06.915Z"
+   "synced_at": "2026-11-17T02:09:23.770Z"
   },
   "2402.16823": {
    "pwc_id": "27997",
    "title": "Language Agents as Optimizable Graphs",
-   "cites": 82,
+   "cites": 95,
    "arxiv": "2402.16823",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:08.110Z"
+   "synced_at": "2026-11-17T02:09:25.089Z"
   },
   "2406.14228": {
    "pwc_id": "33382",
    "title": "EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms",
-   "cites": 137,
+   "cites": 147,
    "arxiv": "2406.14228",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:09.286Z"
+   "synced_at": "2026-11-17T02:09:26.403Z"
   },
   "2410.06153": {
    "pwc_id": "91396",
    "title": "AgentSquare: Automatic LLM Agent Search in Modular Design Space",
-   "cites": 176,
+   "cites": 201,
    "arxiv": "2410.06153",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:10.480Z"
+   "synced_at": "2026-11-17T02:09:27.674Z"
   },
   "2507.19457": {
    "pwc_id": "52068",
    "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
-   "cites": 572,
+   "cites": 700,
    "arxiv": "2507.19457",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:11.718Z"
+   "synced_at": "2026-11-17T02:09:29.021Z"
   },
   "2309.08532": {
    "pwc_id": "20481",
    "title": "EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers",
-   "cites": 232,
+   "cites": 239,
    "arxiv": "2309.08532",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:12.936Z"
+   "synced_at": "2026-11-17T02:09:30.375Z"
   },
   "2310.02170": {
    "pwc_id": "21332",
    "title": "A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration",
-   "cites": 361,
+   "cites": 392,
    "arxiv": "2310.02170",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:14.145Z"
+   "synced_at": "2026-11-17T02:09:31.690Z"
   },
   "2504.15257": {
    "pwc_id": "48004",
    "title": "FlowReasoner: Reinforcing Query-Level Meta-Agents",
-   "cites": 61,
+   "cites": 67,
    "arxiv": "2504.15257",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:15.350Z"
+   "synced_at": "2026-11-17T02:09:32.991Z"
   },
   "2602.03955": {
    "pwc_id": "55802",
@@ -809,27 +821,27 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:16.598Z"
+   "synced_at": "2026-11-17T02:09:34.339Z"
   },
   "2506.14728": {
    "pwc_id": "51233",
    "title": "AgentDistill: Training-Free Agent Distillation with Generalizable MCP Boxes",
-   "cites": 28,
+   "cites": 30,
    "arxiv": "2506.14728",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:17.838Z"
+   "synced_at": "2026-11-17T02:09:35.698Z"
   },
   "2505.22954": {
    "pwc_id": "50058",
    "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
-   "cites": 392,
+   "cites": 519,
    "arxiv": "2505.22954",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:19.041Z"
+   "synced_at": "2026-11-17T02:09:37.036Z"
   },
   "2608.31076": {
    "pwc_id": "113798",
@@ -839,7 +851,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:20.248Z"
+   "synced_at": "2026-11-17T02:09:38.411Z"
   },
   "2608.12564": {
    "pwc_id": "114099",
@@ -849,91 +861,91 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:21.522Z"
+   "synced_at": "2026-11-17T02:09:39.818Z"
   },
   "2506.13131": {
    "pwc_id": "51136",
    "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
-   "cites": 1047,
+   "cites": 1199,
    "arxiv": "2506.13131",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:22.778Z"
+   "synced_at": "2026-11-17T02:09:41.147Z"
   },
   "2505.03335": {
    "pwc_id": "48442",
    "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
-   "cites": 379,
+   "cites": 422,
    "arxiv": "2505.03335",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:24.009Z"
+   "synced_at": "2026-11-17T02:09:42.495Z"
   },
   "2604.26311": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:28:25.073Z"
+   "synced_at": "2026-11-17T02:09:43.535Z"
   },
   "2304.07590": {
    "pwc_id": "79131",
    "title": "Self-collaboration Code Generation via ChatGPT",
-   "cites": 571,
+   "cites": 598,
    "arxiv": "2304.07590",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:26.300Z"
+   "synced_at": "2026-11-17T02:09:44.871Z"
   },
   "2308.00352": {
    "pwc_id": "18828",
    "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
-   "cites": 2652,
+   "cites": 2833,
    "arxiv": "2308.00352",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:27.559Z"
+   "synced_at": "2026-11-17T02:09:46.223Z"
   },
   "2307.07924": {
    "pwc_id": "18271",
    "title": "ChatDev: Communicative Agents for Software Development",
-   "cites": 1350,
+   "cites": 1468,
    "arxiv": "2307.07924",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:28.798Z"
+   "synced_at": "2026-11-17T02:09:47.559Z"
   },
   "2408.06292": {
    "pwc_id": "35760",
    "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
-   "cites": 1282,
+   "cites": 1399,
    "arxiv": "2408.06292",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:30.005Z"
+   "synced_at": "2026-11-17T02:09:48.917Z"
   },
   "2504.08066": {
    "pwc_id": "47534",
    "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
-   "cites": 455,
+   "cites": 518,
    "arxiv": "2504.08066",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:31.202Z"
+   "synced_at": "2026-11-17T02:09:50.185Z"
   },
   "2502.09183": {
    "pwc_id": "44143",
    "title": "RefineCoder: Iterative Improving of Large Language Models via Adaptive Critique Refinement for Code Generation",
-   "cites": 13,
+   "cites": 14,
    "arxiv": "2502.09183",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:32.383Z"
+   "synced_at": "2026-11-17T02:09:51.523Z"
   },
   "2502.18864": {
    "pwc_id": "45048",
@@ -943,79 +955,79 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:33.603Z"
+   "synced_at": "2026-11-17T02:09:52.842Z"
   },
   "2503.22708": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:28:34.618Z"
+   "synced_at": "2026-11-17T02:09:53.882Z"
   },
   "2301.04104": {
    "pwc_id": "12363",
    "title": "Mastering Diverse Domains through World Models",
-   "cites": 1514,
+   "cites": 1598,
    "arxiv": "2301.04104",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:35.778Z"
+   "synced_at": "2026-11-17T02:09:55.159Z"
   },
   "1911.08265": {
    "pwc_id": "2826",
    "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
-   "cites": 2800,
+   "cites": 2890,
    "arxiv": "1911.08265",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:37.006Z"
+   "synced_at": "2026-11-17T02:09:56.499Z"
   },
   "2307.07176": {
    "pwc_id": "18236",
    "title": "SafeDreamer: Safe Reinforcement Learning with World Models",
-   "cites": 71,
+   "cites": 77,
    "arxiv": "2307.07176",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:38.187Z"
+   "synced_at": "2026-11-17T02:09:57.767Z"
   },
   "2512.18832": {
    "pwc_id": "54975",
    "title": "From Word to World: Can Large Language Models be Implicit Text-based World Models?",
-   "cites": 48,
+   "cites": 52,
    "arxiv": "2512.18832",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:39.397Z"
+   "synced_at": "2026-11-17T02:09:59.103Z"
   },
   "2608.07746": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:28:40.433Z"
+   "synced_at": "2026-11-17T02:10:00.157Z"
   },
   "2509.24527": {
    "pwc_id": "67468",
    "title": "Training Agents Inside of Scalable World Models",
-   "cites": 145,
+   "cites": 176,
    "arxiv": "2509.24527",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:41.655Z"
+   "synced_at": "2026-11-17T02:10:01.437Z"
   },
   "1907.01657": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:28:42.686Z"
+   "synced_at": "2026-11-17T02:10:02.489Z"
   },
   "2406.01309": {
    "pwc_id": "91814",
    "title": "REvolve: Reward Evolution with Large Language Models using Human Feedback",
-   "cites": 34,
+   "cites": 36,
    "arxiv": "2406.01309",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:43.912Z"
+   "synced_at": "2026-11-17T02:10:03.823Z"
   },
   "2411.00418": {
    "pwc_id": "39501",
@@ -1025,25 +1037,25 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:45.155Z"
+   "synced_at": "2026-11-17T02:10:05.275Z"
   },
   "2608.18279": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:28:46.207Z"
+   "synced_at": "2026-11-17T02:10:06.346Z"
   },
   "2607.07663": {
    "pwc_id": "106047",
    "title": "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
-   "cites": 40,
+   "cites": 53,
    "arxiv": "2607.07663",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:47.435Z"
+   "synced_at": "2026-11-17T02:10:07.586Z"
   },
   "2607.04277": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:28:48.464Z"
+   "synced_at": "2026-11-17T02:10:08.664Z"
   },
   "2410.04444": {
    "pwc_id": "37954",
@@ -1053,47 +1065,47 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:49.668Z"
+   "synced_at": "2026-11-17T02:10:09.988Z"
   },
   "2606.07412": {
    "pwc_id": "97964",
    "title": "Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills",
-   "cites": 12,
+   "cites": 13,
    "arxiv": "2606.07412",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:50.856Z"
+   "synced_at": "2026-11-17T02:10:11.217Z"
   },
   "2511.13646": {
    "pwc_id": "54225",
    "title": "Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?",
-   "cites": 113,
+   "cites": 121,
    "arxiv": "2511.13646",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:52.073Z"
+   "synced_at": "2026-11-17T02:10:12.560Z"
   },
   "2502.00212": {
    "pwc_id": "43487",
    "title": "STP: Self-play LLM Theorem Provers with Iterative Conjecturing and Proving",
-   "cites": 89,
+   "cites": 97,
    "arxiv": "2502.00212",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:53.279Z"
+   "synced_at": "2026-11-17T02:10:13.829Z"
   },
   "2604.20209": {
    "pwc_id": "106105",
    "title": "Scaling Self-Play with Self-Guidance",
-   "cites": 7,
+   "cites": 9,
    "arxiv": "2604.20209",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:54.508Z"
+   "synced_at": "2026-11-17T02:10:15.275Z"
   },
   "2602.10984": {
    "pwc_id": "128519",
@@ -1103,17 +1115,17 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:55.625Z"
+   "synced_at": "2026-11-17T02:10:16.565Z"
   },
   "2607.28568": {
    "pwc_id": "105929",
    "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
-   "cites": 8,
+   "cites": 16,
    "arxiv": "2607.28568",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:56.883Z"
+   "synced_at": "2026-11-17T02:10:18.145Z"
   },
   "2609.05295": {
    "pwc_id": "113971",
@@ -1123,27 +1135,27 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:58.085Z"
+   "synced_at": "2026-11-17T02:10:19.619Z"
   },
   "2602.11075": {
    "pwc_id": "56055",
    "title": "RISE: Self-Improving Robot Policy with Compositional World Model",
-   "cites": 53,
+   "cites": 59,
    "arxiv": "2602.11075",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:28:59.568Z"
+   "synced_at": "2026-11-17T02:10:21.074Z"
   },
   "2608.11350": {
    "pwc_id": "109115",
    "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
-   "cites": 17,
+   "cites": 26,
    "arxiv": "2608.11350",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:01.499Z"
+   "synced_at": "2026-11-17T02:10:22.626Z"
   },
   "2603.13131": {
    "pwc_id": "56708",
@@ -1153,7 +1165,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:03.108Z"
+   "synced_at": "2026-11-17T02:10:24.090Z"
   },
   "2608.17906": {
    "pwc_id": "109701",
@@ -1163,97 +1175,97 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:04.540Z"
+   "synced_at": "2026-11-17T02:10:25.478Z"
   },
   "2603.01712": {
    "pwc_id": "60037",
    "title": "FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents",
-   "cites": 10,
+   "cites": 13,
    "arxiv": "2603.01712",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:05.985Z"
+   "synced_at": "2026-11-17T02:10:26.914Z"
   },
   "2606.06473": {
    "pwc_id": "95091",
    "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery",
-   "cites": 28,
+   "cites": 29,
    "arxiv": "2606.06473",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:07.296Z"
+   "synced_at": "2026-11-17T02:10:28.336Z"
   },
   "2401.10020": {
    "pwc_id": "25992",
    "title": "Self-Rewarding Language Models",
-   "cites": 775,
+   "cites": 809,
    "arxiv": "2401.10020",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:08.937Z"
+   "synced_at": "2026-11-17T02:10:29.904Z"
   },
   "2501.04519": {
    "pwc_id": "42615",
    "title": "rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking",
-   "cites": 365,
+   "cites": 382,
    "arxiv": "2501.04519",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:10.572Z"
+   "synced_at": "2026-11-17T02:10:31.462Z"
   },
   "2203.14465": {
    "pwc_id": "8447",
    "title": "STaR: Bootstrapping Reasoning With Reasoning",
-   "cites": 1162,
+   "cites": 1248,
    "arxiv": "2203.14465",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:12.043Z"
+   "synced_at": "2026-11-17T02:10:32.897Z"
   },
   "2309.16797": {
    "pwc_id": "21055",
    "title": "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution",
-   "cites": 692,
+   "cites": 743,
    "arxiv": "2309.16797",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:14.237Z"
+   "synced_at": "2026-11-17T02:10:34.306Z"
   },
   "2310.02304": {
    "pwc_id": "21350",
    "title": "Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
-   "cites": 193,
+   "cites": 239,
    "arxiv": "2310.02304",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:15.747Z"
+   "synced_at": "2026-11-17T02:10:35.751Z"
   },
   "2607.05297": {
    "pwc_id": "106046",
    "title": "MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution",
-   "cites": 27,
+   "cites": 29,
    "arxiv": "2607.05297",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:17.358Z"
+   "synced_at": "2026-11-17T02:10:37.073Z"
   },
   "2511.16043": {
    "pwc_id": "54279",
    "title": "Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning",
-   "cites": 89,
+   "cites": 98,
    "arxiv": "2511.16043",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:19.339Z"
+   "synced_at": "2026-11-17T02:10:38.512Z"
   },
   "2603.06333": {
    "pwc_id": "56611",
@@ -1263,225 +1275,243 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:21.078Z"
+   "synced_at": "2026-11-17T02:10:39.908Z"
   },
   "2407.18219": {
    "pwc_id": "35208",
    "title": "Recursive Introspection: Teaching Language Model Agents How to Self-Improve",
-   "cites": 223,
+   "cites": 230,
    "arxiv": "2407.18219",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:23.848Z"
+   "synced_at": "2026-11-17T02:10:41.363Z"
   },
   "2504.15228": {
    "pwc_id": "48002",
    "title": "A Self-Improving Coding Agent",
-   "cites": 75,
+   "cites": 93,
    "arxiv": "2504.15228",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:29:26.035Z"
+   "synced_at": "2026-11-17T02:10:42.832Z"
   },
   "2305.02807": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:29:28.181Z"
+   "synced_at": "2026-11-17T02:10:43.888Z"
   },
   "2503.07885": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:29:32.255Z"
+   "synced_at": "2026-11-17T02:10:44.931Z"
   },
   "2605.12386": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:29:41.166Z"
+   "synced_at": "2026-11-17T02:10:45.973Z"
   },
   "2510.11631": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:29:46.156Z"
+   "synced_at": "2026-11-17T02:10:47.030Z"
   },
   "2602.16317": {
-   "status": "error:HTTP 503",
-   "synced_at": "2026-10-27T02:29:51.922Z"
+   "pwc_id": "56181",
+   "title": "CADEvolve: Creating Realistic CAD via Program Evolution",
+   "cites": 9,
+   "arxiv": "2602.16317",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:10:48.477Z"
   },
   "2601.18067": {
-   "status": "error:HTTP 503",
-   "synced_at": "2026-10-27T02:30:02.537Z"
+   "pwc_id": "55546",
+   "title": "EvolVE: Evolutionary Search for LLM-based Verilog Generation and Optimization",
+   "cites": 15,
+   "arxiv": "2601.18067",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:10:49.907Z"
   },
   "2303.11366": {
-   "status": "error:HTTP 503",
-   "synced_at": "2026-10-27T02:30:21.993Z"
+   "pwc_id": "13936",
+   "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+   "cites": 6714,
+   "arxiv": "2303.11366",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:10:51.341Z"
   },
   "2308.10144": {
    "pwc_id": "19491",
    "title": "ExpeL: LLM Agents Are Experiential Learners",
-   "cites": 1145,
+   "cites": 1319,
    "arxiv": "2308.10144",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:34.652Z"
+   "synced_at": "2026-11-17T02:10:52.778Z"
   },
   "2412.14042": {
    "pwc_id": "41839",
    "title": "CAD-Recode: Reverse Engineering CAD Code from Point Clouds",
-   "cites": 97,
+   "cites": 106,
    "arxiv": "2412.14042",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:35.824Z"
+   "synced_at": "2026-11-17T02:10:54.107Z"
   },
   "2605.18430": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:30:36.946Z"
+   "synced_at": "2026-11-17T02:10:55.171Z"
   },
   "2312.08617": {
    "pwc_id": "78100",
    "title": "RTLCoder: Outperforming GPT-3.5 in Design RTL Generation with Our\n  Open-Source Dataset and Lightweight Solution",
-   "cites": 157,
+   "cites": 170,
    "arxiv": "2312.08617",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:39.876Z"
+   "synced_at": "2026-11-17T02:10:56.478Z"
   },
   "2504.15659": {
    "pwc_id": "48030",
    "title": "VeriCoder: Enhancing LLM-Based RTL Code Generation through Functional Correctness Validation",
-   "cites": 25,
+   "cites": 28,
    "arxiv": "2504.15659",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:41.072Z"
+   "synced_at": "2026-11-17T02:10:57.879Z"
   },
   "2411.03292": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:30:42.300Z"
+   "synced_at": "2026-11-17T02:10:59.235Z"
   },
   "2509.23713": {
    "pwc_id": "86971",
    "title": "Text-to-Code Generation for Modular Building Layouts in Building Information Modeling",
-   "cites": 2,
+   "cites": 3,
    "arxiv": "2509.23713",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:43.875Z"
+   "synced_at": "2026-11-17T02:11:00.562Z"
   },
   "2511.05533": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:30:44.970Z"
+   "synced_at": "2026-11-17T02:11:01.620Z"
   },
   "2605.14117": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:30:46.056Z"
+   "synced_at": "2026-11-17T02:11:02.680Z"
   },
   "2103.03198": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:30:47.116Z"
+   "synced_at": "2026-11-17T02:11:04.090Z"
   },
   "2505.08137": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:30:48.602Z"
+   "synced_at": "2026-11-17T02:11:05.174Z"
   },
   "2603.28052": {
    "pwc_id": "57132",
    "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
-   "cites": 330,
+   "cites": 382,
    "arxiv": "2603.28052",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:49.755Z"
+   "synced_at": "2026-11-17T02:11:06.513Z"
   },
   "2608.26530": {
    "pwc_id": "109823",
    "title": "PILOT in the Loop: Live Self-Improvement for Long-Horizon Agents",
-   "cites": 4,
+   "cites": 5,
    "arxiv": "2608.26530",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:30:51.853Z"
+   "synced_at": "2026-11-17T02:11:07.948Z"
   },
   "2504.11536": {
    "pwc_id": "47757",
    "title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
-   "cites": 422,
+   "cites": 457,
    "arxiv": "2504.11536",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:03.001Z"
+   "synced_at": "2026-11-17T02:11:09.507Z"
   },
   "2504.20073": {
    "pwc_id": "48204",
    "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
-   "cites": 382,
+   "cites": 433,
    "arxiv": "2504.20073",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:04.493Z"
+   "synced_at": "2026-11-17T02:11:10.960Z"
   },
   "2503.15478": {
    "pwc_id": "46402",
    "title": "SWEET-RL: Training Multi-Turn LLM Agents on Collaborative Reasoning Tasks",
-   "cites": 114,
+   "cites": 123,
    "arxiv": "2503.15478",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:05.661Z"
+   "synced_at": "2026-11-17T02:11:12.404Z"
   },
   "2501.12326": {
    "pwc_id": "43067",
    "title": "UI-TARS: Pioneering Automated GUI Interaction with Native Agents",
-   "cites": 634,
+   "cites": 691,
    "arxiv": "2501.12326",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:08.127Z"
+   "synced_at": "2026-11-17T02:11:13.952Z"
   },
   "2503.01584": {
    "pwc_id": "88937",
    "title": "SENSEI: Semantic Exploration Guided by Foundation Models to Learn Versatile World Models",
-   "cites": 9,
+   "cites": 10,
    "arxiv": "2503.01584",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:09.951Z"
+   "synced_at": "2026-11-17T02:11:15.270Z"
   },
   "2602.09305": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:15.870Z"
+   "synced_at": "2026-11-17T02:11:16.332Z"
   },
   "2606.10546": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:20.013Z"
+   "synced_at": "2026-11-17T02:11:17.379Z"
   },
   "2607.05123": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:23.728Z"
+   "synced_at": "2026-11-17T02:11:18.417Z"
   },
   "2608.00891": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:24.935Z"
+   "synced_at": "2026-11-17T02:11:19.489Z"
   },
   "2606.05515": {
    "pwc_id": "95115",
    "title": "BRepCLIP: Contrastive Multimodal Pretraining on BRep Primitives for CAD Understanding",
-   "cites": 1,
+   "cites": 2,
    "arxiv": "2606.05515",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:28.016Z"
+   "synced_at": "2026-11-17T02:11:20.855Z"
   },
   "2512.13399": {
    "pwc_id": "54806",
@@ -1491,139 +1521,139 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:29.642Z"
+   "synced_at": "2026-11-17T02:11:22.256Z"
   },
   "2603.16065": {
    "pwc_id": "59275",
    "title": "Large Reward Models: Generalizable Online Robot Reward Generation with Vision-Language Models",
-   "cites": 16,
+   "cites": 20,
    "arxiv": "2603.16065",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:32.824Z"
+   "synced_at": "2026-11-17T02:11:23.688Z"
   },
   "2603.28416": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:34.272Z"
+   "synced_at": "2026-11-17T02:11:25.035Z"
   },
   "2504.13171": {
    "pwc_id": "47873",
    "title": "Sleep-time Compute: Beyond Inference Scaling at Test-time",
-   "cites": 43,
+   "cites": 48,
    "arxiv": "2504.13171",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:40.746Z"
+   "synced_at": "2026-11-17T02:11:26.406Z"
   },
   "2508.08884": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:43.950Z"
+   "synced_at": "2026-11-17T02:11:27.475Z"
   },
   "2006.10726": {
    "pwc_id": "3754",
    "title": "Tent: Fully Test-time Adaptation by Entropy Minimization",
-   "cites": 70,
+   "cites": 71,
    "arxiv": "2006.10726",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:46.013Z"
+   "synced_at": "2026-11-17T02:11:28.918Z"
   },
   "2211.15661": {
    "pwc_id": "11671",
    "title": "What learning algorithm is in-context learning? Investigations with linear models",
-   "cites": 811,
+   "cites": 837,
    "arxiv": "2211.15661",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:48.652Z"
+   "synced_at": "2026-11-17T02:11:30.347Z"
   },
   "2607.03441": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:50.103Z"
+   "synced_at": "2026-11-17T02:11:31.423Z"
   },
   "2511.04847": {
    "pwc_id": "93573",
    "title": "Test-Time Adaptation for LLM Agents via Environment Interaction",
-   "cites": 19,
+   "cites": 21,
    "arxiv": "2511.04847",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:31:54.033Z"
+   "synced_at": "2026-11-17T02:11:33.499Z"
   },
   "2605.22166": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:55.236Z"
+   "synced_at": "2026-11-17T02:11:34.545Z"
   },
   "2603.04466": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:56.646Z"
+   "synced_at": "2026-11-17T02:11:35.605Z"
   },
   "2405.13026": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:31:57.776Z"
+   "synced_at": "2026-11-17T02:11:36.642Z"
   },
   "2509.02479": {
    "pwc_id": "52630",
    "title": "SimpleTIR: End-to-End Reinforcement Learning for Multi-Turn   Tool-Integrated Reasoning",
-   "cites": 155,
+   "cites": 165,
    "arxiv": "2509.02479",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:05.451Z"
+   "synced_at": "2026-11-17T02:11:38.212Z"
   },
   "2602.20057": {
    "pwc_id": "109048",
    "title": "AdaWorldPolicy: World-Model-Driven Diffusion Policy with Online Adaptive Learning for Robotic Manipulation",
-   "cites": 5,
+   "cites": 7,
    "arxiv": "2602.20057",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:10.556Z"
+   "synced_at": "2026-11-17T02:11:39.709Z"
   },
   "2606.30639": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:32:12.027Z"
+   "synced_at": "2026-11-17T02:11:40.755Z"
   },
   "2506.10085": {
    "pwc_id": "92981",
    "title": "VITA: Zero-Shot Value Functions via Test-Time Adaptation of Vision–Language Models",
-   "cites": 2,
+   "cites": 5,
    "arxiv": "2506.10085",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:14.888Z"
+   "synced_at": "2026-11-17T02:11:42.261Z"
   },
   "2604.09452": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:32:15.953Z"
+   "synced_at": "2026-11-17T02:11:43.334Z"
   },
   "2604.01687": {
    "pwc_id": "58616",
    "title": "EvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification",
-   "cites": 139,
+   "cites": 154,
    "arxiv": "2604.01687",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:19.001Z"
+   "synced_at": "2026-11-17T02:11:44.888Z"
   },
   "2512.17102": {
    "pwc_id": "54952",
    "title": "Reinforcement Learning for Self-Improving Agent with Skill Library",
-   "cites": 105,
+   "cites": 112,
    "arxiv": "2512.17102",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:27.122Z"
+   "synced_at": "2026-11-17T02:11:46.430Z"
   },
   "2601.07641": {
    "pwc_id": "55318",
@@ -1633,29 +1663,29 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:28.634Z"
+   "synced_at": "2026-11-17T02:11:48.001Z"
   },
   "2604.03964": {
    "pwc_id": "58529",
    "title": "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources",
-   "cites": 41,
+   "cites": 42,
    "arxiv": "2604.03964",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:32:41.639Z"
+   "synced_at": "2026-11-17T02:11:49.336Z"
   },
   "2604.13318": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:33:01.617Z"
+   "synced_at": "2026-11-17T02:11:50.374Z"
   },
   "2309.04786": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:33:02.708Z"
+   "synced_at": "2026-11-17T02:11:51.436Z"
   },
   "2608.14590": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:33:04.428Z"
+   "synced_at": "2026-11-17T02:11:52.472Z"
   },
   "2508.00500": {
    "pwc_id": "70420",
@@ -1665,55 +1695,55 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:24.349Z"
+   "synced_at": "2026-11-17T02:11:53.833Z"
   },
   "2305.14325": {
    "pwc_id": "16068",
    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
-   "cites": 2471,
+   "cites": 2650,
    "arxiv": "2305.14325",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:25.513Z"
+   "synced_at": "2026-11-17T02:11:55.403Z"
   },
   "2509.15172": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:33:26.935Z"
+   "synced_at": "2026-11-17T02:11:56.461Z"
   },
   "2606.04536": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:33:29.003Z"
+   "synced_at": "2026-11-17T02:11:57.510Z"
   },
   "2602.02474": {
    "pwc_id": "55812",
    "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
-   "cites": 156,
+   "cites": 170,
    "arxiv": "2602.02474",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:33.330Z"
+   "synced_at": "2026-11-17T02:11:59.073Z"
   },
   "2605.13941": {
    "pwc_id": "83176",
    "title": "EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents",
-   "cites": 15,
+   "cites": 19,
    "arxiv": "2605.13941",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:35.569Z"
+   "synced_at": "2026-11-17T02:12:00.543Z"
   },
   "2602.11757": {
    "pwc_id": "56104",
    "title": "Code2Worlds: Empowering Coding LLMs for 4D World Generation",
-   "cites": 16,
+   "cites": 19,
    "arxiv": "2602.11757",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:37.374Z"
+   "synced_at": "2026-11-17T02:12:02.082Z"
   },
   "2601.22297": {
    "pwc_id": "61762",
@@ -1723,79 +1753,79 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:52.078Z"
+   "synced_at": "2026-11-17T02:12:03.640Z"
   },
   "2310.08560": {
    "pwc_id": "21903",
    "title": "MemGPT: Towards LLMs as Operating Systems",
-   "cites": 1624,
+   "cites": 1851,
    "arxiv": "2310.08560",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:55.725Z"
+   "synced_at": "2026-11-17T02:12:05.146Z"
   },
   "2504.19413": {
    "pwc_id": "48183",
    "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
-   "cites": 784,
+   "cites": 922,
    "arxiv": "2504.19413",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:33:58.272Z"
+   "synced_at": "2026-11-17T02:12:06.689Z"
   },
   "2502.12110": {
    "pwc_id": "44412",
    "title": "A-MEM: Agentic Memory for LLM Agents",
-   "cites": 1209,
+   "cites": 1429,
    "arxiv": "2502.12110",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:00.099Z"
+   "synced_at": "2026-11-17T02:12:08.239Z"
   },
   "2510.04618": {
    "pwc_id": "53224",
    "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving\n  Language Models",
-   "cites": 443,
+   "cites": 554,
    "arxiv": "2510.04618",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:04.301Z"
+   "synced_at": "2026-11-17T02:12:09.768Z"
   },
   "2508.19828": {
    "pwc_id": "69093",
    "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize\n  Memories via Reinforcement Learning",
-   "cites": 233,
+   "cites": 255,
    "arxiv": "2508.19828",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:16.144Z"
+   "synced_at": "2026-11-17T02:12:11.288Z"
   },
   "2606.03787": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:34:18.494Z"
+   "synced_at": "2026-11-17T02:12:12.384Z"
   },
   "2602.15513": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:34:36.641Z"
+   "synced_at": "2026-11-17T02:12:13.441Z"
   },
   "2505.21410": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:34:39.429Z"
+   "synced_at": "2026-11-17T02:12:14.492Z"
   },
   "2601.03192": {
    "pwc_id": "62925",
    "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory",
-   "cites": 118,
+   "cites": 139,
    "arxiv": "2601.03192",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:41.696Z"
+   "synced_at": "2026-11-17T02:12:16.069Z"
   },
   "2512.07287": {
    "pwc_id": "63990",
@@ -1805,31 +1835,37 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:44.783Z"
+   "synced_at": "2026-11-17T02:12:17.446Z"
   },
   "2603.24576": {
-   "status": "missing",
-   "synced_at": "2026-10-27T02:34:45.880Z"
+   "pwc_id": "132438",
+   "title": "Chameleon: Control-Indexed Prospective Memory for Visuomotor Manipulation",
+   "cites": 9,
+   "arxiv": "2603.24576",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:12:18.986Z"
   },
   "2602.11749": {
    "pwc_id": "100611",
    "title": "AIR: Improving Agent Safety through Incident Response",
-   "cites": 9,
+   "cites": 12,
    "arxiv": "2602.11749",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:48.098Z"
+   "synced_at": "2026-11-17T02:12:20.349Z"
   },
   "2509.25370": {
    "pwc_id": "53029",
    "title": "Where LLM Agents Fail and How They can Learn From Failures",
-   "cites": 145,
+   "cites": 167,
    "arxiv": "2509.25370",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:50.526Z"
+   "synced_at": "2026-11-17T02:12:21.877Z"
   },
   "2509.23166": {
    "pwc_id": "53081",
@@ -1839,51 +1875,51 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:34:54.884Z"
+   "synced_at": "2026-11-17T02:12:23.259Z"
   },
   "2505.18126": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:34:56.001Z"
+   "synced_at": "2026-11-17T02:12:24.350Z"
   },
   "2506.24119": {
    "pwc_id": "51595",
    "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
-   "cites": 101,
+   "cites": 115,
    "arxiv": "2506.24119",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:35:16.340Z"
+   "synced_at": "2026-11-17T02:12:26.032Z"
   },
   "2602.21320": {
    "pwc_id": "56395",
    "title": "Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data",
-   "cites": 33,
+   "cites": 41,
    "arxiv": "2602.21320",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:35:34.013Z"
+   "synced_at": "2026-11-17T02:12:27.583Z"
   },
   "2608.19197": {
    "pwc_id": "109496",
    "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
-   "cites": 13,
+   "cites": 14,
    "arxiv": "2608.19197",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:35:35.870Z"
+   "synced_at": "2026-11-17T02:12:29.347Z"
   },
   "2305.14318": {
    "pwc_id": "16064",
    "title": "CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models",
-   "cites": 112,
+   "cites": 114,
    "arxiv": "2305.14318",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:35:37.424Z"
+   "synced_at": "2026-11-17T02:12:30.873Z"
   },
   "2512.24615": {
    "pwc_id": "55069",
@@ -1893,59 +1929,65 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:35:39.675Z"
+   "synced_at": "2026-11-17T02:12:32.630Z"
   },
   "2603.09619": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:35:40.746Z"
+   "synced_at": "2026-11-17T02:12:33.704Z"
   },
   "2510.10047": {
    "pwc_id": "53485",
    "title": "SwarmSys: Decentralized Swarm-Inspired Agents for Scalable and Adaptive\n  Reasoning",
-   "cites": 4,
+   "cites": 5,
    "arxiv": "2510.10047",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:35:43.516Z"
+   "synced_at": "2026-11-17T02:12:35.119Z"
   },
   "2602.23997": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:35:44.590Z"
+   "synced_at": "2026-11-17T02:12:36.159Z"
   },
   "2605.00080": {
    "pwc_id": "83247",
    "title": "World Model for Robot Learning: A Comprehensive Survey",
-   "cites": 54,
+   "cites": 59,
    "arxiv": "2605.00080",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:04.461Z"
+   "synced_at": "2026-11-17T02:12:37.788Z"
   },
   "2602.10090": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:36:36.597Z"
+   "pwc_id": "55952",
+   "title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+   "cites": 82,
+   "arxiv": "2602.10090",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:12:39.408Z"
   },
   "2604.18292": {
    "pwc_id": "57579",
    "title": "Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence",
-   "cites": 50,
+   "cites": 64,
    "arxiv": "2604.18292",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:38.559Z"
+   "synced_at": "2026-11-17T02:12:41.250Z"
   },
   "2402.15391": {
    "pwc_id": "27901",
    "title": "Genie: Generative Interactive Environments",
-   "cites": 945,
+   "cites": 1042,
    "arxiv": "2402.15391",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:39.744Z"
+   "synced_at": "2026-11-17T02:12:42.659Z"
   },
   "2602.10480": {
    "pwc_id": "60859",
@@ -1955,17 +1997,17 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:43.163Z"
+   "synced_at": "2026-11-17T02:12:44.156Z"
   },
   "2506.01392": {
    "pwc_id": "72407",
    "title": "Sparse Imagination for Efficient Visual World Model Planning",
-   "cites": 10,
+   "cites": 11,
    "arxiv": "2506.01392",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:45.439Z"
+   "synced_at": "2026-11-17T02:12:45.685Z"
   },
   "2609.03241": {
    "pwc_id": "114000",
@@ -1975,57 +2017,57 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:46.826Z"
+   "synced_at": "2026-11-17T02:12:47.257Z"
   },
   "2607.06401": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:36:48.318Z"
+   "synced_at": "2026-11-17T02:12:48.309Z"
   },
   "2411.04434": {
    "pwc_id": "39722",
    "title": "Scaling Laws for Pre-training Agents and World Models",
-   "cites": 27,
+   "cites": 30,
    "arxiv": "2411.04434",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:55.617Z"
+   "synced_at": "2026-11-17T02:12:49.685Z"
   },
   "2506.16616": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:36:56.746Z"
+   "synced_at": "2026-11-17T02:12:50.753Z"
   },
   "2606.09311": {
    "pwc_id": "104497",
    "title": "FF-JEPA: Long-Horizon Planning in World Models with Latent Planners",
-   "cites": 7,
+   "cites": 10,
    "arxiv": "2606.09311",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:36:58.923Z"
+   "synced_at": "2026-11-17T02:12:52.170Z"
   },
   "2507.08210": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:01.177Z"
+   "synced_at": "2026-11-17T02:12:53.231Z"
   },
   "2602.15384": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:02.275Z"
+   "synced_at": "2026-11-17T02:12:54.301Z"
   },
   "2605.09423": {
    "pwc_id": "108772",
    "title": "SimWorld Studio: Automatic Environment Generation with Evolving Coding Agent for Embodied Agent Learning",
-   "cites": 16,
+   "cites": 18,
    "arxiv": "2605.09423",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:05.401Z"
+   "synced_at": "2026-11-17T02:12:55.661Z"
   },
   "2604.11540": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:07.628Z"
+   "synced_at": "2026-11-17T02:12:56.737Z"
   },
   "2604.21003": {
    "pwc_id": "57786",
@@ -2035,21 +2077,21 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:09.189Z"
+   "synced_at": "2026-11-17T02:12:58.071Z"
   },
   "2609.01437": {
    "pwc_id": "113897",
    "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
-   "cites": 14,
+   "cites": 17,
    "arxiv": "2609.01437",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:13.484Z"
+   "synced_at": "2026-11-17T02:12:59.561Z"
   },
   "2608.05446": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:14.642Z"
+   "synced_at": "2026-11-17T02:13:00.623Z"
   },
   "2606.05922": {
    "pwc_id": "98139",
@@ -2059,17 +2101,17 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:16.079Z"
+   "synced_at": "2026-11-17T02:13:02.111Z"
   },
   "2506.18203": {
    "pwc_id": "51358",
    "title": "Shrinking the Generation-Verification Gap with Weak Verifiers",
-   "cites": 25,
+   "cites": 27,
    "arxiv": "2506.18203",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:18.762Z"
+   "synced_at": "2026-11-17T02:13:04.229Z"
   },
   "2605.18077": {
    "pwc_id": "100356",
@@ -2079,19 +2121,19 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:21.016Z"
+   "synced_at": "2026-11-17T02:13:05.577Z"
   },
   "2604.25850": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:22.149Z"
+   "synced_at": "2026-11-17T02:13:06.628Z"
   },
   "2609.06396": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:24.337Z"
+   "synced_at": "2026-11-17T02:13:07.671Z"
   },
   "2606.04029": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:25.901Z"
+   "synced_at": "2026-11-17T02:13:08.727Z"
   },
   "2511.01093": {
    "pwc_id": "65509",
@@ -2101,17 +2143,17 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:28.828Z"
+   "synced_at": "2026-11-17T02:13:10.068Z"
   },
   "2411.02337": {
    "pwc_id": "39609",
    "title": "WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning",
-   "cites": 288,
+   "cites": 313,
    "arxiv": "2411.02337",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:33.375Z"
+   "synced_at": "2026-11-17T02:13:11.549Z"
   },
   "2505.14946": {
    "pwc_id": "49242",
@@ -2121,137 +2163,143 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:37.730Z"
+   "synced_at": "2026-11-17T02:13:13.067Z"
   },
   "2510.10181": {
    "pwc_id": "84124",
    "title": "Dejavu: Towards Experience Feedback Learning for Embodied Intelligence",
-   "cites": 3,
+   "cites": 5,
    "arxiv": "2510.10181",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:40.720Z"
+   "synced_at": "2026-11-17T02:13:14.453Z"
   },
   "2607.01120": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:55.242Z"
+   "synced_at": "2026-11-17T02:13:15.521Z"
   },
   "2508.03680": {
    "pwc_id": "52218",
    "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
-   "cites": 114,
+   "cites": 131,
    "arxiv": "2508.03680",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:37:57.867Z"
+   "synced_at": "2026-11-17T02:13:17.214Z"
   },
   "2606.05559": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:37:59.503Z"
+   "synced_at": "2026-11-17T02:13:18.267Z"
   },
   "2605.29495": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:01.998Z"
+   "synced_at": "2026-11-17T02:13:19.296Z"
   },
   "2602.09578": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:04.543Z"
+   "synced_at": "2026-11-17T02:13:20.358Z"
   },
   "2510.14830": {
    "pwc_id": "66297",
    "title": "RL-100: Performant Robotic Manipulation with Real-World Reinforcement\n  Learning",
-   "cites": 76,
+   "cites": 83,
    "arxiv": "2510.14830",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:38:06.588Z"
+   "synced_at": "2026-11-17T02:13:21.854Z"
   },
   "2602.20220": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:08.204Z"
+   "synced_at": "2026-11-17T02:13:22.908Z"
   },
   "2603.04029": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:09.440Z"
+   "synced_at": "2026-11-17T02:13:23.972Z"
   },
   "2602.10503": {
    "pwc_id": "60857",
    "title": "Towards Long-Lived Robots: Continual Learning VLA Models via Reinforcement Fine-Tuning",
-   "cites": 12,
+   "cites": 17,
    "arxiv": "2602.10503",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:38:15.535Z"
+   "synced_at": "2026-11-17T02:13:25.447Z"
   },
   "2605.15971": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:17.220Z"
+   "synced_at": "2026-11-17T02:13:26.494Z"
   },
   "2601.22607": {
    "pwc_id": "61722",
    "title": "From Self-Evolving Synthetic Data to Verifiable-Reward RL: Post-Training Multi-turn Interactive Tool-Using Agents",
-   "cites": 19,
+   "cites": 22,
    "arxiv": "2601.22607",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:38:25.012Z"
+   "synced_at": "2026-11-17T02:13:28.115Z"
   },
   "2605.24812": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:26.126Z"
+   "synced_at": "2026-11-17T02:13:29.181Z"
   },
   "1909.07528": {
    "pwc_id": "2553",
    "title": "Emergent Tool Use From Multi-Agent Autocurricula",
-   "cites": 788,
+   "cites": 804,
    "arxiv": "1909.07528",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:38:27.327Z"
+   "synced_at": "2026-11-17T02:13:30.625Z"
   },
   "2308.10848": {
    "pwc_id": "19575",
    "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors",
-   "cites": 834,
+   "cites": 875,
    "arxiv": "2308.10848",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:38:28.875Z"
+   "synced_at": "2026-11-17T02:13:32.098Z"
   },
   "2602.22593": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:38:35.662Z"
+   "synced_at": "2026-11-17T02:13:33.145Z"
   },
   "2605.00416": {
    "pwc_id": "57836",
    "title": "Learning while Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies",
-   "cites": 20,
+   "cites": 25,
    "arxiv": "2605.00416",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:38:39.319Z"
+   "synced_at": "2026-11-17T02:13:34.615Z"
   },
   "2211.08416": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:39:11.450Z"
+   "pwc_id": "11369",
+   "title": "Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment",
+   "cites": 197,
+   "arxiv": "2211.08416",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:13:35.957Z"
   },
   "2601.06748": {
    "pwc_id": "62688",
    "title": "On-the-Fly VLA Adaptation via Test-Time Reinforcement Learning",
-   "cites": 20,
+   "cites": 23,
    "arxiv": "2601.06748",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:15.171Z"
+   "synced_at": "2026-11-17T02:13:37.286Z"
   },
   "2609.15973": {
    "pwc_id": "114213",
@@ -2261,7 +2309,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:19.981Z"
+   "synced_at": "2026-11-17T02:13:38.771Z"
   },
   "2510.15280": {
    "pwc_id": "53656",
@@ -2271,43 +2319,43 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:22.114Z"
+   "synced_at": "2026-11-17T02:13:40.173Z"
   },
   "2504.19017": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:39:23.543Z"
+   "synced_at": "2026-11-17T02:13:41.217Z"
   },
   "2510.09901": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:39:26.085Z"
+   "synced_at": "2026-11-17T02:13:42.254Z"
   },
   "2412.17799": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:39:27.950Z"
+   "synced_at": "2026-11-17T02:13:43.319Z"
   },
   "2507.17746": {
    "pwc_id": "70813",
    "title": "Rubrics as Rewards: Reinforcement Learning Beyond Verifiable Domains",
-   "cites": 386,
+   "cites": 437,
    "arxiv": "2507.17746",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:31.039Z"
+   "synced_at": "2026-11-17T02:13:44.885Z"
   },
   "2602.01511": {
    "pwc_id": "55690",
    "title": "Alternating Reinforcement Learning for Rubric-Based Reward Modeling in Non-Verifiable LLM Post-Training",
-   "cites": 59,
+   "cites": 64,
    "arxiv": "2602.01511",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:33.022Z"
+   "synced_at": "2026-11-17T02:13:46.597Z"
   },
   "2510.14738": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:39:34.216Z"
+   "synced_at": "2026-11-17T02:13:47.675Z"
   },
   "2603.00077": {
    "pwc_id": "58589",
@@ -2317,41 +2365,41 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:37.929Z"
+   "synced_at": "2026-11-17T02:13:49.082Z"
   },
   "2510.07743": {
    "pwc_id": "53394",
    "title": "OpenRubrics: Towards Scalable Synthetic Rubric Generation for Reward\n  Modeling and LLM Alignment",
-   "cites": 132,
+   "cites": 149,
    "arxiv": "2510.07743",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:40.616Z"
+   "synced_at": "2026-11-17T02:13:50.576Z"
   },
   "2505.02387": {
    "pwc_id": "48391",
    "title": "RM-R1: Reward Modeling as Reasoning",
-   "cites": 154,
+   "cites": 159,
    "arxiv": "2505.02387",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:43.888Z"
+   "synced_at": "2026-11-17T02:13:52.210Z"
   },
   "2605.30568": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:39:45.002Z"
+   "synced_at": "2026-11-17T02:13:53.261Z"
   },
   "2408.02666": {
    "pwc_id": "35568",
    "title": "Self-Taught Evaluators",
-   "cites": 72,
+   "cites": 75,
    "arxiv": "2408.02666",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:46.262Z"
+   "synced_at": "2026-11-17T02:13:54.794Z"
   },
   "2407.08351": {
    "pwc_id": "34479",
@@ -2361,21 +2409,21 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:39:47.774Z"
+   "synced_at": "2026-11-17T02:13:56.188Z"
   },
   "2603.25133": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:40:06.368Z"
+   "synced_at": "2026-11-17T02:13:57.228Z"
   },
   "2608.03972": {
    "pwc_id": "108711",
    "title": "ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning",
-   "cites": 8,
+   "cites": 9,
    "arxiv": "2608.03972",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:40:10.495Z"
+   "synced_at": "2026-11-17T02:13:58.674Z"
   },
   "2610.02202": {
    "pwc_id": "122627",
@@ -2385,31 +2433,37 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:40:14.322Z"
+   "synced_at": "2026-11-17T02:14:00.132Z"
   },
   "2607.29172": {
-   "status": "missing",
-   "synced_at": "2026-10-27T02:40:38.699Z"
+   "pwc_id": "132823",
+   "title": "CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning",
+   "cites": 2,
+   "arxiv": "2607.29172",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:14:01.564Z"
   },
   "2606.11926": {
    "pwc_id": "98189",
    "title": "Toward Generalist Autonomous Research via Hypothesis-Tree Refinement",
-   "cites": 23,
+   "cites": 24,
    "arxiv": "2606.11926",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:40:58.322Z"
+   "synced_at": "2026-11-17T02:14:02.986Z"
   },
   "2609.20519": {
    "pwc_id": "122011",
    "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
-   "cites": 9,
+   "cites": 13,
    "arxiv": "2609.20519",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:41:03.291Z"
+   "synced_at": "2026-11-17T02:14:04.537Z"
   },
   "2610.03675": {
    "pwc_id": "122680",
@@ -2419,29 +2473,29 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:41:06.663Z"
+   "synced_at": "2026-11-17T02:14:05.946Z"
   },
   "2610.04074": {
    "pwc_id": "123139",
    "title": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation",
-   "cites": 0,
+   "cites": 2,
    "arxiv": "2610.04074",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:41:08.180Z"
+   "synced_at": "2026-11-17T02:14:07.324Z"
   },
   "2609.35138": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:41:15.119Z"
+   "synced_at": "2026-11-17T02:14:08.383Z"
   },
   "2609.26704": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:41:16.194Z"
+   "synced_at": "2026-11-17T02:14:09.433Z"
   },
   "2609.39765": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:41:17.294Z"
+   "synced_at": "2026-11-17T02:14:10.482Z"
   },
   "2609.30199": {
    "pwc_id": "122199",
@@ -2451,37 +2505,37 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:41:27.191Z"
+   "synced_at": "2026-11-17T02:14:11.771Z"
   },
   "2609.15364": {
    "pwc_id": "114228",
    "title": "RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments",
-   "cites": 10,
+   "cites": 12,
    "arxiv": "2609.15364",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:41:32.372Z"
+   "synced_at": "2026-11-17T02:14:13.177Z"
   },
   "2609.24972": {
    "pwc_id": "122103",
    "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
-   "cites": 22,
+   "cites": 36,
    "arxiv": "2609.24972",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:41:52.402Z"
+   "synced_at": "2026-11-17T02:14:14.598Z"
   },
   "2601.08323": {
    "pwc_id": "62564",
    "title": "AtomMem : Learnable Dynamic Agentic Memory with Atomic Memory Operation",
-   "cites": 16,
+   "cites": 18,
    "arxiv": "2601.08323",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:05.560Z"
+   "synced_at": "2026-11-17T02:14:15.974Z"
   },
   "2608.31111": {
    "pwc_id": "113898",
@@ -2491,7 +2545,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:07.763Z"
+   "synced_at": "2026-11-17T02:14:17.396Z"
   },
   "2608.13558": {
    "pwc_id": "109133",
@@ -2501,7 +2555,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:14.526Z"
+   "synced_at": "2026-11-17T02:14:18.767Z"
   },
   "2609.11115": {
    "pwc_id": "114180",
@@ -2511,7 +2565,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:18.960Z"
+   "synced_at": "2026-11-17T02:14:20.174Z"
   },
   "2608.27370": {
    "pwc_id": "113745",
@@ -2521,37 +2575,37 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:31.348Z"
+   "synced_at": "2026-11-17T02:14:21.700Z"
   },
   "2608.19799": {
    "pwc_id": "109535",
    "title": "SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?",
-   "cites": 5,
+   "cites": 8,
    "arxiv": "2608.19799",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:33.361Z"
+   "synced_at": "2026-11-17T02:14:23.052Z"
   },
   "2610.11794": {
    "pwc_id": "122996",
    "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
-   "cites": 0,
+   "cites": 4,
    "arxiv": "2610.11794",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:42:40.896Z"
+   "synced_at": "2026-11-17T02:14:24.501Z"
   },
   "2510.18821": {
    "pwc_id": "53793",
    "title": "Search Self-play: Pushing the Frontier of Agent Capability without\n  Supervision",
-   "cites": 39,
+   "cites": 45,
    "arxiv": "2510.18821",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:12.360Z"
+   "synced_at": "2026-11-17T02:14:26.097Z"
   },
   "2609.34327": {
    "pwc_id": "122328",
@@ -2561,119 +2615,131 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:30.694Z"
+   "synced_at": "2026-11-17T02:14:27.507Z"
   },
   "2609.35748": {
    "pwc_id": "122325",
    "title": "Improving Test-Time Scaling with Adaptive Looped Transformers",
-   "cites": 1,
+   "cites": 4,
    "arxiv": "2609.35748",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:31.836Z"
+   "synced_at": "2026-11-17T02:14:29.231Z"
   },
   "2610.07447": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:43:32.932Z"
+   "synced_at": "2026-11-17T02:14:30.277Z"
   },
   "2610.13912": {
    "pwc_id": "123039",
    "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
-   "cites": 0,
+   "cites": 4,
    "arxiv": "2610.13912",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:48.390Z"
+   "synced_at": "2026-11-17T02:14:31.776Z"
   },
   "2610.13025": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:43:50.370Z"
+   "synced_at": "2026-11-17T02:14:32.834Z"
   },
   "2404.09465": {
    "pwc_id": "116958",
    "title": "PhyScene: Physically Interactable 3D Scene Synthesis for Embodied AI",
-   "cites": 169,
+   "cites": 182,
    "arxiv": "2404.09465",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:54.346Z"
+   "synced_at": "2026-11-17T02:14:34.178Z"
   },
   "2404.13026": {
    "pwc_id": "30590",
    "title": "PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation",
-   "cites": 244,
+   "cites": 257,
    "arxiv": "2404.13026",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:56.510Z"
+   "synced_at": "2026-11-17T02:14:35.566Z"
   },
   "2311.12198": {
    "pwc_id": "23582",
    "title": "PhysGaussian: Physics-Integrated 3D Gaussians for Generative Dynamics",
-   "cites": 529,
+   "cites": 548,
    "arxiv": "2311.12198",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:43:57.639Z"
+   "synced_at": "2026-11-17T02:14:36.936Z"
   },
   "2410.08257": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:43:58.696Z"
+   "synced_at": "2026-11-17T02:14:37.993Z"
   },
   "2303.05512": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:44:00.298Z"
+   "synced_at": "2026-11-17T02:14:39.689Z"
   },
   "2503.17973": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:44:32.429Z"
+   "pwc_id": "46594",
+   "title": "PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos",
+   "cites": 148,
+   "arxiv": "2503.17973",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:14:41.060Z"
   },
   "2412.11258": {
    "pwc_id": "41607",
    "title": "GaussianProperty: Integrating Physical Properties to 3D Gaussians with LMMs",
-   "cites": 29,
+   "cites": 31,
    "arxiv": "2412.11258",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:44:37.606Z"
+   "synced_at": "2026-11-17T02:14:42.364Z"
   },
   "2410.13882": {
    "pwc_id": "38763",
    "title": "Articulate-Anything: Automatic Modeling of Articulated Objects via a Vision-Language Foundation Model",
-   "cites": 125,
+   "cites": 137,
    "arxiv": "2410.13882",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:45:02.401Z"
+   "synced_at": "2026-11-17T02:14:43.777Z"
   },
   "2609.08339": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:45:03.883Z"
+   "synced_at": "2026-11-17T02:14:45.150Z"
   },
   "2512.01629": {
    "pwc_id": "84305",
    "title": "SPARK: Sim-ready Part-level Articulated Reconstruction with VLM Knowledge",
-   "cites": 8,
+   "cites": 10,
    "arxiv": "2512.01629",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:45:05.063Z"
+   "synced_at": "2026-11-17T02:14:46.507Z"
   },
   "2507.12465": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:45:37.189Z"
+   "pwc_id": "51931",
+   "title": "PhysX: Physical-Grounded 3D Asset Generation",
+   "cites": 56,
+   "arxiv": "2507.12465",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:14:47.851Z"
   },
   "2610.08781": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:45:38.795Z"
+   "synced_at": "2026-11-17T02:14:48.915Z"
   },
   "2610.20828": {
    "pwc_id": "123533",
@@ -2683,23 +2749,23 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:45:43.289Z"
+   "synced_at": "2026-11-17T02:14:50.584Z"
   },
   "2610.21006": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:45:44.366Z"
+   "synced_at": "2026-11-17T02:14:51.629Z"
   },
   "2610.18867": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:45:45.777Z"
+   "synced_at": "2026-11-17T02:14:52.700Z"
   },
   "2610.23826": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:45:46.881Z"
+   "synced_at": "2026-11-17T02:14:53.755Z"
   },
   "2610.25434": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:45:49.481Z"
+   "synced_at": "2026-11-17T02:14:54.794Z"
   },
   "2610.22324": {
    "pwc_id": "123828",
@@ -2709,7 +2775,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:46:08.746Z"
+   "synced_at": "2026-11-17T02:14:56.364Z"
   },
   "2610.19975": {
    "pwc_id": "123434",
@@ -2719,25 +2785,25 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:46:29.643Z"
+   "synced_at": "2026-11-17T02:14:57.931Z"
   },
   "2610.14224": {
    "pwc_id": "123240",
    "title": "Harness^2: Recursive Agent Harnessing for an Open World",
-   "cites": 1,
+   "cites": 3,
    "arxiv": "2610.14224",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:46:31.149Z"
+   "synced_at": "2026-11-17T02:14:59.467Z"
   },
   "2610.20334": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:46:33.345Z"
+   "synced_at": "2026-11-17T02:15:00.536Z"
   },
   "2610.20022": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:46:34.446Z"
+   "synced_at": "2026-11-17T02:15:01.581Z"
   },
   "2610.17184": {
    "pwc_id": "123698",
@@ -2747,7 +2813,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:46:38.019Z"
+   "synced_at": "2026-11-17T02:15:03.094Z"
   },
   "2510.14980": {
    "pwc_id": "53617",
@@ -2757,17 +2823,17 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:46:59.058Z"
+   "synced_at": "2026-11-17T02:15:04.470Z"
   },
   "2610.22196": {
    "pwc_id": "123661",
    "title": "Hy-Memory-30B-A3B: Attributed Reinforcement Learning for Long-Term Memory Writing",
-   "cites": 0,
+   "cites": 1,
    "arxiv": "2610.22196",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:17.039Z"
+   "synced_at": "2026-11-17T02:15:06.035Z"
   },
   "2610.22344": {
    "pwc_id": "123580",
@@ -2777,31 +2843,31 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:19.558Z"
+   "synced_at": "2026-11-17T02:15:07.748Z"
   },
   "2610.18861": {
    "pwc_id": "123451",
    "title": "Hybrid Reasoning Agents",
-   "cites": 0,
+   "cites": 1,
    "arxiv": "2610.18861",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:40.123Z"
+   "synced_at": "2026-11-17T02:15:09.548Z"
   },
   "2609.40324": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:47:41.205Z"
+   "synced_at": "2026-11-17T02:15:10.611Z"
   },
   "2610.22192": {
    "pwc_id": "123543",
    "title": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
-   "cites": 2,
+   "cites": 5,
    "arxiv": "2610.22192",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:43.714Z"
+   "synced_at": "2026-11-17T02:15:12.638Z"
   },
   "2610.08448": {
    "pwc_id": "122810",
@@ -2811,25 +2877,25 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:52.764Z"
+   "synced_at": "2026-11-17T02:15:14.009Z"
   },
   "2609.31715": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:47:54.186Z"
+   "synced_at": "2026-11-17T02:15:15.069Z"
   },
   "2610.17953": {
    "pwc_id": "123289",
    "title": "Agent-Reflex: Teaching Language Agents to Act Reflectively",
-   "cites": 0,
+   "cites": 1,
    "arxiv": "2610.17953",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:55.310Z"
+   "synced_at": "2026-11-17T02:15:16.801Z"
   },
   "2609.30652": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:47:56.828Z"
+   "synced_at": "2026-11-17T02:15:17.861Z"
   },
   "2609.39687": {
    "pwc_id": "122601",
@@ -2839,7 +2905,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:47:58.699Z"
+   "synced_at": "2026-11-17T02:15:19.443Z"
   },
   "2609.33757": {
    "pwc_id": "122315",
@@ -2849,11 +2915,11 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:00.156Z"
+   "synced_at": "2026-11-17T02:15:21.175Z"
   },
   "2609.38147": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:48:01.572Z"
+   "synced_at": "2026-11-17T02:15:22.214Z"
   },
   "2610.07862": {
    "pwc_id": "122918",
@@ -2863,7 +2929,7 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:04.088Z"
+   "synced_at": "2026-11-17T02:15:23.600Z"
   },
   "2610.18784": {
    "pwc_id": "123683",
@@ -2873,17 +2939,17 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:06.910Z"
+   "synced_at": "2026-11-17T02:15:25.058Z"
   },
   "2506.01716": {
    "pwc_id": "50401",
    "title": "Self-Challenging Language Model Agents",
-   "cites": 57,
+   "cites": 63,
    "arxiv": "2506.01716",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:09.436Z"
+   "synced_at": "2026-11-17T02:15:26.430Z"
   },
   "2610.22194": {
    "pwc_id": "123549",
@@ -2893,33 +2959,39 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:12.313Z"
+   "synced_at": "2026-11-17T02:15:27.960Z"
   },
   "2610.17439": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:48:13.509Z"
+   "synced_at": "2026-11-17T02:15:29.002Z"
   },
   "2609.33781": {
    "pwc_id": "122331",
    "title": "Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning",
-   "cites": 0,
+   "cites": 1,
    "arxiv": "2609.33781",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:15.222Z"
+   "synced_at": "2026-11-17T02:15:30.543Z"
   },
   "2610.19103": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:48:16.356Z"
+   "synced_at": "2026-11-17T02:15:31.625Z"
   },
   "2609.20800": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:48:48.494Z"
+   "pwc_id": "122014",
+   "title": "JEPA-Anything: Learning Predictive Models across Different Worlds",
+   "cites": 4,
+   "arxiv": "2609.20800",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:33.110Z"
   },
   "2610.20665": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:48:51.628Z"
+   "synced_at": "2026-11-17T02:15:34.140Z"
   },
   "2610.23839": {
    "pwc_id": "123685",
@@ -2929,35 +3001,41 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:48:57.776Z"
+   "synced_at": "2026-11-17T02:15:35.823Z"
   },
   "2609.33848": {
    "pwc_id": "122329",
    "title": "QwenGyre: An Elastic Reinforcement Learning Framework for Training xLong-Horizon Agents",
-   "cites": 0,
+   "cites": 2,
    "arxiv": "2609.33848",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:49:00.033Z"
+   "synced_at": "2026-11-17T02:15:37.350Z"
   },
   "2610.18874": {
    "status": "missing",
-   "synced_at": "2026-10-27T02:49:02.998Z"
+   "synced_at": "2026-11-17T02:15:38.380Z"
   },
   "2610.20584": {
    "pwc_id": "123450",
    "title": "Player-1: Learning to Play from Synthetic Experience",
-   "cites": 0,
+   "cites": 2,
    "arxiv": "2610.20584",
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:49:25.479Z"
+   "synced_at": "2026-11-17T02:15:39.949Z"
   },
   "2610.12374": {
-   "status": "error:The operation was aborted due to timeout",
-   "synced_at": "2026-10-27T02:49:53.320Z"
+   "pwc_id": "122944",
+   "title": "AgentGarten: Code Worlds for Evolving Agents",
+   "cites": 2,
+   "arxiv": "2610.12374",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:41.459Z"
   },
   "2609.33439": {
    "pwc_id": "122228",
@@ -2967,7 +3045,287 @@
    "repos": [],
    "datasets": [],
    "status": "matched",
-   "synced_at": "2026-10-27T02:49:56.603Z"
+   "synced_at": "2026-11-17T02:15:42.879Z"
+  },
+  "2512.24497": {
+   "pwc_id": "63178",
+   "title": "What Drives Success in Physical Planning with Joint-Embedding Predictive World Models?",
+   "cites": 67,
+   "arxiv": "2512.24497",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:44.237Z"
+  },
+  "2610.15267": {
+   "pwc_id": "132225",
+   "title": "LeHami: Symplectic Latent Dynamics for World Models",
+   "cites": 1,
+   "arxiv": "2610.15267",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:45.730Z"
+  },
+  "2610.07540": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:46.769Z"
+  },
+  "2610.06805": {
+   "pwc_id": "123141",
+   "title": "H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning",
+   "cites": 8,
+   "arxiv": "2610.06805",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:48.295Z"
+  },
+  "2608.22764": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:49.366Z"
+  },
+  "2606.32026": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:50.419Z"
+  },
+  "2606.23444": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:51.782Z"
+  },
+  "2606.15956": {
+   "pwc_id": "98453",
+   "title": "You Don't Need Strong Assumptions: Visual Representation Learning via Temporal Differences",
+   "cites": 6,
+   "arxiv": "2606.15956",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:53.120Z"
+  },
+  "2606.08775": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:54.179Z"
+  },
+  "2605.26379": {
+   "pwc_id": "109304",
+   "title": "When Does LeJEPA Learn a World Model?",
+   "cites": 37,
+   "arxiv": "2605.26379",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:55.652Z"
+  },
+  "2605.21800": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:56.708Z"
+  },
+  "2605.14759": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:15:57.764Z"
+  },
+  "2604.03208": {
+   "pwc_id": "58557",
+   "title": "Hierarchical Planning with Latent World Models",
+   "cites": 57,
+   "arxiv": "2604.03208",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:15:59.180Z"
+  },
+  "2603.15381": {
+   "pwc_id": "59320",
+   "title": "Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science",
+   "cites": 15,
+   "arxiv": "2603.15381",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:00.550Z"
+  },
+  "2603.12231": {
+   "pwc_id": "59510",
+   "title": "Temporal Straightening for Latent Planning",
+   "cites": 52,
+   "arxiv": "2603.12231",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:01.897Z"
+  },
+  "2602.22617": {
+   "pwc_id": "102416",
+   "title": "Semantic Tube Prediction: Beating LLM Data Efficiency with JEPA",
+   "cites": 8,
+   "arxiv": "2602.22617",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:03.361Z"
+  },
+  "2602.14272": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:16:04.481Z"
+  },
+  "2602.11389": {
+   "pwc_id": "56173",
+   "title": "Causal-JEPA: Learning World Models through Object-Level Latent Interventions",
+   "cites": 28,
+   "arxiv": "2602.11389",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:05.881Z"
+  },
+  "2602.08968": {
+   "pwc_id": "60964",
+   "title": "stable-worldmodel-v1: Reproducible World Modeling Research and Evaluation",
+   "cites": 9,
+   "arxiv": "2602.08968",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:07.289Z"
+  },
+  "2602.03604": {
+   "pwc_id": "61328",
+   "title": "A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures",
+   "cites": 21,
+   "arxiv": "2602.03604",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:08.735Z"
+  },
+  "2602.01456": {
+   "pwc_id": "61516",
+   "title": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations",
+   "cites": 15,
+   "arxiv": "2602.01456",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:10.111Z"
+  },
+  "2602.00475": {
+   "pwc_id": "101956",
+   "title": "Parallel Stochastic Gradient-Based Planning for World Models",
+   "cites": 11,
+   "arxiv": "2602.00475",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:11.410Z"
+  },
+  "2601.05230": {
+   "pwc_id": "62766",
+   "title": "Learning Latent Action World Models In The Wild",
+   "cites": 66,
+   "arxiv": "2601.05230",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:12.714Z"
+  },
+  "2405.05012": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:16:13.773Z"
+  },
+  "2405.18418": {
+   "pwc_id": "31947",
+   "title": "Hierarchical World Models as Visual Whole-Body Humanoid Controllers",
+   "cites": 50,
+   "arxiv": "2405.18418",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:15.081Z"
+  },
+  "2411.04983": {
+   "pwc_id": "39753",
+   "title": "DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning",
+   "cites": 583,
+   "arxiv": "2411.04983",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:16.476Z"
+  },
+  "2411.17662": {
+   "pwc_id": "90550",
+   "title": "RoboPEPP: Vision-Based Robot Pose and Joint Angle Estimation through Embedding Predictive Pre-Training",
+   "cites": 19,
+   "arxiv": "2411.17662",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:17.831Z"
+  },
+  "2512.05094": {
+   "pwc_id": "64098",
+   "title": "From Generated Human Videos to Physically Plausible Robot Trajectories",
+   "cites": 13,
+   "arxiv": "2512.05094",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:19.189Z"
+  },
+  "2511.08544": {
+   "pwc_id": "54156",
+   "title": "LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics",
+   "cites": 338,
+   "arxiv": "2511.08544",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:20.753Z"
+  },
+  "2512.10942": {
+   "pwc_id": "63814",
+   "title": "VL-JEPA: Joint Embedding Predictive Architecture for Vision-language",
+   "cites": 77,
+   "arxiv": "2512.10942",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:22.286Z"
+  },
+  "2512.09929": {
+   "pwc_id": "63874",
+   "title": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
+   "cites": 15,
+   "arxiv": "2512.09929",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:23.668Z"
+  },
+  "2201.10000": {
+   "status": "missing",
+   "synced_at": "2026-11-17T02:16:24.728Z"
+  },
+  "2312.17227": {
+   "pwc_id": "25282",
+   "title": "Gradient-based Planning with World Models",
+   "cites": 21,
+   "arxiv": "2312.17227",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:25.975Z"
+  },
+  "2306.02572": {
+   "pwc_id": "16949",
+   "title": "Introduction to Latent Variable Energy-Based Models: A Path Towards Autonomous Machine Intelligence",
+   "cites": 104,
+   "arxiv": "2306.02572",
+   "repos": [],
+   "datasets": [],
+   "status": "matched",
+   "synced_at": "2026-11-17T02:16:27.261Z"
   }
  }
 }

@@ -14336,5 +14336,1002 @@
   "selfref": false,
   "id": "p428",
   "combo": true
+ },
+ {
+  "n": "What Drives Success in Physical Planning with Joint-Embedding Predictive World Models?",
+  "l": "https://arxiv.org/abs/2512.24497",
+  "m": "2025-12",
+  "d": "JEPA 世界模型+规划器的成功要素分析：从状态-动作轨迹训练世界模型再配规划算法解新任务是主流路线——系统拆解哪些设计选择真正驱动泛化成功。",
+  "v": "ok",
+  "nums": [
+   "成功要素拆解",
+   "JEPA+规划"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "model"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p429",
+  "combo": false
+ },
+ {
+  "n": "LeHami: Symplectic Latent Dynamics for World Models",
+  "l": "https://arxiv.org/abs/2610.15267",
+  "m": "2026-10",
+  "d": "辛几何哈密顿 JEPA：无约束自回归预测器在长 rollout 中收缩潜分布——用作用条件哈密顿流替代标准预测器，结构化保能量地预测潜动力学。",
+  "v": "ok",
+  "nums": [
+   "哈密顿流预测器",
+   "长程不收缩"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p430",
+  "combo": false
+ },
+ {
+  "n": "Preserving Unstable Modes Through Inverse Dynamics in JEPA World Models",
+  "l": "https://arxiv.org/abs/2610.07540",
+  "m": "2026-10",
+  "d": "JEPA 保留不稳定模态：机器人系统的小扰动可无界增长、必须反馈修正——标准 JEPA 会抹掉这些模态，逆动力学设计让表征保留它们，否则视觉控制无从谈起。",
+  "v": "ok",
+  "nums": [
+   "不稳定模态保留",
+   "逆动力学"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p431",
+  "combo": false
+ },
+ {
+  "n": "H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning",
+  "l": "https://arxiv.org/abs/2610.06805",
+  "m": "2026-10",
+  "d": "端到端层级 JEPA：现有任务无关 JEPA 在单一潜空间单一时间尺度上预测规划——H-JEPA 训练作用条件 JEPA 的层级，每层在不同时间尺度/抽象层推理，长程规划跨层分解。",
+  "v": "ok",
+  "nums": [
+   "层级 JEPA",
+   "多时间尺度端到端"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p432",
+  "combo": false
+ },
+ {
+  "n": "LpWM: A Case for Sparse Representations in World Models",
+  "l": "https://arxiv.org/abs/2608.22764",
+  "m": "2026-08",
+  "d": "世界模型需要稀疏表示：JEPA 用各向同性高斯最大熵匹配防坍缩、得到稠密表示——但稠密是否是建模动力学的最优几何存疑；稀疏表示的世界模型论证与实证。",
+  "v": "ok",
+  "nums": [
+   "稀疏 vs 稠密",
+   "表示几何之辩"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p433",
+  "combo": false
+ },
+ {
+  "n": "AdaJEPA: An Adaptive Latent World Model",
+  "l": "https://arxiv.org/abs/2606.32026",
+  "m": "2026-06",
+  "d": "测试时自适应的世界模型：潜世界模型通常部署时冻结，预测失准即规划失败（尤其分布漂移下）——AdaJEPA 在测试时在线适应预测器，世界模型的 L2 运行时适应形态。",
+  "v": "ok",
+  "nums": [
+   "测试时适应",
+   "分布漂移下规划"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm",
+   "loop"
+  ],
+  "lvl": 2,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p434",
+  "combo": true
+ },
+ {
+  "n": "SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors",
+  "l": "https://arxiv.org/abs/2606.23444",
+  "m": "2026-06",
+  "d": "四旋翼零样本 sim-to-real：现有神经动力学模型自回归误差累积难做长程预测——SkyJEPA 长程世界模型+不确定条件下敏捷飞行决策，零样本跨出仿真。",
+  "v": "ok",
+  "nums": [
+   "零样本 sim-to-real",
+   "四旋翼长程"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim",
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p435",
+  "combo": false
+ },
+ {
+  "n": "You Don't Need Strong Assumptions: Visual Representation Learning via Temporal Differences",
+  "l": "https://arxiv.org/abs/2606.15956",
+  "m": "2026-06",
+  "d": "时间差分视觉表示学习：AI 进步由\"假设更少\"的方法驱动（算力数据涨时弱归纳偏置胜出）——监督→自监督→时间差分，继续削弱假设的表示学习下一站。",
+  "v": "ok",
+  "nums": [
+   "弱假设路线",
+   "时间差分表示"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p436",
+  "combo": false
+ },
+ {
+  "n": "Unifying Object-Centric World Models and Diffusion Policy: A Hierarchical Framework for Multi-Stage Robotic Tasks",
+  "l": "https://arxiv.org/abs/2606.08775",
+  "m": "2026-06",
+  "d": "对象中心世界模型×扩散策略统一：世界模型当 MPC 转移函数只够单阶段任务（抓/够）——层级框架把对象中心 WM 与扩散策略组合，解多阶段机器人任务。",
+  "v": "ok",
+  "nums": [
+   "对象中心×扩散策略",
+   "多阶段任务"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p437",
+  "combo": false
+ },
+ {
+  "n": "When Does LeJEPA Learn a World Model?",
+  "l": "https://arxiv.org/abs/2605.26379",
+  "m": "2026-05",
+  "d": "LeJEPA 学出世界模型的可证条件：证明对齐+高斯正则在非线性观测下线性恢复世界潜变量（线性可辨识性）——打乱真实自由度的表示无法支撑规划与组合泛化，理论给出何时不会打乱。",
+  "v": "ok",
+  "nums": [
+   "线性可辨识性证明",
+   "可证世界模型"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "na"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p438",
+  "combo": false
+ },
+ {
+  "n": "stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation",
+  "l": "https://arxiv.org/abs/2605.21800",
+  "m": "2026-05",
+  "d": "世界模型研究的可复现平台：领域被碎片化代码库/数据管线/评测协议割裂——统一平台+三瓶颈（长训练、评测贵、基准缺失）的系统性解法，世界模型的基础设施层。",
+  "v": "ok",
+  "nums": [
+   "可复现平台",
+   "统一评测"
+  ],
+  "scenes": [
+   "world",
+   "research"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p439",
+  "combo": true
+ },
+ {
+  "n": "Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement",
+  "l": "https://arxiv.org/abs/2605.14759",
+  "m": "2026-05",
+  "d": "JEPA 加速晶体发现：生成模型最大化似然只会采样出接近已知材料的晶体——嵌入筛选+生成精炼两段式，按发现标准（稳定+新颖）而非似然对齐。JEPA 方法论跨界到材料发现。",
+  "v": "ok",
+  "nums": [
+   "嵌入筛选+生成精炼",
+   "材料发现"
+  ],
+  "scenes": [
+   "world",
+   "research"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p440",
+  "combo": true
+ },
+ {
+  "n": "Hierarchical Planning with Latent World Models",
+  "l": "https://arxiv.org/abs/2604.03208",
+  "m": "2026-04",
+  "d": "潜世界模型的层级规划：预测误差复合+朴素搜索随规划时域指数爆炸——层级分解为短程子问题缓解两者，潜空间中的层级规划方法。",
+  "v": "ok",
+  "nums": [
+   "层级分解",
+   "对抗误差复合"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p441",
+  "combo": false
+ },
+ {
+  "n": "Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science",
+  "l": "https://arxiv.org/abs/2603.15381",
+  "m": "2026-03",
+  "d": "认知科学视角的自主学习架构：当前 AI 不会\"学习\"的批判——System A（观察学习）与 System B（主动行为学习）双系统灵活切换，人类/动物认知启发的自主学习蓝图。",
+  "v": "ok",
+  "nums": [
+   "双学习系统",
+   "认知科学启示"
+  ],
+  "scenes": [
+   "agentself"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "human"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p442",
+  "combo": false
+ },
+ {
+  "n": "Temporal Straightening for Latent Planning",
+  "l": "https://arxiv.org/abs/2603.12231",
+  "m": "2026-03",
+  "d": "时间拉直的潜规划：预训视觉编码器语义强但含规划无关甚至有害信息——受人眼知觉拉直假说启发，把表示沿时间拉直以适配规划。",
+  "v": "ok",
+  "nums": [
+   "知觉拉直假说",
+   "规划定制表示"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p443",
+  "combo": false
+ },
+ {
+  "n": "Semantic Tube Prediction: Beating LLM Data Efficiency with JEPA",
+  "l": "https://arxiv.org/abs/2602.22617",
+  "m": "2026-02",
+  "d": "JEPA 打败 LLM 数据效率：LLM 缩放律是描述性而非规定性——语义管道预测在文本上挑战\"更多数据\"教条，连续表示空间的预测比离散 token 自回归更数据高效。",
+  "v": "ok",
+  "nums": [
+   "数据效率胜 LLM",
+   "挑战缩放律"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "nlp",
+  "selfref": false,
+  "id": "p444",
+  "combo": false
+ },
+ {
+  "n": "Radial-VCReg: More Informative Representation Learning Through Radial Gaussianization",
+  "l": "https://arxiv.org/abs/2602.14272",
+  "m": "2026-02",
+  "d": "径向高斯化的更富信息表示：显式信息最大化被维度诅咒卡住，VCReg 只正则一二阶统计量不够——径向高斯化补全最大熵表示。JEPA 表示理论工具箱新件。",
+  "v": "ok",
+  "nums": [
+   "径向高斯化",
+   "最大熵表示"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p445",
+  "combo": false
+ },
+ {
+  "n": "Causal-JEPA: Learning World Models through Object-Level Latent Masking",
+  "l": "https://arxiv.org/abs/2602.11389",
+  "m": "2026-02",
+  "d": "对象级潜掩码的因果世界模型：对象中心表示不够捕捉交互依赖动力学——C-JEPA 扩展掩码联合嵌入，对象级因果结构进世界模型。",
+  "v": "ok",
+  "nums": [
+   "对象级因果",
+   "潜掩码"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p446",
+  "combo": false
+ },
+ {
+  "n": "stable-worldmodel-v1: Reproducible World Modeling Research and Evaluation",
+  "l": "https://arxiv.org/abs/2602.08968",
+  "m": "2026-02",
+  "d": "stable-worldmodel 平台 v1 论文：现有实现一论文一套、复用性差——可复现的世界模型研究与评测基线库（与 2605.21800 平台论文同条线）。",
+  "v": "ok",
+  "nums": [
+   "v1 基线库",
+   "一论文一套之弊"
+  ],
+  "scenes": [
+   "world",
+   "research"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p447",
+  "combo": true
+ },
+ {
+  "n": "EB-JEPA: A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures",
+  "l": "https://arxiv.org/abs/2602.03604",
+  "m": "2026-02",
+  "d": "轻量 JEPA 能量基库：表示空间预测避开生成建模陷阱、捕获语义特征——开源轻量库降低 JEPA 研究门槛。",
+  "v": "ok",
+  "nums": [
+   "轻量开源库",
+   "能量基 JEPA"
+  ],
+  "scenes": [
+   "world",
+   "research"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p448",
+  "combo": true
+ },
+ {
+  "n": "Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations",
+  "l": "https://arxiv.org/abs/2602.01456",
+  "m": "2026-02",
+  "d": "矫正 LpJEPA：现有方法正则到各向同性高斯、偏好稠密表示且失掉稀疏性——稀疏+最大熵兼得的 JEPA 表示（与 LpWM 同一论题的另一解法）。",
+  "v": "ok",
+  "nums": [
+   "稀疏+最大熵",
+   "Lp 空间"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p449",
+  "combo": false
+ },
+ {
+  "n": "Parallel Stochastic Gradient-Based Planning for World Models",
+  "l": "https://arxiv.org/abs/2602.00475",
+  "m": "2026-01",
+  "d": "高并行随机梯度规划：世界模型规划面对巨大非结构搜索空间——利用世界模型可微性做高效并行优化，解长程视觉规划。",
+  "v": "ok",
+  "nums": [
+   "可微性并行规划",
+   "长程视觉任务"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p450",
+  "combo": false
+ },
+ {
+  "n": "Learning Latent Action World Models In The Wild",
+  "l": "https://arxiv.org/abs/2601.05230",
+  "m": "2026-01",
+  "d": "野外潜动作世界模型：世界模型大多需要动作标签、规模化获取难——潜动作模型从无标注视频学出动作空间，行动预测能力免标签获得。",
+  "v": "ok",
+  "nums": [
+   "免动作标签",
+   "视频学动作空间"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p451",
+  "combo": false
+ },
+ {
+  "n": "The Entropy Enigma: Success and Failure of Entropy Minimization",
+  "l": "https://arxiv.org/abs/2405.05012",
+  "m": "2024-05",
+  "d": "熵最小化成败之谜：测试时自适应常用 EM 提高分类置信——分析其何时有效何时灾难性失败，测试时适应（L2）的理论边界刻画。",
+  "v": "ok",
+  "nums": [
+   "EM 成败分析",
+   "L2 理论边界"
+  ],
+  "scenes": [
+   "reasoning"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sym"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p452",
+  "combo": false
+ },
+ {
+  "n": "Hierarchical World Models as Visual Whole-Body Humanoid Controllers",
+  "l": "https://arxiv.org/abs/2405.18418",
+  "m": "2024-05",
+  "d": "层级世界模型当人形全身控制器：高维+双足不稳定的视觉全身控制难题——基于世界模型的高度数据驱动路线，从视觉观察直接出全身控制。",
+  "v": "ok",
+  "nums": [
+   "视觉全身控制",
+   "层级 WM"
+  ],
+  "scenes": [
+   "world",
+   "policy"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p453",
+  "combo": true
+ },
+ {
+  "n": "DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning",
+  "l": "https://arxiv.org/abs/2411.04983",
+  "m": "2024-11",
+  "d": "预训特征上的世界模型：任务特定在线策略学习限制了世界模型潜力——DINO-WM 在冻结预训视觉特征上学动力学，零样本规划到新任务。",
+  "v": "ok",
+  "nums": [
+   "冻结特征动力学",
+   "零样本规划"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p454",
+  "combo": false
+ },
+ {
+  "n": "RoboPEPP: Vision-Based Robot Pose and Joint Angle Estimation through Embedding Predictive Pre-Training",
+  "l": "https://arxiv.org/abs/2411.17662",
+  "m": "2024-11",
+  "d": "嵌入预测预训练的机器人位姿估计：未知关节角的铰接机器人视觉位姿估计——JEPA 式预训练捕获机器人图像的结构信息，协作机器人与人机交互的基础感知件。",
+  "v": "ok",
+  "nums": [
+   "JEPA 预训练",
+   "关节角估计"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "real"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p455",
+  "combo": false
+ },
+ {
+  "n": "From Generated Human Videos to Physically Plausible Robot Trajectories",
+  "l": "https://arxiv.org/abs/2512.05094",
+  "m": "2025-12",
+  "d": "生成人类视频→物理合理机器人轨迹：视频生成模型可当高层规划器——零样本人形执行生成视频中的动作，视频先验与物理可行性的桥接。",
+  "v": "ok",
+  "nums": [
+   "视频当规划器",
+   "零样本人形"
+  ],
+  "scenes": [
+   "world",
+   "policy"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p456",
+  "combo": true
+ },
+ {
+  "n": "LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics",
+  "m": "2025-11",
+  "l": "https://arxiv.org/abs/2511.08544",
+  "d": "JEPA 的完整理论+精简实现：缺乏理论指导导致 ad-hoc 研发——LeJEPA 给出 JEPA 的综合理论并实例化为精简可扩展免调参的算法，JEPA 理论化的旗舰作。",
+  "v": "ok",
+  "nums": [
+   "综合理论",
+   "免启发式",
+   "精简可扩展"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p457",
+  "combo": false
+ },
+ {
+  "n": "VL-JEPA: Joint Embedding Predictive Architecture for Vision-language",
+  "l": "https://arxiv.org/abs/2512.10942",
+  "m": "2025-12",
+  "d": "视觉-语言 JEPA：经典 VLM 自回归生成 token——VL-JEPA 预测目标文本的连续嵌入，在抽象表示空间学习、聚焦任务相关语义。JEPA 方法论从视觉扩展到视觉语言。",
+  "v": "ok",
+  "nums": [
+   "连续嵌入预测",
+   "免自回归 VLM"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "model"
+  ],
+  "dom": "multimodal",
+  "selfref": false,
+  "id": "p458",
+  "combo": false
+ },
+ {
+  "n": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
+  "l": "https://arxiv.org/abs/2512.09929",
+  "m": "2025-12",
+  "d": "闭合世界模型训练-测试鸿沟：离线专家轨迹训练的 WM+MPC 推理时规划——梯度规划与训练分布的错位系统修复，免慢速搜索的精确优化。",
+  "v": "ok",
+  "nums": [
+   "训练-测试鸿沟",
+   "梯度规划对齐"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm",
+   "loop"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p459",
+  "combo": true
+ },
+ {
+  "n": "Neural Manifold Clustering and Embedding",
+  "l": "https://arxiv.org/abs/2201.10000",
+  "m": "2022-01",
+  "d": "神经流形聚类与嵌入：非线性流形并集上按结构聚类并参数化为特征空间线性子流形——JEPA 可辨识性理论（如 LeJEPA 线性恢复）的数学基础前驱。",
+  "v": "ok",
+  "nums": [
+   "流形聚类",
+   "可辨识性前驱"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 3,
+  "stk": 1,
+  "rtc": 1,
+  "rtt": 1,
+  "ts": "a",
+  "oracle": [
+   "na"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p460",
+  "combo": false
+ },
+ {
+  "n": "Gradient-based Planning with World Models",
+  "l": "https://arxiv.org/abs/2312.17227",
+  "m": "2023-12",
+  "d": "世界模型的梯度规划：LQR 之于简单动力学，通用任务需要可微世界模型上的梯度优化规划——世界模型规划路线的早期系统化陈述。",
+  "v": "ok",
+  "nums": [
+   "可微规划",
+   "早期系统化"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "wm"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "b",
+  "oracle": [
+   "sim"
+  ],
+  "dom": "robot",
+  "selfref": false,
+  "id": "p461",
+  "combo": false
+ },
+ {
+  "n": "Introduction to Latent Variable Energy-Based Models: A Path Towards Autonomous Machine Intelligence",
+  "l": "https://arxiv.org/abs/2306.02572",
+  "m": "LeCun · 2023-06",
+  "d": "潜变量能量基模型引论：自主机器智能路线图——可靠世界模型、分级规划、能量基推理的完整蓝图，整个 JEPA 谱系的源头立场论文。库内 JEPA 线（至 2026 已 30+ 篇）的共同起点。",
+  "v": "ok",
+  "nums": [
+   "LeCun 路线图",
+   "JEPA 谱系源头",
+   "能量基推理"
+  ],
+  "scenes": [
+   "world"
+  ],
+  "dirs": [
+   "oneshot"
+  ],
+  "lvl": 0,
+  "stk": 1,
+  "rtc": 0,
+  "rtt": 0,
+  "ts": "d",
+  "oracle": [
+   "human"
+  ],
+  "dom": "general",
+  "selfref": false,
+  "id": "p462",
+  "combo": false
  }
 ]
